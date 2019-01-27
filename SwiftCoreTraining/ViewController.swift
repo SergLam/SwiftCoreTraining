@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        loadImagesConcurently()
-        task1()
+//        task1()
     }
     
     private func loadImagesConcurently() {
