@@ -1,23 +1,16 @@
 //
-//  ViewController.swift
+//  GCDViewModel.swift
 //  SwiftCoreTraining
 //
-//  Created by Serg Liamthev on 1/26/19.
+//  Created by Serg Liamthev on 1/27/19.
 //  Copyright © 2019 serglam. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class GCDViewModel {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-//        loadImagesConcurently()
-//        task1()
-    }
-    
-    private func loadImagesConcurently() {
+    func loadImagesConcurently() {
         let url = "https://picsum.photos/300/300/?image="
         
         var imagesURL: [String] = []
@@ -59,7 +52,34 @@ class ViewController: UIViewController {
         }
     }
     
-    private func task1() {
+    func task2() {
+        let queue = DispatchQueue.main
+        print(0)
+        queue.async {
+            sleep(5)
+            print(1)
+            queue.async {
+                sleep(5)
+                print(2)
+            }
+            sleep(10)
+            print(3)
+        }
+        print(4)
+    }
+    
+    func task3_priority() -> [DispatchQueue] {
+        // https://developer.apple.com/library/archive/documentation/Performance/Conceptual/EnergyGuide-iOS/PrioritizeWorkWithQoS.html
+        let highest = DispatchQueue.global(qos: .userInteractive)
+        let high = DispatchQueue.global(qos: .userInitiated)
+        let medium = DispatchQueue.global(qos: .default) // Should not be used for priority classification by developers
+        let low = DispatchQueue.global(qos: .utility)
+        let lowest = DispatchQueue.global(qos: .background)
+        return [highest, high, medium, low, lowest]
+    }
+
+    func task1() {
+        // https://www.reddit.com/r/iOSProgramming/comments/6x24xl/interesting_interview_question_about_gcd_could/
         print("A")
         
         DispatchQueue.main.async {
@@ -91,6 +111,4 @@ class ViewController: UIViewController {
         print("I")
     }
     
-    
 }
-
