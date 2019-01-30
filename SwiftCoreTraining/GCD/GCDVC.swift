@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GCDVC: UIViewController {
     
     private let viewModel = GCDViewModel()
     
@@ -23,8 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-//        viewModel.loadImagesConcurently()
-        viewModel.task2()
+        viewModel.loadImagesConcurently()
+//        viewModel.task2()
     }
     
 }
