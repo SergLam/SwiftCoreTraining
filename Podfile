@@ -7,6 +7,7 @@ target 'SwiftCoreTraining' do
 
   # Pods for SwiftCoreTraining
   pod 'Eureka'
+  pod 'SnapKit'
 
   target 'SwiftCoreTrainingTests' do
     inherit! :search_paths

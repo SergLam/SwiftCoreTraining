@@ -20,11 +20,17 @@ class DebugVC: FormViewController {
     
     private func setupForm() {
         form
-            +++ Section("Entrance")
+            +++ Section("GCD")
             <<< LabelRow() { row in
-                row.title = "EntranceVC"
+                row.title = "GCDVC"
                 }.onCellSelection({ [unowned self] _, _ in
                     self.navigationController?.pushViewController(GCDVC(), animated: true)
+                })
+            +++ Section("UI")
+            <<< LabelRow() { row in
+                row.title = "SizeClasses (Orientation adaptive layout)"
+                }.onCellSelection({ (_, _) in
+                    self.navigationController?.pushViewController(SizeClassesVC(), animated: true)
                 })
     }
 }
