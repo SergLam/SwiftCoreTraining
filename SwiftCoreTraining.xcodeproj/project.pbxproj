@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E5DE2E20012CB11E4C7B52F /* Pods_SwiftCoreTrainingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DAFCB717863B193DF9FEDD /* Pods_SwiftCoreTrainingTests.framework */; };
+		7C1ADDC62206E9C000F70F2C /* SizeClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1ADDC52206E9C000F70F2C /* SizeClassesView.swift */; };
+		7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */; };
 		7C1F1D6122025361005C82FF /* DebugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1F1D6022025361005C82FF /* DebugVC.swift */; };
 		7C1F1D6422025511005C82FF /* SizeClassesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1F1D6322025511005C82FF /* SizeClassesVC.swift */; };
 		7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F034B21FCC5D000A50936 /* AppDelegate.swift */; };
@@ -44,6 +46,8 @@
 		55DAFCB717863B193DF9FEDD /* Pods_SwiftCoreTrainingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTrainingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		568115C0A37CBE3749D94602 /* Pods-SwiftCoreTrainingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingTests/Pods-SwiftCoreTrainingTests.release.xcconfig"; sourceTree = "<group>"; };
 		572E422DA4E54BA9B01B1618 /* Pods-SwiftCoreTrainingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingTests/Pods-SwiftCoreTrainingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C1ADDC52206E9C000F70F2C /* SizeClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeClassesView.swift; sourceTree = "<group>"; };
+		7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		7C1F1D6022025361005C82FF /* DebugVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugVC.swift; sourceTree = "<group>"; };
 		7C1F1D6322025511005C82FF /* SizeClassesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeClassesVC.swift; sourceTree = "<group>"; };
 		7C2F034821FCC5D000A50936 /* SwiftCoreTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCoreTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,10 +120,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7C1ADDC72206EFBB00F70F2C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7C1F1D6222025501005C82FF /* SizeClasses */ = {
 			isa = PBXGroup;
 			children = (
 				7C1F1D6322025511005C82FF /* SizeClassesVC.swift */,
+				7C1ADDC52206E9C000F70F2C /* SizeClassesView.swift */,
 			);
 			path = SizeClasses;
 			sourceTree = "<group>";
@@ -149,6 +162,7 @@
 		7C2F034A21FCC5D000A50936 /* SwiftCoreTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7C1ADDC72206EFBB00F70F2C /* Extensions */,
 				7C1F1D6222025501005C82FF /* SizeClasses */,
 				7C2F038021FE421800A50936 /* GCD */,
 				7C2F037F21FE159000A50936 /* BundleFiles */,
@@ -357,6 +371,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -364,6 +379,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +438,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C1ADDC62206E9C000F70F2C /* SizeClassesView.swift in Sources */,
+				7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */,
 				7C1F1D6122025361005C82FF /* DebugVC.swift in Sources */,
 				7C2F034E21FCC5D000A50936 /* GCDVC.swift in Sources */,
 				7C1F1D6422025511005C82FF /* SizeClassesVC.swift in Sources */,

@@ -1,20 +1,24 @@
 PODS:
   - Eureka (4.3.1)
+  - Kingfisher (5.0.1)
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
   - Eureka
+  - Kingfisher
   - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Eureka
+    - Kingfisher
     - SnapKit
 
 SPEC CHECKSUMS:
   Eureka: 28ea296f06710f6745266b71f17862048941a32d
+  Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 2085c85eb12026e5589728eada4344eb05890022
+PODFILE CHECKSUM: 2d0eaf2807c31bcccdd8bdb83c13fa3f22856c09
 
 COCOAPODS: 1.5.3
