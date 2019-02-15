@@ -32,5 +32,11 @@ class DebugVC: FormViewController {
                 }.onCellSelection({ (_, _) in
                     self.navigationController?.pushViewController(SizeClassesVC(), animated: true)
                 })
+            +++ Section("Data structures and algorightms")
+            <<< LabelRow() { row in
+                row.title = "Array-Set convertions"
+                }.onCellSelection({ (_, _) in
+                    self.navigationController?.pushViewController(ArraySetVC(), animated: true)
+                })
     }
 }
