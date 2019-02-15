@@ -15,20 +15,51 @@ class ArraySetVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createTestData()
+        usersArray = createTestData()
         convertArrayToSet()
+        convertSetToArray()
+        convertSetToArrayByAppending()
+        appendArrayToSet()
     }
     
-    private func createTestData() {
+    private func createTestData() -> [User] {
+        var result: [User] = []
         for _ in 1..<100000 {
-            usersArray.append(User())
+            result.append(User())
         }
+        return result
     }
     
     private func convertArrayToSet() {
         let startTime = CFAbsoluteTimeGetCurrent()
-         usersSet = Set(usersArray)
+        usersSet = Set(usersArray)
         let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
         print("Time elapsed for convertArrayToSet: \(timeElapsed) s.")
+    }
+    
+    private func convertSetToArray() {
+        let startTime = CFAbsoluteTimeGetCurrent()
+        usersArray.removeAll()
+        usersArray = Array(usersSet)
+        let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
+        print("Time elapsed for convertSetToArray: \(timeElapsed) s.")
+    }
+    
+    private func convertSetToArrayByAppending() {
+        let startTime = CFAbsoluteTimeGetCurrent()
+        usersArray.removeAll()
+        usersArray.append(contentsOf: Array(usersSet))
+        let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
+        print("Time elapsed for convertSetToArrayByAppending: \(timeElapsed) s.")
+    }
+    
+    private func appendArrayToSet() {
+        let newData = createTestData()
+        let startTime = CFAbsoluteTimeGetCurrent()
+        usersSet.removeAll()
+        usersSet.removeAll(keepingCapacity: true)
+        usersSet.formUnion(newData)
+        let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
+        print("Time elapsed for appendArrayToSet: \(timeElapsed) s.")
     }
 }
