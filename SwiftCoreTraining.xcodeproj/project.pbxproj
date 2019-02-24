@@ -19,8 +19,13 @@
 		7C2F037A21FE135B00A50936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F037921FE135B00A50936 /* Assets.xcassets */; };
 		7C2F037E21FE151A00A50936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */; };
 		7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */; };
+		7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5AEA3A2222B8140036692F /* ExampleView.m */; };
 		7C9360AF2216AFFB00ADC6F9 /* ArraySetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9360AE2216AFFB00ADC6F9 /* ArraySetVC.swift */; };
 		7C9360B12216B04500ADC6F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9360B02216B04500ADC6F9 /* User.swift */; };
+		7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE5D7D5221F48D00049E3A9 /* ExampleVC.m */; };
+		7CE7C1CC2222BF1200CDAF34 /* ExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE7C1CB2222BF1200CDAF34 /* ExampleCell.m */; };
+		7CE7C1D22223127C00CDAF34 /* ExampleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE7C1D12223127C00CDAF34 /* ExampleViewModel.m */; };
+		7CE7C1D62223377100CDAF34 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE7C1D52223377100CDAF34 /* UserModel.m */; };
 		86D51C3297479D0338A6D137 /* Pods_SwiftCoreTrainingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF259DAFE179C80A3B0F011 /* Pods_SwiftCoreTrainingUITests.framework */; };
 		BFD1AF259D05A309A7E05EBF /* Pods_SwiftCoreTraining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA89E5239673E10E8CD7519 /* Pods_SwiftCoreTraining.framework */; };
 /* End PBXBuildFile section */
@@ -65,9 +70,20 @@
 		7C2F037921FE135B00A50936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewModel.swift; sourceTree = "<group>"; };
+		7C5AEA392222B8140036692F /* ExampleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleView.h; sourceTree = "<group>"; };
+		7C5AEA3A2222B8140036692F /* ExampleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleView.m; sourceTree = "<group>"; };
 		7C9360AE2216AFFB00ADC6F9 /* ArraySetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySetVC.swift; sourceTree = "<group>"; };
 		7C9360B02216B04500ADC6F9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7CA700117650CC9F4EA2C7EE /* Pods-SwiftCoreTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7CE5D7D2221F37DD0049E3A9 /* SwiftCoreTraining-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftCoreTraining-Bridging-Header.h"; sourceTree = "<group>"; };
+		7CE5D7D4221F48D00049E3A9 /* ExampleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleVC.h; sourceTree = "<group>"; };
+		7CE5D7D5221F48D00049E3A9 /* ExampleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleVC.m; sourceTree = "<group>"; };
+		7CE7C1CA2222BF1200CDAF34 /* ExampleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleCell.h; sourceTree = "<group>"; };
+		7CE7C1CB2222BF1200CDAF34 /* ExampleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleCell.m; sourceTree = "<group>"; };
+		7CE7C1D02223127C00CDAF34 /* ExampleViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleViewModel.h; sourceTree = "<group>"; };
+		7CE7C1D12223127C00CDAF34 /* ExampleViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleViewModel.m; sourceTree = "<group>"; };
+		7CE7C1D42223377100CDAF34 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		7CE7C1D52223377100CDAF34 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		ACF259DAFE179C80A3B0F011 /* Pods_SwiftCoreTrainingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTrainingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2750D5A2AA4194665FD4CD6 /* Pods-SwiftCoreTrainingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8CD09ADDAEDEEDF44866504 /* Pods-SwiftCoreTraining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +182,7 @@
 		7C2F034A21FCC5D000A50936 /* SwiftCoreTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7CE5D7D3221F48440049E3A9 /* ObjcUsageInSwift */,
 				7C9360AD2216AF5200ADC6F9 /* Array-Set */,
 				7C1ADDC72206EFBB00F70F2C /* Extensions */,
 				7C1F1D6222025501005C82FF /* SizeClasses */,
@@ -201,6 +218,7 @@
 				7C2F037921FE135B00A50936 /* Assets.xcassets */,
 				7C2F035721FCC5D200A50936 /* Info.plist */,
 				7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */,
+				7CE5D7D2221F37DD0049E3A9 /* SwiftCoreTraining-Bridging-Header.h */,
 			);
 			path = BundleFiles;
 			sourceTree = "<group>";
@@ -221,6 +239,39 @@
 				7C9360B02216B04500ADC6F9 /* User.swift */,
 			);
 			path = "Array-Set";
+			sourceTree = "<group>";
+		};
+		7CE5D7D3221F48440049E3A9 /* ObjcUsageInSwift */ = {
+			isa = PBXGroup;
+			children = (
+				7CE7C1D32223375200CDAF34 /* DataModel */,
+				7CE7C1C92222BEF000CDAF34 /* Cell */,
+				7CE5D7D4221F48D00049E3A9 /* ExampleVC.h */,
+				7CE5D7D5221F48D00049E3A9 /* ExampleVC.m */,
+				7C5AEA392222B8140036692F /* ExampleView.h */,
+				7C5AEA3A2222B8140036692F /* ExampleView.m */,
+				7CE7C1D02223127C00CDAF34 /* ExampleViewModel.h */,
+				7CE7C1D12223127C00CDAF34 /* ExampleViewModel.m */,
+			);
+			path = ObjcUsageInSwift;
+			sourceTree = "<group>";
+		};
+		7CE7C1C92222BEF000CDAF34 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7CE7C1CA2222BF1200CDAF34 /* ExampleCell.h */,
+				7CE7C1CB2222BF1200CDAF34 /* ExampleCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7CE7C1D32223375200CDAF34 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				7CE7C1D42223377100CDAF34 /* UserModel.h */,
+				7CE7C1D52223377100CDAF34 /* UserModel.m */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,16 +435,22 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,12 +511,17 @@
 			files = (
 				7C1ADDC62206E9C000F70F2C /* SizeClassesView.swift in Sources */,
 				7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */,
+				7CE7C1D62223377100CDAF34 /* UserModel.m in Sources */,
+				7CE7C1D22223127C00CDAF34 /* ExampleViewModel.m in Sources */,
 				7C1F1D6122025361005C82FF /* DebugVC.swift in Sources */,
 				7C2F034E21FCC5D000A50936 /* GCDVC.swift in Sources */,
 				7C1F1D6422025511005C82FF /* SizeClassesVC.swift in Sources */,
 				7C9360B12216B04500ADC6F9 /* User.swift in Sources */,
 				7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */,
+				7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */,
+				7CE7C1CC2222BF1200CDAF34 /* ExampleCell.m in Sources */,
 				7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */,
+				7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */,
 				7C9360AF2216AFFB00ADC6F9 /* ArraySetVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,6 +689,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.SwiftCoreTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PRECOMPS_DIR = "$(SRCROOT)/BundleFiles/MyPrefixHeaderFile.pch";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/macbookpro/XCodeProjects/swift_core_training/SwiftCoreTraining/SwiftCoreTraining/BundleFiles/SwiftCoreTraining-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -647,6 +711,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.SwiftCoreTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PRECOMPS_DIR = "$(SRCROOT)/BundleFiles/MyPrefixHeaderFile.pch";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/macbookpro/XCodeProjects/swift_core_training/SwiftCoreTraining/SwiftCoreTraining/BundleFiles/SwiftCoreTraining-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

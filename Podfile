@@ -9,6 +9,11 @@ target 'SwiftCoreTraining' do
   pod 'Eureka'
   pod 'SnapKit'
   pod 'Kingfisher'
+  
+  #Objc Pods
+  pod 'DZNEmptyDataSet'
+  pod 'Masonry'
+  pod 'SDWebImage', '~> 4.0'
 
   target 'SwiftCoreTrainingTests' do
     inherit! :search_paths

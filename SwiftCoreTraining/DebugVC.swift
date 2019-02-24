@@ -8,6 +8,7 @@
 
 import UIKit
 import Eureka
+import DZNEmptyDataSet
 
 class DebugVC: FormViewController {
  
@@ -15,6 +16,7 @@ class DebugVC: FormViewController {
         super.viewDidLoad()
         title = "DebugVC"
         view.accessibilityLabel = "DebugVCView"
+        self.tableView.emptyDataSetDelegate = self
         setupForm()
     }
     
@@ -29,14 +31,24 @@ class DebugVC: FormViewController {
             +++ Section("UI")
             <<< LabelRow() { row in
                 row.title = "SizeClasses (Orientation adaptive layout)"
-                }.onCellSelection({ (_, _) in
+                }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(SizeClassesVC(), animated: true)
                 })
             +++ Section("Data structures and algorightms")
             <<< LabelRow() { row in
                 row.title = "Array-Set convertions"
-                }.onCellSelection({ (_, _) in
+                }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(ArraySetVC(), animated: true)
                 })
+        +++ Section("Lets get deep into legacy!")
+            <<< LabelRow() { row in
+                row.title = "ObjC example view controller"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(ExampleVC(), animated: true)
+                })
     }
+}
+
+extension DebugVC: DZNEmptyDataSetDelegate {
+    
 }
