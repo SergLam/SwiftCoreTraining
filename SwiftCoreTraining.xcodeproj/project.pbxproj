@@ -20,6 +20,7 @@
 		7C2F037E21FE151A00A50936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */; };
 		7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */; };
 		7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5AEA3A2222B8140036692F /* ExampleView.m */; };
+		7C64B848224592EA00480D88 /* AlgorhitmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64B847224592EA00480D88 /* AlgorhitmsVC.swift */; };
 		7C9360AF2216AFFB00ADC6F9 /* ArraySetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9360AE2216AFFB00ADC6F9 /* ArraySetVC.swift */; };
 		7C9360B12216B04500ADC6F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9360B02216B04500ADC6F9 /* User.swift */; };
 		7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE5D7D5221F48D00049E3A9 /* ExampleVC.m */; };
@@ -72,6 +73,7 @@
 		7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewModel.swift; sourceTree = "<group>"; };
 		7C5AEA392222B8140036692F /* ExampleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleView.h; sourceTree = "<group>"; };
 		7C5AEA3A2222B8140036692F /* ExampleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleView.m; sourceTree = "<group>"; };
+		7C64B847224592EA00480D88 /* AlgorhitmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorhitmsVC.swift; sourceTree = "<group>"; };
 		7C9360AE2216AFFB00ADC6F9 /* ArraySetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySetVC.swift; sourceTree = "<group>"; };
 		7C9360B02216B04500ADC6F9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7CA700117650CC9F4EA2C7EE /* Pods-SwiftCoreTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		7C2F034A21FCC5D000A50936 /* SwiftCoreTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7C64B846224592C400480D88 /* Algorithms */,
 				7CE5D7D3221F48440049E3A9 /* ObjcUsageInSwift */,
 				7C9360AD2216AF5200ADC6F9 /* Array-Set */,
 				7C1ADDC72206EFBB00F70F2C /* Extensions */,
@@ -230,6 +233,14 @@
 				7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		7C64B846224592C400480D88 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				7C64B847224592EA00480D88 /* AlgorhitmsVC.swift */,
+			);
+			path = Algorithms;
 			sourceTree = "<group>";
 		};
 		7C9360AD2216AF5200ADC6F9 /* Array-Set */ = {
@@ -520,6 +531,7 @@
 				7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */,
 				7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */,
 				7CE7C1CC2222BF1200CDAF34 /* ExampleCell.m in Sources */,
+				7C64B848224592EA00480D88 /* AlgorhitmsVC.swift in Sources */,
 				7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */,
 				7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */,
 				7C9360AF2216AFFB00ADC6F9 /* ArraySetVC.swift in Sources */,

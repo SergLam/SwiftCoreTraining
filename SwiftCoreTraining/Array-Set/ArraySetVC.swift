@@ -16,10 +16,10 @@ class ArraySetVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         usersArray = createTestData()
-        convertArrayToSet()
-        convertSetToArray()
-        convertSetToArrayByAppending()
-        appendArrayToSet()
+//        convertArrayToSet()
+//        convertSetToArray()
+//        convertSetToArrayByAppending()
+//        appendArrayToSet()
     }
     
     private func createTestData() -> [User] {
@@ -28,6 +28,10 @@ class ArraySetVC: UIViewController {
             result.append(User())
         }
         return result
+    }
+    
+    private func filterArrayByArray() {
+//        let usersID =
     }
     
     private func convertArrayToSet() {
@@ -62,4 +66,6 @@ class ArraySetVC: UIViewController {
         let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
         print("Time elapsed for appendArrayToSet: \(timeElapsed) s.")
     }
+    
+ 
 }
