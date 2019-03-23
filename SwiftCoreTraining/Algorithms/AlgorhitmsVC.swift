@@ -10,16 +10,24 @@ import UIKit
 
 class AlgorhitmsVC: UIViewController {
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        var array = [123,123123,4,3,6,34,43,67,34]
-        bubleSort(&array)
-        debugPrint(fibonacci(7))
+//        var array = [123,123123,4,3,6,34,43,67,34]
+//        bubleSort(&array)
+        debugPrint(fib(6))
     }
     
     
-    func fibonacci(_ n: Int) -> Int {
-        return fibonacci(n)
+    func fib(_ n: Int) -> Int {
+        // 1 1 2 3 5 8 13
+        debugPrint("Fibonacci function call with argumant: \(n)")
+        if n <= 2 {
+            return 1
+        } else {
+            return fib(n-2) + fib(n-1)
+        }
+        
     }
     
     private func bubleSort(_ array: inout [Int]) -> [Int] {
@@ -34,7 +42,6 @@ class AlgorhitmsVC: UIViewController {
         }
         return array
     }
-
     
     
 }
