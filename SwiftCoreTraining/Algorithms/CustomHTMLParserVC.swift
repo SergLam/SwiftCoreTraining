@@ -30,22 +30,20 @@ class CustomHTMLParserVC: UIViewController {
             assert(false, "File not found")
             return
         }
-
-        let html = "<html>...</html>"
         
         if let doc = try? HTML(html: data, encoding: .utf8) {
-            print(doc.title)
+            debugPrint(String(describing: doc.title))
             
             // Search for nodes by CSS
             for link in doc.css("a, link") {
-                print(link.text)
-                print(link["href"])
+                debugPrint(String(describing: link.text).replacingOccurrences(of: "\"", with: ""))
+                debugPrint(String(describing: link["href"]).replacingOccurrences(of: "\"", with: ""))
             }
             
             // Search for nodes by XPath
             for link in doc.xpath("//a | //link") {
-                print(link.text)
-                print(link["href"])
+                debugPrint(String(describing: link.text).replacingOccurrences(of: "\"", with: ""))
+                debugPrint(String(describing: link["href"]).replacingOccurrences(of: "\"", with: ""))
             }
         }
     }
