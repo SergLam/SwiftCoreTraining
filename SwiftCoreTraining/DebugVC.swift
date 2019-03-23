@@ -58,6 +58,11 @@ class DebugVC: FormViewController {
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(XMLParserVC(), animated: true)
                 })
+            <<< LabelRow() { row in
+                row.title = "CustomHTMLParser VC"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(CustomHTMLParserVC(), animated: true)
+                })
     }
 }
 

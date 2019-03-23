@@ -24,6 +24,7 @@
 		7C64B84A224597F100480D88 /* page.html in Resources */ = {isa = PBXBuildFile; fileRef = 7C64B849224597F100480D88 /* page.html */; };
 		7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64B84C2246290300480D88 /* AlertPresenter.swift */; };
 		7C64B84F22462B7400480D88 /* XMLParserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64B84E22462B7400480D88 /* XMLParserVC.swift */; };
+		7C64B85122463E8A00480D88 /* CustomHTMLParserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64B85022463E8900480D88 /* CustomHTMLParserVC.swift */; };
 		7C9360AF2216AFFB00ADC6F9 /* ArraySetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9360AE2216AFFB00ADC6F9 /* ArraySetVC.swift */; };
 		7C9360B12216B04500ADC6F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9360B02216B04500ADC6F9 /* User.swift */; };
 		7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE5D7D5221F48D00049E3A9 /* ExampleVC.m */; };
@@ -80,6 +81,7 @@
 		7C64B849224597F100480D88 /* page.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = page.html; sourceTree = "<group>"; };
 		7C64B84C2246290300480D88 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		7C64B84E22462B7400480D88 /* XMLParserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParserVC.swift; sourceTree = "<group>"; };
+		7C64B85022463E8900480D88 /* CustomHTMLParserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHTMLParserVC.swift; sourceTree = "<group>"; };
 		7C9360AE2216AFFB00ADC6F9 /* ArraySetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySetVC.swift; sourceTree = "<group>"; };
 		7C9360B02216B04500ADC6F9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7CA700117650CC9F4EA2C7EE /* Pods-SwiftCoreTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				7C64B847224592EA00480D88 /* AlgorhitmsVC.swift */,
 				7C64B84E22462B7400480D88 /* XMLParserVC.swift */,
+				7C64B85022463E8900480D88 /* CustomHTMLParserVC.swift */,
 				7C64B849224597F100480D88 /* page.html */,
 			);
 			path = Algorithms;
@@ -466,6 +469,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -477,6 +481,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -552,6 +557,7 @@
 				7C64B848224592EA00480D88 /* AlgorhitmsVC.swift in Sources */,
 				7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */,
 				7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */,
+				7C64B85122463E8A00480D88 /* CustomHTMLParserVC.swift in Sources */,
 				7C9360AF2216AFFB00ADC6F9 /* ArraySetVC.swift in Sources */,
 				7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */,
 				7C64B84F22462B7400480D88 /* XMLParserVC.swift in Sources */,
