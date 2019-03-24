@@ -52,6 +52,11 @@ class DebugVC: FormViewController {
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(AlgorhitmsVC(), animated: true)
                 })
+            <<< LabelRow() { row in
+                row.title = "RecursiveAlgorithms VC"
+                }.onCellSelection({ [unowned self] (_,_) in
+                    self.navigationController?.pushViewController(RecursiveAlgorithmsVC(), animated: true)
+                })
             +++ Section("XML Parsing")
             <<< LabelRow() { row in
                 row.title = "XMLParser VC"

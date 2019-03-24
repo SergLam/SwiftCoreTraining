@@ -19,6 +19,7 @@
 		7C2F037A21FE135B00A50936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F037921FE135B00A50936 /* Assets.xcassets */; };
 		7C2F037E21FE151A00A50936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */; };
 		7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */; };
+		7C37B4832247A353003BFF7A /* RecursiveAlgorithmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37B4822247A353003BFF7A /* RecursiveAlgorithmsVC.swift */; };
 		7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5AEA3A2222B8140036692F /* ExampleView.m */; };
 		7C64B848224592EA00480D88 /* AlgorhitmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64B847224592EA00480D88 /* AlgorhitmsVC.swift */; };
 		7C64B84A224597F100480D88 /* page.html in Resources */ = {isa = PBXBuildFile; fileRef = 7C64B849224597F100480D88 /* page.html */; };
@@ -75,6 +76,7 @@
 		7C2F037921FE135B00A50936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewModel.swift; sourceTree = "<group>"; };
+		7C37B4822247A353003BFF7A /* RecursiveAlgorithmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveAlgorithmsVC.swift; sourceTree = "<group>"; };
 		7C5AEA392222B8140036692F /* ExampleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleView.h; sourceTree = "<group>"; };
 		7C5AEA3A2222B8140036692F /* ExampleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleView.m; sourceTree = "<group>"; };
 		7C64B847224592EA00480D88 /* AlgorhitmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorhitmsVC.swift; sourceTree = "<group>"; };
@@ -192,9 +194,9 @@
 		7C2F034A21FCC5D000A50936 /* SwiftCoreTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7CE5D7D3221F48440049E3A9 /* ObjcUsageInSwift */,
 				7C64B84B224628F100480D88 /* Helpers */,
 				7C64B846224592C400480D88 /* Algorithms */,
-				7CE5D7D3221F48440049E3A9 /* ObjcUsageInSwift */,
 				7C9360AD2216AF5200ADC6F9 /* Array-Set */,
 				7C1ADDC72206EFBB00F70F2C /* Extensions */,
 				7C1F1D6222025501005C82FF /* SizeClasses */,
@@ -250,6 +252,7 @@
 				7C64B847224592EA00480D88 /* AlgorhitmsVC.swift */,
 				7C64B84E22462B7400480D88 /* XMLParserVC.swift */,
 				7C64B85022463E8900480D88 /* CustomHTMLParserVC.swift */,
+				7C37B4822247A353003BFF7A /* RecursiveAlgorithmsVC.swift */,
 				7C64B849224597F100480D88 /* page.html */,
 			);
 			path = Algorithms;
@@ -553,6 +556,7 @@
 				7C9360B12216B04500ADC6F9 /* User.swift in Sources */,
 				7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */,
 				7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */,
+				7C37B4832247A353003BFF7A /* RecursiveAlgorithmsVC.swift in Sources */,
 				7CE7C1CC2222BF1200CDAF34 /* ExampleCell.m in Sources */,
 				7C64B848224592EA00480D88 /* AlgorhitmsVC.swift in Sources */,
 				7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */,
