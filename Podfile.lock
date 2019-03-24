@@ -1,6 +1,7 @@
 PODS:
   - DZNEmptyDataSet (1.8.1)
   - Eureka (4.3.1)
+  - Kanna (4.0.3)
   - Kingfisher (5.0.1)
   - Masonry (1.1.0)
   - SDWebImage (4.4.5):
@@ -11,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - DZNEmptyDataSet
   - Eureka
+  - Kanna (~> 4.0.0)
   - Kingfisher
   - Masonry
   - SDWebImage (~> 4.0)
@@ -20,6 +22,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - DZNEmptyDataSet
     - Eureka
+    - Kanna
     - Kingfisher
     - Masonry
     - SDWebImage
@@ -28,11 +31,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Eureka: 28ea296f06710f6745266b71f17862048941a32d
+  Kanna: 0ebbdd0e7e3308f0aafbd569e79c8cadc5eb877c
   Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 149785ed684f9c9e726897ab641af0e0d0f93ab0
+PODFILE CHECKSUM: 3becbfcea675d3ead45ba8e938ce9752c7b1cbf7
 
 COCOAPODS: 1.5.3

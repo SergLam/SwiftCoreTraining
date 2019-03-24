@@ -10,6 +10,9 @@ target 'SwiftCoreTraining' do
   pod 'SnapKit'
   pod 'Kingfisher'
   
+  # HTML Parsing
+  pod 'Kanna', '~> 4.0.0'
+  
   #Objc Pods
   pod 'DZNEmptyDataSet'
   pod 'Masonry'
