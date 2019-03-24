@@ -15,7 +15,16 @@ class AlgorhitmsVC: UIViewController {
         super.viewDidLoad()
 //        var array = [123,123123,4,3,6,34,43,67,34]
 //        bubleSort(&array)
-        debugPrint(fib(6))
+//        debugPrint(fib(6))
+        
+        /// Hanoi tower
+        print("3 disks")
+        tower(numberOfDisks:3, source:.Tower1, dest:.Tower3 , temp:.Tower2)
+        
+        print("--------")
+        
+        print("4 disks")
+        tower(numberOfDisks:4, source:.Tower1, dest:.Tower3 , temp:.Tower2)
     }
     
     
@@ -42,6 +51,24 @@ class AlgorhitmsVC: UIViewController {
         }
         return array
     }
+    
+    enum Tower : String {
+        case Tower1 = "Tower 1"
+        case Tower2 = "Tower 2"
+        case Tower3 = "Tower 3"
+    }
+    
+    func tower(numberOfDisks: Int, source x: Tower, dest y: Tower, temp z: Tower) {
+        if (numberOfDisks > 0) {
+            let previousDisk =  numberOfDisks - 1
+            debugPrint("Current number \(numberOfDisks), previous number: \(previousDisk)")
+            tower(numberOfDisks: previousDisk, source:x, dest:z, temp:y)
+            debugPrint("Move disk \(numberOfDisks) from \(x.rawValue) to \(y.rawValue)")
+            tower(numberOfDisks: previousDisk, source:z, dest:y, temp:x)
+        }
+    }
+    
+  
     
     
 }
