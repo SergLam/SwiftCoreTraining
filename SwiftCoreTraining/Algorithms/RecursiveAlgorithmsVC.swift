@@ -20,12 +20,13 @@ class RecursiveAlgorithmsVC: UIViewController {
 //        numberFromRigthToLeft(102)
 //        debugPrint(numberFromLeftToRight(102))
         debugPrint(factorial(4))
+        debugPrint(factorial(3))
         debugPrint(factorial(0))
     }
     
     private func factorial(_ num: Int) -> Int {
-        if num <= 1 {
-            return num
+        if num == 0 {
+            return 1
         } else {
             return num * factorial(num - 1)
         }
