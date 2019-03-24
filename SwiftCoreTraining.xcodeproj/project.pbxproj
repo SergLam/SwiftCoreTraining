@@ -20,6 +20,7 @@
 		7C2F037E21FE151A00A50936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */; };
 		7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */; };
 		7C37B4832247A353003BFF7A /* RecursiveAlgorithmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37B4822247A353003BFF7A /* RecursiveAlgorithmsVC.swift */; };
+		7C37B4862247DE61003BFF7A /* SubclassingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37B4852247DE61003BFF7A /* SubclassingVC.swift */; };
 		7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5AEA3A2222B8140036692F /* ExampleView.m */; };
 		7C64B848224592EA00480D88 /* AlgorhitmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64B847224592EA00480D88 /* AlgorhitmsVC.swift */; };
 		7C64B84A224597F100480D88 /* page.html in Resources */ = {isa = PBXBuildFile; fileRef = 7C64B849224597F100480D88 /* page.html */; };
@@ -77,6 +78,7 @@
 		7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewModel.swift; sourceTree = "<group>"; };
 		7C37B4822247A353003BFF7A /* RecursiveAlgorithmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveAlgorithmsVC.swift; sourceTree = "<group>"; };
+		7C37B4852247DE61003BFF7A /* SubclassingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubclassingVC.swift; sourceTree = "<group>"; };
 		7C5AEA392222B8140036692F /* ExampleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleView.h; sourceTree = "<group>"; };
 		7C5AEA3A2222B8140036692F /* ExampleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleView.m; sourceTree = "<group>"; };
 		7C64B847224592EA00480D88 /* AlgorhitmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorhitmsVC.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		7C2F034A21FCC5D000A50936 /* SwiftCoreTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7C37B4842247DE4B003BFF7A /* Access Levels */,
 				7CE5D7D3221F48440049E3A9 /* ObjcUsageInSwift */,
 				7C64B84B224628F100480D88 /* Helpers */,
 				7C64B846224592C400480D88 /* Algorithms */,
@@ -244,6 +247,14 @@
 				7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		7C37B4842247DE4B003BFF7A /* Access Levels */ = {
+			isa = PBXGroup;
+			children = (
+				7C37B4852247DE61003BFF7A /* SubclassingVC.swift */,
+			);
+			path = "Access Levels";
 			sourceTree = "<group>";
 		};
 		7C64B846224592C400480D88 /* Algorithms */ = {
@@ -555,6 +566,7 @@
 				7C1F1D6422025511005C82FF /* SizeClassesVC.swift in Sources */,
 				7C9360B12216B04500ADC6F9 /* User.swift in Sources */,
 				7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */,
+				7C37B4862247DE61003BFF7A /* SubclassingVC.swift in Sources */,
 				7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */,
 				7C37B4832247A353003BFF7A /* RecursiveAlgorithmsVC.swift in Sources */,
 				7CE7C1CC2222BF1200CDAF34 /* ExampleCell.m in Sources */,
