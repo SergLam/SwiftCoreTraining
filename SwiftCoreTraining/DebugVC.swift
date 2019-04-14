@@ -34,6 +34,12 @@ class DebugVC: FormViewController {
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(SizeClassesVC(), animated: true)
                 })
+            <<< LabelRow() { row in
+                row.title = "CustomTransitions (Animations)"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(CustomTransitionsVC(), animated: true)
+                })
+            
             +++ Section("Swift Basics")
             <<< LabelRow() { row in
                 row.title = "SubclassingVC"
