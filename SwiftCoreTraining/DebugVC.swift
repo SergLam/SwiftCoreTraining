@@ -39,6 +39,11 @@ class DebugVC: FormViewController {
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(CustomTransitionsVC(), animated: true)
                 })
+            <<< LabelRow() { row in
+                row.title = "SystemTransitions"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(SystemTransitionRootVC(), animated: true)
+                })
             
             +++ Section("Swift Basics")
             <<< LabelRow() { row in

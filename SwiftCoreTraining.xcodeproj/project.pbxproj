@@ -40,6 +40,8 @@
 		7CDB28272263BA8700546F9C /* ZoomPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB28262263BA8700546F9C /* ZoomPushAnimator.swift */; };
 		7CDB28292263BA9F00546F9C /* ZoomPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB28282263BA9F00546F9C /* ZoomPopAnimator.swift */; };
 		7CDB282B2263CC5900546F9C /* UIScreen+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */; };
+		7CDB28302263DA7A00546F9C /* SystemTransitionRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB282F2263DA7A00546F9C /* SystemTransitionRootVC.swift */; };
+		7CDB28322263DA9200546F9C /* SystemTransitionPushVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB28312263DA9200546F9C /* SystemTransitionPushVC.swift */; };
 		7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE5D7D5221F48D00049E3A9 /* ExampleVC.m */; };
 		7CE7C1CC2222BF1200CDAF34 /* ExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE7C1CB2222BF1200CDAF34 /* ExampleCell.m */; };
 		7CE7C1D22223127C00CDAF34 /* ExampleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE7C1D12223127C00CDAF34 /* ExampleViewModel.m */; };
@@ -111,6 +113,8 @@
 		7CDB28262263BA8700546F9C /* ZoomPushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomPushAnimator.swift; sourceTree = "<group>"; };
 		7CDB28282263BA9F00546F9C /* ZoomPopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomPopAnimator.swift; sourceTree = "<group>"; };
 		7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Ext.swift"; sourceTree = "<group>"; };
+		7CDB282F2263DA7A00546F9C /* SystemTransitionRootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTransitionRootVC.swift; sourceTree = "<group>"; };
+		7CDB28312263DA9200546F9C /* SystemTransitionPushVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTransitionPushVC.swift; sourceTree = "<group>"; };
 		7CE5D7D2221F37DD0049E3A9 /* SwiftCoreTraining-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftCoreTraining-Bridging-Header.h"; sourceTree = "<group>"; };
 		7CE5D7D4221F48D00049E3A9 /* ExampleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleVC.h; sourceTree = "<group>"; };
 		7CE5D7D5221F48D00049E3A9 /* ExampleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleVC.m; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 		7C2F034A21FCC5D000A50936 /* SwiftCoreTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7CDB282C2263D9D200546F9C /* SystemTransitions */,
 				7C580CC322637F700082019A /* CustomTransitions */,
 				7C37B4842247DE4B003BFF7A /* Access Levels */,
 				7CE5D7D3221F48440049E3A9 /* ObjcUsageInSwift */,
@@ -357,6 +362,15 @@
 				7CDB28282263BA9F00546F9C /* ZoomPopAnimator.swift */,
 			);
 			path = ZoomAnimation;
+			sourceTree = "<group>";
+		};
+		7CDB282C2263D9D200546F9C /* SystemTransitions */ = {
+			isa = PBXGroup;
+			children = (
+				7CDB282F2263DA7A00546F9C /* SystemTransitionRootVC.swift */,
+				7CDB28312263DA9200546F9C /* SystemTransitionPushVC.swift */,
+			);
+			path = SystemTransitions;
 			sourceTree = "<group>";
 		};
 		7CE5D7D3221F48440049E3A9 /* ObjcUsageInSwift */ = {
@@ -659,6 +673,7 @@
 				7CE7C1D62223377100CDAF34 /* UserModel.m in Sources */,
 				7CE7C1D22223127C00CDAF34 /* ExampleViewModel.m in Sources */,
 				7C1F1D6122025361005C82FF /* DebugVC.swift in Sources */,
+				7CDB28302263DA7A00546F9C /* SystemTransitionRootVC.swift in Sources */,
 				7CDB281F22639C8400546F9C /* TransitionPushView.swift in Sources */,
 				7C2F034E21FCC5D000A50936 /* GCDVC.swift in Sources */,
 				7C1F1D6422025511005C82FF /* SizeClassesVC.swift in Sources */,
@@ -666,6 +681,7 @@
 				7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */,
 				7CDB2818226389FB00546F9C /* CustomTransitionsView.swift in Sources */,
 				7C37B4862247DE61003BFF7A /* SubclassingVC.swift in Sources */,
+				7CDB28322263DA9200546F9C /* SystemTransitionPushVC.swift in Sources */,
 				7CDB281B22638BC800546F9C /* R.generated.swift in Sources */,
 				7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */,
 				7C37B4832247A353003BFF7A /* RecursiveAlgorithmsVC.swift in Sources */,
