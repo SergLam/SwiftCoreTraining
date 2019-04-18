@@ -1,13 +1,19 @@
 PODS:
   - DZNEmptyDataSet (1.8.1)
-  - Eureka (4.3.1)
+  - Eureka (5.0.0)
   - Kanna (4.0.3)
-  - Kingfisher (5.0.1)
+  - Kingfisher (5.3.1)
   - Masonry (1.1.0)
-  - SDWebImage (4.4.5):
-    - SDWebImage/Core (= 4.4.5)
-  - SDWebImage/Core (4.4.5)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
   - SnapKit (4.2.0)
+  - Socket.IO-Client-Swift (15.0.0):
+    - Starscream (~> 3.1)
+  - Starscream (3.1.0)
 
 DEPENDENCIES:
   - DZNEmptyDataSet
@@ -15,8 +21,11 @@ DEPENDENCIES:
   - Kanna (~> 4.0.0)
   - Kingfisher
   - Masonry
+  - R.swift
   - SDWebImage (~> 4.0)
   - SnapKit
+  - Socket.IO-Client-Swift (~> 15.0.0)
+  - Starscream (~> 3.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -25,18 +34,26 @@ SPEC REPOS:
     - Kanna
     - Kingfisher
     - Masonry
+    - R.swift
+    - R.swift.Library
     - SDWebImage
     - SnapKit
+    - Socket.IO-Client-Swift
+    - Starscream
 
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  Eureka: 28ea296f06710f6745266b71f17862048941a32d
+  Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
   Kanna: 0ebbdd0e7e3308f0aafbd569e79c8cadc5eb877c
-  Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  Socket.IO-Client-Swift: c039a808195d22a7192962841b8c035cb61ea49e
+  Starscream: 08172b481e145289c4930cb567230fb55897cfa4
 
-PODFILE CHECKSUM: 3becbfcea675d3ead45ba8e938ce9752c7b1cbf7
+PODFILE CHECKSUM: b8a0f9921946463193a37b651e29335a73c1c0c2
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

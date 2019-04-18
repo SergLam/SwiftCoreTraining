@@ -16,4 +16,11 @@ class AlertPresenter {
         alert.addAction(action)
         vc.present(alert, animated: true, completion: nil)
     }
+    
+    static func showSuccessMessage(at vc: UIViewController, message: String) {
+        let alert = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { _ in }
+        alert.addAction(action)
+        vc.present(alert, animated: true, completion: nil)
+    }
 }

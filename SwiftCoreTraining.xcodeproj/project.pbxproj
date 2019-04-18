@@ -20,6 +20,8 @@
 		7C2F037E21FE151A00A50936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */; };
 		7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */; };
 		7C37B4832247A353003BFF7A /* RecursiveAlgorithmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37B4822247A353003BFF7A /* RecursiveAlgorithmsVC.swift */; };
+		7C37B4862247DE61003BFF7A /* SubclassingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37B4852247DE61003BFF7A /* SubclassingVC.swift */; };
+		7C580CC522637F8C0082019A /* CustomTransitionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C580CC422637F8C0082019A /* CustomTransitionsVC.swift */; };
 		7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5AEA3A2222B8140036692F /* ExampleView.m */; };
 		7C64B848224592EA00480D88 /* AlgorhitmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64B847224592EA00480D88 /* AlgorhitmsVC.swift */; };
 		7C64B84A224597F100480D88 /* page.html in Resources */ = {isa = PBXBuildFile; fileRef = 7C64B849224597F100480D88 /* page.html */; };
@@ -28,6 +30,20 @@
 		7C64B85122463E8A00480D88 /* CustomHTMLParserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64B85022463E8900480D88 /* CustomHTMLParserVC.swift */; };
 		7C9360AF2216AFFB00ADC6F9 /* ArraySetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9360AE2216AFFB00ADC6F9 /* ArraySetVC.swift */; };
 		7C9360B12216B04500ADC6F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9360B02216B04500ADC6F9 /* User.swift */; };
+		7CBA68E42268FDA800AC4CEF /* WebSocketStarscreamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA68E32268FDA800AC4CEF /* WebSocketStarscreamVC.swift */; };
+		7CBA68E62268FF1A00AC4CEF /* SocketTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA68E52268FF1A00AC4CEF /* SocketTarget.swift */; };
+		7CDB28152263892A00546F9C /* CustomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB28142263892A00546F9C /* CustomAnimator.swift */; };
+		7CDB2818226389FB00546F9C /* CustomTransitionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB2817226389FB00546F9C /* CustomTransitionsView.swift */; };
+		7CDB281B22638BC800546F9C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB281A22638BC800546F9C /* R.generated.swift */; };
+		7CDB281D22639BE700546F9C /* TransitionPushVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB281C22639BE700546F9C /* TransitionPushVC.swift */; };
+		7CDB281F22639C8400546F9C /* TransitionPushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB281E22639C8400546F9C /* TransitionPushView.swift */; };
+		7CDB28212263A2FD00546F9C /* FadePushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB28202263A2FD00546F9C /* FadePushAnimator.swift */; };
+		7CDB28242263B30900546F9C /* FadePopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB28232263B30900546F9C /* FadePopAnimator.swift */; };
+		7CDB28272263BA8700546F9C /* ZoomPushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB28262263BA8700546F9C /* ZoomPushAnimator.swift */; };
+		7CDB28292263BA9F00546F9C /* ZoomPopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB28282263BA9F00546F9C /* ZoomPopAnimator.swift */; };
+		7CDB282B2263CC5900546F9C /* UIScreen+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */; };
+		7CDB28302263DA7A00546F9C /* SystemTransitionRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB282F2263DA7A00546F9C /* SystemTransitionRootVC.swift */; };
+		7CDB28322263DA9200546F9C /* SystemTransitionPushVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB28312263DA9200546F9C /* SystemTransitionPushVC.swift */; };
 		7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE5D7D5221F48D00049E3A9 /* ExampleVC.m */; };
 		7CE7C1CC2222BF1200CDAF34 /* ExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE7C1CB2222BF1200CDAF34 /* ExampleCell.m */; };
 		7CE7C1D22223127C00CDAF34 /* ExampleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE7C1D12223127C00CDAF34 /* ExampleViewModel.m */; };
@@ -77,6 +93,8 @@
 		7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewModel.swift; sourceTree = "<group>"; };
 		7C37B4822247A353003BFF7A /* RecursiveAlgorithmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveAlgorithmsVC.swift; sourceTree = "<group>"; };
+		7C37B4852247DE61003BFF7A /* SubclassingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubclassingVC.swift; sourceTree = "<group>"; };
+		7C580CC422637F8C0082019A /* CustomTransitionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionsVC.swift; sourceTree = "<group>"; };
 		7C5AEA392222B8140036692F /* ExampleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleView.h; sourceTree = "<group>"; };
 		7C5AEA3A2222B8140036692F /* ExampleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleView.m; sourceTree = "<group>"; };
 		7C64B847224592EA00480D88 /* AlgorhitmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorhitmsVC.swift; sourceTree = "<group>"; };
@@ -87,6 +105,20 @@
 		7C9360AE2216AFFB00ADC6F9 /* ArraySetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArraySetVC.swift; sourceTree = "<group>"; };
 		7C9360B02216B04500ADC6F9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7CA700117650CC9F4EA2C7EE /* Pods-SwiftCoreTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7CBA68E32268FDA800AC4CEF /* WebSocketStarscreamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketStarscreamVC.swift; sourceTree = "<group>"; };
+		7CBA68E52268FF1A00AC4CEF /* SocketTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketTarget.swift; sourceTree = "<group>"; };
+		7CDB28142263892A00546F9C /* CustomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimator.swift; sourceTree = "<group>"; };
+		7CDB2817226389FB00546F9C /* CustomTransitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionsView.swift; sourceTree = "<group>"; };
+		7CDB281A22638BC800546F9C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		7CDB281C22639BE700546F9C /* TransitionPushVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionPushVC.swift; sourceTree = "<group>"; };
+		7CDB281E22639C8400546F9C /* TransitionPushView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionPushView.swift; sourceTree = "<group>"; };
+		7CDB28202263A2FD00546F9C /* FadePushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadePushAnimator.swift; sourceTree = "<group>"; };
+		7CDB28232263B30900546F9C /* FadePopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadePopAnimator.swift; sourceTree = "<group>"; };
+		7CDB28262263BA8700546F9C /* ZoomPushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomPushAnimator.swift; sourceTree = "<group>"; };
+		7CDB28282263BA9F00546F9C /* ZoomPopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomPopAnimator.swift; sourceTree = "<group>"; };
+		7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Ext.swift"; sourceTree = "<group>"; };
+		7CDB282F2263DA7A00546F9C /* SystemTransitionRootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTransitionRootVC.swift; sourceTree = "<group>"; };
+		7CDB28312263DA9200546F9C /* SystemTransitionPushVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTransitionPushVC.swift; sourceTree = "<group>"; };
 		7CE5D7D2221F37DD0049E3A9 /* SwiftCoreTraining-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftCoreTraining-Bridging-Header.h"; sourceTree = "<group>"; };
 		7CE5D7D4221F48D00049E3A9 /* ExampleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleVC.h; sourceTree = "<group>"; };
 		7CE5D7D5221F48D00049E3A9 /* ExampleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleVC.m; sourceTree = "<group>"; };
@@ -156,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */,
+				7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,6 +227,10 @@
 		7C2F034A21FCC5D000A50936 /* SwiftCoreTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7CBA68E22268FC7F00AC4CEF /* WebSockets */,
+				7CDB282C2263D9D200546F9C /* SystemTransitions */,
+				7C580CC322637F700082019A /* CustomTransitions */,
+				7C37B4842247DE4B003BFF7A /* Access Levels */,
 				7CE5D7D3221F48440049E3A9 /* ObjcUsageInSwift */,
 				7C64B84B224628F100480D88 /* Helpers */,
 				7C64B846224592C400480D88 /* Algorithms */,
@@ -232,6 +269,7 @@
 				7C2F037921FE135B00A50936 /* Assets.xcassets */,
 				7C2F035721FCC5D200A50936 /* Info.plist */,
 				7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */,
+				7CDB281A22638BC800546F9C /* R.generated.swift */,
 				7CE5D7D2221F37DD0049E3A9 /* SwiftCoreTraining-Bridging-Header.h */,
 			);
 			path = BundleFiles;
@@ -244,6 +282,23 @@
 				7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		7C37B4842247DE4B003BFF7A /* Access Levels */ = {
+			isa = PBXGroup;
+			children = (
+				7C37B4852247DE61003BFF7A /* SubclassingVC.swift */,
+			);
+			path = "Access Levels";
+			sourceTree = "<group>";
+		};
+		7C580CC322637F700082019A /* CustomTransitions */ = {
+			isa = PBXGroup;
+			children = (
+				7CDB28162263892E00546F9C /* CustomAnimators */,
+				7CDB28132263890D00546F9C /* ViewControllers */,
+			);
+			path = CustomTransitions;
 			sourceTree = "<group>";
 		};
 		7C64B846224592C400480D88 /* Algorithms */ = {
@@ -273,6 +328,63 @@
 				7C9360B02216B04500ADC6F9 /* User.swift */,
 			);
 			path = "Array-Set";
+			sourceTree = "<group>";
+		};
+		7CBA68E22268FC7F00AC4CEF /* WebSockets */ = {
+			isa = PBXGroup;
+			children = (
+				7CBA68E32268FDA800AC4CEF /* WebSocketStarscreamVC.swift */,
+				7CBA68E52268FF1A00AC4CEF /* SocketTarget.swift */,
+			);
+			path = WebSockets;
+			sourceTree = "<group>";
+		};
+		7CDB28132263890D00546F9C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C580CC422637F8C0082019A /* CustomTransitionsVC.swift */,
+				7CDB2817226389FB00546F9C /* CustomTransitionsView.swift */,
+				7CDB281C22639BE700546F9C /* TransitionPushVC.swift */,
+				7CDB281E22639C8400546F9C /* TransitionPushView.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7CDB28162263892E00546F9C /* CustomAnimators */ = {
+			isa = PBXGroup;
+			children = (
+				7CDB28252263B94200546F9C /* ZoomAnimation */,
+				7CDB28222263B18200546F9C /* FadeAnimation */,
+				7CDB28142263892A00546F9C /* CustomAnimator.swift */,
+			);
+			path = CustomAnimators;
+			sourceTree = "<group>";
+		};
+		7CDB28222263B18200546F9C /* FadeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				7CDB28202263A2FD00546F9C /* FadePushAnimator.swift */,
+				7CDB28232263B30900546F9C /* FadePopAnimator.swift */,
+			);
+			path = FadeAnimation;
+			sourceTree = "<group>";
+		};
+		7CDB28252263B94200546F9C /* ZoomAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				7CDB28262263BA8700546F9C /* ZoomPushAnimator.swift */,
+				7CDB28282263BA9F00546F9C /* ZoomPopAnimator.swift */,
+			);
+			path = ZoomAnimation;
+			sourceTree = "<group>";
+		};
+		7CDB282C2263D9D200546F9C /* SystemTransitions */ = {
+			isa = PBXGroup;
+			children = (
+				7CDB282F2263DA7A00546F9C /* SystemTransitionRootVC.swift */,
+				7CDB28312263DA9200546F9C /* SystemTransitionPushVC.swift */,
+			);
+			path = SystemTransitions;
 			sourceTree = "<group>";
 		};
 		7CE5D7D3221F48440049E3A9 /* ObjcUsageInSwift */ = {
@@ -316,6 +428,7 @@
 			buildConfigurationList = 7C2F037021FCC5D200A50936 /* Build configuration list for PBXNativeTarget "SwiftCoreTraining" */;
 			buildPhases = (
 				EA0A9845F6942D7DE111C3EF /* [CP] Check Pods Manifest.lock */,
+				7CDB281922638B2A00546F9C /* R.swift */,
 				7C2F034421FCC5D000A50936 /* Sources */,
 				7C2F034521FCC5D000A50936 /* Frameworks */,
 				7C2F034621FCC5D000A50936 /* Resources */,
@@ -439,6 +552,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7CDB281922638B2A00546F9C /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		954B60FF53BDAFD76A6E7D42 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,14 +602,17 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -487,12 +623,15 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C35EFD3F2C814054E6D5CDE5 /* [CP] Check Pods Manifest.lock */ = {
@@ -548,21 +687,37 @@
 			files = (
 				7C1ADDC62206E9C000F70F2C /* SizeClassesView.swift in Sources */,
 				7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */,
+				7CDB28212263A2FD00546F9C /* FadePushAnimator.swift in Sources */,
 				7CE7C1D62223377100CDAF34 /* UserModel.m in Sources */,
 				7CE7C1D22223127C00CDAF34 /* ExampleViewModel.m in Sources */,
 				7C1F1D6122025361005C82FF /* DebugVC.swift in Sources */,
+				7CDB28302263DA7A00546F9C /* SystemTransitionRootVC.swift in Sources */,
+				7CDB281F22639C8400546F9C /* TransitionPushView.swift in Sources */,
 				7C2F034E21FCC5D000A50936 /* GCDVC.swift in Sources */,
+				7CBA68E62268FF1A00AC4CEF /* SocketTarget.swift in Sources */,
 				7C1F1D6422025511005C82FF /* SizeClassesVC.swift in Sources */,
 				7C9360B12216B04500ADC6F9 /* User.swift in Sources */,
 				7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */,
+				7CDB2818226389FB00546F9C /* CustomTransitionsView.swift in Sources */,
+				7C37B4862247DE61003BFF7A /* SubclassingVC.swift in Sources */,
+				7CDB28322263DA9200546F9C /* SystemTransitionPushVC.swift in Sources */,
+				7CDB281B22638BC800546F9C /* R.generated.swift in Sources */,
 				7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */,
 				7C37B4832247A353003BFF7A /* RecursiveAlgorithmsVC.swift in Sources */,
 				7CE7C1CC2222BF1200CDAF34 /* ExampleCell.m in Sources */,
+				7CBA68E42268FDA800AC4CEF /* WebSocketStarscreamVC.swift in Sources */,
+				7CDB281D22639BE700546F9C /* TransitionPushVC.swift in Sources */,
+				7CDB28242263B30900546F9C /* FadePopAnimator.swift in Sources */,
 				7C64B848224592EA00480D88 /* AlgorhitmsVC.swift in Sources */,
 				7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */,
+				7C580CC522637F8C0082019A /* CustomTransitionsVC.swift in Sources */,
 				7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */,
+				7CDB28292263BA9F00546F9C /* ZoomPopAnimator.swift in Sources */,
+				7CDB282B2263CC5900546F9C /* UIScreen+Ext.swift in Sources */,
+				7CDB28152263892A00546F9C /* CustomAnimator.swift in Sources */,
 				7C64B85122463E8A00480D88 /* CustomHTMLParserVC.swift in Sources */,
 				7C9360AF2216AFFB00ADC6F9 /* ArraySetVC.swift in Sources */,
+				7CDB28272263BA8700546F9C /* ZoomPushAnimator.swift in Sources */,
 				7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */,
 				7C64B84F22462B7400480D88 /* XMLParserVC.swift in Sources */,
 			);

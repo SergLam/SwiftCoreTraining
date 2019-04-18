@@ -9,6 +9,11 @@ target 'SwiftCoreTraining' do
   pod 'Eureka'
   pod 'SnapKit'
   pod 'Kingfisher'
+  pod 'R.swift'
+  
+  # WebSockets
+  pod 'Starscream', '~> 3.1.0'
+  pod 'Socket.IO-Client-Swift', '~> 15.0.0'
   
   # HTML Parsing
   pod 'Kanna', '~> 4.0.0'

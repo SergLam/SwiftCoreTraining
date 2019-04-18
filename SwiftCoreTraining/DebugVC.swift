@@ -22,6 +22,12 @@ class DebugVC: FormViewController {
     
     private func setupForm() {
         form
+            +++ Section("WebSockets")
+            <<< LabelRow() { row in
+                row.title = "WebSockets - StarScream"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(WebSocketStarscreamVC(), animated: true)
+                })
             +++ Section("GCD")
             <<< LabelRow() { row in
                 row.title = "GCDVC"
@@ -33,6 +39,23 @@ class DebugVC: FormViewController {
                 row.title = "SizeClasses (Orientation adaptive layout)"
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(SizeClassesVC(), animated: true)
+                })
+            <<< LabelRow() { row in
+                row.title = "CustomTransitions (Animations)"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(CustomTransitionsVC(), animated: true)
+                })
+            <<< LabelRow() { row in
+                row.title = "SystemTransitions"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(SystemTransitionRootVC(), animated: true)
+                })
+            
+            +++ Section("Swift Basics")
+            <<< LabelRow() { row in
+                row.title = "SubclassingVC"
+                }.onCellSelection({ [unowned self] (_, _) in
+                 self.navigationController?.pushViewController(SubclassingVC(), animated: true)
                 })
             +++ Section("Data structures and algorightms")
             <<< LabelRow() { row in
