@@ -9,6 +9,7 @@ target 'SwiftCoreTraining' do
   pod 'Eureka'
   pod 'SnapKit'
   pod 'Kingfisher'
+  pod 'R.swift'
   
   # HTML Parsing
   pod 'Kanna', '~> 4.0.0'

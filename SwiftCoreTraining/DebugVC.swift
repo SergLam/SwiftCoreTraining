@@ -34,6 +34,23 @@ class DebugVC: FormViewController {
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(SizeClassesVC(), animated: true)
                 })
+            <<< LabelRow() { row in
+                row.title = "CustomTransitions (Animations)"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(CustomTransitionsVC(), animated: true)
+                })
+            <<< LabelRow() { row in
+                row.title = "SystemTransitions"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(SystemTransitionRootVC(), animated: true)
+                })
+            
+            +++ Section("Swift Basics")
+            <<< LabelRow() { row in
+                row.title = "SubclassingVC"
+                }.onCellSelection({ [unowned self] (_, _) in
+                 self.navigationController?.pushViewController(SubclassingVC(), animated: true)
+                })
             +++ Section("Data structures and algorightms")
             <<< LabelRow() { row in
                 row.title = "Array-Set convertions"
