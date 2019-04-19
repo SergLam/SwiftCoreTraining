@@ -49,6 +49,8 @@
 		7CE7C1D22223127C00CDAF34 /* ExampleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE7C1D12223127C00CDAF34 /* ExampleViewModel.m */; };
 		7CE7C1D62223377100CDAF34 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE7C1D52223377100CDAF34 /* UserModel.m */; };
 		86D51C3297479D0338A6D137 /* Pods_SwiftCoreTrainingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF259DAFE179C80A3B0F011 /* Pods_SwiftCoreTrainingUITests.framework */; };
+		9C295B362269B16C00527898 /* WebSocketStarscreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C295B352269B16C00527898 /* WebSocketStarscreamView.swift */; };
+		9C295B382269BD9B00527898 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C295B372269BD9B00527898 /* UIButton+Ext.swift */; };
 		BFD1AF259D05A309A7E05EBF /* Pods_SwiftCoreTraining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA89E5239673E10E8CD7519 /* Pods_SwiftCoreTraining.framework */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +130,8 @@
 		7CE7C1D12223127C00CDAF34 /* ExampleViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleViewModel.m; sourceTree = "<group>"; };
 		7CE7C1D42223377100CDAF34 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		7CE7C1D52223377100CDAF34 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		9C295B352269B16C00527898 /* WebSocketStarscreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketStarscreamView.swift; sourceTree = "<group>"; };
+		9C295B372269BD9B00527898 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		ACF259DAFE179C80A3B0F011 /* Pods_SwiftCoreTrainingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTrainingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2750D5A2AA4194665FD4CD6 /* Pods-SwiftCoreTrainingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8CD09ADDAEDEEDF44866504 /* Pods-SwiftCoreTraining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 			children = (
 				7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */,
 				7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */,
+				9C295B372269BD9B00527898 /* UIButton+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				7CBA68E32268FDA800AC4CEF /* WebSocketStarscreamVC.swift */,
+				9C295B352269B16C00527898 /* WebSocketStarscreamView.swift */,
 				7CBA68E52268FF1A00AC4CEF /* SocketTarget.swift */,
 			);
 			path = WebSockets;
@@ -712,9 +718,11 @@
 				7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */,
 				7C580CC522637F8C0082019A /* CustomTransitionsVC.swift in Sources */,
 				7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */,
+				9C295B362269B16C00527898 /* WebSocketStarscreamView.swift in Sources */,
 				7CDB28292263BA9F00546F9C /* ZoomPopAnimator.swift in Sources */,
 				7CDB282B2263CC5900546F9C /* UIScreen+Ext.swift in Sources */,
 				7CDB28152263892A00546F9C /* CustomAnimator.swift in Sources */,
+				9C295B382269BD9B00527898 /* UIButton+Ext.swift in Sources */,
 				7C64B85122463E8A00480D88 /* CustomHTMLParserVC.swift in Sources */,
 				7C9360AF2216AFFB00ADC6F9 /* ArraySetVC.swift in Sources */,
 				7CDB28272263BA8700546F9C /* ZoomPushAnimator.swift in Sources */,
@@ -887,7 +895,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.SwiftCoreTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SHARED_PRECOMPS_DIR = "$(SRCROOT)/BundleFiles/MyPrefixHeaderFile.pch";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/macbookpro/XCodeProjects/swift_core_training/SwiftCoreTraining/SwiftCoreTraining/BundleFiles/SwiftCoreTraining-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/SwiftCoreTraining-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -909,7 +917,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.SwiftCoreTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SHARED_PRECOMPS_DIR = "$(SRCROOT)/BundleFiles/MyPrefixHeaderFile.pch";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/macbookpro/XCodeProjects/swift_core_training/SwiftCoreTraining/SwiftCoreTraining/BundleFiles/SwiftCoreTraining-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/SwiftCoreTraining-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
