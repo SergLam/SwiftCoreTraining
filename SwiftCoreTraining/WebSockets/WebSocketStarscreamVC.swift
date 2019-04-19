@@ -62,20 +62,15 @@ class WebSocketStarscreamVC: UIViewController {
 
 extension WebSocketStarscreamVC: WebSocketAdvancedDelegate {
     func websocketDidConnect(socket: WebSocket) {
-        debugPrint("Connected")
-        //        changeImage() // works
-        //        sendMessage()
-//        loginToSocket() // works
-//        changeAnonImage() // works
-//        setProfileType()
-//        changeBio() // works
-        
+        debugPrint("Connected")        
     }
     
     func websocketDidDisconnect(socket: WebSocket, error: Error?) {
         debugPrint("Disconnected")
         if let error = error {
             AlertPresenter.showError(at: self, error: error.localizedDescription)
+        } else {
+            socket.connect()
         }
     }
     
