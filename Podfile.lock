@@ -11,6 +11,9 @@ PODS:
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
   - SnapKit (4.2.0)
+  - Socket.IO-Client-Swift (15.0.0):
+    - Starscream (~> 3.1)
+  - Starscream (3.1.0)
 
 DEPENDENCIES:
   - DZNEmptyDataSet
@@ -21,6 +24,8 @@ DEPENDENCIES:
   - R.swift
   - SDWebImage (~> 4.0)
   - SnapKit
+  - Socket.IO-Client-Swift (~> 15.0.0)
+  - Starscream (~> 3.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -33,6 +38,8 @@ SPEC REPOS:
     - R.swift.Library
     - SDWebImage
     - SnapKit
+    - Socket.IO-Client-Swift
+    - Starscream
 
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -44,7 +51,9 @@ SPEC CHECKSUMS:
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  Socket.IO-Client-Swift: c039a808195d22a7192962841b8c035cb61ea49e
+  Starscream: 08172b481e145289c4930cb567230fb55897cfa4
 
-PODFILE CHECKSUM: 00f9b8926b7dffd1b8a78fc6e417655df1149dbf
+PODFILE CHECKSUM: b8a0f9921946463193a37b651e29335a73c1c0c2
 
 COCOAPODS: 1.6.1

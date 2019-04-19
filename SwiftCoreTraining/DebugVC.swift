@@ -22,6 +22,12 @@ class DebugVC: FormViewController {
     
     private func setupForm() {
         form
+            +++ Section("WebSockets")
+            <<< LabelRow() { row in
+                row.title = "WebSockets - StarScream"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(WebSocketStarscreamVC(), animated: true)
+                })
             +++ Section("GCD")
             <<< LabelRow() { row in
                 row.title = "GCDVC"
