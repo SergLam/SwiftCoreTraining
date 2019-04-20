@@ -21,6 +21,8 @@
 		7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */; };
 		7C37B4832247A353003BFF7A /* RecursiveAlgorithmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37B4822247A353003BFF7A /* RecursiveAlgorithmsVC.swift */; };
 		7C37B4862247DE61003BFF7A /* SubclassingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C37B4852247DE61003BFF7A /* SubclassingVC.swift */; };
+		7C39E212226AFB9B006B1F3C /* KVO_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39E211226AFB9B006B1F3C /* KVO_VC.swift */; };
+		7C39E216226B14C8006B1F3C /* KVC_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39E215226B14C8006B1F3C /* KVC_VC.swift */; };
 		7C580CC522637F8C0082019A /* CustomTransitionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C580CC422637F8C0082019A /* CustomTransitionsVC.swift */; };
 		7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5AEA3A2222B8140036692F /* ExampleView.m */; };
 		7C64B848224592EA00480D88 /* AlgorhitmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64B847224592EA00480D88 /* AlgorhitmsVC.swift */; };
@@ -96,6 +98,8 @@
 		7C2F038121FE4B3D00A50936 /* GCDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewModel.swift; sourceTree = "<group>"; };
 		7C37B4822247A353003BFF7A /* RecursiveAlgorithmsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveAlgorithmsVC.swift; sourceTree = "<group>"; };
 		7C37B4852247DE61003BFF7A /* SubclassingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubclassingVC.swift; sourceTree = "<group>"; };
+		7C39E211226AFB9B006B1F3C /* KVO_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVO_VC.swift; sourceTree = "<group>"; };
+		7C39E215226B14C8006B1F3C /* KVC_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVC_VC.swift; sourceTree = "<group>"; };
 		7C580CC422637F8C0082019A /* CustomTransitionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionsVC.swift; sourceTree = "<group>"; };
 		7C5AEA392222B8140036692F /* ExampleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleView.h; sourceTree = "<group>"; };
 		7C5AEA3A2222B8140036692F /* ExampleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleView.m; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 		7C2F034A21FCC5D000A50936 /* SwiftCoreTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7C39E210226AFB78006B1F3C /* KVO_KVC */,
 				7CBA68E22268FC7F00AC4CEF /* WebSockets */,
 				7CDB282C2263D9D200546F9C /* SystemTransitions */,
 				7C580CC322637F700082019A /* CustomTransitions */,
@@ -295,6 +300,31 @@
 				7C37B4852247DE61003BFF7A /* SubclassingVC.swift */,
 			);
 			path = "Access Levels";
+			sourceTree = "<group>";
+		};
+		7C39E210226AFB78006B1F3C /* KVO_KVC */ = {
+			isa = PBXGroup;
+			children = (
+				7C39E214226B050A006B1F3C /* KVC */,
+				7C39E213226AFB9F006B1F3C /* KVO */,
+			);
+			path = KVO_KVC;
+			sourceTree = "<group>";
+		};
+		7C39E213226AFB9F006B1F3C /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				7C39E211226AFB9B006B1F3C /* KVO_VC.swift */,
+			);
+			path = KVO;
+			sourceTree = "<group>";
+		};
+		7C39E214226B050A006B1F3C /* KVC */ = {
+			isa = PBXGroup;
+			children = (
+				7C39E215226B14C8006B1F3C /* KVC_VC.swift */,
+			);
+			path = KVC;
 			sourceTree = "<group>";
 		};
 		7C580CC322637F700082019A /* CustomTransitions */ = {
@@ -700,6 +730,7 @@
 				7CDB28302263DA7A00546F9C /* SystemTransitionRootVC.swift in Sources */,
 				7CDB281F22639C8400546F9C /* TransitionPushView.swift in Sources */,
 				7C2F034E21FCC5D000A50936 /* GCDVC.swift in Sources */,
+				7C39E212226AFB9B006B1F3C /* KVO_VC.swift in Sources */,
 				7CBA68E62268FF1A00AC4CEF /* SocketTarget.swift in Sources */,
 				7C1F1D6422025511005C82FF /* SizeClassesVC.swift in Sources */,
 				7C9360B12216B04500ADC6F9 /* User.swift in Sources */,
@@ -708,6 +739,7 @@
 				7C37B4862247DE61003BFF7A /* SubclassingVC.swift in Sources */,
 				7CDB28322263DA9200546F9C /* SystemTransitionPushVC.swift in Sources */,
 				7CDB281B22638BC800546F9C /* R.generated.swift in Sources */,
+				7C39E216226B14C8006B1F3C /* KVC_VC.swift in Sources */,
 				7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */,
 				7C37B4832247A353003BFF7A /* RecursiveAlgorithmsVC.swift in Sources */,
 				7CE7C1CC2222BF1200CDAF34 /* ExampleCell.m in Sources */,
