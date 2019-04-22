@@ -42,10 +42,10 @@ class WebSocketSocketIOVC: UIViewController {
     @objc func sendDataToSocket(_ button: UIButton) {
         let index = button.tag
         let data = SocketCallsJSONData.allData[index]
-        let callType = SocketCalls.allCases[index]
+        // let callType = SocketCalls.allCases[index]
         if socket.status == .connected {
-            socket.emit(callType.rawValue, data) {
-                debugPrint("\(callType.rawValue) on  write")
+            socket.emit("message", data) {
+                debugPrint("message on  write")
             }
         } else {
             AlertPresenter.showError(at: self, error: "Socket not connected")
@@ -69,10 +69,8 @@ class WebSocketSocketIOVC: UIViewController {
     }
     
     private func setupSocketListeners() {
-        for call in SocketCalls.allCases {
-            socket.on(call.rawValue) { [unowned self] (data, ack) in
-                AlertPresenter.showSuccessMessage(at: self, message: String(describing: data))
-            }
+        socket.on("message") { [unowned self] (data, ack) in
+            AlertPresenter.showSocketEventDescription(at: self, title: data.first.debugDescription, message: String(describing: data))
         }
     }
 }
