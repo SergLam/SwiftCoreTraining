@@ -34,6 +34,10 @@
 		7C9360B12216B04500ADC6F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9360B02216B04500ADC6F9 /* User.swift */; };
 		7CBA68E42268FDA800AC4CEF /* WebSocketStarscreamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA68E32268FDA800AC4CEF /* WebSocketStarscreamVC.swift */; };
 		7CBA68E62268FF1A00AC4CEF /* SocketTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA68E52268FF1A00AC4CEF /* SocketTarget.swift */; };
+		7CD73B71226E435F00B31E54 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B6D226E435E00B31E54 /* CoreDataManager.swift */; };
+		7CD73B72226E435F00B31E54 /* CoreDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B6E226E435E00B31E54 /* CoreDataVC.swift */; };
+		7CD73B73226E435F00B31E54 /* CoreDataOpetations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B6F226E435E00B31E54 /* CoreDataOpetations.swift */; };
+		7CD73B74226E435F00B31E54 /* CoreDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B70226E435E00B31E54 /* CoreDataView.swift */; };
 		7CDB28152263892A00546F9C /* CustomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB28142263892A00546F9C /* CustomAnimator.swift */; };
 		7CDB2818226389FB00546F9C /* CustomTransitionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB2817226389FB00546F9C /* CustomTransitionsView.swift */; };
 		7CDB281B22638BC800546F9C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB281A22638BC800546F9C /* R.generated.swift */; };
@@ -116,6 +120,10 @@
 		7CA700117650CC9F4EA2C7EE /* Pods-SwiftCoreTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7CBA68E32268FDA800AC4CEF /* WebSocketStarscreamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketStarscreamVC.swift; sourceTree = "<group>"; };
 		7CBA68E52268FF1A00AC4CEF /* SocketTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketTarget.swift; sourceTree = "<group>"; };
+		7CD73B6D226E435E00B31E54 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		7CD73B6E226E435E00B31E54 /* CoreDataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataVC.swift; sourceTree = "<group>"; };
+		7CD73B6F226E435E00B31E54 /* CoreDataOpetations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOpetations.swift; sourceTree = "<group>"; };
+		7CD73B70226E435E00B31E54 /* CoreDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataView.swift; sourceTree = "<group>"; };
 		7CDB28142263892A00546F9C /* CustomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimator.swift; sourceTree = "<group>"; };
 		7CDB2817226389FB00546F9C /* CustomTransitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionsView.swift; sourceTree = "<group>"; };
 		7CDB281A22638BC800546F9C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -242,6 +250,7 @@
 		7C2F034A21FCC5D000A50936 /* SwiftCoreTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7CD73B6C226E435E00B31E54 /* CoreData */,
 				7C39E210226AFB78006B1F3C /* KVO_KVC */,
 				7CBA68E22268FC7F00AC4CEF /* WebSockets */,
 				7CDB282C2263D9D200546F9C /* SystemTransitions */,
@@ -378,6 +387,17 @@
 				9C2481AA226DACD900BC9B79 /* StarScream */,
 			);
 			path = WebSockets;
+			sourceTree = "<group>";
+		};
+		7CD73B6C226E435E00B31E54 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7CD73B6D226E435E00B31E54 /* CoreDataManager.swift */,
+				7CD73B6E226E435E00B31E54 /* CoreDataVC.swift */,
+				7CD73B6F226E435E00B31E54 /* CoreDataOpetations.swift */,
+				7CD73B70226E435E00B31E54 /* CoreDataView.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		7CDB28132263890D00546F9C /* ViewControllers */ = {
@@ -749,6 +769,7 @@
 				7C1ADDC62206E9C000F70F2C /* SizeClassesView.swift in Sources */,
 				7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */,
 				7CDB28212263A2FD00546F9C /* FadePushAnimator.swift in Sources */,
+				7CD73B72226E435F00B31E54 /* CoreDataVC.swift in Sources */,
 				7CE7C1D62223377100CDAF34 /* UserModel.m in Sources */,
 				7CE7C1D22223127C00CDAF34 /* ExampleViewModel.m in Sources */,
 				7C1F1D6122025361005C82FF /* DebugVC.swift in Sources */,
@@ -763,17 +784,20 @@
 				7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */,
 				7CDB2818226389FB00546F9C /* CustomTransitionsView.swift in Sources */,
 				9C2481AF226DAD9800BC9B79 /* WebSocketSocketIOView.swift in Sources */,
+				7CD73B73226E435F00B31E54 /* CoreDataOpetations.swift in Sources */,
 				7C37B4862247DE61003BFF7A /* SubclassingVC.swift in Sources */,
 				7CDB28322263DA9200546F9C /* SystemTransitionPushVC.swift in Sources */,
 				7CDB281B22638BC800546F9C /* R.generated.swift in Sources */,
 				7C39E216226B14C8006B1F3C /* KVC_VC.swift in Sources */,
 				7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */,
+				7CD73B71226E435F00B31E54 /* CoreDataManager.swift in Sources */,
 				7C37B4832247A353003BFF7A /* RecursiveAlgorithmsVC.swift in Sources */,
 				7CE7C1CC2222BF1200CDAF34 /* ExampleCell.m in Sources */,
 				7CBA68E42268FDA800AC4CEF /* WebSocketStarscreamVC.swift in Sources */,
 				7CDB281D22639BE700546F9C /* TransitionPushVC.swift in Sources */,
 				7CDB28242263B30900546F9C /* FadePopAnimator.swift in Sources */,
 				7C64B848224592EA00480D88 /* AlgorhitmsVC.swift in Sources */,
+				7CD73B74226E435F00B31E54 /* CoreDataView.swift in Sources */,
 				7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */,
 				7C580CC522637F8C0082019A /* CustomTransitionsVC.swift in Sources */,
 				7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */,
