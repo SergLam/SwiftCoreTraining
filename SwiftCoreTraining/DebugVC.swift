@@ -28,6 +28,11 @@ class DebugVC: FormViewController {
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(WebSocketStarscreamVC(), animated: true)
                 })
+            <<< LabelRow() { row in
+                row.title = "WebSockets - Socket.IO"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(WebSocketSocketIOVC(), animated: true)
+                })
             +++ Section("GCD")
             <<< LabelRow() { row in
                 row.title = "GCDVC"

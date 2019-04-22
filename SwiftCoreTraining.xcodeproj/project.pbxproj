@@ -49,6 +49,9 @@
 		7CE7C1D22223127C00CDAF34 /* ExampleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE7C1D12223127C00CDAF34 /* ExampleViewModel.m */; };
 		7CE7C1D62223377100CDAF34 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE7C1D52223377100CDAF34 /* UserModel.m */; };
 		86D51C3297479D0338A6D137 /* Pods_SwiftCoreTrainingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF259DAFE179C80A3B0F011 /* Pods_SwiftCoreTrainingUITests.framework */; };
+		9C2481AD226DAD2700BC9B79 /* WebSocketSocketIOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2481AC226DAD2700BC9B79 /* WebSocketSocketIOVC.swift */; };
+		9C2481AF226DAD9800BC9B79 /* WebSocketSocketIOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2481AE226DAD9800BC9B79 /* WebSocketSocketIOView.swift */; };
+		9C2481B1226DADE400BC9B79 /* SocketCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2481B0226DADE400BC9B79 /* SocketCalls.swift */; };
 		9C295B362269B16C00527898 /* WebSocketStarscreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C295B352269B16C00527898 /* WebSocketStarscreamView.swift */; };
 		9C295B382269BD9B00527898 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C295B372269BD9B00527898 /* UIButton+Ext.swift */; };
 		BFD1AF259D05A309A7E05EBF /* Pods_SwiftCoreTraining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA89E5239673E10E8CD7519 /* Pods_SwiftCoreTraining.framework */; };
@@ -130,6 +133,9 @@
 		7CE7C1D12223127C00CDAF34 /* ExampleViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleViewModel.m; sourceTree = "<group>"; };
 		7CE7C1D42223377100CDAF34 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		7CE7C1D52223377100CDAF34 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		9C2481AC226DAD2700BC9B79 /* WebSocketSocketIOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketSocketIOVC.swift; sourceTree = "<group>"; };
+		9C2481AE226DAD9800BC9B79 /* WebSocketSocketIOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketSocketIOView.swift; sourceTree = "<group>"; };
+		9C2481B0226DADE400BC9B79 /* SocketCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketCalls.swift; sourceTree = "<group>"; };
 		9C295B352269B16C00527898 /* WebSocketStarscreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketStarscreamView.swift; sourceTree = "<group>"; };
 		9C295B372269BD9B00527898 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		ACF259DAFE179C80A3B0F011 /* Pods_SwiftCoreTrainingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTrainingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,9 +344,8 @@
 		7CBA68E22268FC7F00AC4CEF /* WebSockets */ = {
 			isa = PBXGroup;
 			children = (
-				7CBA68E32268FDA800AC4CEF /* WebSocketStarscreamVC.swift */,
-				9C295B352269B16C00527898 /* WebSocketStarscreamView.swift */,
-				7CBA68E52268FF1A00AC4CEF /* SocketTarget.swift */,
+				9C2481AB226DACE900BC9B79 /* Socket.io */,
+				9C2481AA226DACD900BC9B79 /* StarScream */,
 			);
 			path = WebSockets;
 			sourceTree = "<group>";
@@ -424,6 +429,26 @@
 				7CE7C1D52223377100CDAF34 /* UserModel.m */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		9C2481AA226DACD900BC9B79 /* StarScream */ = {
+			isa = PBXGroup;
+			children = (
+				7CBA68E32268FDA800AC4CEF /* WebSocketStarscreamVC.swift */,
+				9C295B352269B16C00527898 /* WebSocketStarscreamView.swift */,
+				7CBA68E52268FF1A00AC4CEF /* SocketTarget.swift */,
+			);
+			path = StarScream;
+			sourceTree = "<group>";
+		};
+		9C2481AB226DACE900BC9B79 /* Socket.io */ = {
+			isa = PBXGroup;
+			children = (
+				9C2481AC226DAD2700BC9B79 /* WebSocketSocketIOVC.swift */,
+				9C2481AE226DAD9800BC9B79 /* WebSocketSocketIOView.swift */,
+				9C2481B0226DADE400BC9B79 /* SocketCalls.swift */,
+			);
+			path = Socket.io;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -703,8 +728,10 @@
 				7CBA68E62268FF1A00AC4CEF /* SocketTarget.swift in Sources */,
 				7C1F1D6422025511005C82FF /* SizeClassesVC.swift in Sources */,
 				7C9360B12216B04500ADC6F9 /* User.swift in Sources */,
+				9C2481B1226DADE400BC9B79 /* SocketCalls.swift in Sources */,
 				7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */,
 				7CDB2818226389FB00546F9C /* CustomTransitionsView.swift in Sources */,
+				9C2481AF226DAD9800BC9B79 /* WebSocketSocketIOView.swift in Sources */,
 				7C37B4862247DE61003BFF7A /* SubclassingVC.swift in Sources */,
 				7CDB28322263DA9200546F9C /* SystemTransitionPushVC.swift in Sources */,
 				7CDB281B22638BC800546F9C /* R.generated.swift in Sources */,
@@ -728,6 +755,7 @@
 				7CDB28272263BA8700546F9C /* ZoomPushAnimator.swift in Sources */,
 				7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */,
 				7C64B84F22462B7400480D88 /* XMLParserVC.swift in Sources */,
+				9C2481AD226DAD2700BC9B79 /* WebSocketSocketIOVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
