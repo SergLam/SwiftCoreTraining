@@ -52,14 +52,8 @@ class WebSocketStarscreamVC: UIViewController {
             AlertPresenter.showError(at: self, error: "Socket not connected")
         }
     }
-        
-    
     
 }
-
-
-
-
 
 extension WebSocketStarscreamVC: WebSocketAdvancedDelegate {
     func websocketDidConnect(socket: WebSocket) {

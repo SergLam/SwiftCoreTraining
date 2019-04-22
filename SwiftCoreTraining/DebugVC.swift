@@ -33,6 +33,17 @@ class DebugVC: FormViewController {
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(WebSocketSocketIOVC(), animated: true)
                 })
+            +++ Section("KVO_KVC")
+            <<< LabelRow() { row in
+                row.title = "KVO_View_Controller"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(KVO_VC(), animated: true)
+                })
+            <<< LabelRow() { row in
+                row.title = "KVC_View_Controller"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(KVC_VC(), animated: true)
+                })
             +++ Section("GCD")
             <<< LabelRow() { row in
                 row.title = "GCDVC"
