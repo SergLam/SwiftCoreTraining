@@ -70,7 +70,8 @@ class WebSocketSocketIOVC: UIViewController {
     
     private func setupSocketListeners() {
         socket.on("message") { [unowned self] (data, ack) in
-            AlertPresenter.showSocketEventDescription(at: self, title: data.first.debugDescription, message: String(describing: data))
+            let response = String(describing: data.first)
+            AlertPresenter.showSocketEventDescription(at: self, title: "Socket incoming message", message: response)
         }
     }
 }
