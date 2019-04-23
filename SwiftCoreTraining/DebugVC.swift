@@ -44,6 +44,12 @@ class DebugVC: FormViewController {
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(KVC_VC(), animated: true)
                 })
+            +++ Section("Core Data")
+            <<< LabelRow() { row in
+                row.title = "Core Data VC"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(CoreDataVC(), animated: true)
+                })
             +++ Section("GCD")
             <<< LabelRow() { row in
                 row.title = "GCDVC"
