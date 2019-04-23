@@ -44,7 +44,7 @@ struct SocketCallsJSONData {
     // https://socket.io/blog/socket-io-on-ios/
     static let loginToSocket: [String: Any] =
     ["callName": "loginToSocket",
-    "user_id": "582549398928559",
+    "user_id": "5825", // 582549398928559
     "app_version": "3.001",
     "access_token": "EAAXqsnpKyskBAEK8Svx2UOt5AfhobymK7gc5wTdnIllGS8FWGQBpzdZAnTzcVE8djL1weUvxXQiMirZCsCIqREmxTT5jrO7ykUNodhgmrNjMEEVoMuP2CpUYerRIm903ZCvJyZCPsoynBvobSrROV8ZAufwmrsvN3bNNL2r5jar3pQrjUo6iN5NS0z9YoX5FWHblDgETlrh6BZAVoqqltvA1nC4QRsDRBpId5ZCPkfhwQZDZD"]
     
