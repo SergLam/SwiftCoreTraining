@@ -10,7 +10,7 @@ import UIKit
 import Eureka
 import DZNEmptyDataSet
 
-class DebugVC: FormViewController {
+class DebugVC: FormViewController, DebugVCShowable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,11 +85,16 @@ class DebugVC: FormViewController {
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(ArraySetVC(), animated: true)
                 })
-            +++ Section("Lets get deep into legacy!")
+            +++ Section("Objc features!")
             <<< LabelRow() { row in
                 row.title = "ObjC example view controller"
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(ExampleVC(), animated: true)
+                })
+            <<< LabelRow() { row in
+                row.title = "Objc_associatedKeyValues"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.showDebugVC()
                 })
             +++ Section("Algorithms")
             <<< LabelRow() { row in

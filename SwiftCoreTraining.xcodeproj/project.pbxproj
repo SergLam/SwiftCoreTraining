@@ -12,6 +12,7 @@
 		7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */; };
 		7C1F1D6122025361005C82FF /* DebugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1F1D6022025361005C82FF /* DebugVC.swift */; };
 		7C1F1D6422025511005C82FF /* SizeClassesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1F1D6322025511005C82FF /* SizeClassesVC.swift */; };
+		7C2A4B3E22738A4600C15340 /* DebugVCShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A4B3D22738A4600C15340 /* DebugVCShowable.swift */; };
 		7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F034B21FCC5D000A50936 /* AppDelegate.swift */; };
 		7C2F034E21FCC5D000A50936 /* GCDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F034D21FCC5D000A50936 /* GCDVC.swift */; };
 		7C2F036121FCC5D200A50936 /* SwiftCoreTrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F036021FCC5D200A50936 /* SwiftCoreTrainingTests.swift */; };
@@ -90,6 +91,7 @@
 		7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		7C1F1D6022025361005C82FF /* DebugVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugVC.swift; sourceTree = "<group>"; };
 		7C1F1D6322025511005C82FF /* SizeClassesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeClassesVC.swift; sourceTree = "<group>"; };
+		7C2A4B3D22738A4600C15340 /* DebugVCShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugVCShowable.swift; sourceTree = "<group>"; };
 		7C2F034821FCC5D000A50936 /* SwiftCoreTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCoreTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2F034B21FCC5D000A50936 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C2F034D21FCC5D000A50936 /* GCDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDVC.swift; sourceTree = "<group>"; };
@@ -225,6 +227,14 @@
 			path = SizeClasses;
 			sourceTree = "<group>";
 		};
+		7C2A4B3C22738A2A00C15340 /* AssociatedKeyValues */ = {
+			isa = PBXGroup;
+			children = (
+				7C2A4B3D22738A4600C15340 /* DebugVCShowable.swift */,
+			);
+			path = AssociatedKeyValues;
+			sourceTree = "<group>";
+		};
 		7C2F033F21FCC5D000A50936 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +260,7 @@
 		7C2F034A21FCC5D000A50936 /* SwiftCoreTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7C2A4B3C22738A2A00C15340 /* AssociatedKeyValues */,
 				7CD73B6C226E435E00B31E54 /* CoreData */,
 				7C39E210226AFB78006B1F3C /* KVO_KVC */,
 				7CBA68E22268FC7F00AC4CEF /* WebSockets */,
@@ -788,6 +799,7 @@
 				7C37B4862247DE61003BFF7A /* SubclassingVC.swift in Sources */,
 				7CDB28322263DA9200546F9C /* SystemTransitionPushVC.swift in Sources */,
 				7CDB281B22638BC800546F9C /* R.generated.swift in Sources */,
+				7C2A4B3E22738A4600C15340 /* DebugVCShowable.swift in Sources */,
 				7C39E216226B14C8006B1F3C /* KVC_VC.swift in Sources */,
 				7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */,
 				7CD73B71226E435F00B31E54 /* CoreDataManager.swift in Sources */,
