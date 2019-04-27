@@ -13,6 +13,7 @@
 		7C1F1D6122025361005C82FF /* DebugVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1F1D6022025361005C82FF /* DebugVC.swift */; };
 		7C1F1D6422025511005C82FF /* SizeClassesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1F1D6322025511005C82FF /* SizeClassesVC.swift */; };
 		7C2A4B3E22738A4600C15340 /* DebugVCShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A4B3D22738A4600C15340 /* DebugVCShowable.swift */; };
+		7C2A4B422274602B00C15340 /* DatabaseOne.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A4B402274602B00C15340 /* DatabaseOne.xcdatamodeld */; };
 		7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F034B21FCC5D000A50936 /* AppDelegate.swift */; };
 		7C2F034E21FCC5D000A50936 /* GCDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F034D21FCC5D000A50936 /* GCDVC.swift */; };
 		7C2F036121FCC5D200A50936 /* SwiftCoreTrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F036021FCC5D200A50936 /* SwiftCoreTrainingTests.swift */; };
@@ -92,6 +93,7 @@
 		7C1F1D6022025361005C82FF /* DebugVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugVC.swift; sourceTree = "<group>"; };
 		7C1F1D6322025511005C82FF /* SizeClassesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeClassesVC.swift; sourceTree = "<group>"; };
 		7C2A4B3D22738A4600C15340 /* DebugVCShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugVCShowable.swift; sourceTree = "<group>"; };
+		7C2A4B412274602B00C15340 /* DatabaseOne.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DatabaseOne.xcdatamodel; sourceTree = "<group>"; };
 		7C2F034821FCC5D000A50936 /* SwiftCoreTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCoreTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2F034B21FCC5D000A50936 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C2F034D21FCC5D000A50936 /* GCDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDVC.swift; sourceTree = "<group>"; };
@@ -233,6 +235,15 @@
 				7C2A4B3D22738A4600C15340 /* DebugVCShowable.swift */,
 			);
 			path = AssociatedKeyValues;
+			sourceTree = "<group>";
+		};
+		7C2A4B3F22745F6D00C15340 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7CD73B6E226E435E00B31E54 /* CoreDataVC.swift */,
+				7CD73B70226E435E00B31E54 /* CoreDataView.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		7C2F033F21FCC5D000A50936 = {
@@ -403,10 +414,10 @@
 		7CD73B6C226E435E00B31E54 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				7C2A4B3F22745F6D00C15340 /* ViewController */,
 				7CD73B6D226E435E00B31E54 /* CoreDataManager.swift */,
-				7CD73B6E226E435E00B31E54 /* CoreDataVC.swift */,
 				7CD73B6F226E435E00B31E54 /* CoreDataOpetations.swift */,
-				7CD73B70226E435E00B31E54 /* CoreDataView.swift */,
+				7C2A4B402274602B00C15340 /* DatabaseOne.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -816,6 +827,7 @@
 				9C295B362269B16C00527898 /* WebSocketStarscreamView.swift in Sources */,
 				7CDB28292263BA9F00546F9C /* ZoomPopAnimator.swift in Sources */,
 				7CDB282B2263CC5900546F9C /* UIScreen+Ext.swift in Sources */,
+				7C2A4B422274602B00C15340 /* DatabaseOne.xcdatamodeld in Sources */,
 				7CDB28152263892A00546F9C /* CustomAnimator.swift in Sources */,
 				9C295B382269BD9B00527898 /* UIButton+Ext.swift in Sources */,
 				7C64B85122463E8A00480D88 /* CustomHTMLParserVC.swift in Sources */,
@@ -1145,6 +1157,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7C2A4B402274602B00C15340 /* DatabaseOne.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7C2A4B412274602B00C15340 /* DatabaseOne.xcdatamodel */,
+			);
+			currentVersion = 7C2A4B412274602B00C15340 /* DatabaseOne.xcdatamodel */;
+			path = DatabaseOne.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C2F034021FCC5D000A50936 /* Project object */;
 }

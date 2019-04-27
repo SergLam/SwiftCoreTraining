@@ -47,7 +47,10 @@ class CoreDataManager: NSObject {
         }
     }
     
-    // MARK: Methods for core data operations
+}
+
+// MARK: Methods for core data operations
+extension CoreDataManager {
     
     func write<T: NSManagedObject>(shouldUpdate: Bool, entities: [T.Type], completion: @escaping (Bool) -> (Void)) {
         guard let entity = entities.first else {
@@ -64,7 +67,7 @@ class CoreDataManager: NSObject {
             try managedObjectContext.save()
             completion(true)
         } catch {
-            assert(false, error.localizedDescription)
+            assertionFailure(error.localizedDescription)
             completion(false)
         }
     }
@@ -84,5 +87,4 @@ class CoreDataManager: NSObject {
     func deleteAll() {
         
     }
-    
 }
