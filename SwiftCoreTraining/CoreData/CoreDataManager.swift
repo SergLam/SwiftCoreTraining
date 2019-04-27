@@ -13,13 +13,14 @@ class CoreDataManager: NSObject {
     
     static let shared = CoreDataManager.init{}
     
-    var coordinator: NSPersistentStoreCoordinator
-    var model: NSManagedObjectModel
+    private var coordinator: NSPersistentStoreCoordinator
+    private var model: NSManagedObjectModel
     var managedObjectContext: NSManagedObjectContext
-    var persistentContainer: NSPersistentContainer
+    private var persistentContainer: NSPersistentContainer
     
     init(completion: @escaping () -> ()) {
-        model = NSManagedObjectModel()
+        let modelURL = Bundle.main.url(forResource: "DatabaseOne", withExtension: "momd")!
+        model = NSManagedObjectModel(contentsOf: modelURL)!
         coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
         
         managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
@@ -52,13 +53,10 @@ class CoreDataManager: NSObject {
 // MARK: Methods for core data operations
 extension CoreDataManager {
     
-    func write<T: NSManagedObject>(shouldUpdate: Bool, entities: [T.Type], completion: @escaping (Bool) -> (Void)) {
-        guard let entity = entities.first else {
-            assert(false, "Empty array exception")
-            return
-        }
+    // MARK: create and update opetations
+    func write<T: NSManagedObject>(shouldUpdate: Bool, entities: [T], completion: @escaping (Bool) -> (Void)) {
         
-        let entityName = String(describing: entity)
+        let entityName = T.entity().managedObjectClassName ?? ""
         for _ in entities {
             let _ = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedObjectContext) as! T
         }
@@ -72,19 +70,57 @@ extension CoreDataManager {
         }
     }
     
-    func read() {
-        
+    // MARK: read operations
+    func readById<T: NSManagedObject>(_ id: NSManagedObjectID) -> T? {
+        do {
+            let object = try managedObjectContext.existingObject(with: id)
+            return object as? T
+        } catch {
+            assertionFailure(error.localizedDescription)
+            return nil
+        }
     }
     
-    func readAll() {
+    func readAllObjects<T: NSManagedObject>(_ entity: T.Type) -> [T] {
+        var objects  = [T]()
         
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: T.entity().managedObjectClassName)
+        do {
+            objects = try managedObjectContext.fetch(fetchRequest) as? [T] ?? []
+        } catch {
+            assertionFailure(error.localizedDescription)
+        }
+        return objects
     }
     
-    func delete() {
+    
+    // MARK: delete operations
+    func deleteById(_ id: NSManagedObjectID) -> Bool {
+        guard let object = readById(id) else {
+            return false
+        }
         
+        managedObjectContext.delete(object)
+        do {
+            try managedObjectContext.save()
+        } catch {
+            assertionFailure(error.localizedDescription)
+        }
+        
+        return true
     }
     
-    func deleteAll() {
+    func deleteAll<T: NSManagedObject>(_ objectsToDelete: T.Type) {
         
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: T.entity().managedObjectClassName)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try coordinator.execute(deleteRequest, with: managedObjectContext)
+            try managedObjectContext.save()
+        } catch {
+            assertionFailure(error.localizedDescription)
+        }
     }
+    
 }

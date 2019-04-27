@@ -19,6 +19,7 @@ class CoreDataVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupButtonsActions()
     }
     
     private func setupButtonsActions() {
@@ -31,7 +32,31 @@ class CoreDataVC: UIViewController {
     @objc func performOperation(_ button: UIButton) {
         let index = button.tag
         let operation = CoreDataOpetations.allCases[index]
-  
+        switch operation {
+        case .write:
+            let company = Company.init(entity: Company.entity(), insertInto: dbManager.managedObjectContext)
+            company.companyID = Int64(dbManager.readAllObjects(Company.self).count)
+            company.monthIncome = 1000
+            company.numberOfEmployee = Int64(500)
+            company.title = "Test company\(company.companyID)"
+            dbManager.write(shouldUpdate: true, entities: [company]) { [unowned self] (result) -> (Void) in
+                if result {
+                    AlertPresenter.showSuccessMessage(at: self, message: "New company added successfully")
+                } else {
+                    AlertPresenter.showError(at: self, error: "New company write error")
+                }
+            }
+        case .readById:
+            break
+        case .readAllObjects:
+            break
+        case .delete:
+            break
+        case .deleteById:
+            break
+        case .deleteAll:
+            break
+        }
     }
     
 }
