@@ -47,16 +47,31 @@ class CoreDataVC: UIViewController {
                     AlertPresenter.showError(at: self, error: "New company write error")
                 }
             }
-        case .readById:
-            break
+        case .fetchObjectsByParameter:
+            guard let objects = dbManager.fetchObjects("numberOfEmployee", 500, Company.self) else {
+                AlertPresenter.showSuccessMessage(at: self, message: "Empty fetsh request result")
+                return
+            }
+            AlertPresenter.showSuccessMessage(at: self, message: String.init(describing: objects.count))
         case .readAllObjects:
-            break
-        case .delete:
-            break
-        case .deleteById:
-            break
+            let objects = dbManager.readAllObjects(Company.self)
+            AlertPresenter.showSuccessMessage(at: self, message: String.init(describing: objects.count))
+        case .deleteObjectsByParameter:
+            dbManager.deleteObjects("numberOfEmployee", 500, Company.self) { (result, description) in
+                if result {
+                    AlertPresenter.showSuccessMessage(at: self, message: description)
+                } else {
+                    AlertPresenter.showError(at: self, error: description)
+                }
+            }
         case .deleteAll:
-            break
+            dbManager.deleteAll(Company.self) { (result, description) -> (Void) in
+                if result {
+                    AlertPresenter.showSuccessMessage(at: self, message: description)
+                } else {
+                    AlertPresenter.showError(at: self, error: description)
+                }
+            }
         }
     }
     

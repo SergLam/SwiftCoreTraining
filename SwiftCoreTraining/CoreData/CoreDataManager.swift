@@ -9,6 +9,8 @@
 import Foundation
 import CoreData
 
+typealias OperationResult = ((Bool, String) -> (Void))
+
 class CoreDataManager: NSObject {
     
     static let shared = CoreDataManager.init(modelFileName: "DatabaseOne"){}
@@ -36,6 +38,7 @@ class CoreDataManager: NSObject {
          This code uses a file named "DataModel.sqlite" in the application's documents directory.
          */
         let storeURL = docURL.appendingPathComponent("DataModel.sqlite")
+        debugPrint("STORE: \(storeURL)")
         do {
             try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
         } catch {
@@ -52,15 +55,17 @@ class CoreDataManager: NSObject {
     }
     
     // MARK: - Core Data Saving support
-    func saveContext () {
-        let context = container.viewContext
+    func saveContext(completion: @escaping (Bool) -> (Void)) {
         if context.hasChanges {
             do {
                 try context.save()
+                completion(true)
             } catch {
-                let nserror = error as NSError
-                assert(false, "Unresolved error \(nserror), \(nserror.userInfo)")
+                assertionFailure(error.localizedDescription)
+                completion(false)
             }
+        } else {
+            completion(true)
         }
     }
     
@@ -72,33 +77,18 @@ extension CoreDataManager {
     // MARK: create and update opetations
     
     func write<T: NSManagedObject>(shouldUpdate: Bool, entities: [T], completion: @escaping (Bool) -> (Void)) {
-        guard let firstElement = entities.first else {
-            assertionFailure("Empty array exception")
-            return
-        }
-        
-        guard let entity = NSEntityDescription.entity(forEntityName: firstElement.theClassName, in: context) else {
-            assertionFailure("Could not get \(firstElement.theClassName) entity description")
-            return
-        }
-        for _ in entities {
-            let _ = NSManagedObject.init(entity: entity, insertInto: context)
-        }
-        
-        do {
-            try context.save()
-            completion(true)
-        } catch {
-            assertionFailure(error.localizedDescription)
-            completion(false)
-        }
+        saveContext(completion: { result in
+            completion(result)
+        })
     }
     
     // MARK: read operations
-    func readById<T: NSManagedObject>(_ id: NSManagedObjectID) -> T? {
+    func fetchObjects<T: NSManagedObject>(_ fieldName: String, _ fieldValue: Any, _ entity: T.Type) -> [T]? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.entityClassName)
+        fetchRequest.predicate = NSPredicate(format: "\(fieldName) = %@", argumentArray: [fieldValue])
         do {
-            let object = try context.existingObject(with: id)
-            return object as? T
+            let objects = try context.fetch(fetchRequest)
+            return objects as? [T]
         } catch {
             assertionFailure(error.localizedDescription)
             return nil
@@ -119,31 +109,31 @@ extension CoreDataManager {
     
     
     // MARK: delete operations
-    func deleteById(_ id: NSManagedObjectID) -> Bool {
-        guard let object = readById(id) else {
-            return false
+    func deleteObjects<T: NSManagedObject>(_ fieldName: String, _ fieldValue: Any, _ entity: T.Type, completion: @escaping OperationResult) {
+        guard let objects = fetchObjects(fieldName, fieldValue, entity) else {
+            completion(false, "Objects with specified parameters not found")
+            return
         }
+        objects.forEach { context.delete($0) }
         
-        context.delete(object)
-        do {
-            try context.save()
-        } catch {
-            assertionFailure(error.localizedDescription)
-        }
-        
-        return true
+        saveContext(completion: { result in
+            completion(result, "Delete operation completed successfully")
+        })
     }
     
-    func deleteAll<T: NSManagedObject>(_ objectsToDelete: T.Type) {
+    func deleteAll<T: NSManagedObject>(_ objectsToDelete: T.Type, completion: @escaping OperationResult) {
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: T.entityClassName)
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         
         do {
             try coordinator.execute(deleteRequest, with: context)
-            try context.save()
+            saveContext { (result) -> (Void) in
+                completion(result, "Objects deleted successfully")
+            }
         } catch {
             assertionFailure(error.localizedDescription)
+            completion(false, error.localizedDescription)
         }
     }
     
