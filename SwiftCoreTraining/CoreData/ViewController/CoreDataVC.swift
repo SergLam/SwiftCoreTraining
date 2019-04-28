@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CoreDataVC: UIViewController {
     
@@ -34,7 +35,7 @@ class CoreDataVC: UIViewController {
         let operation = CoreDataOpetations.allCases[index]
         switch operation {
         case .write:
-            let company = Company.init(entity: Company.entity(), insertInto: dbManager.managedObjectContext)
+            let company = Company.init(context: dbManager.context)
             company.companyID = Int64(dbManager.readAllObjects(Company.self).count)
             company.monthIncome = 1000
             company.numberOfEmployee = Int64(500)

@@ -11,23 +11,39 @@ import CoreData
 
 class CoreDataManager: NSObject {
     
-    static let shared = CoreDataManager.init{}
+    static let shared = CoreDataManager.init(modelFileName: "DatabaseOne"){}
     
     private var coordinator: NSPersistentStoreCoordinator
     private var model: NSManagedObjectModel
-    var managedObjectContext: NSManagedObjectContext
-    private var persistentContainer: NSPersistentContainer
+    public  var context: NSManagedObjectContext
+    private var container: NSPersistentContainer
     
-    init(completion: @escaping () -> ()) {
-        let modelURL = Bundle.main.url(forResource: "DatabaseOne", withExtension: "momd")!
+    init(modelFileName: String, completion: @escaping () -> ()) {
+        
+        let modelURL = Bundle.main.url(forResource: modelFileName, withExtension: "momd")!
         model = NSManagedObjectModel(contentsOf: modelURL)!
+        
         coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
         
-        managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-        managedObjectContext.persistentStoreCoordinator = coordinator
+        context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        context.persistentStoreCoordinator = coordinator
         
-        persistentContainer = NSPersistentContainer(name: "DatabaseOne")
-        persistentContainer.loadPersistentStores() { (description, error) in
+      
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docURL = urls[urls.endIndex-1]
+        
+        /* The directory the application uses to store the Core Data store file.
+         This code uses a file named "DataModel.sqlite" in the application's documents directory.
+         */
+        let storeURL = docURL.appendingPathComponent("DataModel.sqlite")
+        do {
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
+        } catch {
+            fatalError("Error migrating store: \(error)")
+        }
+        
+        container = NSPersistentContainer(name: "SwiftCoreTraining")
+        container.loadPersistentStores() { (description, error) in
             if let error = error {
                 fatalError("Failed to load Core Data stack: \(error)")
             }
@@ -37,7 +53,7 @@ class CoreDataManager: NSObject {
     
     // MARK: - Core Data Saving support
     func saveContext () {
-        let context = persistentContainer.viewContext
+        let context = container.viewContext
         if context.hasChanges {
             do {
                 try context.save()
@@ -54,15 +70,23 @@ class CoreDataManager: NSObject {
 extension CoreDataManager {
     
     // MARK: create and update opetations
+    
     func write<T: NSManagedObject>(shouldUpdate: Bool, entities: [T], completion: @escaping (Bool) -> (Void)) {
+        guard let firstElement = entities.first else {
+            assertionFailure("Empty array exception")
+            return
+        }
         
-        let entityName = T.entity().managedObjectClassName ?? ""
+        guard let entity = NSEntityDescription.entity(forEntityName: firstElement.theClassName, in: context) else {
+            assertionFailure("Could not get \(firstElement.theClassName) entity description")
+            return
+        }
         for _ in entities {
-            let _ = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedObjectContext) as! T
+            let _ = NSManagedObject.init(entity: entity, insertInto: context)
         }
         
         do {
-            try managedObjectContext.save()
+            try context.save()
             completion(true)
         } catch {
             assertionFailure(error.localizedDescription)
@@ -73,7 +97,7 @@ extension CoreDataManager {
     // MARK: read operations
     func readById<T: NSManagedObject>(_ id: NSManagedObjectID) -> T? {
         do {
-            let object = try managedObjectContext.existingObject(with: id)
+            let object = try context.existingObject(with: id)
             return object as? T
         } catch {
             assertionFailure(error.localizedDescription)
@@ -82,15 +106,15 @@ extension CoreDataManager {
     }
     
     func readAllObjects<T: NSManagedObject>(_ entity: T.Type) -> [T] {
-        var objects  = [T]()
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: T.entity().managedObjectClassName)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: T.entityName)
         do {
-            objects = try managedObjectContext.fetch(fetchRequest) as? [T] ?? []
+            let objects = try context.fetch(fetchRequest) as? [T] ?? []
+            return objects
         } catch {
             assertionFailure(error.localizedDescription)
+            return []
         }
-        return objects
     }
     
     
@@ -100,9 +124,9 @@ extension CoreDataManager {
             return false
         }
         
-        managedObjectContext.delete(object)
+        context.delete(object)
         do {
-            try managedObjectContext.save()
+            try context.save()
         } catch {
             assertionFailure(error.localizedDescription)
         }
@@ -112,12 +136,12 @@ extension CoreDataManager {
     
     func deleteAll<T: NSManagedObject>(_ objectsToDelete: T.Type) {
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: T.entity().managedObjectClassName)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: T.entityClassName)
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         
         do {
-            try coordinator.execute(deleteRequest, with: managedObjectContext)
-            try managedObjectContext.save()
+            try coordinator.execute(deleteRequest, with: context)
+            try context.save()
         } catch {
             assertionFailure(error.localizedDescription)
         }
