@@ -9,24 +9,44 @@
 import Foundation
 import CoreData
 
+typealias OperationResult = ((Bool, String) -> (Void))
+
 class CoreDataManager: NSObject {
     
-    static let shared = CoreDataManager.init{}
+    static let shared = CoreDataManager.init(modelFileName: "DatabaseOne"){}
     
-    var coordinator: NSPersistentStoreCoordinator
-    var model: NSManagedObjectModel
-    var managedObjectContext: NSManagedObjectContext
-    var persistentContainer: NSPersistentContainer
+    private var coordinator: NSPersistentStoreCoordinator
+    private var model: NSManagedObjectModel
+    public  var context: NSManagedObjectContext
+    private var container: NSPersistentContainer
     
-    init(completion: @escaping () -> ()) {
-        model = NSManagedObjectModel()
+    init(modelFileName: String, completion: @escaping () -> ()) {
+        
+        let modelURL = Bundle.main.url(forResource: modelFileName, withExtension: "momd")!
+        model = NSManagedObjectModel(contentsOf: modelURL)!
+        
         coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
         
-        managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-        managedObjectContext.persistentStoreCoordinator = coordinator
+        context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        context.persistentStoreCoordinator = coordinator
         
-        persistentContainer = NSPersistentContainer(name: "DatabaseOne")
-        persistentContainer.loadPersistentStores() { (description, error) in
+      
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docURL = urls[urls.endIndex-1]
+        
+        /* The directory the application uses to store the Core Data store file.
+         This code uses a file named "DataModel.sqlite" in the application's documents directory.
+         */
+        let storeURL = docURL.appendingPathComponent("DataModel.sqlite")
+        debugPrint("STORE: \(storeURL)")
+        do {
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
+        } catch {
+            fatalError("Error migrating store: \(error)")
+        }
+        
+        container = NSPersistentContainer(name: "SwiftCoreTraining")
+        container.loadPersistentStores() { (description, error) in
             if let error = error {
                 fatalError("Failed to load Core Data stack: \(error)")
             }
@@ -35,54 +55,86 @@ class CoreDataManager: NSObject {
     }
     
     // MARK: - Core Data Saving support
-    func saveContext () {
-        let context = persistentContainer.viewContext
+    func saveContext(completion: @escaping (Bool) -> (Void)) {
         if context.hasChanges {
             do {
                 try context.save()
+                completion(true)
             } catch {
-                let nserror = error as NSError
-                assert(false, "Unresolved error \(nserror), \(nserror.userInfo)")
+                assertionFailure(error.localizedDescription)
+                completion(false)
             }
+        } else {
+            completion(true)
         }
     }
     
-    // MARK: Methods for core data operations
+}
+
+// MARK: Methods for core data operations
+extension CoreDataManager {
     
-    func write<T: NSManagedObject>(shouldUpdate: Bool, entities: [T.Type], completion: @escaping (Bool) -> (Void)) {
-        guard let entity = entities.first else {
-            assert(false, "Empty array exception")
+    // MARK: create and update opetations
+    
+    func write<T: NSManagedObject>(shouldUpdate: Bool, entities: [T], completion: @escaping (Bool) -> (Void)) {
+        saveContext(completion: { result in
+            completion(result)
+        })
+    }
+    
+    // MARK: read operations
+    func fetchObjects<T: NSManagedObject>(_ fieldName: String, _ fieldValue: Any, _ entity: T.Type) -> [T]? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.entityClassName)
+        fetchRequest.predicate = NSPredicate(format: "\(fieldName) = %@", argumentArray: [fieldValue])
+        do {
+            let objects = try context.fetch(fetchRequest)
+            return objects as? [T]
+        } catch {
+            assertionFailure(error.localizedDescription)
+            return nil
+        }
+    }
+    
+    func readAllObjects<T: NSManagedObject>(_ entity: T.Type) -> [T] {
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: T.entityName)
+        do {
+            let objects = try context.fetch(fetchRequest) as? [T] ?? []
+            return objects
+        } catch {
+            assertionFailure(error.localizedDescription)
+            return []
+        }
+    }
+    
+    
+    // MARK: delete operations
+    func deleteObjects<T: NSManagedObject>(_ fieldName: String, _ fieldValue: Any, _ entity: T.Type, completion: @escaping OperationResult) {
+        guard let objects = fetchObjects(fieldName, fieldValue, entity) else {
+            completion(false, "Objects with specified parameters not found")
             return
         }
+        objects.forEach { context.delete($0) }
         
-        let entityName = String(describing: entity)
-        for _ in entities {
-            let _ = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedObjectContext) as! T
-        }
+        saveContext(completion: { result in
+            completion(result, "Delete operation completed successfully")
+        })
+    }
+    
+    func deleteAll<T: NSManagedObject>(_ objectsToDelete: T.Type, completion: @escaping OperationResult) {
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: T.entityClassName)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         
         do {
-            try managedObjectContext.save()
-            completion(true)
+            try coordinator.execute(deleteRequest, with: context)
+            saveContext { (result) -> (Void) in
+                completion(result, "Objects deleted successfully")
+            }
         } catch {
-            assert(false, error.localizedDescription)
-            completion(false)
+            assertionFailure(error.localizedDescription)
+            completion(false, error.localizedDescription)
         }
-    }
-    
-    func read() {
-        
-    }
-    
-    func readAll() {
-        
-    }
-    
-    func delete() {
-        
-    }
-    
-    func deleteAll() {
-        
     }
     
 }

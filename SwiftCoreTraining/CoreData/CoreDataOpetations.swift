@@ -10,7 +10,10 @@ import UIKit
 
 enum CoreDataOpetations: String, CaseIterable {
     case write
-    case read
-    case delete
-    case getAllCount
+    
+    case fetchObjectsByParameter
+    case readAllObjects
+    
+    case deleteObjectsByParameter
+    case deleteAll
 }
