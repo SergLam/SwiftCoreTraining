@@ -10,6 +10,7 @@ target 'SwiftCoreTraining' do
   pod 'SnapKit'
   pod 'Kingfisher'
   pod 'R.swift'
+  pod 'Closures'
   
   # WebSockets
   pod 'Starscream', '~> 3.1.0'

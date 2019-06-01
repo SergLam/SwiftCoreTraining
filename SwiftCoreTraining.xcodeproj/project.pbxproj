@@ -37,6 +37,13 @@
 		7C9360B12216B04500ADC6F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9360B02216B04500ADC6F9 /* User.swift */; };
 		7CBA68E42268FDA800AC4CEF /* WebSocketStarscreamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA68E32268FDA800AC4CEF /* WebSocketStarscreamVC.swift */; };
 		7CBA68E62268FF1A00AC4CEF /* SocketTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA68E52268FF1A00AC4CEF /* SocketTarget.swift */; };
+		7CC0B5FA22A30A510072EB49 /* PrivacyTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B5F622A30A510072EB49 /* PrivacyTitleCell.swift */; };
+		7CC0B5FB22A30A510072EB49 /* PrivacyDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B5F722A30A510072EB49 /* PrivacyDetailsCell.swift */; };
+		7CC0B5FC22A30A510072EB49 /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B5F822A30A510072EB49 /* PrivacyPolicyVC.swift */; };
+		7CC0B5FD22A30A510072EB49 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B5F922A30A510072EB49 /* PrivacyPolicyView.swift */; };
+		7CC0B5FF22A30C9B0072EB49 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B5FE22A30C9B0072EB49 /* UIView+Ext.swift */; };
+		7CC0B60222A312090072EB49 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B60122A312090072EB49 /* ReusableView.swift */; };
+		7CC0B60422A3124B0072EB49 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B60322A3124B0072EB49 /* NibLoadableView.swift */; };
 		7CD73B71226E435F00B31E54 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B6D226E435E00B31E54 /* CoreDataManager.swift */; };
 		7CD73B72226E435F00B31E54 /* CoreDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B6E226E435E00B31E54 /* CoreDataVC.swift */; };
 		7CD73B73226E435F00B31E54 /* CoreDataOpetations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD73B6F226E435E00B31E54 /* CoreDataOpetations.swift */; };
@@ -126,6 +133,13 @@
 		7CA700117650CC9F4EA2C7EE /* Pods-SwiftCoreTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7CBA68E32268FDA800AC4CEF /* WebSocketStarscreamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketStarscreamVC.swift; sourceTree = "<group>"; };
 		7CBA68E52268FF1A00AC4CEF /* SocketTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketTarget.swift; sourceTree = "<group>"; };
+		7CC0B5F622A30A510072EB49 /* PrivacyTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyTitleCell.swift; sourceTree = "<group>"; };
+		7CC0B5F722A30A510072EB49 /* PrivacyDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyDetailsCell.swift; sourceTree = "<group>"; };
+		7CC0B5F822A30A510072EB49 /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
+		7CC0B5F922A30A510072EB49 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		7CC0B5FE22A30C9B0072EB49 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		7CC0B60122A312090072EB49 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		7CC0B60322A3124B0072EB49 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		7CD73B6D226E435E00B31E54 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		7CD73B6E226E435E00B31E54 /* CoreDataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataVC.swift; sourceTree = "<group>"; };
 		7CD73B6F226E435E00B31E54 /* CoreDataOpetations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOpetations.swift; sourceTree = "<group>"; };
@@ -218,6 +232,7 @@
 				7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */,
 				7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */,
 				9C295B372269BD9B00527898 /* UIButton+Ext.swift */,
+				7CC0B5FE22A30C9B0072EB49 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,6 +288,8 @@
 		7C2F034A21FCC5D000A50936 /* SwiftCoreTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7CC0B60022A311EF0072EB49 /* Protocols */,
+				7CC0B5F422A30A170072EB49 /* Accordeon_Table */,
 				7C2A4B3C22738A2A00C15340 /* AssociatedKeyValues */,
 				7CD73B6C226E435E00B31E54 /* CoreData */,
 				7C39E210226AFB78006B1F3C /* KVO_KVC */,
@@ -411,6 +428,34 @@
 				9C2481AA226DACD900BC9B79 /* StarScream */,
 			);
 			path = WebSockets;
+			sourceTree = "<group>";
+		};
+		7CC0B5F422A30A170072EB49 /* Accordeon_Table */ = {
+			isa = PBXGroup;
+			children = (
+				7CC0B5F522A30A510072EB49 /* Cells */,
+				7CC0B5F822A30A510072EB49 /* PrivacyPolicyVC.swift */,
+				7CC0B5F922A30A510072EB49 /* PrivacyPolicyView.swift */,
+			);
+			path = Accordeon_Table;
+			sourceTree = "<group>";
+		};
+		7CC0B5F522A30A510072EB49 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7CC0B5F622A30A510072EB49 /* PrivacyTitleCell.swift */,
+				7CC0B5F722A30A510072EB49 /* PrivacyDetailsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7CC0B60022A311EF0072EB49 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7CC0B60122A312090072EB49 /* ReusableView.swift */,
+				7CC0B60322A3124B0072EB49 /* NibLoadableView.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		7CD73B6C226E435E00B31E54 /* CoreData */ = {
@@ -709,6 +754,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Closures/Closures.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
@@ -724,6 +770,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Closures.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
@@ -817,14 +864,19 @@
 				7C39E216226B14C8006B1F3C /* KVC_VC.swift in Sources */,
 				7CE5D7D6221F48D00049E3A9 /* ExampleVC.m in Sources */,
 				7CD73B71226E435F00B31E54 /* CoreDataManager.swift in Sources */,
+				7CC0B60222A312090072EB49 /* ReusableView.swift in Sources */,
 				7C37B4832247A353003BFF7A /* RecursiveAlgorithmsVC.swift in Sources */,
 				7CE7C1CC2222BF1200CDAF34 /* ExampleCell.m in Sources */,
 				7CBA68E42268FDA800AC4CEF /* WebSocketStarscreamVC.swift in Sources */,
 				7CDB281D22639BE700546F9C /* TransitionPushVC.swift in Sources */,
 				7CDB28242263B30900546F9C /* FadePopAnimator.swift in Sources */,
 				7C64B848224592EA00480D88 /* AlgorhitmsVC.swift in Sources */,
+				7CC0B5FF22A30C9B0072EB49 /* UIView+Ext.swift in Sources */,
+				7CC0B5FB22A30A510072EB49 /* PrivacyDetailsCell.swift in Sources */,
 				7CD73B74226E435F00B31E54 /* CoreDataView.swift in Sources */,
 				7C2F038221FE4B3D00A50936 /* GCDViewModel.swift in Sources */,
+				7CC0B60422A3124B0072EB49 /* NibLoadableView.swift in Sources */,
+				7CC0B5FC22A30A510072EB49 /* PrivacyPolicyVC.swift in Sources */,
 				7C580CC522637F8C0082019A /* CustomTransitionsVC.swift in Sources */,
 				7C5AEA3B2222B8140036692F /* ExampleView.m in Sources */,
 				9C295B362269B16C00527898 /* WebSocketStarscreamView.swift in Sources */,
@@ -838,7 +890,9 @@
 				7C9360AF2216AFFB00ADC6F9 /* ArraySetVC.swift in Sources */,
 				7CDB28272263BA8700546F9C /* ZoomPushAnimator.swift in Sources */,
 				7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */,
+				7CC0B5FA22A30A510072EB49 /* PrivacyTitleCell.swift in Sources */,
 				7C64B84F22462B7400480D88 /* XMLParserVC.swift in Sources */,
+				7CC0B5FD22A30A510072EB49 /* PrivacyPolicyView.swift in Sources */,
 				9C2481AD226DAD2700BC9B79 /* WebSocketSocketIOVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

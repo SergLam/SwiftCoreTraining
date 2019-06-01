@@ -58,6 +58,11 @@ class DebugVC: FormViewController, DebugVCShowable {
                 })
             +++ Section("UI")
             <<< LabelRow() { row in
+                row.title = "Accordion table view"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.present(PrivacyPolicyVC(), animated: true, completion: nil)
+                })
+            <<< LabelRow() { row in
                 row.title = "SizeClasses (Orientation adaptive layout)"
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(SizeClassesVC(), animated: true)
