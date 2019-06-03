@@ -81,6 +81,7 @@ final class PrivacyPolicyView: UIView {
         }
         
         containerView.addSubview(bottomSeparator)
+        bottomSeparator.backgroundColor = .blue
         bottomSeparator.snp.makeConstraints { (make) in
             make.bottom.equalTo(closeButton.snp.top).offset(-10)
             make.height.equalTo(1)
@@ -90,6 +91,7 @@ final class PrivacyPolicyView: UIView {
         containerView.addSubview(tableView)
         
         topSeparator.frame.size.height = 1.0
+        topSeparator.backgroundColor = .blue
         tableView.tableHeaderView = topSeparator
         
         tableView.snp.makeConstraints { (make) in
