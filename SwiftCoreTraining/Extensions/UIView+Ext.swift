@@ -21,12 +21,8 @@ extension UIView {
     }
     
     func createLinearGradient(_ colors: [UIColor]) -> CALayer {
-        let newLayer = CAGradientLayer()
-        newLayer.frame = self.bounds
-        newLayer.colors = colors.map{ $0.cgColor }
-        newLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
-        newLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
-        return newLayer
+        
+        return UIView.createLinearGradient(colors, bounds)
     }
     
     func addLinearGradient(_ colors: [UIColor]) {
