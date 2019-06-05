@@ -12,6 +12,9 @@ target 'SwiftCoreTraining' do
   pod 'R.swift'
   pod 'Closures'
   
+  # Database
+  pod 'RealmSwift'
+  
   # WebSockets
   pod 'Starscream', '~> 3.1.0'
   pod 'Socket.IO-Client-Swift', '~> 15.0.0'

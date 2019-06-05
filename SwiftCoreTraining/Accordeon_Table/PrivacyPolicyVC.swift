@@ -115,31 +115,27 @@ extension PrivacyPolicyVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        switch indexPath.row % 2 == 0 {
-        case true:
-            
-            var indexes: [IndexPath] = []
-            for (index, _) in cellStates.enumerated() {
-                
-                if index % 2 == 0 {
-                   indexes.append(IndexPath(row: index, section: 0))
-                }
-                
-                if index == indexPath.row {
-                    cellStates[indexPath.row] = !cellStates[indexPath.row]
-                } else {
-                    cellStates[index] = true
-                }
-            }
-            
-            contentView.tableView.beginUpdates()
-            contentView.tableView.reloadRows(at: indexes, with: .none)
-            contentView.tableView.endUpdates()
-            
-        case false:
-            break
+        guard indexPath.row % 2 == 0 else {
+            return
         }
         
+        var indexes: [IndexPath] = []
+        for (index, _) in cellStates.enumerated() {
+            
+            if index % 2 == 0 {
+                indexes.append(IndexPath(row: index, section: 0))
+            }
+            
+            if index == indexPath.row {
+                cellStates[indexPath.row] = !cellStates[indexPath.row]
+            } else {
+                cellStates[index] = true
+            }
+        }
+        
+        contentView.tableView.beginUpdates()
+        contentView.tableView.reloadRows(at: indexes, with: .none)
+        contentView.tableView.endUpdates()
     }
     
 }
