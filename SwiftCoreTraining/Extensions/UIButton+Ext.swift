@@ -16,4 +16,16 @@ extension UIButton {
         button.titleLabel?.textColor = .white
         return button
     }
+    
+    static func creareCloseButton(_ buttonHeight: CGFloat) -> UIButton {
+        
+        let button = UIButton()
+        button.layer.cornerRadius = buttonHeight / 2
+        button.clipsToBounds = true
+        button.setTitle("Close", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.setTitleColor(.white, for: .normal)
+        return button
+    }
+    
 }

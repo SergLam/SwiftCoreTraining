@@ -33,3 +33,16 @@ class SubclassingVC: UIViewController {
     
     
 }
+
+class H {
+    private var property: String = ""
+    var openProperty: String = ""
+}
+
+class G: H {
+    var some: String = ""
+    
+    func change() {
+        some = super.openProperty
+    }
+}

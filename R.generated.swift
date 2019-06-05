@@ -30,12 +30,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
     /// Image `LaunchImage`.
     static let launchImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchImage")
     /// Image `avatarPlaceholder`.
     static let avatarPlaceholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "avatarPlaceholder")
+    /// Image `disclosureIndicatorGray`.
+    static let disclosureIndicatorGray = Rswift.ImageResource(bundle: R.hostingBundle, name: "disclosureIndicatorGray")
     
     /// `UIImage(named: "LaunchImage", bundle: ..., traitCollection: ...)`
     static func launchImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -45,6 +47,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "avatarPlaceholder", bundle: ..., traitCollection: ...)`
     static func avatarPlaceholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.avatarPlaceholder, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "disclosureIndicatorGray", bundle: ..., traitCollection: ...)`
+    static func disclosureIndicatorGray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.disclosureIndicatorGray, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
