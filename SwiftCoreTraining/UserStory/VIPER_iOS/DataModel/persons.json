@@ -1,0 +1,20 @@
+{
+    "success": true,
+    "users_list": [
+        {
+            "id": 1,
+            "first_name": "John",
+            "last_name": "Smith"
+        },
+        {
+            "id": 2,
+            "first_name": "John",
+            "last_name": "Snow"
+        },
+        {
+            "id": 3,
+            "first_name": "John",
+            "last_name": "Wick"
+        }
+    ]
+}

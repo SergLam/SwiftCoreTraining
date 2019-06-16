@@ -20,6 +20,7 @@ PODS:
   - Socket.IO-Client-Swift (15.0.0):
     - Starscream (~> 3.1)
   - Starscream (3.1.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Closures
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - SnapKit
   - Socket.IO-Client-Swift (~> 15.0.0)
   - Starscream (~> 3.1.0)
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -51,6 +53,7 @@ SPEC REPOS:
     - SnapKit
     - Socket.IO-Client-Swift
     - Starscream
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Closures: 7477e86502e33d7ae435b8c60ce219390e06c476
@@ -67,7 +70,8 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Socket.IO-Client-Swift: c039a808195d22a7192962841b8c035cb61ea49e
   Starscream: 08172b481e145289c4930cb567230fb55897cfa4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 33981b20d83afa73ed296f076ad7cfd0607cc47d
+PODFILE CHECKSUM: 95841ed7e2040f6f41418b7675403654c8f54853
 
 COCOAPODS: 1.6.1

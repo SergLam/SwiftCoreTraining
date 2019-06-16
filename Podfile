@@ -11,6 +11,7 @@ target 'SwiftCoreTraining' do
   pod 'Kingfisher'
   pod 'R.swift'
   pod 'Closures'
+  pod 'SVProgressHUD'
   
   # Database
   pod 'RealmSwift'
