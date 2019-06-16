@@ -22,6 +22,14 @@ class DebugVC: FormViewController, DebugVCShowable {
     
     private func setupForm() {
         form
+            +++ Section("VIPER Architecture in iOS")
+            <<< LabelRow() { row in
+                row.title = "Viper VC"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    
+                    let personsVC = ViperRouter.createModule()
+                    self.navigationController?.pushViewController(personsVC, animated: true)
+                })
             +++ Section("WebSockets")
             <<< LabelRow() { row in
                 row.title = "WebSockets - StarScream"
@@ -99,6 +107,7 @@ class DebugVC: FormViewController, DebugVCShowable {
             <<< LabelRow() { row in
                 row.title = "Objc_associatedKeyValues"
                 }.onCellSelection({ [unowned self] (_, _) in
+                    // DebugVCShowable
                     self.showDebugVC()
                 })
             +++ Section("Algorithms")
