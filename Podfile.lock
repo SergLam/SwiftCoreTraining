@@ -38,7 +38,7 @@ DEPENDENCIES:
   - SVProgressHUD
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Closures
     - DZNEmptyDataSet
     - Eureka
@@ -74,4 +74,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 95841ed7e2040f6f41418b7675403654c8f54853
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4
