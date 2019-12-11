@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class WebSocketStarscreamView: UIView {
+final class WebSocketStarscreamView: UIView {
     
     let scrollView = UIScrollView()
     let contentView = UIView()

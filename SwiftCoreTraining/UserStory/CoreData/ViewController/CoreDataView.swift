@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CoreDataView: UIView {
+final class CoreDataView: UIView {
     
     let scrollView = UIScrollView()
     let contentView = UIView()

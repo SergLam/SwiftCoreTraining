@@ -10,7 +10,7 @@ import UIKit
 import Eureka
 import DZNEmptyDataSet
 
-class DebugVC: FormViewController, DebugVCShowable {
+final class DebugVC: FormViewController, DebugVCShowable {
     
     override func viewDidLoad() {
         super.viewDidLoad()

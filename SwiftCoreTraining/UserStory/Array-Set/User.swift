@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User: Hashable {
+final class User: Hashable {
     
     static func == (lhs: User, rhs: User) -> Bool {
         return lhs.userId == rhs.userId

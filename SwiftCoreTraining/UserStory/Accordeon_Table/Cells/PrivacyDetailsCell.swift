@@ -1,7 +1,7 @@
 import UIKit
 import Rswift
 
-class PrivacyDetailsCell: UITableViewCell {
+final class PrivacyDetailsCell: UITableViewCell {
     
     static let identifier = String(describing: self)
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XMLParserVC: UIViewController {
+final class XMLParserVC: UIViewController {
     
     var parser = XMLParser()
     var parseResult: [String] = []

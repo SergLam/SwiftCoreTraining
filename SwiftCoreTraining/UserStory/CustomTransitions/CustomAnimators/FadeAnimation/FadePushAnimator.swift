@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FadePushAnimator: NSObject {
+final class FadePushAnimator: NSObject {
 
     var duration: TimeInterval
     var viewsToHide: [UIView]

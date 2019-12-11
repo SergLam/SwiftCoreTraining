@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PersonResponse: Codable {
+final class PersonResponse: Codable {
     
     let status: Bool
     let users: [PersonModel]

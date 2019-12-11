@@ -9,7 +9,7 @@
 import UIKit
 import SocketIO
 
-class WebSocketSocketIOVC: UIViewController {
+final class WebSocketSocketIOVC: UIViewController {
     // ws://superfy.cc:2000 - outdated server, from old app
     // https://devchat.sprfy.com - use this endpoint
     static let manager = SocketManager(socketURL: URL(string: "https://devchat.sprfy.com")!,

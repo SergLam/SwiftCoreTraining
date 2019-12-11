@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZoomPopAnimator: NSObject {
+final class ZoomPopAnimator: NSObject {
     
     var duration: TimeInterval
     var viewToZoomOut: UIView

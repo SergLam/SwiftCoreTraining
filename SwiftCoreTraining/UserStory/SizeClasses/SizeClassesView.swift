@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Kingfisher
 
-class SizeClassesView: UIView {
+final class SizeClassesView: UIView {
     
     let imageView = UIImageView()
     

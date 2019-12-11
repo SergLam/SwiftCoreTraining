@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomAnimator: NSObject {
+final class CustomAnimator: NSObject {
     
     var duration : TimeInterval
     var isPresenting : Bool

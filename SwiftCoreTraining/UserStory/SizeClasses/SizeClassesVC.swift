@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SizeClassesVC: UIViewController {
+final class SizeClassesVC: UIViewController {
     
     let contentView = SizeClassesView()
     

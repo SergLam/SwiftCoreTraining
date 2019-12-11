@@ -8,7 +8,7 @@
 
 import UIKit
 
-class A {
+final class A {
     var aa = 10
 }
 
@@ -17,7 +17,7 @@ struct One {
     var reference: A = A()
 }
 
-class SubclassingVC: UIViewController {
+final class SubclassingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class H {
     var openProperty: String = ""
 }
 
-class G: H {
+final class G: H {
     var some: String = ""
     
     func change() {

@@ -9,7 +9,7 @@
 import UIKit
 import Kanna
 
-class CustomHTMLParserVC: UIViewController {
+final class CustomHTMLParserVC: UIViewController {
     
     var parseResult: [String] = []
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FadePopAnimator: NSObject {
+final class FadePopAnimator: NSObject {
     
     var duration: TimeInterval
     var viewsToHide: [UIView]

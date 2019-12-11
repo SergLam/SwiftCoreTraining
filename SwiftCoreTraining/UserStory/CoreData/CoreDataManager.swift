@@ -11,7 +11,7 @@ import CoreData
 
 typealias OperationResult = ((Bool, String) -> (Void))
 
-class CoreDataManager: NSObject {
+final class CoreDataManager: NSObject {
     
     static let shared = CoreDataManager.init(modelFileName: "DatabaseOne"){}
     

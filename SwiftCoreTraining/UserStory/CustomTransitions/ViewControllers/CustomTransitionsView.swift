@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class CustomTransitionsView: UIView {
+final class CustomTransitionsView: UIView {
     
     let image = R.image.avatarPlaceholder()
     let imageView = UIImageView()

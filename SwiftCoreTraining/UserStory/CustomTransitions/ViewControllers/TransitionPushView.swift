@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransitionPushView: UIView {
+final class TransitionPushView: UIView {
     
     let bigImageView = UIImageView()
     

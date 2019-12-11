@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PersonModel: Codable {
+final class PersonModel: Codable {
     
     let id: Int
     let firstName: String

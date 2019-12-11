@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SystemTransitionPushVC: UIViewController {
+final class SystemTransitionPushVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

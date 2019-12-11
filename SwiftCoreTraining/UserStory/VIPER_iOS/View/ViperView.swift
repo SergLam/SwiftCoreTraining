@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class ViperView: UIView {
+final class ViperView: UIView {
     
     let tableView = UITableView()
     

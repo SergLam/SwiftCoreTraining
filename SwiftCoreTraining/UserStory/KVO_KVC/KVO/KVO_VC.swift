@@ -12,7 +12,7 @@ import UIKit
     @objc dynamic var name: String = "Test user"
 }
 
-class KVO_VC: UIViewController {
+final class KVO_VC: UIViewController {
     // Do  not to be confused with didSet willSet in Swift !!!!!
     // Use dynamic keyword for dynamic dispatch enabling (ObjC feature)
     // Good article - https://habr.com/ru/post/148922/

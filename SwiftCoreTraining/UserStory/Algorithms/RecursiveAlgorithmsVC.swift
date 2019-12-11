@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecursiveAlgorithmsVC: UIViewController {
+final class RecursiveAlgorithmsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

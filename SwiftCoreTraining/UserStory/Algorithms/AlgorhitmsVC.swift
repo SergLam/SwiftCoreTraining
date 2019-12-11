@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlgorhitmsVC: UIViewController {
+final class AlgorhitmsVC: UIViewController {
     
     
     override func viewDidLoad() {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ViperInteractor: PresenterToInteractorProtocol {
+final class ViperInteractor: PresenterToInteractorProtocol {
     
     var presenter: InteractorToPresenterProtocol?
     

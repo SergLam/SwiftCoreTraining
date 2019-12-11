@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZoomPushAnimator: NSObject {
+final class ZoomPushAnimator: NSObject {
     
     var duration: TimeInterval
     var viewToZoom: UIView

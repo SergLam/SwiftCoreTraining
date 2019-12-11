@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GCDViewModel {
+final class GCDViewModel {
     
     func loadImagesConcurently() {
         let url = "https://picsum.photos/300/300/?image="

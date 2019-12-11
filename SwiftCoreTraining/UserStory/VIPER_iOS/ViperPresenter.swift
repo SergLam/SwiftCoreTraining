@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ViperPresenter: ViewToPresenterProtocol {
+final class ViperPresenter: ViewToPresenterProtocol {
     
     var view: PresenterToViewProtocol?
     

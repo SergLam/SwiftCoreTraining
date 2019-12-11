@@ -9,7 +9,7 @@
 import UIKit
 import Starscream
 
-class WebSocketStarscreamVC: UIViewController {
+final class WebSocketStarscreamVC: UIViewController {
     // ws://superfy.cc:2000 - outdated server, from old app
     // https://devchat.sprfy.com - use this endpoint
     let socket = WebSocket(url: URL(string: "ws://superfy.cc:2000")!)

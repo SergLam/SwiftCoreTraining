@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViperRouter: PresenterToRouterProtocol {
+final class ViperRouter: PresenterToRouterProtocol {
     
     static func createModule() -> ViperVC {
         
