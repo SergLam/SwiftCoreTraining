@@ -1,13 +1,16 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '11.0'
-# Code generation guide
+use_frameworks!
+inhibit_all_warnings!
+
 # https://github.com/strongself/Generamba/wiki/Rambafile-Structure
 # https://github.com/strongself/Generamba
 
 target 'SwiftCoreTraining' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  
   use_frameworks!
-
+  inhibit_all_warnings!
+  
   # UI
   pod 'Eureka'
   pod 'SnapKit'
