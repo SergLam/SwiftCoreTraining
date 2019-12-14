@@ -10,6 +10,9 @@ import UIKit
 import CoreData
 import Rswift
 
+typealias VoidClosure = () -> ()
+typealias Localizable = R.string.localizable
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

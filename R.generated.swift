@@ -16,10 +16,12 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 2 files.
   struct file {
     /// Resource file `page.html`.
     static let pageHtml = Rswift.FileResource(bundle: R.hostingBundle, name: "page", pathExtension: "html")
+    /// Resource file `persons.json`.
+    static let personsJson = Rswift.FileResource(bundle: R.hostingBundle, name: "persons", pathExtension: "json")
     
     /// `bundle.url(forResource: "page", withExtension: "html")`
     static func pageHtml(_: Void = ()) -> Foundation.URL? {
@@ -27,15 +29,23 @@ struct R: Rswift.Validatable {
       return fileResource.bundle.url(forResource: fileResource)
     }
     
+    /// `bundle.url(forResource: "persons", withExtension: "json")`
+    static func personsJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.personsJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
     /// Image `LaunchImage`.
     static let launchImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchImage")
     /// Image `avatarPlaceholder`.
     static let avatarPlaceholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "avatarPlaceholder")
+    /// Image `disclosureIndicatorGray`.
+    static let disclosureIndicatorGray = Rswift.ImageResource(bundle: R.hostingBundle, name: "disclosureIndicatorGray")
     
     /// `UIImage(named: "LaunchImage", bundle: ..., traitCollection: ...)`
     static func launchImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -45,6 +55,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "avatarPlaceholder", bundle: ..., traitCollection: ...)`
     static func avatarPlaceholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.avatarPlaceholder, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "disclosureIndicatorGray", bundle: ..., traitCollection: ...)`
+    static func disclosureIndicatorGray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.disclosureIndicatorGray, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -58,6 +73,28 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
+    }
+    
+    fileprivate init() {}
+  }
+  
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  struct string {
+    /// This `R.string.localizable` struct is generated, and contains static references to 1 localization keys.
+    struct localizable {
+      /// en translation: Loading
+      /// 
+      /// Locales: en
+      static let loading = Rswift.StringResource(key: "loading", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      
+      /// en translation: Loading
+      /// 
+      /// Locales: en
+      static func loading(_: Void = ()) -> String {
+        return NSLocalizedString("loading", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
     }
     
     fileprivate init() {}

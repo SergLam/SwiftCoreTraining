@@ -1,4 +1,5 @@
 PODS:
+  - Closures (0.6)
   - DZNEmptyDataSet (1.8.1)
   - Eureka (5.0.0)
   - Kanna (4.0.3)
@@ -7,6 +8,11 @@ PODS:
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
+  - Realm (3.14.2):
+    - Realm/Headers (= 3.14.2)
+  - Realm/Headers (3.14.2)
+  - RealmSwift (3.14.2):
+    - Realm (= 3.14.2)
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
@@ -14,21 +20,26 @@ PODS:
   - Socket.IO-Client-Swift (15.0.0):
     - Starscream (~> 3.1)
   - Starscream (3.1.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - Closures
   - DZNEmptyDataSet
   - Eureka
   - Kanna (~> 4.0.0)
   - Kingfisher
   - Masonry
   - R.swift
+  - RealmSwift
   - SDWebImage (~> 4.0)
   - SnapKit
   - Socket.IO-Client-Swift (~> 15.0.0)
   - Starscream (~> 3.1.0)
+  - SVProgressHUD
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
+    - Closures
     - DZNEmptyDataSet
     - Eureka
     - Kanna
@@ -36,12 +47,16 @@ SPEC REPOS:
     - Masonry
     - R.swift
     - R.swift.Library
+    - Realm
+    - RealmSwift
     - SDWebImage
     - SnapKit
     - Socket.IO-Client-Swift
     - Starscream
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
+  Closures: 7477e86502e33d7ae435b8c60ce219390e06c476
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
   Kanna: 0ebbdd0e7e3308f0aafbd569e79c8cadc5eb877c
@@ -49,11 +64,14 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  Realm: 179c6706e3a49dbfe112e572fd3c03d3169bea35
+  RealmSwift: 1797f272fb51c555b764fada32e82159a2c65247
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Socket.IO-Client-Swift: c039a808195d22a7192962841b8c035cb61ea49e
   Starscream: 08172b481e145289c4930cb567230fb55897cfa4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: b8a0f9921946463193a37b651e29335a73c1c0c2
+PODFILE CHECKSUM: 95841ed7e2040f6f41418b7675403654c8f54853
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4
