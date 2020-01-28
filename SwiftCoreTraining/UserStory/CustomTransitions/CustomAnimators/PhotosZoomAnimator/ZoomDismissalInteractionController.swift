@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+// https://medium.com/flawless-app-stories/create-transition-and-interaction-like-ios-photos-app-2b9f16313d3
+// https://github.com/masamichiueta/FluidPhoto
 class ZoomDismissalInteractionController: NSObject {
     
     var transitionContext: UIViewControllerContextTransitioning?

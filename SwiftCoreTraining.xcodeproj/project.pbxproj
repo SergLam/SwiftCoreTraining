@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,9 @@
 		7CC0B60422A3124B0072EB49 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B60322A3124B0072EB49 /* NibLoadableView.swift */; };
 		7CDB281B22638BC800546F9C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB281A22638BC800546F9C /* R.generated.swift */; };
 		7CDB282B2263CC5900546F9C /* UIScreen+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */; };
+		7CED219323E0DBB500A37499 /* ZoomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED219023E0DBB500A37499 /* ZoomTransitionController.swift */; };
+		7CED219423E0DBB500A37499 /* ZoomDismissalInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED219123E0DBB500A37499 /* ZoomDismissalInteractionController.swift */; };
+		7CED219523E0DBB500A37499 /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED219223E0DBB500A37499 /* ZoomAnimator.swift */; };
 		7CFDC39622B6CFE900FF351E /* ExampleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC33822B6CFE900FF351E /* ExampleViewModel.m */; };
 		7CFDC39722B6CFE900FF351E /* ExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC33D22B6CFE900FF351E /* ExampleCell.m */; };
 		7CFDC39822B6CFE900FF351E /* ExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC33E22B6CFE900FF351E /* ExampleView.m */; };
@@ -130,6 +133,9 @@
 		7CDB281A22638BC800546F9C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Ext.swift"; sourceTree = "<group>"; };
 		7CE5D7D2221F37DD0049E3A9 /* SwiftCoreTraining-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftCoreTraining-Bridging-Header.h"; sourceTree = "<group>"; };
+		7CED219023E0DBB500A37499 /* ZoomTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomTransitionController.swift; sourceTree = "<group>"; };
+		7CED219123E0DBB500A37499 /* ZoomDismissalInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomDismissalInteractionController.swift; sourceTree = "<group>"; };
+		7CED219223E0DBB500A37499 /* ZoomAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
 		7CFDC33822B6CFE900FF351E /* ExampleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleViewModel.m; sourceTree = "<group>"; };
 		7CFDC33922B6CFE900FF351E /* ExampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleView.h; sourceTree = "<group>"; };
 		7CFDC33A22B6CFE900FF351E /* ExampleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleVC.h; sourceTree = "<group>"; };
@@ -350,6 +356,16 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		7CED218F23E0DBB500A37499 /* PhotosZoomAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				7CED219023E0DBB500A37499 /* ZoomTransitionController.swift */,
+				7CED219123E0DBB500A37499 /* ZoomDismissalInteractionController.swift */,
+				7CED219223E0DBB500A37499 /* ZoomAnimator.swift */,
+			);
+			path = PhotosZoomAnimator;
+			sourceTree = "<group>";
+		};
 		7CFDC33622B6CFE900FF351E /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				7CFDC34E22B6CFE900FF351E /* CustomAnimator.swift */,
+				7CED218F23E0DBB500A37499 /* PhotosZoomAnimator */,
 				7CFDC34F22B6CFE900FF351E /* ZoomAnimation */,
 				7CFDC35222B6CFE900FF351E /* FadeAnimation */,
 			);
@@ -819,7 +836,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -928,6 +945,7 @@
 				7CFDC3C722B6CFE900FF351E /* GCDVC.swift in Sources */,
 				7CFDC3BF22B6CFE900FF351E /* WebSocketStarscreamView.swift in Sources */,
 				7CFDC3B022B6CFE900FF351E /* SizeClassesView.swift in Sources */,
+				7CED219523E0DBB500A37499 /* ZoomAnimator.swift in Sources */,
 				7CFDC3B922B6CFE900FF351E /* XMLParserVC.swift in Sources */,
 				7CFDC3CB22B6CFE900FF351E /* PrivacyDetailsCell.swift in Sources */,
 				9C448C8122A7AD1700247047 /* RealmManager.swift in Sources */,
@@ -949,6 +967,7 @@
 				7CFDC39922B6CFE900FF351E /* UserModel.m in Sources */,
 				7CFDC3BD22B6CFE900FF351E /* WebSocketStarscreamVC.swift in Sources */,
 				7CC0B60222A312090072EB49 /* ReusableView.swift in Sources */,
+				7CED219323E0DBB500A37499 /* ZoomTransitionController.swift in Sources */,
 				7CFDC3C522B6CFE900FF351E /* CoreDataVC.swift in Sources */,
 				7CFDC39A22B6CFE900FF351E /* ExampleVC.m in Sources */,
 				7CFDC3BA22B6CFE900FF351E /* WebSocketSocketIOVC.swift in Sources */,
@@ -975,6 +994,7 @@
 				7CFDC3B822B6CFE900FF351E /* RecursiveAlgorithmsVC.swift in Sources */,
 				7CFDC3B222B6CFE900FF351E /* DebugVCShowable.swift in Sources */,
 				7CDB282B2263CC5900546F9C /* UIScreen+Ext.swift in Sources */,
+				7CED219423E0DBB500A37499 /* ZoomDismissalInteractionController.swift in Sources */,
 				7CFDC3C122B6CFE900FF351E /* DatabaseOne.xcdatamodeld in Sources */,
 				7CFDC39B22B6CFE900FF351E /* ArraySetVC.swift in Sources */,
 				7CFDC3BE22B6CFE900FF351E /* SocketTarget.swift in Sources */,
@@ -1153,7 +1173,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = SwiftCoreTraining/Resources/Assets.xcassets;
-				DEVELOPMENT_TEAM = 5F4UJN8DRU;
+				DEVELOPMENT_TEAM = MDWBDEPC5G;
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1176,7 +1196,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = SwiftCoreTraining/Resources/Assets.xcassets;
-				DEVELOPMENT_TEAM = 5F4UJN8DRU;
+				DEVELOPMENT_TEAM = MDWBDEPC5G;
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
