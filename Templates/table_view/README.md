@@ -8,44 +8,25 @@ Generamba templates collection.
 ```
 ### Templates
 catalogs:
-- 'https://github.com/agsarkisov/generamba-templates'
+- 'https://github.com/SergLam/Generamba-Templates'
 templates:
-- {name: [TEMPLATE_NAME]}
+- {name: swifty_viper, git: 'https://github.com/SergLam/Generamba-Templates/tree', branch: 'master'}
+- {name: table_view, git: 'https://github.com/SergLam/Generamba-Templates', branch: 'master'}
 ```
 
 3) Run `generamba template install`. All the templates will be placed in the '/Templates' folder of your current project.
 
 3) Run `generamba gen [MODULE_NAME] [TEMPLATE_NAME]` - It creates module with specific name from specific template.
 
-# Installation : 
-1. Install and setup Generamba
+### Additional info
 
-2. Update templates section in your Rambafile:
+Run `generamba help` to learn more about each of the Generamba features.
 
-```
-### Templates
-catalogs:
-- 'https://github.com/elbertvaldian/Newbie-Viper-Generamba-Template'
-templates:
-- {name: Newbie-Viper-Generamba-Template}
-```
+**Wiki:**
+- [Command list](https://github.com/rambler-digital-solutions/Generamba/wiki/Available-Commands)
+- [Understanding the Rambafile](https://github.com/rambler-digital-solutions/Generamba/wiki/Rambafile-Structure)
+- [Understanding templates](https://github.com/rambler-digital-solutions/Generamba/wiki/Template-Structure)
 
-3. Run ```generamba template install```. All the templates will be placed in the '/Templates' folder of your current project.
-
-4. Run ```generamba gen [MODULE_NAME] Newbie-Viper-Generamba-Template``` - It creates module with specific name from specific template.
-
-### Overview
-
-It's a shared catalog of templates for [Generamba](https://github.com/rambler-digital-solutions/Generamba) code generator.
-
-**Generamba** is a code generator made for working with Xcode. Primarily it is designed to generate VIPER modules but it is quite easy to customize it for generation of any other classes (both in Objective-C and Swift).
-
-The detailed information about a template structure is available in [Generamba Wiki](https://github.com/rambler-digital-solutions/Generamba/wiki/Template-Structure).
-
-### Templates
-- [adkrviper_controller](https://github.com/rambler-digital-solutions/generamba-catalog/blob/master/adkrviper_controller/adkrviper_controller.rambaspec)
-- [championat_viper](https://github.com/rambler-digital-solutions/generamba-catalog/blob/master/championat_viper/championat_viper.rambaspec)
-- [mvvm_controller](https://github.com/rambler-digital-solutions/generamba-catalog/blob/master/mvvm_controller/mvvm_controller.rambaspec)
-- [rviper_controller](https://github.com/rambler-digital-solutions/generamba-catalog/blob/master/rviper_controller/rviper_controller.rambaspec)
-- [swifty_viper](https://github.com/rambler-digital-solutions/generamba-catalog/blob/master/swifty_viper/swifty_viper.rambaspec)
-- [swifty_viper_OSX](https://github.com/rambler-digital-solutions/generamba-catalog/blob/master/swifty_viper_OSX/swifty_viper_OSX.rambaspec)
+**Other materials:**
+- [Russian] Rambler.iOS V: Generamba and Code Generation ([Slides](http://www.slideshare.net/Rambler-iOS/viper-56423582) | [Video](http://www.youtube.com/watch?v=NXNiN9FaUnY))
+- [Introduction to Generamba](http://etolstoy.com/2016/02/10/generamba/)

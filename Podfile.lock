@@ -24,7 +24,7 @@ PODS:
 
 DEPENDENCIES:
   - Closures
-  - DZNEmptyDataSet
+  - DZNEmptyDataSet (~> 1.8.1)
   - Eureka
   - Kanna (~> 4.0.0)
   - Kingfisher
@@ -72,6 +72,6 @@ SPEC CHECKSUMS:
   Starscream: 08172b481e145289c4930cb567230fb55897cfa4
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 230934ba50e19172ff54d84eb15219b47ee3eea0
+PODFILE CHECKSUM: bf2ec765cbc469cb48194c775449c50d1ab247df
 
 COCOAPODS: 1.8.4

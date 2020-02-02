@@ -14,7 +14,7 @@ final class {{ module_info.name }}ViewTableController: NSObject {
     private var dataSource: [{{ module_info.name }}TableViewCellViewModel] = []
     
     func updateDataSource(_ points: [{{ custom_parameters.dto }}]) {
-        self.dataSource = points.map{ return {{ module_info.name }}TableViewCellViewModel(point: $0) }
+        self.dataSource = points.map{ return {{ module_info.name }}TableViewCellViewModel($0) }
     }
     
 }

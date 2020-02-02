@@ -13,6 +13,7 @@ target 'SwiftCoreTraining' do
   
   # UI
   pod 'Eureka'
+  pod 'DZNEmptyDataSet', '~> 1.8.1'
   pod 'SnapKit'
   pod 'Kingfisher'
   pod 'R.swift'
@@ -30,7 +31,6 @@ target 'SwiftCoreTraining' do
   pod 'Kanna', '~> 4.0.0'
   
   #Objc Pods
-  pod 'DZNEmptyDataSet'
   pod 'Masonry'
   pod 'SDWebImage', '~> 4.0'
 

@@ -1,0 +1,6 @@
+Example launch:
+
+DTO - class / structure that you used for parameters storing 
+that you would like to use for displaying at table view cell
+
+generamba gen [MODULE_NAME] table_view --custom_parameters dto:[DTO_Class_name]

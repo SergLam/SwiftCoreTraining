@@ -1,0 +1,11 @@
+Example launch:
+
+DTO - class / structure that you used for parameters storing 
+that you would like to use for displaying at table view cell
+
+Cell_size_value - pass a global layout constant variable name / Double value 
+
+Cell_section_spacing - pass a global layout constant variable name / Double value 
+
+Usage:
+generamba gen [MODULE_NAME] collection_view_h --custom_parameters dto:[DTO_Class_name] cell_size:[Cell_size_value] spacing:[Cell_section_spacing]
