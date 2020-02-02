@@ -1,0 +1,49 @@
+{% include 'header' %}
+
+import UIKit
+
+protocol {{ module_info.name }}ViewTableControllerDelegate: class {
+    
+    func didSelectItem(_ item: {{ custom_parameters.dto }})
+}
+
+final class {{ module_info.name }}ViewTableController: NSObject {
+    
+    weak var delegate: {{ module_info.name }}ViewTableControllerDelegate?
+    
+    private var dataSource: [{{ module_info.name }}TableViewCellViewModel] = []
+    
+    func updateDataSource(_ points: [{{ custom_parameters.dto }}]) {
+        self.dataSource = points.map{ return {{ module_info.name }}TableViewCellViewModel(point: $0) }
+    }
+    
+}
+
+// MARK: - UITableViewDataSource
+extension {{ module_info.name }}ViewTableController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let identifier: String = {{ module_info.name }}TableViewCell.reuseIdentifier
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? {{ module_info.name }}TableViewCell else {
+            preconditionFailure("Unable to dequeueReusableCell")
+        }
+        cell.update(dataSource[indexPath.row])
+        return cell
+    }
+    
+}
+
+// MARK: - UITableViewDelegate
+extension {{ module_info.name }}ViewTableController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        delegate?.didSelectItem(dataSource[indexPath.row].item)
+    }
+    
+}

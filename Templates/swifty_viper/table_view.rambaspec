@@ -1,0 +1,21 @@
+# Template information section
+name: "table_view"
+summary: "Table view with encapsulated delegate + data source logic"
+author: "Sergey Lamcev"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# View
+- {name: table_view/View.swift,  path: table_view/Code/View.swift.liquid}
+
+# Table Controller
+- {name: table_view/ViewTableController.swift, path: table_view/Code/ViewTableController.swift.liquid}
+
+# Table View Cell
+- {name: table_view/Cells/TableViewCell.swift, path: table_view/Code/Cells/TableViewCell.swift.liquid}
+
+# The declarations for test files
+test_files:

@@ -85,9 +85,12 @@
 		7CFDC3D722B6D0D000FF351E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CFDC3D422B6D0D000FF351E /* Localizable.strings */; };
 		7CFDC3D822B6D0D000FF351E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CFDC3D622B6D0D000FF351E /* Assets.xcassets */; };
 		86D51C3297479D0338A6D137 /* Pods_SwiftCoreTrainingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF259DAFE179C80A3B0F011 /* Pods_SwiftCoreTrainingUITests.framework */; };
+		9B0B4B494C01936B98EB039A /* MapFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AF0421F6F42E46B4D9B5A2 /* MapFilterTableViewCell.swift */; };
 		9C295B382269BD9B00527898 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C295B372269BD9B00527898 /* UIButton+Ext.swift */; };
 		9C448C8122A7AD1700247047 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C448C8022A7AD1700247047 /* RealmManager.swift */; };
+		9CA3250E8BC824F2A459758F /* MapFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C019445DCE5089BE5DF9A6B6 /* MapFilterView.swift */; };
 		BFD1AF259D05A309A7E05EBF /* Pods_SwiftCoreTraining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA89E5239673E10E8CD7519 /* Pods_SwiftCoreTraining.framework */; };
+		FDEFFFAB291D5CE314944DF6 /* MapFilterViewTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11C64988A399C39C91E6A8E /* MapFilterViewTableController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,7 @@
 
 /* Begin PBXFileReference section */
 		109A922D1A59CE7844434F86 /* Pods-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
+		25AF0421F6F42E46B4D9B5A2 /* MapFilterTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapFilterTableViewCell.swift; sourceTree = "<group>"; };
 		2EA89E5239673E10E8CD7519 /* Pods_SwiftCoreTraining.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTraining.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DAFCB717863B193DF9FEDD /* Pods_SwiftCoreTrainingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTrainingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		568115C0A37CBE3749D94602 /* Pods-SwiftCoreTrainingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingTests/Pods-SwiftCoreTrainingTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 		9C295B372269BD9B00527898 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		9C448C8022A7AD1700247047 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		ACF259DAFE179C80A3B0F011 /* Pods_SwiftCoreTrainingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTrainingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B11C64988A399C39C91E6A8E /* MapFilterViewTableController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapFilterViewTableController.swift; sourceTree = "<group>"; };
+		C019445DCE5089BE5DF9A6B6 /* MapFilterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapFilterView.swift; sourceTree = "<group>"; };
 		D2750D5A2AA4194665FD4CD6 /* Pods-SwiftCoreTrainingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8CD09ADDAEDEEDF44866504 /* Pods-SwiftCoreTraining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +244,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BE95D5587ACD924D930C710 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				25AF0421F6F42E46B4D9B5A2 /* MapFilterTableViewCell.swift */,
+			);
+			name = Cells;
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		404C880442F649CDFAD427F3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +296,7 @@
 				7C2F034921FCC5D000A50936 /* Products */,
 				404C880442F649CDFAD427F3 /* Pods */,
 				65AA712967BD7B4D1B86074E /* Frameworks */,
+				8D91E8FB990F803D96F8389E /* Generated_Code */,
 			);
 			sourceTree = "<group>";
 		};
@@ -680,12 +696,50 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		8385AE32DFAC76872336C836 /* table_view */ = {
+			isa = PBXGroup;
+			children = (
+				C019445DCE5089BE5DF9A6B6 /* MapFilterView.swift */,
+				B11C64988A399C39C91E6A8E /* MapFilterViewTableController.swift */,
+				0BE95D5587ACD924D930C710 /* Cells */,
+			);
+			name = table_view;
+			path = table_view;
+			sourceTree = "<group>";
+		};
+		884DB395337BDC58C39FFD09 /* MapFilter */ = {
+			isa = PBXGroup;
+			children = (
+				8385AE32DFAC76872336C836 /* table_view */,
+			);
+			name = MapFilter;
+			path = MapFilter;
+			sourceTree = "<group>";
+		};
+		8D91E8FB990F803D96F8389E /* Generated_Code */ = {
+			isa = PBXGroup;
+			children = (
+				EB20A1313C20333490DE31CA /* Modules */,
+			);
+			name = Generated_Code;
+			path = Generated_Code;
+			sourceTree = "<group>";
+		};
 		9C448C7F22A7ACFA00247047 /* RealmSwift */ = {
 			isa = PBXGroup;
 			children = (
 				9C448C8022A7AD1700247047 /* RealmManager.swift */,
 			);
 			path = RealmSwift;
+			sourceTree = "<group>";
+		};
+		EB20A1313C20333490DE31CA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				884DB395337BDC58C39FFD09 /* MapFilter */,
+			);
+			name = Modules;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -836,7 +890,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1003,6 +1057,9 @@
 				7CFDC3CD22B6CFE900FF351E /* PrivacyPolicyView.swift in Sources */,
 				7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */,
 				7CFDC3A922B6CFE900FF351E /* ViperInteractor.swift in Sources */,
+				9CA3250E8BC824F2A459758F /* MapFilterView.swift in Sources */,
+				FDEFFFAB291D5CE314944DF6 /* MapFilterViewTableController.swift in Sources */,
+				9B0B4B494C01936B98EB039A /* MapFilterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

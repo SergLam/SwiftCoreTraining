@@ -1,0 +1,26 @@
+### Headers settings
+company: SergLam
+
+### Xcode project settings
+project_name: ProjectName
+xcodeproj_path: TestProject.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: TestProject
+
+# The file path for new modules
+project_file_path: Generamba
+
+# The Xcode group path to new modules
+project_group_path: Generamba
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+catalogs:
+- 'https://github.com/SergLam/Generamba-Templates'
+templates:
+- {name: swifty_viper, git: 'https://github.com/SergLam/Generamba-Templates/tree', branch: 'master'}
+- {name: table_view, git: 'https://github.com/SergLam/Generamba-Templates', branch: 'master'}
