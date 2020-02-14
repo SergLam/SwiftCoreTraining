@@ -21,7 +21,7 @@ target 'SwiftCoreTraining' do
   pod 'SVProgressHUD'
   
   # Database
-  pod 'RealmSwift'
+  pod 'RealmSwift', '4.3.0'
   
   # WebSockets
   pod 'Starscream', '~> 3.1.0'
