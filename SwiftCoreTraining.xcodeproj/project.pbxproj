@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32CD914B6A8C031C5994D63A /* SwipeBackSwipeBackNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963FED9427C469CB57281C59 /* SwipeBackSwipeBackNavigationController.swift */; };
 		3E5DE2E20012CB11E4C7B52F /* Pods_SwiftCoreTrainingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DAFCB717863B193DF9FEDD /* Pods_SwiftCoreTrainingTests.framework */; };
 		7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */; };
 		7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F034B21FCC5D000A50936 /* AppDelegate.swift */; };
@@ -88,6 +89,8 @@
 		9C295B382269BD9B00527898 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C295B372269BD9B00527898 /* UIButton+Ext.swift */; };
 		9C448C8122A7AD1700247047 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C448C8022A7AD1700247047 /* RealmManager.swift */; };
 		BFD1AF259D05A309A7E05EBF /* Pods_SwiftCoreTraining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA89E5239673E10E8CD7519 /* Pods_SwiftCoreTraining.framework */; };
+		DD05ADBDD103B53F085CBB46 /* SwipeBackPanDirectionGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD962C1D0CFE1C0EC73B27 /* SwipeBackPanDirectionGestureRecognizer.swift */; };
+		EBF4EABEB82CCACB43C9C783 /* SwipeBackPopNavigationGestureAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30988835CB9CEA36BF18E176 /* SwipeBackPopNavigationGestureAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,7 @@
 /* Begin PBXFileReference section */
 		109A922D1A59CE7844434F86 /* Pods-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		2EA89E5239673E10E8CD7519 /* Pods_SwiftCoreTraining.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTraining.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30988835CB9CEA36BF18E176 /* SwipeBackPopNavigationGestureAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeBackPopNavigationGestureAnimator.swift; sourceTree = "<group>"; };
 		55DAFCB717863B193DF9FEDD /* Pods_SwiftCoreTrainingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTrainingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		568115C0A37CBE3749D94602 /* Pods-SwiftCoreTrainingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingTests/Pods-SwiftCoreTrainingTests.release.xcconfig"; sourceTree = "<group>"; };
 		572E422DA4E54BA9B01B1618 /* Pods-SwiftCoreTrainingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingTests/Pods-SwiftCoreTrainingTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,11 +207,16 @@
 		7CFDC3D122B6D08C00FF351E /* ProgressShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressShowable.swift; sourceTree = "<group>"; };
 		7CFDC3D522B6D0D000FF351E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7CFDC3D622B6D0D000FF351E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		963FED9427C469CB57281C59 /* SwipeBackSwipeBackNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeBackSwipeBackNavigationController.swift; sourceTree = "<group>"; };
 		9C295B372269BD9B00527898 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		9C448C8022A7AD1700247047 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		AADD962C1D0CFE1C0EC73B27 /* SwipeBackPanDirectionGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeBackPanDirectionGestureRecognizer.swift; sourceTree = "<group>"; };
 		ACF259DAFE179C80A3B0F011 /* Pods_SwiftCoreTrainingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTrainingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6F4EB2A92E04830227CB891 /* SwipeBackSwipeBackNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeBackSwipeBackNavigationController.swift; sourceTree = "<group>"; };
+		C720BFA20F75996C4D8A3A46 /* SwipeBackPanDirectionGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeBackPanDirectionGestureRecognizer.swift; sourceTree = "<group>"; };
 		D2750D5A2AA4194665FD4CD6 /* Pods-SwiftCoreTrainingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8CD09ADDAEDEEDF44866504 /* Pods-SwiftCoreTraining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.debug.xcconfig"; sourceTree = "<group>"; };
+		F3A2A9DC51CFDA30ACAF4DD5 /* SwipeBackPopNavigationGestureAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeBackPopNavigationGestureAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +247,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0372D16F17D1B35F4477F5AE /* SwipeBack */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4EB2A92E04830227CB891 /* SwipeBackSwipeBackNavigationController.swift */,
+				C720BFA20F75996C4D8A3A46 /* SwipeBackPanDirectionGestureRecognizer.swift */,
+				F3A2A9DC51CFDA30ACAF4DD5 /* SwipeBackPopNavigationGestureAnimator.swift */,
+			);
+			path = SwipeBack;
+			sourceTree = "<group>";
+		};
 		404C880442F649CDFAD427F3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +301,7 @@
 				404C880442F649CDFAD427F3 /* Pods */,
 				65AA712967BD7B4D1B86074E /* Frameworks */,
 				8D91E8FB990F803D96F8389E /* Generated_Code */,
+				A2A03A9C7ABF582E3A3F0D5D /* Generamba */,
 			);
 			sourceTree = "<group>";
 		};
@@ -435,6 +455,7 @@
 		7CFDC34722B6CFE900FF351E /* CustomTransitions */ = {
 			isa = PBXGroup;
 			children = (
+				BA580E28BB3978B39719DB27 /* SwipeBack */,
 				7CFDC34822B6CFE900FF351E /* ViewControllers */,
 				7CFDC34D22B6CFE900FF351E /* CustomAnimators */,
 			);
@@ -695,6 +716,24 @@
 				9C448C8022A7AD1700247047 /* RealmManager.swift */,
 			);
 			path = RealmSwift;
+			sourceTree = "<group>";
+		};
+		A2A03A9C7ABF582E3A3F0D5D /* Generamba */ = {
+			isa = PBXGroup;
+			children = (
+				0372D16F17D1B35F4477F5AE /* SwipeBack */,
+			);
+			path = Generamba;
+			sourceTree = "<group>";
+		};
+		BA580E28BB3978B39719DB27 /* SwipeBack */ = {
+			isa = PBXGroup;
+			children = (
+				963FED9427C469CB57281C59 /* SwipeBackSwipeBackNavigationController.swift */,
+				AADD962C1D0CFE1C0EC73B27 /* SwipeBackPanDirectionGestureRecognizer.swift */,
+				30988835CB9CEA36BF18E176 /* SwipeBackPopNavigationGestureAnimator.swift */,
+			);
+			path = SwipeBack;
 			sourceTree = "<group>";
 		};
 		E9C2A51FBC5B83A76F288CEA /* Modules */ = {
@@ -1019,6 +1058,9 @@
 				7CFDC3CD22B6CFE900FF351E /* PrivacyPolicyView.swift in Sources */,
 				7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */,
 				7CFDC3A922B6CFE900FF351E /* ViperInteractor.swift in Sources */,
+				32CD914B6A8C031C5994D63A /* SwipeBackSwipeBackNavigationController.swift in Sources */,
+				DD05ADBDD103B53F085CBB46 /* SwipeBackPanDirectionGestureRecognizer.swift in Sources */,
+				EBF4EABEB82CCACB43C9C783 /* SwipeBackPopNavigationGestureAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

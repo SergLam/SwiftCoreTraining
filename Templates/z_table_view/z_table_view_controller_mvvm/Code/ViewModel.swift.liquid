@@ -1,0 +1,14 @@
+{% include 'header' %}
+
+import Foundation
+
+protocol {{ module_info.name }}ViewModelDelegate: class {
+    
+    func didReceiveError(_ error: String)
+}
+
+final class {{ module_info.name }}ViewModel {
+    
+    weak var delegate: {{ module_info.name }}ViewModelDelegate?
+    
+}

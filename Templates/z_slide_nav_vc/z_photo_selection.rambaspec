@@ -1,0 +1,15 @@
+# Template information section
+name: "z_photo_selection"
+summary: "Photo selection controller - iOS native photo picker"
+author: "Sergey Lamcev"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# Controller
+- {name: Controller.swift, path: z_photo_selection/Code/Controller.swift.liquid}
+
+# The declarations for test files
+test_files:

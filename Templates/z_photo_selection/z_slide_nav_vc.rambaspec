@@ -1,0 +1,17 @@
+# Template information section
+name: "z_slide_nav_vc"
+summary: "Navigation controller with swipe back for half screen area (e.g. WhatsApp or Telegram)"
+author: "Sergey Lamcev"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# Controller
+- {name: SwipeBackNavigationController.swift, path: z_slide_nav_vc/Code/NavigationController.swift.liquid}
+- {name: PanDirectionGestureRecognizer.swift, path: z_slide_nav_vc/Code/PanDirectionGestureRecognizer.swift.liquid}
+- {name: PopNavigationGestureAnimator.swift, path: z_slide_nav_vc/Code/PopNavigationGestureAnimator.swift.liquid}
+
+# The declarations for test files
+test_files:

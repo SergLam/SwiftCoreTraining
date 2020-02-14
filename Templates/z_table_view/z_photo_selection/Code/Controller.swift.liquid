@@ -1,0 +1,139 @@
+{% include 'header' %}
+
+import AVFoundation
+import Photos
+import UIKit
+
+protocol PhotoSelectionControllerDelegate: class {
+    
+    func photoSelectionCanceled()
+    
+    func didFailWithError(_ error: String)
+    func didFailToGetPermission(_ message: String)
+    
+    func didUserSelectImage(_ image: UIImage)
+    
+    func didPhotoSelectionCompleted()
+}
+
+typealias ImageFetchClosure = (_ image: UIImage?) -> Void
+
+final class PhotoSelectionController: NSObject {
+    
+    weak var delegate: PhotoSelectionControllerDelegate?
+    
+    private let phManager = PHCachingImageManager()
+    
+}
+
+// MARK: - UINavigationControllerDelegate
+extension PhotoSelectionController: UINavigationControllerDelegate {
+    
+    func checkCameraAccess(completion: @escaping (Bool) -> Void ) {
+        guard AVCaptureDevice.default(for: .video) != nil else {
+            // Localizable.errorCameraNotAvailable() = "error.camera-not-available" = "Camera not available";
+            delegate?.didFailWithError("Camera not available")
+            completion(false)
+            return
+        }
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .denied, .restricted:
+            // Localizable.accessErrorCamera() = "access.error-camera" = "Camera access was denied";
+            delegate?.didFailToGetPermission("Camera access was denied")
+            completion(false)
+        case .authorized:
+            completion(true)
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { [unowned self] success in
+                if !success {
+                    // Localizable.accessErrorCamera() = "access.error-camera" = "Camera access was denied";
+                    self.delegate?.didFailToGetPermission("Camera access was denied")
+                }
+                completion(success)
+            }
+            
+        @unknown default:
+            assertionFailure()
+        }
+    }
+    
+    func checkPhotosAccess(completion: @escaping (Bool) -> Void ) {
+        let status = PHPhotoLibrary.authorizationStatus()
+        switch status {
+        case .authorized:
+            completion(true)
+        case .denied, .restricted:
+            // Localizable.accessErrorPhotos() = "access.error-photos" = "Photos access was denied";
+            delegate?.didFailToGetPermission("Photos access was denied")
+            completion(false)
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization { [unowned self] status in
+                switch status {
+                case .authorized:
+                    completion(true)
+                case .denied, .restricted:
+                    // Localizable.accessErrorPhotos() = "access.error-photos" = "Photos access was denied";
+                    self.delegate?.didFailToGetPermission("Photos access was denied")
+                    completion(false)
+                case .notDetermined:
+                    assertionFailure() // won't happen but still
+                @unknown default:
+                    assertionFailure()
+                }
+            }
+        @unknown default:
+            assertionFailure()
+        }
+    }
+    
+}
+
+// MARK: - UIImagePickerControllerDelegate
+extension PhotoSelectionController: UIImagePickerControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        
+        // NOTE: image captured by device camera do not have image URL
+        handleCapturedImage(picker, info: info)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+        delegate?.photoSelectionCanceled()
+    }
+    
+    private func handleCapturedImage(_ picker: UIImagePickerController,
+                                     info: [UIImagePickerController.InfoKey: Any]) {
+        
+        var selectedImage: UIImage?
+        let editedImage = info[.editedImage] as? UIImage
+        
+        if editedImage?.jpegData(compressionQuality: 1.0) == nil {
+            // Image was NOT edited
+            guard let image = info[.originalImage] as? UIImage else {
+                assertionFailure("Unable to get image")
+                return
+            }
+            selectedImage = image
+        } else {
+            // Image was edited
+            guard let image = info[.editedImage] as? UIImage else {
+                assertionFailure("Unable to get image")
+                return
+            }
+            selectedImage = image
+        }
+        guard let image = selectedImage else {
+            assertionFailure("Image wasn't provided")
+            return
+        }
+        
+        delegate?.didUserSelectImage(image)
+        picker.dismiss(animated: true) { [unowned self] in
+            self.delegate?.didPhotoSelectionCompleted()
+        }
+        
+    }
+    
+}

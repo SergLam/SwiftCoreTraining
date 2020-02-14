@@ -1,0 +1,21 @@
+# Template information section
+name: "z_collection_view_v"
+summary: "Collection view with encapsulated delegate + data source logic"
+author: "Sergey Lamcev"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# View
+- {name: View.swift,  path: z_collection_view_v/Code/View.swift.liquid}
+
+# Collection Controller
+- {name: ViewCollectionController.swift, path: z_collection_view_v/Code/ViewCollectionController.swift.liquid}
+
+# Collection View Cell
+- {name: Cells/CollectionViewCell.swift, path: z_collection_view_v/Code/Cells/CollectionViewCell.swift.liquid}
+
+# The declarations for test files
+test_files:

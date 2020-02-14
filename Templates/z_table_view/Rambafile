@@ -2,12 +2,12 @@
 company: SergLam
 
 ### Xcode project settings
-project_name: SwiftCoreTraining
-xcodeproj_path: SwiftCoreTraining.xcodeproj
+project_name: <YOUR_PROJECT_NAME>
+xcodeproj_path: <YOUR_PROJECT_NAME>.xcodeproj
 
 ### Code generation settings section
 # The main project target name
-project_target: SwiftCoreTraining
+project_target: <YOUR_MAIN_PROJECT_TARGET_NAME>
 
 # The file path for new modules
 project_file_path: Generated_Code/Modules

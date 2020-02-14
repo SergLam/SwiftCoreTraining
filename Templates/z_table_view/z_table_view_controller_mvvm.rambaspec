@@ -1,0 +1,28 @@
+# Template information section
+name: "z_table_view_controller_mvvm"
+summary: "Table view controller + pull to refresh + empty state with + encapsulated delegate + data source logic"
+author: "Sergey Lamcev"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+# View Controller
+- {name: ViewСontroller.swift,  path: ./z_table_view_controller_mvvm/Code/ViewСontroller.swift.liquid}
+
+# View
+- {name: View.swift,  path: ./z_table_view_controller_mvvm/Code/View.swift.liquid}
+
+# View Model
+- {name: ViewModel.swift,  path: ./z_table_view_controller_mvvm/Code/ViewModel.swift.liquid}
+
+# Table Controller
+- {name: ViewTableController.swift, path: ./z_table_view_controller_mvvm/Code/ViewTableController.swift.liquid}
+
+# Table View Cell
+- {name: Cells/TableViewCell.swift, path: ./z_table_view_controller_mvvm/Code/Cells/TableViewCell.swift.liquid}
+
+# The declarations for test files
+test_files:

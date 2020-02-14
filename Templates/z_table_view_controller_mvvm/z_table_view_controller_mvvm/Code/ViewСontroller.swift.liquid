@@ -1,0 +1,81 @@
+{% include 'header' %}
+
+import DZNEmptyDataSet
+import UIKit
+
+protocol {{ module_info.name }}ViewСontrollerDelegate: class {
+    
+    func didSelect{{ module_info.name }}Item(_ item: {{ custom_parameters.dto }})
+}
+
+final class {{ module_info.name }}ViewСontroller: UIViewController {
+    
+    weak var delegate: {{ module_info.name }}ViewСontrollerDelegate?
+    
+    private let contentView: {{ module_info.name }}View = {{ module_info.name }}View()
+    private let tableController: {{ module_info.name }}VCTableController = {{ module_info.name }}VCTableController()
+    
+    private let viewModel: {{ module_info.name }}ViewModel = {{ module_info.name }}ViewModel()
+    
+    // MARK: - Lifecycle
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    override func loadView() {
+        view = contentView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        configureTableView()
+        viewModel.delegate = self
+        contentView.delegate = self
+        tableController.delegate = self
+    }
+    
+    // MARK: - Private functions
+    private func configureTableView() {
+        contentView.tableView.separatorStyle = .none
+        contentView.tableView.rowHeight = UITableView.automaticDimension
+        contentView.tableView.estimatedRowHeight = 600.0
+        
+        contentView.tableView.register({{ module_info.name }}TableViewCell.self,
+                                       forCellReuseIdentifier: {{ module_info.name }}TableViewCell.reuseIdentifier)
+        contentView.tableView.dataSource = tableController
+        contentView.tableView.delegate = tableController
+        contentView.tableView.emptyDataSetSource = tableController
+        contentView.tableView.emptyDataSetDelegate = tableController
+    }
+    
+}
+
+// MARK: - {{ module_info.name }}ViewModelDelegate
+extension {{ module_info.name }}ViewСontroller: {{ module_info.name }}ViewModelDelegate {
+    
+    func didReceiveError(_ error: String) {
+        contentView.changeRefreshControlVisibility(isVisible: false)
+        // TODO: - Handle error here
+    }
+    
+}
+
+// MARK: - {{ module_info.name }}ViewDelegate
+extension {{ module_info.name }}ViewСontroller: {{ module_info.name }}ViewDelegate {
+    
+    func onPullToRefreshAction() {
+        contentView.changeRefreshControlVisibility(isVisible: true)
+        // TODO: - Request new data here
+    }
+
+}
+
+// MARK: - {{ module_info.name }}ViewDelegate
+extension {{ module_info.name }}ViewСontroller: {{ module_info.name }}VCTableControllerDelegate {
+    
+    func didSelectItem(_ item: {{ custom_parameters.dto }}) {
+        delegate?.didSelect{{ module_info.name }}Item(item)
+    }
+    
+}
