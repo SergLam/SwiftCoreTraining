@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		131FCD7123F6FA85002A72FE /* PredicateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCD6D23F6FA85002A72FE /* PredicateBuilder.swift */; };
-		131FCD7223F6FA85002A72FE /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCD6E23F6FA85002A72FE /* DatabaseError.swift */; };
-		131FCD7323F6FA85002A72FE /* RealmDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCD6F23F6FA85002A72FE /* RealmDAO.swift */; };
-		131FCD7423F6FA85002A72FE /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCD7023F6FA85002A72FE /* Realm+Ext.swift */; };
+		131FCD9323F708FF002A72FE /* PredicateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCD8F23F708FF002A72FE /* PredicateBuilder.swift */; };
+		131FCD9423F708FF002A72FE /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCD9023F708FF002A72FE /* DatabaseError.swift */; };
+		131FCD9523F708FF002A72FE /* RealmDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCD9123F708FF002A72FE /* RealmDAO.swift */; };
+		131FCD9623F708FF002A72FE /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCD9223F708FF002A72FE /* Realm+Ext.swift */; };
 		32CD914B6A8C031C5994D63A /* SwipeBackSwipeBackNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963FED9427C469CB57281C59 /* SwipeBackSwipeBackNavigationController.swift */; };
 		3E5DE2E20012CB11E4C7B52F /* Pods_SwiftCoreTrainingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DAFCB717863B193DF9FEDD /* Pods_SwiftCoreTrainingTests.framework */; };
 		7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */; };
@@ -115,10 +115,10 @@
 
 /* Begin PBXFileReference section */
 		109A922D1A59CE7844434F86 /* Pods-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
-		131FCD6D23F6FA85002A72FE /* PredicateBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateBuilder.swift; sourceTree = "<group>"; };
-		131FCD6E23F6FA85002A72FE /* DatabaseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
-		131FCD6F23F6FA85002A72FE /* RealmDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDAO.swift; sourceTree = "<group>"; };
-		131FCD7023F6FA85002A72FE /* Realm+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
+		131FCD8F23F708FF002A72FE /* PredicateBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateBuilder.swift; sourceTree = "<group>"; };
+		131FCD9023F708FF002A72FE /* DatabaseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
+		131FCD9123F708FF002A72FE /* RealmDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDAO.swift; sourceTree = "<group>"; };
+		131FCD9223F708FF002A72FE /* Realm+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
 		2EA89E5239673E10E8CD7519 /* Pods_SwiftCoreTraining.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTraining.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30988835CB9CEA36BF18E176 /* SwipeBackPopNavigationGestureAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeBackPopNavigationGestureAnimator.swift; sourceTree = "<group>"; };
 		55DAFCB717863B193DF9FEDD /* Pods_SwiftCoreTrainingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTrainingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,26 +266,26 @@
 		131FCD5E23F6F982002A72FE /* RealmSwift */ = {
 			isa = PBXGroup;
 			children = (
-				131FCD6B23F6FA85002A72FE /* Database */,
+				131FCD8D23F708FF002A72FE /* Database */,
 			);
 			path = RealmSwift;
 			sourceTree = "<group>";
 		};
-		131FCD6B23F6FA85002A72FE /* Database */ = {
+		131FCD8D23F708FF002A72FE /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				131FCD6C23F6FA85002A72FE /* PredicateBuilder */,
-				131FCD6E23F6FA85002A72FE /* DatabaseError.swift */,
-				131FCD6F23F6FA85002A72FE /* RealmDAO.swift */,
-				131FCD7023F6FA85002A72FE /* Realm+Ext.swift */,
+				131FCD8E23F708FF002A72FE /* PredicateBuilder */,
+				131FCD9023F708FF002A72FE /* DatabaseError.swift */,
+				131FCD9123F708FF002A72FE /* RealmDAO.swift */,
+				131FCD9223F708FF002A72FE /* Realm+Ext.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
 		};
-		131FCD6C23F6FA85002A72FE /* PredicateBuilder */ = {
+		131FCD8E23F708FF002A72FE /* PredicateBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				131FCD6D23F6FA85002A72FE /* PredicateBuilder.swift */,
+				131FCD8F23F708FF002A72FE /* PredicateBuilder.swift */,
 			);
 			path = PredicateBuilder;
 			sourceTree = "<group>";
@@ -1021,8 +1021,8 @@
 				7CFDC3A422B6CFE900FF351E /* FadePushAnimator.swift in Sources */,
 				7CFDC3B722B6CFE900FF351E /* CustomHTMLParserVC.swift in Sources */,
 				7CFDC3B122B6CFE900FF351E /* SizeClassesVC.swift in Sources */,
-				131FCD7423F6FA85002A72FE /* Realm+Ext.swift in Sources */,
-				131FCD7123F6FA85002A72FE /* PredicateBuilder.swift in Sources */,
+				131FCD9623F708FF002A72FE /* Realm+Ext.swift in Sources */,
+				131FCD9323F708FF002A72FE /* PredicateBuilder.swift in Sources */,
 				7CFDC3A822B6CFE900FF351E /* VIPERProtocols.swift in Sources */,
 				7CFDC3C722B6CFE900FF351E /* GCDVC.swift in Sources */,
 				7CFDC3BF22B6CFE900FF351E /* WebSocketStarscreamView.swift in Sources */,
@@ -1087,8 +1087,8 @@
 				32CD914B6A8C031C5994D63A /* SwipeBackSwipeBackNavigationController.swift in Sources */,
 				DD05ADBDD103B53F085CBB46 /* SwipeBackPanDirectionGestureRecognizer.swift in Sources */,
 				EBF4EABEB82CCACB43C9C783 /* SwipeBackPopNavigationGestureAnimator.swift in Sources */,
-				131FCD7323F6FA85002A72FE /* RealmDAO.swift in Sources */,
-				131FCD7223F6FA85002A72FE /* DatabaseError.swift in Sources */,
+				131FCD9523F708FF002A72FE /* RealmDAO.swift in Sources */,
+				131FCD9423F708FF002A72FE /* DatabaseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

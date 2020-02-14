@@ -12,10 +12,12 @@ final class PredicateBuilder {
     
     // MARK: field names - equal to realm Object fields names
     static let chatIdFieldName = "chatId"
+    
     static let messageIdFieldName = "id"
     
     static let messagePredicate = PredicateBuilder.equalityPredicate(messageIdFieldName, 101)
-    static let messagePredicateFormat = "\(PredicateBuilder.messageIdFieldName) == %@ AND \(PredicateBuilder.chatIdFieldName) == %@"
+    
+    static let messagePredicateFormat = "\(PredicateBuilder.chatIdFieldName) == %@ AND \(PredicateBuilder.messageIdFieldName) == %@"
     
     // MARK: - Predicate creation methods
     static func equalityPredicate(_ fieldName: String, _ value: Any) -> NSPredicate {
