@@ -24,6 +24,11 @@ target 'SwiftCoreTraining' do
   pod 'ReachabilitySwift', '~> 4.3.1'
   pod 'Kingfisher', '~> 5.9.0'
   
+  # Social auth - Facebook
+  pod 'FacebookCore', '~> 0.9.0'
+  pod 'FacebookLogin', '~> 0.9.0'
+  pod 'FacebookShare', '~> 0.9.0'
+  
   # Social auth - Google
   pod 'GoogleSignIn', '~> 5.0.2'
   
