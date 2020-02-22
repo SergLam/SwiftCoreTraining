@@ -15,10 +15,22 @@ target 'SwiftCoreTraining' do
   pod 'Eureka'
   pod 'DZNEmptyDataSet', '~> 1.8.1'
   pod 'SnapKit'
-  pod 'Kingfisher'
   pod 'R.swift'
   pod 'Closures'
   pod 'SVProgressHUD'
+  
+  # Networking
+  pod 'Moya', '~> 13.0.1'
+  pod 'ReachabilitySwift', '~> 4.3.1'
+  pod 'Kingfisher', '~> 5.9.0'
+  
+  # Social auth - Google
+  pod 'GoogleSignIn', '~> 5.0.2'
+  
+  # Firebase
+  pod 'FirebaseCore'#, '~> 6.13.0'
+  pod 'Firebase/Auth'#, '~> 6.4.1'
+  pod 'Firebase/Analytics'#, '~> 6.1.6'
   
   # Database
   pod 'RealmSwift', '4.3.0'

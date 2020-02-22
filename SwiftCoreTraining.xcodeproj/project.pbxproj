@@ -18,6 +18,11 @@
 		7C2F036121FCC5D200A50936 /* SwiftCoreTrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F036021FCC5D200A50936 /* SwiftCoreTrainingTests.swift */; };
 		7C2F036C21FCC5D200A50936 /* SwiftCoreTrainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F036B21FCC5D200A50936 /* SwiftCoreTrainingUITests.swift */; };
 		7C2F037E21FE151A00A50936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */; };
+		7C55ED5C240136A4008E3C6F /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55ED56240136A4008E3C6F /* AuthRequest.swift */; };
+		7C55ED5D240136A4008E3C6F /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55ED57240136A4008E3C6F /* AuthError.swift */; };
+		7C55ED5E240136A4008E3C6F /* GoogleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55ED58240136A4008E3C6F /* GoogleAuthService.swift */; };
+		7C55ED5F240136A4008E3C6F /* AuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55ED59240136A4008E3C6F /* AuthType.swift */; };
+		7C55ED60240136A4008E3C6F /* JSONAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55ED5B240136A4008E3C6F /* JSONAble.swift */; };
 		7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64B84C2246290300480D88 /* AlertPresenter.swift */; };
 		7CC0B5FF22A30C9B0072EB49 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B5FE22A30C9B0072EB49 /* UIView+Ext.swift */; };
 		7CC0B60222A312090072EB49 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B60122A312090072EB49 /* ReusableView.swift */; };
@@ -136,6 +141,11 @@
 		7C2F036D21FCC5D200A50936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C2F037921FE135B00A50936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7C55ED56240136A4008E3C6F /* AuthRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
+		7C55ED57240136A4008E3C6F /* AuthError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		7C55ED58240136A4008E3C6F /* GoogleAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAuthService.swift; sourceTree = "<group>"; };
+		7C55ED59240136A4008E3C6F /* AuthType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthType.swift; sourceTree = "<group>"; };
+		7C55ED5B240136A4008E3C6F /* JSONAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAble.swift; sourceTree = "<group>"; };
 		7C64B84C2246290300480D88 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		7CA700117650CC9F4EA2C7EE /* Pods-SwiftCoreTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7CC0B5FE22A30C9B0072EB49 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
@@ -392,6 +402,26 @@
 			path = BundleFiles;
 			sourceTree = "<group>";
 		};
+		7C55ED55240136A4008E3C6F /* GoogleAuthService */ = {
+			isa = PBXGroup;
+			children = (
+				7C55ED56240136A4008E3C6F /* AuthRequest.swift */,
+				7C55ED57240136A4008E3C6F /* AuthError.swift */,
+				7C55ED58240136A4008E3C6F /* GoogleAuthService.swift */,
+				7C55ED59240136A4008E3C6F /* AuthType.swift */,
+				7C55ED5A240136A4008E3C6F /* Protocols */,
+			);
+			path = GoogleAuthService;
+			sourceTree = "<group>";
+		};
+		7C55ED5A240136A4008E3C6F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7C55ED5B240136A4008E3C6F /* JSONAble.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		7C64B84B224628F100480D88 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +453,7 @@
 		7CFDC33622B6CFE900FF351E /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
+				7C55ED55240136A4008E3C6F /* GoogleAuthService */,
 				131FCD5E23F6F982002A72FE /* RealmSwift */,
 				7CFDC33722B6CFE900FF351E /* ObjcUsageInSwift */,
 				7CFDC34422B6CFE900FF351E /* Array-Set */,
@@ -781,6 +812,7 @@
 				7C2F034521FCC5D000A50936 /* Frameworks */,
 				7C2F034621FCC5D000A50936 /* Resources */,
 				BDE357D9FD28BC1F4A9DCC5D /* [CP] Embed Pods Frameworks */,
+				43CAA4406DC46839A7FFAAFE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -902,6 +934,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		43CAA4406DC46839A7FFAAFE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7CDB281922638B2A00546F9C /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1018,6 +1067,7 @@
 				7CFDC3AB22B6CFE900FF351E /* ViperView.swift in Sources */,
 				7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */,
 				7CFDC3AC22B6CFE900FF351E /* ViperVC.swift in Sources */,
+				7C55ED5F240136A4008E3C6F /* AuthType.swift in Sources */,
 				7CFDC3A422B6CFE900FF351E /* FadePushAnimator.swift in Sources */,
 				7CFDC3B722B6CFE900FF351E /* CustomHTMLParserVC.swift in Sources */,
 				7CFDC3B122B6CFE900FF351E /* SizeClassesVC.swift in Sources */,
@@ -1062,15 +1112,18 @@
 				7CC0B5FF22A30C9B0072EB49 /* UIView+Ext.swift in Sources */,
 				7CFDC3C922B6CFE900FF351E /* SubclassingVC.swift in Sources */,
 				7CFDC3CA22B6CFE900FF351E /* PrivacyTitleCell.swift in Sources */,
+				7C55ED5E240136A4008E3C6F /* GoogleAuthService.swift in Sources */,
 				7CFDC3C322B6CFE900FF351E /* NSManagedObject+Ext.swift in Sources */,
 				7CFDC39F22B6CFE900FF351E /* TransitionPushVC.swift in Sources */,
 				7CFDC3AD22B6CFE900FF351E /* PersonModel.swift in Sources */,
+				7C55ED60240136A4008E3C6F /* JSONAble.swift in Sources */,
 				7CFDC39C22B6CFE900FF351E /* User.swift in Sources */,
 				7CFDC3C822B6CFE900FF351E /* GCDViewModel.swift in Sources */,
 				7CFDC3A022B6CFE900FF351E /* CustomTransitionsView.swift in Sources */,
 				7CFDC39E22B6CFE900FF351E /* TransitionPushView.swift in Sources */,
 				7CFDC3CF22B6CFE900FF351E /* SystemTransitionRootVC.swift in Sources */,
 				7CC0B60422A3124B0072EB49 /* NibLoadableView.swift in Sources */,
+				7C55ED5D240136A4008E3C6F /* AuthError.swift in Sources */,
 				7CFDC3AA22B6CFE900FF351E /* PersonCell.swift in Sources */,
 				7CFDC3B822B6CFE900FF351E /* RecursiveAlgorithmsVC.swift in Sources */,
 				7CFDC3B222B6CFE900FF351E /* DebugVCShowable.swift in Sources */,
@@ -1087,6 +1140,7 @@
 				32CD914B6A8C031C5994D63A /* SwipeBackSwipeBackNavigationController.swift in Sources */,
 				DD05ADBDD103B53F085CBB46 /* SwipeBackPanDirectionGestureRecognizer.swift in Sources */,
 				EBF4EABEB82CCACB43C9C783 /* SwipeBackPopNavigationGestureAnimator.swift in Sources */,
+				7C55ED5C240136A4008E3C6F /* AuthRequest.swift in Sources */,
 				131FCDAD23F70F2F002A72FE /* RealmDAO.swift in Sources */,
 				131FCDAC23F70F2F002A72FE /* DatabaseError.swift in Sources */,
 			);
