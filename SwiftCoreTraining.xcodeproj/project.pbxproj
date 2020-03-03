@@ -19,6 +19,16 @@
 		7C2F036C21FCC5D200A50936 /* SwiftCoreTrainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F036B21FCC5D200A50936 /* SwiftCoreTrainingUITests.swift */; };
 		7C2F037E21FE151A00A50936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */; };
 		7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64B84C2246290300480D88 /* AlertPresenter.swift */; };
+		7C906338240ED6DE0055BCD8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C90632D240ED6DE0055BCD8 /* View.swift */; };
+		7C906339240ED6DE0055BCD8 /* ModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C90632E240ED6DE0055BCD8 /* ModuleConfigurator.swift */; };
+		7C90633A240ED6DE0055BCD8 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C90632F240ED6DE0055BCD8 /* Interactor.swift */; };
+		7C90633B240ED6DE0055BCD8 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C906330240ED6DE0055BCD8 /* Animator.swift */; };
+		7C90633C240ED6DE0055BCD8 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C906331240ED6DE0055BCD8 /* Presenter.swift */; };
+		7C90633D240ED6DE0055BCD8 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C906332240ED6DE0055BCD8 /* DataSource.swift */; };
+		7C90633E240ED6DE0055BCD8 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C906333240ED6DE0055BCD8 /* Module.swift */; };
+		7C90633F240ED6DE0055BCD8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C906335240ED6DE0055BCD8 /* Router.swift */; };
+		7C906340240ED6DE0055BCD8 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C906336240ED6DE0055BCD8 /* BaseNavigationController.swift */; };
+		7C906341240ED6DE0055BCD8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C906337240ED6DE0055BCD8 /* Coordinator.swift */; };
 		7CC0B5FF22A30C9B0072EB49 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B5FE22A30C9B0072EB49 /* UIView+Ext.swift */; };
 		7CC0B60222A312090072EB49 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B60122A312090072EB49 /* ReusableView.swift */; };
 		7CC0B60422A3124B0072EB49 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0B60322A3124B0072EB49 /* NibLoadableView.swift */; };
@@ -137,6 +147,16 @@
 		7C2F037921FE135B00A50936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C64B84C2246290300480D88 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		7C90632D240ED6DE0055BCD8 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		7C90632E240ED6DE0055BCD8 /* ModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleConfigurator.swift; sourceTree = "<group>"; };
+		7C90632F240ED6DE0055BCD8 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		7C906330240ED6DE0055BCD8 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		7C906331240ED6DE0055BCD8 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		7C906332240ED6DE0055BCD8 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		7C906333240ED6DE0055BCD8 /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		7C906335240ED6DE0055BCD8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		7C906336240ED6DE0055BCD8 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		7C906337240ED6DE0055BCD8 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7CA700117650CC9F4EA2C7EE /* Pods-SwiftCoreTrainingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7CC0B5FE22A30C9B0072EB49 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		7CC0B60122A312090072EB49 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -400,9 +420,35 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		7C90632C240ED6DE0055BCD8 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				7C90632D240ED6DE0055BCD8 /* View.swift */,
+				7C90632E240ED6DE0055BCD8 /* ModuleConfigurator.swift */,
+				7C90632F240ED6DE0055BCD8 /* Interactor.swift */,
+				7C906330240ED6DE0055BCD8 /* Animator.swift */,
+				7C906331240ED6DE0055BCD8 /* Presenter.swift */,
+				7C906332240ED6DE0055BCD8 /* DataSource.swift */,
+				7C906333240ED6DE0055BCD8 /* Module.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		7C906334240ED6DE0055BCD8 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				7C906335240ED6DE0055BCD8 /* Router.swift */,
+				7C906336240ED6DE0055BCD8 /* BaseNavigationController.swift */,
+				7C906337240ED6DE0055BCD8 /* Coordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		7CC0B60022A311EF0072EB49 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				7C90632C240ED6DE0055BCD8 /* Module */,
+				7C906334240ED6DE0055BCD8 /* Navigation */,
 				7CC0B60122A312090072EB49 /* ReusableView.swift */,
 				7CFDC3D122B6D08C00FF351E /* ProgressShowable.swift */,
 				7CC0B60322A3124B0072EB49 /* NibLoadableView.swift */,
@@ -1036,6 +1082,7 @@
 				7CFDC3AB22B6CFE900FF351E /* ViperView.swift in Sources */,
 				7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */,
 				7CFDC3AC22B6CFE900FF351E /* ViperVC.swift in Sources */,
+				7C906339240ED6DE0055BCD8 /* ModuleConfigurator.swift in Sources */,
 				7CFDC3A422B6CFE900FF351E /* FadePushAnimator.swift in Sources */,
 				7CFDC3B722B6CFE900FF351E /* CustomHTMLParserVC.swift in Sources */,
 				7CFDC3B122B6CFE900FF351E /* SizeClassesVC.swift in Sources */,
@@ -1044,22 +1091,28 @@
 				7CFDC3A822B6CFE900FF351E /* VIPERProtocols.swift in Sources */,
 				7CFDC3C722B6CFE900FF351E /* GCDVC.swift in Sources */,
 				7CFDC3BF22B6CFE900FF351E /* WebSocketStarscreamView.swift in Sources */,
+				7C90633B240ED6DE0055BCD8 /* Animator.swift in Sources */,
 				7CFDC3B022B6CFE900FF351E /* SizeClassesView.swift in Sources */,
 				7CED219523E0DBB500A37499 /* ZoomAnimator.swift in Sources */,
+				7C90633D240ED6DE0055BCD8 /* DataSource.swift in Sources */,
 				7CFDC3B922B6CFE900FF351E /* XMLParserVC.swift in Sources */,
 				7CFDC3CB22B6CFE900FF351E /* PrivacyDetailsCell.swift in Sources */,
 				7CFDC3A322B6CFE900FF351E /* ZoomPopAnimator.swift in Sources */,
 				7CFDC3BB22B6CFE900FF351E /* SocketCalls.swift in Sources */,
 				7CFDC3C422B6CFE900FF351E /* test.xcdatamodeld in Sources */,
+				7C90633A240ED6DE0055BCD8 /* Interactor.swift in Sources */,
 				7CFDC3A622B6CFE900FF351E /* ViperPresenter.swift in Sources */,
 				7CFDC3AF22B6CFE900FF351E /* PersonsResponse.swift in Sources */,
+				7C90633F240ED6DE0055BCD8 /* Router.swift in Sources */,
 				7CFDC3A722B6CFE900FF351E /* ViperRouter.swift in Sources */,
 				7CFDC3C022B6CFE900FF351E /* CoreDataManager.swift in Sources */,
 				7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */,
+				7C906338240ED6DE0055BCD8 /* View.swift in Sources */,
 				7CFDC3D022B6CFE900FF351E /* DebugVC.swift in Sources */,
 				7CFDC3C222B6CFE900FF351E /* CoreDataOpetations.swift in Sources */,
 				7CFDC39822B6CFE900FF351E /* ExampleView.m in Sources */,
 				7CFDC39622B6CFE900FF351E /* ExampleViewModel.m in Sources */,
+				7C906340240ED6DE0055BCD8 /* BaseNavigationController.swift in Sources */,
 				7CFDC3B322B6CFE900FF351E /* KVO_VC.swift in Sources */,
 				7CDB281B22638BC800546F9C /* R.generated.swift in Sources */,
 				7CFDC39722B6CFE900FF351E /* ExampleCell.m in Sources */,
@@ -1070,6 +1123,7 @@
 				7CFDC3C522B6CFE900FF351E /* CoreDataVC.swift in Sources */,
 				7CFDC39A22B6CFE900FF351E /* ExampleVC.m in Sources */,
 				7CFDC3BA22B6CFE900FF351E /* WebSocketSocketIOVC.swift in Sources */,
+				7C906341240ED6DE0055BCD8 /* Coordinator.swift in Sources */,
 				7CFDC3A122B6CFE900FF351E /* CustomAnimator.swift in Sources */,
 				7CFDC3BC22B6CFE900FF351E /* WebSocketSocketIOView.swift in Sources */,
 				7CFDC3CC22B6CFE900FF351E /* PrivacyPolicyVC.swift in Sources */,
@@ -1078,6 +1132,7 @@
 				7CFDC3C622B6CFE900FF351E /* CoreDataView.swift in Sources */,
 				7CFDC3D222B6D08C00FF351E /* ProgressShowable.swift in Sources */,
 				7CC0B5FF22A30C9B0072EB49 /* UIView+Ext.swift in Sources */,
+				7C90633E240ED6DE0055BCD8 /* Module.swift in Sources */,
 				7CFDC3C922B6CFE900FF351E /* SubclassingVC.swift in Sources */,
 				7CFDC3CA22B6CFE900FF351E /* PrivacyTitleCell.swift in Sources */,
 				7CFDC3C322B6CFE900FF351E /* NSManagedObject+Ext.swift in Sources */,
@@ -1102,6 +1157,7 @@
 				7CFDC3CD22B6CFE900FF351E /* PrivacyPolicyView.swift in Sources */,
 				7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */,
 				7CFDC3A922B6CFE900FF351E /* ViperInteractor.swift in Sources */,
+				7C90633C240ED6DE0055BCD8 /* Presenter.swift in Sources */,
 				32CD914B6A8C031C5994D63A /* SwipeBackSwipeBackNavigationController.swift in Sources */,
 				DD05ADBDD103B53F085CBB46 /* SwipeBackPanDirectionGestureRecognizer.swift in Sources */,
 				EBF4EABEB82CCACB43C9C783 /* SwipeBackPopNavigationGestureAnimator.swift in Sources */,
