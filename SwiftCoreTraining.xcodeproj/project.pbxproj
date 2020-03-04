@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1316DB8D241029B60070CE2C /* ViperDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DB8C241029B60070CE2C /* ViperDataSource.swift */; };
 		131FCDAB23F70F2F002A72FE /* PredicateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCDA723F70F2F002A72FE /* PredicateBuilder.swift */; };
 		131FCDAC23F70F2F002A72FE /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCDA823F70F2F002A72FE /* DatabaseError.swift */; };
 		131FCDAD23F70F2F002A72FE /* RealmDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCDA923F70F2F002A72FE /* RealmDAO.swift */; };
@@ -125,6 +126,7 @@
 
 /* Begin PBXFileReference section */
 		109A922D1A59CE7844434F86 /* Pods-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
+		1316DB8C241029B60070CE2C /* ViperDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDataSource.swift; sourceTree = "<group>"; };
 		131FCDA723F70F2F002A72FE /* PredicateBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateBuilder.swift; sourceTree = "<group>"; };
 		131FCDA823F70F2F002A72FE /* DatabaseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
 		131FCDA923F70F2F002A72FE /* RealmDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDAO.swift; sourceTree = "<group>"; };
@@ -588,6 +590,7 @@
 				7CFDC35722B6CFE900FF351E /* ViperRouter.swift */,
 				7CFDC35822B6CFE900FF351E /* VIPERProtocols.swift */,
 				7CFDC35922B6CFE900FF351E /* ViperInteractor.swift */,
+				1316DB8C241029B60070CE2C /* ViperDataSource.swift */,
 				7CFDC35A22B6CFE900FF351E /* View */,
 				7CFDC35F22B6CFE900FF351E /* DataModel */,
 			);
@@ -1109,6 +1112,7 @@
 				7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */,
 				7C906338240ED6DE0055BCD8 /* View.swift in Sources */,
 				7CFDC3D022B6CFE900FF351E /* DebugVC.swift in Sources */,
+				1316DB8D241029B60070CE2C /* ViperDataSource.swift in Sources */,
 				7CFDC3C222B6CFE900FF351E /* CoreDataOpetations.swift in Sources */,
 				7CFDC39822B6CFE900FF351E /* ExampleView.m in Sources */,
 				7CFDC39622B6CFE900FF351E /* ExampleViewModel.m in Sources */,
