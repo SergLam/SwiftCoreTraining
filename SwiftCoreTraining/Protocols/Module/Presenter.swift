@@ -8,4 +8,6 @@
 
 import Foundation
 
-protocol Presenter: class {}
+protocol Presenter: class {
+    
+}
