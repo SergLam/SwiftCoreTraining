@@ -48,7 +48,7 @@ final class WebSocketSocketIOVC: UIViewController {
                 debugPrint("message on  write")
             }
         } else {
-            AlertPresenter.showError(at: self, error: "Socket not connected")
+            AlertPresenter.showErrorAlert(at: self, error: "Socket not connected")
         }
     }
     
@@ -63,7 +63,7 @@ final class WebSocketSocketIOVC: UIViewController {
             debugPrint("socket reconnected")
         }
         socket.on(clientEvent: .error) { [unowned self] (data, ack) in
-            AlertPresenter.showError(at: self, error: String(describing: data))
+            AlertPresenter.showErrorAlert(at: self, error: String(describing: data))
         }
         socket.connect()
     }

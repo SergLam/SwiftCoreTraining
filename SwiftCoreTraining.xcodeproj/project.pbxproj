@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1316DB8D241029B60070CE2C /* ViperDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DB8C241029B60070CE2C /* ViperDataSource.swift */; };
+		1316DC06241116C60070CE2C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC05241116C60070CE2C /* BaseViewController.swift */; };
+		1316DC0A241117880070CE2C /* StatusBarResizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC08241117870070CE2C /* StatusBarResizable.swift */; };
+		1316DC0B241117880070CE2C /* ExternalURLOpenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC09241117870070CE2C /* ExternalURLOpenable.swift */; };
 		131FCDAB23F70F2F002A72FE /* PredicateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCDA723F70F2F002A72FE /* PredicateBuilder.swift */; };
 		131FCDAC23F70F2F002A72FE /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCDA823F70F2F002A72FE /* DatabaseError.swift */; };
 		131FCDAD23F70F2F002A72FE /* RealmDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131FCDA923F70F2F002A72FE /* RealmDAO.swift */; };
@@ -127,6 +130,9 @@
 /* Begin PBXFileReference section */
 		109A922D1A59CE7844434F86 /* Pods-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		1316DB8C241029B60070CE2C /* ViperDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDataSource.swift; sourceTree = "<group>"; };
+		1316DC05241116C60070CE2C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1316DC08241117870070CE2C /* StatusBarResizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarResizable.swift; sourceTree = "<group>"; };
+		1316DC09241117870070CE2C /* ExternalURLOpenable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalURLOpenable.swift; sourceTree = "<group>"; };
 		131FCDA723F70F2F002A72FE /* PredicateBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateBuilder.swift; sourceTree = "<group>"; };
 		131FCDA823F70F2F002A72FE /* DatabaseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
 		131FCDA923F70F2F002A72FE /* RealmDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDAO.swift; sourceTree = "<group>"; };
@@ -283,6 +289,16 @@
 				F3A2A9DC51CFDA30ACAF4DD5 /* SwipeBackPopNavigationGestureAnimator.swift */,
 			);
 			path = SwipeBack;
+			sourceTree = "<group>";
+		};
+		1316DC07241117730070CE2C /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1316DC09241117870070CE2C /* ExternalURLOpenable.swift */,
+				1316DC08241117870070CE2C /* StatusBarResizable.swift */,
+				7CFDC3D122B6D08C00FF351E /* ProgressShowable.swift */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		131FCD5E23F6F982002A72FE /* RealmSwift */ = {
@@ -449,10 +465,10 @@
 		7CC0B60022A311EF0072EB49 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				1316DC07241117730070CE2C /* UIViewController */,
 				7C90632C240ED6DE0055BCD8 /* Module */,
 				7C906334240ED6DE0055BCD8 /* Navigation */,
 				7CC0B60122A312090072EB49 /* ReusableView.swift */,
-				7CFDC3D122B6D08C00FF351E /* ProgressShowable.swift */,
 				7CC0B60322A3124B0072EB49 /* NibLoadableView.swift */,
 			);
 			path = Protocols;
@@ -487,6 +503,7 @@
 				7CFDC38C22B6CFE900FF351E /* Accordeon_Table */,
 				7CFDC39222B6CFE900FF351E /* SystemTransitions */,
 				7CFDC39522B6CFE900FF351E /* DebugVC.swift */,
+				1316DC05241116C60070CE2C /* BaseViewController.swift */,
 			);
 			path = UserStory;
 			sourceTree = "<group>";
@@ -1079,6 +1096,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1316DC0B241117880070CE2C /* ExternalURLOpenable.swift in Sources */,
 				7CFDC3CE22B6CFE900FF351E /* SystemTransitionPushVC.swift in Sources */,
 				7CFDC3A222B6CFE900FF351E /* ZoomPushAnimator.swift in Sources */,
 				7CFDC3A522B6CFE900FF351E /* FadePopAnimator.swift in Sources */,
@@ -1100,6 +1118,7 @@
 				7C90633D240ED6DE0055BCD8 /* DataSource.swift in Sources */,
 				7CFDC3B922B6CFE900FF351E /* XMLParserVC.swift in Sources */,
 				7CFDC3CB22B6CFE900FF351E /* PrivacyDetailsCell.swift in Sources */,
+				1316DC06241116C60070CE2C /* BaseViewController.swift in Sources */,
 				7CFDC3A322B6CFE900FF351E /* ZoomPopAnimator.swift in Sources */,
 				7CFDC3BB22B6CFE900FF351E /* SocketCalls.swift in Sources */,
 				7CFDC3C422B6CFE900FF351E /* test.xcdatamodeld in Sources */,
@@ -1130,6 +1149,7 @@
 				7C906341240ED6DE0055BCD8 /* Coordinator.swift in Sources */,
 				7CFDC3A122B6CFE900FF351E /* CustomAnimator.swift in Sources */,
 				7CFDC3BC22B6CFE900FF351E /* WebSocketSocketIOView.swift in Sources */,
+				1316DC0A241117880070CE2C /* StatusBarResizable.swift in Sources */,
 				7CFDC3CC22B6CFE900FF351E /* PrivacyPolicyVC.swift in Sources */,
 				7CFDC39D22B6CFE900FF351E /* CustomTransitionsVC.swift in Sources */,
 				7CFDC3B622B6CFE900FF351E /* AlgorhitmsVC.swift in Sources */,

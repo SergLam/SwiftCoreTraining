@@ -44,7 +44,7 @@ final class CoreDataVC: UIViewController {
                 if result {
                     AlertPresenter.showSuccessMessage(at: self, message: "New company added successfully")
                 } else {
-                    AlertPresenter.showError(at: self, error: "New company write error")
+                    AlertPresenter.showErrorAlert(at: self, error: "New company write error")
                 }
             }
         case .fetchObjectsByParameter:
@@ -61,7 +61,7 @@ final class CoreDataVC: UIViewController {
                 if result {
                     AlertPresenter.showSuccessMessage(at: self, message: description)
                 } else {
-                    AlertPresenter.showError(at: self, error: description)
+                    AlertPresenter.showErrorAlert(at: self, error: description)
                 }
             }
         case .deleteAll:
@@ -69,7 +69,7 @@ final class CoreDataVC: UIViewController {
                 if result {
                     AlertPresenter.showSuccessMessage(at: self, message: description)
                 } else {
-                    AlertPresenter.showError(at: self, error: description)
+                    AlertPresenter.showErrorAlert(at: self, error: description)
                 }
             }
         }

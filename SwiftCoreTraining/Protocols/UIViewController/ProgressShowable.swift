@@ -1,9 +1,9 @@
 //
 //  ProgressShowable.swift
-//  Superfy
+//  SwiftCoreTraining
 //
-//  Created by IdeaSoft on 5/20/19.
-//  Copyright © 2019 Aleksandr Zhovtyi. All rights reserved.
+//  Created by Serg Liamthev on 6/1/19.
+//  Copyright © 2019 serglam. All rights reserved.
 //
 
 import UIKit

@@ -82,7 +82,7 @@ extension ViperVC: PresenterToViewProtocol {
     func showError(error: String) {
         
         hideProgress { [unowned self] in
-            AlertPresenter.showError(at: self, error: error)
+            AlertPresenter.showErrorAlert(at: self, error: error)
         }
     }
     

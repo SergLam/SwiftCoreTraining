@@ -49,7 +49,7 @@ final class WebSocketStarscreamVC: UIViewController {
                 debugPrint("\(callType.rawValue) on  write")
             }
         } else {
-            AlertPresenter.showError(at: self, error: "Socket not connected")
+            AlertPresenter.showErrorAlert(at: self, error: "Socket not connected")
         }
     }
     
@@ -63,7 +63,7 @@ extension WebSocketStarscreamVC: WebSocketAdvancedDelegate {
     func websocketDidDisconnect(socket: WebSocket, error: Error?) {
         debugPrint("Disconnected")
         if let error = error {
-            AlertPresenter.showError(at: self, error: error.localizedDescription)
+            AlertPresenter.showErrorAlert(at: self, error: error.localizedDescription)
         } else {
             socket.connect()
         }
