@@ -22,6 +22,7 @@
 		7C2F036121FCC5D200A50936 /* SwiftCoreTrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F036021FCC5D200A50936 /* SwiftCoreTrainingTests.swift */; };
 		7C2F036C21FCC5D200A50936 /* SwiftCoreTrainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F036B21FCC5D200A50936 /* SwiftCoreTrainingUITests.swift */; };
 		7C2F037E21FE151A00A50936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */; };
+		7C4FA41524B3996400ECE2E5 /* House.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FA41424B3996400ECE2E5 /* House.m */; };
 		7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64B84C2246290300480D88 /* AlertPresenter.swift */; };
 		7C906338240ED6DE0055BCD8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C90632D240ED6DE0055BCD8 /* View.swift */; };
 		7C906339240ED6DE0055BCD8 /* ModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C90632E240ED6DE0055BCD8 /* ModuleConfigurator.swift */; };
@@ -154,6 +155,8 @@
 		7C2F036D21FCC5D200A50936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C2F037921FE135B00A50936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7C4FA41324B3996400ECE2E5 /* House.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = House.h; sourceTree = "<group>"; };
+		7C4FA41424B3996400ECE2E5 /* House.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = House.m; sourceTree = "<group>"; };
 		7C64B84C2246290300480D88 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		7C90632D240ED6DE0055BCD8 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7C90632E240ED6DE0055BCD8 /* ModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleConfigurator.swift; sourceTree = "<group>"; };
@@ -430,6 +433,36 @@
 			path = BundleFiles;
 			sourceTree = "<group>";
 		};
+		7C4FA41024B398CD00ECE2E5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7CFDC33B22B6CFE900FF351E /* Cell */,
+				7CFDC33A22B6CFE900FF351E /* ExampleVC.h */,
+				7CFDC34322B6CFE900FF351E /* ExampleVC.m */,
+				7CFDC33922B6CFE900FF351E /* ExampleView.h */,
+				7CFDC33E22B6CFE900FF351E /* ExampleView.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7C4FA41124B398F100ECE2E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7CFDC33F22B6CFE900FF351E /* ExampleViewModel.h */,
+				7CFDC33822B6CFE900FF351E /* ExampleViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7C4FA41224B3993600ECE2E5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7C4FA41324B3996400ECE2E5 /* House.h */,
+				7C4FA41424B3996400ECE2E5 /* House.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		7C64B84B224628F100480D88 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,14 +544,10 @@
 		7CFDC33722B6CFE900FF351E /* ObjcUsageInSwift */ = {
 			isa = PBXGroup;
 			children = (
-				7CFDC33822B6CFE900FF351E /* ExampleViewModel.m */,
-				7CFDC33922B6CFE900FF351E /* ExampleView.h */,
-				7CFDC33A22B6CFE900FF351E /* ExampleVC.h */,
-				7CFDC33B22B6CFE900FF351E /* Cell */,
-				7CFDC33E22B6CFE900FF351E /* ExampleView.m */,
-				7CFDC33F22B6CFE900FF351E /* ExampleViewModel.h */,
+				7C4FA41224B3993600ECE2E5 /* Home */,
+				7C4FA41124B398F100ECE2E5 /* ViewModel */,
+				7C4FA41024B398CD00ECE2E5 /* UI */,
 				7CFDC34022B6CFE900FF351E /* DataModel */,
-				7CFDC34322B6CFE900FF351E /* ExampleVC.m */,
 			);
 			path = ObjcUsageInSwift;
 			sourceTree = "<group>";
@@ -1138,6 +1167,7 @@
 				7C906340240ED6DE0055BCD8 /* BaseNavigationController.swift in Sources */,
 				7CFDC3B322B6CFE900FF351E /* KVO_VC.swift in Sources */,
 				7CDB281B22638BC800546F9C /* R.generated.swift in Sources */,
+				7C4FA41524B3996400ECE2E5 /* House.m in Sources */,
 				7CFDC39722B6CFE900FF351E /* ExampleCell.m in Sources */,
 				7CFDC39922B6CFE900FF351E /* UserModel.m in Sources */,
 				7CFDC3BD22B6CFE900FF351E /* WebSocketStarscreamVC.swift in Sources */,
