@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Bedroom.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString * address;
 @property (nonatomic) NSInteger * numberOfBedrooms;
 @property (nonatomic) BOOL hasHotTub;
+
+@property (nonatomic) Bedroom * frontBedroom;
+@property (nonatomic) Bedroom * backBedroom;
 
 @end
 
