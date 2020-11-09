@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		32CD914B6A8C031C5994D63A /* SwipeBackSwipeBackNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963FED9427C469CB57281C59 /* SwipeBackSwipeBackNavigationController.swift */; };
 		3E5DE2E20012CB11E4C7B52F /* Pods_SwiftCoreTrainingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DAFCB717863B193DF9FEDD /* Pods_SwiftCoreTrainingTests.framework */; };
 		7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */; };
+		7C22859825598F8C0080DF81 /* ClosuresVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C22859725598F8C0080DF81 /* ClosuresVC.swift */; };
+		7C2285A825598FAE0080DF81 /* ClosuresVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2285A725598FAE0080DF81 /* ClosuresVCView.swift */; };
 		7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F034B21FCC5D000A50936 /* AppDelegate.swift */; };
 		7C2F036121FCC5D200A50936 /* SwiftCoreTrainingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F036021FCC5D200A50936 /* SwiftCoreTrainingTests.swift */; };
 		7C2F036C21FCC5D200A50936 /* SwiftCoreTrainingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F036B21FCC5D200A50936 /* SwiftCoreTrainingUITests.swift */; };
@@ -147,6 +149,8 @@
 		568115C0A37CBE3749D94602 /* Pods-SwiftCoreTrainingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingTests/Pods-SwiftCoreTrainingTests.release.xcconfig"; sourceTree = "<group>"; };
 		572E422DA4E54BA9B01B1618 /* Pods-SwiftCoreTrainingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingTests/Pods-SwiftCoreTrainingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
+		7C22859725598F8C0080DF81 /* ClosuresVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosuresVC.swift; sourceTree = "<group>"; };
+		7C2285A725598FAE0080DF81 /* ClosuresVCView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosuresVCView.swift; sourceTree = "<group>"; };
 		7C2F034821FCC5D000A50936 /* SwiftCoreTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCoreTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2F034B21FCC5D000A50936 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C2F035721FCC5D200A50936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -361,6 +365,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7C22859625598F760080DF81 /* Closures */ = {
+			isa = PBXGroup;
+			children = (
+				7C22859725598F8C0080DF81 /* ClosuresVC.swift */,
+				7C2285A725598FAE0080DF81 /* ClosuresVCView.swift */,
+			);
+			path = Closures;
+			sourceTree = "<group>";
+		};
 		7C2F033F21FCC5D000A50936 = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +566,7 @@
 		7CFDC33622B6CFE900FF351E /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
+				7C22859625598F760080DF81 /* Closures */,
 				131FCD5E23F6F982002A72FE /* RealmSwift */,
 				7CFDC33722B6CFE900FF351E /* ObjcUsageInSwift */,
 				7CFDC34422B6CFE900FF351E /* Array-Set */,
@@ -1052,7 +1066,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1172,6 +1186,7 @@
 				1316DC06241116C60070CE2C /* BaseViewController.swift in Sources */,
 				7CFDC3A322B6CFE900FF351E /* ZoomPopAnimator.swift in Sources */,
 				7CFDC3BB22B6CFE900FF351E /* SocketCalls.swift in Sources */,
+				7C2285A825598FAE0080DF81 /* ClosuresVCView.swift in Sources */,
 				7CFDC3C422B6CFE900FF351E /* test.xcdatamodeld in Sources */,
 				7C90633A240ED6DE0055BCD8 /* Interactor.swift in Sources */,
 				7CFDC3A622B6CFE900FF351E /* ViperPresenter.swift in Sources */,
@@ -1198,6 +1213,7 @@
 				7CFDC3C522B6CFE900FF351E /* CoreDataVC.swift in Sources */,
 				7CFDC39A22B6CFE900FF351E /* ExampleVC.m in Sources */,
 				7CFDC3BA22B6CFE900FF351E /* WebSocketSocketIOVC.swift in Sources */,
+				7C22859825598F8C0080DF81 /* ClosuresVC.swift in Sources */,
 				7C906341240ED6DE0055BCD8 /* Coordinator.swift in Sources */,
 				7CFDC3A122B6CFE900FF351E /* CustomAnimator.swift in Sources */,
 				7CFDC3BC22B6CFE900FF351E /* WebSocketSocketIOView.swift in Sources */,
@@ -1412,6 +1428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = SwiftCoreTraining/Resources/Assets.xcassets;
 				DEVELOPMENT_TEAM = MDWBDEPC5G;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1435,6 +1452,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = SwiftCoreTraining/Resources/Assets.xcassets;
 				DEVELOPMENT_TEAM = MDWBDEPC5G;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

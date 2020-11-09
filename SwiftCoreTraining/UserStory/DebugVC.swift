@@ -41,6 +41,12 @@ final class DebugVC: FormViewController, DebugVCShowable {
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(WebSocketSocketIOVC(), animated: true)
                 })
+            +++ Section("Closures")
+            <<< LabelRow() { row in
+                row.title = "ClosuresVC"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(ClosuresVC(), animated: true)
+                })
             +++ Section("KVO_KVC")
             <<< LabelRow() { row in
                 row.title = "KVO_View_Controller"

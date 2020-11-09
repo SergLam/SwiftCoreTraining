@@ -31,8 +31,8 @@ final class GCDViewModel {
                         let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
                         let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
                         let data = data, error == nil else {
-                            print("Failed to load image \(index)")
-                            return
+                        print("Failed to load image \(index)")
+                        return
                     }
                     if let image = UIImage(data: data) {
                         print("Downloaded image \(index)")
@@ -77,7 +77,7 @@ final class GCDViewModel {
         let lowest = DispatchQueue.global(qos: .background)
         return [highest, high, medium, low, lowest]
     }
-
+    
     func task1() {
         // https://www.reddit.com/r/iOSProgramming/comments/6x24xl/interesting_interview_question_about_gcd_could/
         print("A")
@@ -109,6 +109,21 @@ final class GCDViewModel {
         }
         
         print("I")
+    }
+    
+    func task3() {
+        
+        DispatchQueue.main.async {
+            debugPrint("1")
+        }
+        
+        DispatchQueue.main.sync {
+            debugPrint("2")
+            
+            DispatchQueue.main.async {
+                debugPrint("3")
+            }
+        }
     }
     
 }
