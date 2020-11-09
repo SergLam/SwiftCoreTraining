@@ -5,9 +5,9 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.3.0)
   - AppAuth/Core (1.3.0)
   - AppAuth/ExternalUserAgent (1.3.0)
-  - Closures (0.6)
+  - Closures (0.7)
   - DZNEmptyDataSet (1.8.1)
-  - Eureka (5.0.0)
+  - Eureka (5.3.1)
   - FacebookCore (0.9.0):
     - FBSDKCoreKit (~> 5.0)
   - FacebookLogin (0.9.0):
@@ -119,7 +119,7 @@ PODS:
   - GTMSessionFetcher/Core (1.3.1)
   - GTMSessionFetcher/Full (1.3.1):
     - GTMSessionFetcher/Core (= 1.3.1)
-  - Kanna (4.0.3)
+  - Kanna (5.2.3)
   - Kingfisher (5.9.0):
     - Kingfisher/Core (= 5.9.0)
   - Kingfisher/Core (5.9.0)
@@ -139,25 +139,25 @@ PODS:
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
   - ReachabilitySwift (4.3.1)
-  - Realm (4.3.0):
-    - Realm/Headers (= 4.3.0)
-  - Realm/Headers (4.3.0)
-  - RealmSwift (4.3.0):
-    - Realm (= 4.3.0)
+  - Realm (5.3.6):
+    - Realm/Headers (= 5.3.6)
+  - Realm/Headers (5.3.6)
+  - RealmSwift (5.3.6):
+    - Realm (= 5.3.6)
   - Result (4.1.0)
   - SDWebImage (4.4.6):
     - SDWebImage/Core (= 4.4.6)
   - SDWebImage/Core (4.4.6)
-  - SnapKit (4.2.0)
-  - Socket.IO-Client-Swift (15.0.0):
+  - SnapKit (5.0.1)
+  - Socket.IO-Client-Swift (15.2.0):
     - Starscream (~> 3.1)
   - Starscream (3.1.0)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - Closures
+  - Closures (~> 0.7)
   - DZNEmptyDataSet (~> 1.8.1)
-  - Eureka
+  - Eureka (~> 5.3)
   - FacebookCore (~> 0.9.0)
   - FacebookLogin (~> 0.9.0)
   - FacebookShare (~> 0.9.0)
@@ -165,36 +165,33 @@ DEPENDENCIES:
   - Firebase/Auth
   - FirebaseCore
   - GoogleSignIn (~> 5.0.2)
-  - Kanna (~> 4.0.0)
+  - Kanna (~> 5.2.3)
   - Kingfisher (~> 5.9.0)
-  - Masonry
+  - Masonry (~> 1.1.0)
   - Moya (~> 13.0.1)
-  - R.swift
+  - R.swift (~> 5.0)
   - ReachabilitySwift (~> 4.3.1)
-  - RealmSwift (= 4.3.0)
+  - RealmSwift (~> 5.3.6)
   - SDWebImage (~> 4.0)
-  - SnapKit
-  - Socket.IO-Client-Swift (~> 15.0.0)
-  - Starscream (~> 3.1.0)
-  - SVProgressHUD
+  - SnapKit (~> 5.0.1)
+  - Socket.IO-Client-Swift (~> 15.2.0)
+  - Starscream (~> 3.1)
+  - SVProgressHUD (~> 2.2.5)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - Closures
     - DZNEmptyDataSet
-    - Eureka
-    - Kanna
     - Masonry
     - R.swift
     - R.swift.Library
     - SDWebImage
-    - SnapKit
-    - Socket.IO-Client-Swift
     - Starscream
     - SVProgressHUD
   trunk:
     - Alamofire
     - AppAuth
+    - Closures
+    - Eureka
     - FacebookCore
     - FacebookLogin
     - FacebookShare
@@ -217,6 +214,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMAppAuth
     - GTMSessionFetcher
+    - Kanna
     - Kingfisher
     - Moya
     - nanopb
@@ -225,13 +223,15 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - Result
+    - SnapKit
+    - Socket.IO-Client-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AppAuth: 73574f3013a1e65b9601a3ddc8b3158cce68c09d
-  Closures: 7477e86502e33d7ae435b8c60ce219390e06c476
+  Closures: a83b9892a5b1c4125a9dfcd53e2754db5d7f6d22
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
+  Eureka: 859877ab1e85661b6b7e810015d430e937d9cc7d
   FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
   FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
   FacebookShare: 85968ad1b1606c4944fb154924e425fd29184ea5
@@ -254,7 +254,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
-  Kanna: 0ebbdd0e7e3308f0aafbd569e79c8cadc5eb877c
+  Kanna: 113d111e95d7e903efe0c3eb7221f7635716084c
   Kingfisher: ff98240aebb7302bdc4f1ecd701761030ce18b16
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
@@ -263,15 +263,15 @@ SPEC CHECKSUMS:
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
-  Realm: 9357c3589555793e1860a7104a7412bca4a48d99
-  RealmSwift: 402f1e379a8ef82c635313037b043f0f06de880c
+  Realm: cd400dd7e5b5bb5c8ae9842eecd73792369e6ec0
+  RealmSwift: 99a16dbdee5d6dfb3d91d56088a9f8c15c0871d1
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  Socket.IO-Client-Swift: c039a808195d22a7192962841b8c035cb61ea49e
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 08172b481e145289c4930cb567230fb55897cfa4
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: c54041796f0ceac6f385d1d38479288d41e7c546
+PODFILE CHECKSUM: 75c5925dc27aad145c88448030a56bc75e897a0f
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0

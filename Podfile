@@ -12,12 +12,12 @@ target 'SwiftCoreTraining' do
   inhibit_all_warnings!
   
   # UI
-  pod 'Eureka'
+  pod 'Eureka', '~> 5.3'
   pod 'DZNEmptyDataSet', '~> 1.8.1'
-  pod 'SnapKit'
-  pod 'R.swift'
-  pod 'Closures'
-  pod 'SVProgressHUD'
+  pod 'SnapKit', '~> 5.0.1'
+  pod 'R.swift', '~> 5.0'
+  pod 'Closures', '~> 0.7'
+  pod 'SVProgressHUD', '~> 2.2.5'
   
   # Networking
   pod 'Moya', '~> 13.0.1'
@@ -38,17 +38,17 @@ target 'SwiftCoreTraining' do
   pod 'Firebase/Analytics'#, '~> 6.1.6'
   
   # Database
-  pod 'RealmSwift', '4.3.0'
+  pod 'RealmSwift', '~> 5.3.6'
   
   # WebSockets
-  pod 'Starscream', '~> 3.1.0'
-  pod 'Socket.IO-Client-Swift', '~> 15.0.0'
+  pod 'Starscream', '~> 3.1'
+  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
   
   # HTML Parsing
-  pod 'Kanna', '~> 4.0.0'
+  pod 'Kanna', '~> 5.2.3'
   
   #Objc Pods
-  pod 'Masonry'
+  pod 'Masonry', '~> 1.1.0'
   pod 'SDWebImage', '~> 4.0'
 
   target 'SwiftCoreTrainingTests' do

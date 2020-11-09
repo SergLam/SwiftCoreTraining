@@ -258,11 +258,8 @@
 		9C295B372269BD9B00527898 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		AADD962C1D0CFE1C0EC73B27 /* SwipeBackPanDirectionGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeBackPanDirectionGestureRecognizer.swift; sourceTree = "<group>"; };
 		ACF259DAFE179C80A3B0F011 /* Pods_SwiftCoreTrainingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCoreTrainingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6F4EB2A92E04830227CB891 /* SwipeBackSwipeBackNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeBackSwipeBackNavigationController.swift; sourceTree = "<group>"; };
-		C720BFA20F75996C4D8A3A46 /* SwipeBackPanDirectionGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeBackPanDirectionGestureRecognizer.swift; sourceTree = "<group>"; };
 		D2750D5A2AA4194665FD4CD6 /* Pods-SwiftCoreTrainingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTrainingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTrainingUITests/Pods-SwiftCoreTrainingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8CD09ADDAEDEEDF44866504 /* Pods-SwiftCoreTraining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.debug.xcconfig"; sourceTree = "<group>"; };
-		F3A2A9DC51CFDA30ACAF4DD5 /* SwipeBackPopNavigationGestureAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeBackPopNavigationGestureAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,16 +290,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0372D16F17D1B35F4477F5AE /* SwipeBack */ = {
-			isa = PBXGroup;
-			children = (
-				B6F4EB2A92E04830227CB891 /* SwipeBackSwipeBackNavigationController.swift */,
-				C720BFA20F75996C4D8A3A46 /* SwipeBackPanDirectionGestureRecognizer.swift */,
-				F3A2A9DC51CFDA30ACAF4DD5 /* SwipeBackPopNavigationGestureAnimator.swift */,
-			);
-			path = SwipeBack;
-			sourceTree = "<group>";
-		};
 		1316DC07241117730070CE2C /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,7 +371,6 @@
 				404C880442F649CDFAD427F3 /* Pods */,
 				65AA712967BD7B4D1B86074E /* Frameworks */,
 				8D91E8FB990F803D96F8389E /* Generated_Code */,
-				A2A03A9C7ABF582E3A3F0D5D /* Generamba */,
 			);
 			sourceTree = "<group>";
 		};
@@ -883,14 +869,6 @@
 				E9C2A51FBC5B83A76F288CEA /* Modules */,
 			);
 			path = Generated_Code;
-			sourceTree = "<group>";
-		};
-		A2A03A9C7ABF582E3A3F0D5D /* Generamba */ = {
-			isa = PBXGroup;
-			children = (
-				0372D16F17D1B35F4477F5AE /* SwipeBack */,
-			);
-			path = Generamba;
 			sourceTree = "<group>";
 		};
 		BA580E28BB3978B39719DB27 /* SwipeBack */ = {
