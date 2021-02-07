@@ -47,6 +47,12 @@ final class DebugVC: FormViewController, DebugVCShowable {
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(ClosuresVC(), animated: true)
                 })
+            +++ Section("Memory Managment")
+            <<< LabelRow() { row in
+                row.title = "MemoryManagmentVC"
+                }.onCellSelection({ [unowned self] (_, _) in
+                    self.navigationController?.pushViewController(MemoryManagmentVC(), animated: true)
+                })
             +++ Section("KVO_KVC")
             <<< LabelRow() { row in
                 row.title = "KVO_View_Controller"

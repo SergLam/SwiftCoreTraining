@@ -15,16 +15,16 @@ target 'SwiftCoreTraining' do
   inhibit_all_warnings!
   
   # UI
-  pod 'Eureka', '~> 5.3'
+  pod 'Eureka', '~> 5.3.2'
   pod 'DZNEmptyDataSet', '~> 1.8.1'
   pod 'SnapKit', '~> 5.0.1'
-  pod 'R.swift', '~> 5.0'
+  pod 'R.swift', '~> 5.3.1'
   pod 'Closures', '~> 0.7'
   pod 'SVProgressHUD', '~> 2.2.5'
   
   # Networking
-  pod 'Moya', '~> 13.0.1'
-  pod 'ReachabilitySwift', '~> 4.3.1'
+  pod 'Moya', '~> 14.0.0'
+  pod 'ReachabilitySwift', '~> 5.0.0'
   pod 'Kingfisher', '~> 5.9.0'
   
   # Social auth - Facebook
@@ -41,18 +41,18 @@ target 'SwiftCoreTraining' do
   pod 'Firebase/Analytics'#, '~> 6.1.6'
   
   # Database
-  pod 'RealmSwift', '~> 5.3.6'
+  pod 'RealmSwift', '~> 10.5.1'
   
   # WebSockets
   pod 'Starscream', '~> 3.1'
   pod 'Socket.IO-Client-Swift', '~> 15.2.0'
   
   # HTML Parsing
-  pod 'Kanna', '~> 5.2.3'
+  pod 'Kanna', '~> 5.2.4'
   
   #Objc Pods
   pod 'Masonry', '~> 1.1.0'
-  pod 'SDWebImage', '~> 4.0'
+  pod 'SDWebImage', '~> 5.10.4'
 
   target 'SwiftCoreTrainingTests' do
     inherit! :search_paths
