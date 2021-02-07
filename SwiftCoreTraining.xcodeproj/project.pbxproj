@@ -45,6 +45,8 @@
 		7CC57CB325CFDB3600C58D27 /* MemoryManagmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC57CB225CFDB3600C58D27 /* MemoryManagmentVC.swift */; };
 		7CC57CBB25CFDB5600C58D27 /* MemoryManagmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC57CBA25CFDB5600C58D27 /* MemoryManagmentViewModel.swift */; };
 		7CC57CC125CFDC1E00C58D27 /* TestMemoryClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC57CC025CFDC1E00C58D27 /* TestMemoryClass.swift */; };
+		7CC57CFA25CFE0AB00C58D27 /* ClosuresVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC57CF925CFE0AB00C58D27 /* ClosuresVCViewModel.swift */; };
+		7CC57D0025CFE3F100C58D27 /* MyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC57CFF25CFE3F100C58D27 /* MyObject.swift */; };
 		7CDB281B22638BC800546F9C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB281A22638BC800546F9C /* R.generated.swift */; };
 		7CDB282B2263CC5900546F9C /* UIScreen+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */; };
 		7CED219323E0DBB500A37499 /* ZoomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED219023E0DBB500A37499 /* ZoomTransitionController.swift */; };
@@ -191,6 +193,8 @@
 		7CC57CB225CFDB3600C58D27 /* MemoryManagmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryManagmentVC.swift; sourceTree = "<group>"; };
 		7CC57CBA25CFDB5600C58D27 /* MemoryManagmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryManagmentViewModel.swift; sourceTree = "<group>"; };
 		7CC57CC025CFDC1E00C58D27 /* TestMemoryClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMemoryClass.swift; sourceTree = "<group>"; };
+		7CC57CF925CFE0AB00C58D27 /* ClosuresVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosuresVCViewModel.swift; sourceTree = "<group>"; };
+		7CC57CFF25CFE3F100C58D27 /* MyObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyObject.swift; sourceTree = "<group>"; };
 		7CDB281A22638BC800546F9C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Ext.swift"; sourceTree = "<group>"; };
 		7CE5D7D2221F37DD0049E3A9 /* SwiftCoreTraining-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftCoreTraining-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -374,6 +378,7 @@
 		7C22859625598F760080DF81 /* Closures */ = {
 			isa = PBXGroup;
 			children = (
+				7CC57CFE25CFE3E600C58D27 /* ViewModels */,
 				7C22859725598F8C0080DF81 /* ClosuresVC.swift */,
 				7C2285A725598FAE0080DF81 /* ClosuresVCView.swift */,
 			);
@@ -575,6 +580,15 @@
 				7CC57CC025CFDC1E00C58D27 /* TestMemoryClass.swift */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		7CC57CFE25CFE3E600C58D27 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7CC57CF925CFE0AB00C58D27 /* ClosuresVCViewModel.swift */,
+				7CC57CFF25CFE3F100C58D27 /* MyObject.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		7CED218F23E0DBB500A37499 /* PhotosZoomAnimator */ = {
@@ -1186,8 +1200,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1316DC0B241117880070CE2C /* ExternalURLOpenable.swift in Sources */,
+				7CC57CFA25CFE0AB00C58D27 /* ClosuresVCViewModel.swift in Sources */,
 				7CFDC3CE22B6CFE900FF351E /* SystemTransitionPushVC.swift in Sources */,
 				7CFDC3A222B6CFE900FF351E /* ZoomPushAnimator.swift in Sources */,
+				7CC57D0025CFE3F100C58D27 /* MyObject.swift in Sources */,
 				7CFDC3A522B6CFE900FF351E /* FadePopAnimator.swift in Sources */,
 				7CFDC3AB22B6CFE900FF351E /* ViperView.swift in Sources */,
 				7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */,

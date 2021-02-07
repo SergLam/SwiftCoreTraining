@@ -11,6 +11,7 @@ import UIKit
 final class ClosuresVC: BaseViewController {
     
     private lazy var contentView: ClosuresVCView = ClosuresVCView()
+    private lazy var viewModel: ClosuresVCViewModel = ClosuresVCViewModel()
     
     override func loadView() {
         view = contentView
@@ -18,27 +19,8 @@ final class ClosuresVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        test()
-    }
-    
-    private func test() {
-        
-        var number = "One"
-
-        let closureCapture = { [number] in
-            debugPrint("Closure Capture \(number)")
-        }
-        let closureNonCapture = {
-            debugPrint("Closure Non Capture \(number)")
-        }
-
-        number = "Two"
-
-        let newClosure = closureCapture
-        newClosure()
-        
-        let newClosure1 = closureNonCapture
-        newClosure1()
+        // viewModel.valuesCapturing()
+        viewModel.valuesCapturingWithGCD()
     }
     
 }
