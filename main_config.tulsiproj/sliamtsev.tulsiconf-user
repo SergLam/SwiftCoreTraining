@@ -1,0 +1,10 @@
+{
+  "optionSet" : {
+    "BazelPath" : {
+      "p" : "/usr/local/lib/bazel/bin/bazel"
+    },
+    "WorkspaceRootPath" : {
+      "p" : "/Users/sliamtsev/XCodeProjects/SwiftCoreTraining"
+    }
+  }
+}

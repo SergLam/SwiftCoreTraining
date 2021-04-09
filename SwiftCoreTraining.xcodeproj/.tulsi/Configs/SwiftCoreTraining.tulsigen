@@ -1,0 +1,16 @@
+{
+  "additionalFilePaths" : [
+    "/BUILD"
+  ],
+  "buildTargets" : [
+    "//:SwiftCoreTraining"
+  ],
+  "optionSet" : {
+
+  },
+  "projectName" : "SwiftCoreTraining",
+  "sourceFilters" : [
+    "SwiftCoreTraining/...",
+    "SwiftCoreTraining/BundleFiles"
+  ]
+}
