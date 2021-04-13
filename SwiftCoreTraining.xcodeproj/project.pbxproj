@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040B00702625F5030001A5C3 /* UIView+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B006F2625F5030001A5C3 /* UIView+AddAction.swift */; };
+		040B008A2625F6AC0001A5C3 /* SharedTypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B00892625F6AC0001A5C3 /* SharedTypeAliases.swift */; };
 		1316DB8D241029B60070CE2C /* ViperDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DB8C241029B60070CE2C /* ViperDataSource.swift */; };
 		1316DC06241116C60070CE2C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC05241116C60070CE2C /* BaseViewController.swift */; };
 		1316DC0A241117880070CE2C /* StatusBarResizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC08241117870070CE2C /* StatusBarResizable.swift */; };
@@ -139,6 +141,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040B006F2625F5030001A5C3 /* UIView+AddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAction.swift"; sourceTree = "<group>"; };
+		040B00892625F6AC0001A5C3 /* SharedTypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTypeAliases.swift; sourceTree = "<group>"; };
 		109A922D1A59CE7844434F86 /* Pods-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		1316DB8C241029B60070CE2C /* ViperDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDataSource.swift; sourceTree = "<group>"; };
 		1316DC05241116C60070CE2C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -165,7 +169,6 @@
 		7C2F036721FCC5D200A50936 /* SwiftCoreTrainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCoreTrainingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2F036B21FCC5D200A50936 /* SwiftCoreTrainingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCoreTrainingUITests.swift; sourceTree = "<group>"; };
 		7C2F036D21FCC5D200A50936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C2F037921FE135B00A50936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C3B5C4724B9FDA30058B9A8 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		7C3B5C4824B9FDA30058B9A8 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
@@ -195,7 +198,7 @@
 		7CC57CC025CFDC1E00C58D27 /* TestMemoryClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMemoryClass.swift; sourceTree = "<group>"; };
 		7CC57CF925CFE0AB00C58D27 /* ClosuresVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosuresVCViewModel.swift; sourceTree = "<group>"; };
 		7CC57CFF25CFE3F100C58D27 /* MyObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyObject.swift; sourceTree = "<group>"; };
-		7CDB281A22638BC800546F9C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		7CDB281A22638BC800546F9C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = SwiftCoreTraining/Resources/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Ext.swift"; sourceTree = "<group>"; };
 		7CE5D7D2221F37DD0049E3A9 /* SwiftCoreTraining-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftCoreTraining-Bridging-Header.h"; sourceTree = "<group>"; };
 		7CED219023E0DBB500A37499 /* ZoomTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomTransitionController.swift; sourceTree = "<group>"; };
@@ -304,6 +307,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040B006D2625F4E30001A5C3 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				7CC0B5FE22A30C9B0072EB49 /* UIView+Ext.swift */,
+				040B006F2625F5030001A5C3 /* UIView+AddAction.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		040B00772625F5510001A5C3 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				7CFDC3D422B6D0D000FF351E /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		040B00782625F5610001A5C3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7CFDC3D622B6D0D000FF351E /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		040B007F2625F5FD0001A5C3 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7C2F034B21FCC5D000A50936 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		040B00832625F6310001A5C3 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				7C2F035721FCC5D200A50936 /* Info.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		040B00872625F6580001A5C3 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		040B00882625F6860001A5C3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				040B00892625F6AC0001A5C3 /* SharedTypeAliases.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		1316DC07241117730070CE2C /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,10 +427,10 @@
 		7C1ADDC72206EFBB00F70F2C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				040B006D2625F4E30001A5C3 /* UIView */,
 				7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */,
 				7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */,
 				9C295B372269BD9B00527898 /* UIButton+Ext.swift */,
-				7CC0B5FE22A30C9B0072EB49 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -411,6 +471,9 @@
 		7C2F034A21FCC5D000A50936 /* SwiftCoreTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7CE5D7D2221F37DD0049E3A9 /* SwiftCoreTraining-Bridging-Header.h */,
+				040B00882625F6860001A5C3 /* Application */,
+				040B007F2625F5FD0001A5C3 /* AppDelegate */,
 				7CFDC3D322B6D0D000FF351E /* Resources */,
 				7CFDC33622B6CFE900FF351E /* UserStory */,
 				7CC0B60022A311EF0072EB49 /* Protocols */,
@@ -442,12 +505,7 @@
 		7C2F037F21FE159000A50936 /* BundleFiles */ = {
 			isa = PBXGroup;
 			children = (
-				7C2F034B21FCC5D000A50936 /* AppDelegate.swift */,
-				7C2F037921FE135B00A50936 /* Assets.xcassets */,
-				7C2F035721FCC5D200A50936 /* Info.plist */,
-				7C2F037D21FE151A00A50936 /* LaunchScreen.storyboard */,
-				7CDB281A22638BC800546F9C /* R.generated.swift */,
-				7CE5D7D2221F37DD0049E3A9 /* SwiftCoreTraining-Bridging-Header.h */,
+				040B00832625F6310001A5C3 /* Plist */,
 			);
 			path = BundleFiles;
 			sourceTree = "<group>";
@@ -910,8 +968,10 @@
 		7CFDC3D322B6D0D000FF351E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7CFDC3D422B6D0D000FF351E /* Localizable.strings */,
-				7CFDC3D622B6D0D000FF351E /* Assets.xcassets */,
+				7CDB281A22638BC800546F9C /* R.generated.swift */,
+				040B00872625F6580001A5C3 /* LaunchScreen */,
+				040B00782625F5610001A5C3 /* Images */,
+				040B00772625F5510001A5C3 /* Localization */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1105,11 +1165,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				$SRCROOT/SwiftCoreTraining/Resources/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/SwiftCoreTraining/Resources/R.generated.swift\"\n";
 		};
 		954B60FF53BDAFD76A6E7D42 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1209,6 +1269,7 @@
 				7C1ADDC92206EFD000F70F2C /* UINavigationController+Ext.swift in Sources */,
 				7CFDC3AC22B6CFE900FF351E /* ViperVC.swift in Sources */,
 				7C906339240ED6DE0055BCD8 /* ModuleConfigurator.swift in Sources */,
+				040B00702625F5030001A5C3 /* UIView+AddAction.swift in Sources */,
 				7CFDC3A422B6CFE900FF351E /* FadePushAnimator.swift in Sources */,
 				7C3B5C4924B9FDA30058B9A8 /* Person.m in Sources */,
 				7CFDC3B722B6CFE900FF351E /* CustomHTMLParserVC.swift in Sources */,
@@ -1291,6 +1352,7 @@
 				7C3B5C4D24BA00B80058B9A8 /* Bedroom.m in Sources */,
 				9C295B382269BD9B00527898 /* UIButton+Ext.swift in Sources */,
 				7CFDC3B422B6CFE900FF351E /* KVC_VC.swift in Sources */,
+				040B008A2625F6AC0001A5C3 /* SharedTypeAliases.swift in Sources */,
 				7C3B5C5124BA3D840058B9A8 /* Book.m in Sources */,
 				7CFDC3CD22B6CFE900FF351E /* PrivacyPolicyView.swift in Sources */,
 				7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */,
@@ -1398,13 +1460,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1453,12 +1516,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1470,10 +1534,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = SwiftCoreTraining/Resources/Assets.xcassets;
+				DEVELOPMENT_ASSET_PATHS = SwiftCoreTraining/Resources/Images/Assets.xcassets;
 				DEVELOPMENT_TEAM = MDWBDEPC5G;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/Plist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1481,8 +1545,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.SwiftCoreTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SHARED_PRECOMPS_DIR = "$(SRCROOT)/BundleFiles/MyPrefixHeaderFile.pch";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/SwiftCoreTraining-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftCoreTraining/SwiftCoreTraining-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1494,10 +1558,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = SwiftCoreTraining/Resources/Assets.xcassets;
+				DEVELOPMENT_ASSET_PATHS = SwiftCoreTraining/Resources/Images/Assets.xcassets;
 				DEVELOPMENT_TEAM = MDWBDEPC5G;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/Plist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1505,8 +1569,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.SwiftCoreTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SHARED_PRECOMPS_DIR = "$(SRCROOT)/BundleFiles/MyPrefixHeaderFile.pch";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/SwiftCoreTraining-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftCoreTraining/SwiftCoreTraining-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1527,7 +1591,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.SwiftCoreTrainingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftCoreTraining.app/SwiftCoreTraining";
 			};
@@ -1549,7 +1613,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.SwiftCoreTrainingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftCoreTraining.app/SwiftCoreTraining";
 			};
@@ -1570,7 +1634,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.SwiftCoreTrainingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SwiftCoreTraining;
 			};
@@ -1591,7 +1655,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = serglam.SwiftCoreTrainingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SwiftCoreTraining;
 			};

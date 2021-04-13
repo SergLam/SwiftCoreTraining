@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '11.0'
+deployment_target = '11.0'
 
 install! 'cocoapods', :disable_input_output_paths => true, :warn_for_unused_master_specs_repo => false
 
@@ -15,17 +16,16 @@ target 'SwiftCoreTraining' do
   inhibit_all_warnings!
   
   # UI
-  pod 'Eureka', '~> 5.3.2'
+  pod 'Eureka', '~> 5.3.3'
   pod 'DZNEmptyDataSet', '~> 1.8.1'
   pod 'SnapKit', '~> 5.0.1'
-  pod 'R.swift', '~> 5.3.1'
-  pod 'Closures', '~> 0.7'
+  pod 'R.swift', '~> 5.4.0'
   pod 'SVProgressHUD', '~> 2.2.5'
   
   # Networking
   pod 'Moya', '~> 14.0.0'
   pod 'ReachabilitySwift', '~> 5.0.0'
-  pod 'Kingfisher', '~> 5.9.0'
+  pod 'Kingfisher', '~> 6.2.1'
   
   # Social auth - Facebook
   pod 'FacebookCore', '~> 0.9.0'
@@ -41,7 +41,7 @@ target 'SwiftCoreTraining' do
   pod 'Firebase/Analytics'#, '~> 6.1.6'
   
   # Database
-  pod 'RealmSwift', '~> 10.5.1'
+  pod 'RealmSwift', '~> 10.7.2'
   
   # WebSockets
   pod 'Starscream', '~> 3.1'
@@ -52,7 +52,7 @@ target 'SwiftCoreTraining' do
   
   #Objc Pods
   pod 'Masonry', '~> 1.1.0'
-  pod 'SDWebImage', '~> 5.10.4'
+  pod 'SDWebImage', '~> 5.11.0'
 
   target 'SwiftCoreTrainingTests' do
     inherit! :search_paths
@@ -65,9 +65,10 @@ target 'SwiftCoreTraining' do
   end
 
   post_install do |installer|
+    
      installer.pods_project.targets.each do |target|
            target.build_configurations.each do |config|
-               config.build_settings['ENABLE_BITCODE'] = 'NO'
+               config.build_settings['ENABLE_BITCODE'] = 'NO' # set 'NO' to disable DSYM uploading - usefull for third-party error logging SDK (like Firebase)
                config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
                if config.name == 'Debug' || config.name == 'Debug-MockAPI'
                  config.build_settings['OTHER_SWIFT_FLAGS'] = ['$(inherited)', '-Onone']
@@ -75,6 +76,13 @@ target 'SwiftCoreTraining' do
                end
        end
      end
+     
+     installer.generated_projects.each do |project|
+       project.build_configurations.each do |bc|
+         bc.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
+       end
+     end
+     
    end
   
 end

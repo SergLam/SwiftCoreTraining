@@ -8,15 +8,7 @@
 
 import Foundation
 
-final class User: Hashable {
-    
-    static func == (lhs: User, rhs: User) -> Bool {
-        return lhs.userId == rhs.userId
-    }
-    
-    var hashValue: Int {
-        return userId.hashValue
-    }
+final class User {
     
     let userId = "MP6uxlnIDcYky6AydRL0IObGwjV2"
     let email = "test@example.com"
@@ -55,6 +47,25 @@ final class User: Hashable {
     
     init() {
         
+    }
+    
+}
+
+// MARK: - Equatable
+extension User: Equatable {
+    
+    static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.userId == rhs.userId
+    }
+    
+}
+
+// MARK: - Hashable
+extension User: Hashable {
+    
+    func hash(into hasher: inout Hasher) {
+        
+        hasher.combine(userId)
     }
     
 }

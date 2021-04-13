@@ -28,7 +28,7 @@ extension DebugVCShowable where Self: UIViewController {
             return property
         }
         set {
-            property = newValue
+            
         }
     }
     

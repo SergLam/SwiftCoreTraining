@@ -1,6 +1,5 @@
 import UIKit
 import SnapKit
-import Closures
 
 protocol PrivacyPolicyViewDelegate: class {
     
@@ -76,7 +75,7 @@ final class PrivacyPolicyView: UIView {
             make.centerX.equalToSuperview()
         }
         
-        closeButton.onTap { [unowned self] in
+        closeButton.addAction = { [unowned self] in
             self.delegate?.didTapCloseButton()
         }
         

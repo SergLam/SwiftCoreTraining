@@ -58,7 +58,7 @@
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog([NSString stringWithFormat:@"%d", _viewModel.usersList.count]);
+    NSLog(@"%@", [NSString stringWithFormat:@"%lu", (unsigned long)_viewModel.usersList.count]);
     return _viewModel.usersList.count;
 }
 

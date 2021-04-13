@@ -73,8 +73,8 @@ extension XMLParserVC: XMLParserDelegate {
     }
     
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
-        guard let errorCode = parseError as? XMLParser.ErrorCode.RawValue else { return }
-        AlertPresenter.showErrorAlert(at: self, error: String(errorCode))
+        
+        AlertPresenter.showErrorAlert(at: self, error: parseError.localizedDescription)
     }
     
 }

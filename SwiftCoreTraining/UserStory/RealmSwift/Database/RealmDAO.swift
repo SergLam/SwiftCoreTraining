@@ -54,6 +54,7 @@ final class RealmDAO {
             }
         } catch {
             let message = "\(error.localizedDescription)"
+            assertionFailure(message)
             // ErrorLoggerService.logWithTrace(.error(errorMessage: message))
         }
     }
@@ -101,6 +102,7 @@ final class RealmDAO {
             try realm.write { realm.delete(allObjects) }
         } catch {
             let message = "Unable to create realm instance \(error.localizedDescription)"
+            assertionFailure(message)
             // ErrorLoggerService.logWithTrace(.error(errorMessage: message))
         }
     }
@@ -111,6 +113,7 @@ final class RealmDAO {
             try realm.write { realm.delete(value) }
         } catch {
             let message = "Unable to create realm instance \(error.localizedDescription)"
+            assertionFailure(message)
             // ErrorLoggerService.logWithTrace(.error(errorMessage: message))
         }
     }
@@ -121,6 +124,7 @@ final class RealmDAO {
             try realm.write { realm.add(value, update: .modified) }
         } catch {
             let message = "Unable to create realm instance \(error.localizedDescription)"
+            assertionFailure(message)
             // ErrorLoggerService.logWithTrace(.error(errorMessage: message))
         }
     }
