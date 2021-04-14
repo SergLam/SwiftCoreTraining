@@ -1,6 +1,6 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '11.0'
-deployment_target = '11.0'
+platform :ios, '13.0'
+deployment_target = '13.0'
 
 install! 'cocoapods', :disable_input_output_paths => true, :warn_for_unused_master_specs_repo => false
 
@@ -10,7 +10,11 @@ inhibit_all_warnings!
 # https://github.com/strongself/Generamba/wiki/Rambafile-Structure
 # https://github.com/strongself/Generamba
 
-target 'SwiftCoreTraining' do
+workspace 'SwiftCoreTraining'
+
+project 'SwiftCoreTraining'
+
+def development_pods
   
   use_frameworks!
   inhibit_all_warnings!
@@ -28,17 +32,17 @@ target 'SwiftCoreTraining' do
   pod 'Kingfisher', '~> 6.2.1'
   
   # Social auth - Facebook
-  pod 'FacebookCore', '~> 0.9.0'
-  pod 'FacebookLogin', '~> 0.9.0'
-  pod 'FacebookShare', '~> 0.9.0'
+  pod 'FBSDKCoreKit', '~> 9.2.0'
+  pod 'FBSDKLoginKit', '~> 9.2.0'
+  pod 'FBSDKShareKit', '~> 9.2.0'
   
   # Social auth - Google
   pod 'GoogleSignIn', '~> 5.0.2'
   
   # Firebase
-  pod 'FirebaseCore'#, '~> 6.13.0'
-  pod 'Firebase/Auth'#, '~> 6.4.1'
-  pod 'Firebase/Analytics'#, '~> 6.1.6'
+  pod 'FirebaseCore', '~> 7.10.0'
+  pod 'Firebase/Auth', '~> 7.10.0'
+  pod 'Firebase/Analytics', '~> 7.10.0'
   
   # Database
   pod 'RealmSwift', '~> 10.7.2'
@@ -53,36 +57,51 @@ target 'SwiftCoreTraining' do
   #Objc Pods
   pod 'Masonry', '~> 1.1.0'
   pod 'SDWebImage', '~> 5.11.0'
+  
+end
 
-  target 'SwiftCoreTrainingTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'SwiftCoreTrainingUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  post_install do |installer|
+abstract_target 'App' do
+  
+  target 'SwiftCoreTraining' do
     
-     installer.pods_project.targets.each do |target|
-           target.build_configurations.each do |config|
-               config.build_settings['ENABLE_BITCODE'] = 'NO' # set 'NO' to disable DSYM uploading - usefull for third-party error logging SDK (like Firebase)
-               config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
-               if config.name == 'Debug' || config.name == 'Debug-MockAPI'
-                 config.build_settings['OTHER_SWIFT_FLAGS'] = ['$(inherited)', '-Onone']
-                 config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Owholemodule'
-               end
-       end
-     end
-     
-     installer.generated_projects.each do |project|
-       project.build_configurations.each do |bc|
-         bc.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
-       end
-     end
-     
-   end
+    project 'SwiftCoreTraining'
+    development_pods
+    
+  end
+  
+  target 'SwiftCoreTrainingTests' do
+    
+    project 'SwiftCoreTraining'
+    development_pods
+    
+  end
+  
+  target 'SwiftCoreTrainingUITests' do
+    
+    project 'SwiftCoreTraining'
+    development_pods
+    
+  end
+  
+end
+
+post_install do |installer|
+  
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO' # set 'NO' to disable DSYM uploading - usefull for third-party error logging SDK (like Firebase)
+      config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
+      if config.name == 'Debug' || config.name == 'Debug-MockAPI'
+        config.build_settings['OTHER_SWIFT_FLAGS'] = ['$(inherited)', '-Onone']
+        config.build_settings['SWIFT_OPTIMIZATION_LEVEL'] = '-Owholemodule'
+      end
+    end
+  end
+  
+  installer.generated_projects.each do |project|
+    project.build_configurations.each do |bc|
+      bc.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = deployment_target
+    end
+  end
   
 end

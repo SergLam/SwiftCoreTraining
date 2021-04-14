@@ -42,6 +42,7 @@ final class CustomTransitionsVC: UIViewController {
     
 }
 
+// MARK: - UINavigationControllerDelegate
 extension CustomTransitionsVC: UINavigationControllerDelegate {
     
     
@@ -76,6 +77,9 @@ extension CustomTransitionsVC: UINavigationControllerDelegate {
 //                                   viewsToShow: [toVC.contentView.imageView])
             
 //            return CustomAnimator(duration: 1.0, isPresenting: false)
+        @unknown default:
+            assertionFailure("Unknown UINavigationController.Operation value \(operation.rawValue)")
+            return nil
         }
         
     }
