@@ -73,3 +73,6 @@ fastlane/test_output
 ## Generamba
 Templates/
 Generated_Code/
+
+## Bazel + Tulsi
+Vendor/

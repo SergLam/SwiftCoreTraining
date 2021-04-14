@@ -2,7 +2,7 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-load("@rules_pods//BazelExtensions:workspace.bzl", "new_pod_repository")
+# load("@rules_pods//BazelExtensions:workspace.bzl", "new_pod_repository")
 
 git_repository(
     name = "build_bazel_rules_apple",
@@ -28,7 +28,11 @@ git_repository(
     tag = "1.0.3",
 )
 
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+http_archive(
+    name = "rules_pods",
+    sha256 = "31b3ee6c32c6047008e6820af36573019ac7a25ea421222c638277984e9cde27",
+    url = "https://github.com/pinterest/PodToBUILD/releases/download/3.4.1-ea20598f/PodToBUILD.zip",
+)
 
 http_archive(
     name = "build_bazel_rules_swift",
