@@ -2,8 +2,6 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-# load("@rules_pods//BazelExtensions:workspace.bzl", "new_pod_repository")
-
 git_repository(
     name = "build_bazel_rules_apple",
     remote = "https://github.com/bazelbuild/rules_apple.git",

@@ -1618,7 +1618,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = serglam.SwiftCoreTraining;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serglam.SwiftCoreTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SHARED_PRECOMPS_DIR = "$(SRCROOT)/BundleFiles/MyPrefixHeaderFile.pch";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftCoreTraining/SwiftCoreTraining-Bridging-Header.h";
@@ -1642,7 +1642,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = serglam.SwiftCoreTraining;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serglam.SwiftCoreTraining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SHARED_PRECOMPS_DIR = "$(SRCROOT)/BundleFiles/MyPrefixHeaderFile.pch";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftCoreTraining/SwiftCoreTraining-Bridging-Header.h";
