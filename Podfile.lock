@@ -1,30 +1,16 @@
 PODS:
   - Eureka (5.3.3)
-  - Realm (10.7.2):
-    - Realm/Headers (= 10.7.2)
-  - Realm/Headers (10.7.2)
-  - RealmSwift (10.7.2):
-    - Realm (= 10.7.2)
-  - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Eureka (~> 5.3.3)
-  - RealmSwift (~> 10.7.2)
-  - SnapKit (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
     - Eureka
-    - Realm
-    - RealmSwift
-    - SnapKit
 
 SPEC CHECKSUMS:
   Eureka: e6d720290c56bb23333ad1a0e020b2a98a0e9a43
-  Realm: e523da9ade306c5ae87e85dc09fdef148d3e1cc1
-  RealmSwift: 4f6758c3adbdcc87f7b7777107226532a077f61c
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 8993f7b5dcd41ea49d76f450e981e1217e69b292
+PODFILE CHECKSUM: db4e44958c6dc493c1a0017d819f4dc09e76e8fb
 
 COCOAPODS: 1.10.1

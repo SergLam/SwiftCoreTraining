@@ -6,7 +6,7 @@ swift_library(
     name = "SwiftCoreTraining_Swift",
     srcs = glob(["SwiftCoreTraining/**/*.swift"]) ,
     visibility = ["//visibility:public"],
-    deps = ["//Vendor/SnapKit:SnapKit"],
+    deps = ["//Vendor/Eureka:Eureka"],
     # //Vendor/R.swift:R.swift
 )
 

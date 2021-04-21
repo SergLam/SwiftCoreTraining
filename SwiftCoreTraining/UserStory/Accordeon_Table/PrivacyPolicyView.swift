@@ -1,4 +1,4 @@
-import SnapKit
+
 import UIKit
 
 protocol PrivacyPolicyViewDelegate: class {
@@ -50,11 +50,16 @@ final class PrivacyPolicyView: UIView {
         containerView.layer.borderColor = UIColor.purple.cgColor
         containerView.layer.borderWidth = containerBorder
         
-        containerView.snp.makeConstraints { (make) in
-            make.top.equalTo(safeAreaLayoutGuide.snp.topMargin).inset(20)
-            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottomMargin).inset(20)
-            make.leading.trailing.equalToSuperview().inset(10)
-        }
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let containerViewConstraints: [NSLayoutConstraint] = [
+        
+            containerView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
+            containerView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            containerView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            containerView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -10)
+        ]
+        NSLayoutConstraint.activate(containerViewConstraints)
         
         containerView.addSubview(titleLabel)
         
@@ -62,18 +67,28 @@ final class PrivacyPolicyView: UIView {
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         titleLabel.textAlignment = .center
         
-        titleLabel.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(10)
-            make.leading.trailing.equalToSuperview().inset(15)
-        }
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let titleLabelConstraints: [NSLayoutConstraint] = [
+        
+            titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
+            titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 15),
+            titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -15)
+        ]
+        NSLayoutConstraint.activate(titleLabelConstraints)
         
         containerView.addSubview(closeButton)
-        closeButton.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-15)
-            make.height.equalTo(PrivacyPolicyView.buttonHeigth)
-            make.width.equalTo(PrivacyPolicyView.buttonWidth)
-            make.centerX.equalToSuperview()
-        }
+        
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        let closeButtonConstraints: [NSLayoutConstraint] = [
+        
+            closeButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -15),
+            closeButton.heightAnchor.constraint(equalToConstant: PrivacyPolicyView.buttonHeigth),
+            closeButton.widthAnchor.constraint(equalToConstant: PrivacyPolicyView.buttonWidth),
+            closeButton.centerXAnchor.constraint(equalTo: containerView.centerXAnchor)
+        ]
+        NSLayoutConstraint.activate(closeButtonConstraints)
         
         closeButton.addAction = { [unowned self] in
             self.delegate?.didTapCloseButton()
@@ -81,11 +96,17 @@ final class PrivacyPolicyView: UIView {
         
         containerView.addSubview(bottomSeparator)
         bottomSeparator.backgroundColor = .blue
-        bottomSeparator.snp.makeConstraints { (make) in
-            make.bottom.equalTo(closeButton.snp.top).offset(-10)
-            make.height.equalTo(1)
-            make.leading.trailing.equalToSuperview()
-        }
+        
+        bottomSeparator.translatesAutoresizingMaskIntoConstraints = false
+        
+        let bottomSeparatorConstraints: [NSLayoutConstraint] = [
+        
+            bottomSeparator.bottomAnchor.constraint(equalTo: closeButton.topAnchor, constant: -10),
+            bottomSeparator.heightAnchor.constraint(equalToConstant: 1),
+            bottomSeparator.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            bottomSeparator.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
+        ]
+        NSLayoutConstraint.activate(bottomSeparatorConstraints)
         
         containerView.addSubview(tableView)
         
@@ -93,11 +114,16 @@ final class PrivacyPolicyView: UIView {
         topSeparator.backgroundColor = .blue
         tableView.tableHeaderView = topSeparator
         
-        tableView.snp.makeConstraints { (make) in
-            make.top.equalTo(titleLabel.snp.bottom).offset(10)
-            make.bottom.equalTo(bottomSeparator.snp.top)
-            make.leading.trailing.equalToSuperview()
-        }
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let tableViewConstraints: [NSLayoutConstraint] = [
+        
+            tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            tableView.bottomAnchor.constraint(equalTo: bottomSeparator.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
+        ]
+        NSLayoutConstraint.activate(tableViewConstraints)
     }
     
     override func layoutSubviews() {

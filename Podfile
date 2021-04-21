@@ -18,10 +18,6 @@ def development_pods
   
   # UI
   pod 'Eureka', '~> 5.3.3'
-  pod 'SnapKit', '~> 5.0.1'
-  
-  # Database
-  pod 'RealmSwift', '~> 10.7.2'
   
 end
 
