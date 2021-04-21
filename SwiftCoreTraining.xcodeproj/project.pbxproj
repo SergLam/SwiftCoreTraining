@@ -10,6 +10,8 @@
 		040B00702625F5030001A5C3 /* UIView+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B006F2625F5030001A5C3 /* UIView+AddAction.swift */; };
 		040B008A2625F6AC0001A5C3 /* SharedTypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B00892625F6AC0001A5C3 /* SharedTypeAliases.swift */; };
 		047B24C12630718700E21DA6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B24C02630718700E21DA6 /* String+Localization.swift */; };
+		047B259126307E4600E21DA6 /* SpinnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B259026307E4600E21DA6 /* SpinnerVC.swift */; };
+		047B259626307EFE00E21DA6 /*  NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B259526307EFE00E21DA6 /*  NSObject+Ext.swift */; };
 		1316DB8D241029B60070CE2C /* ViperDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DB8C241029B60070CE2C /* ViperDataSource.swift */; };
 		1316DC06241116C60070CE2C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC05241116C60070CE2C /* BaseViewController.swift */; };
 		1316DC0A241117880070CE2C /* StatusBarResizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC08241117870070CE2C /* StatusBarResizable.swift */; };
@@ -137,6 +139,8 @@
 		040B006F2625F5030001A5C3 /* UIView+AddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAction.swift"; sourceTree = "<group>"; };
 		040B00892625F6AC0001A5C3 /* SharedTypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTypeAliases.swift; sourceTree = "<group>"; };
 		047B24C02630718700E21DA6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		047B259026307E4600E21DA6 /* SpinnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerVC.swift; sourceTree = "<group>"; };
+		047B259526307EFE00E21DA6 /*  NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NSObject+Ext.swift"; sourceTree = "<group>"; };
 		056826C7458D32F6F304219A /* Pods-App-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-SwiftCoreTraining/Pods-App-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		109A922D1A59CE7844434F86 /* Pods-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		1316DB8C241029B60070CE2C /* ViperDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDataSource.swift; sourceTree = "<group>"; };
@@ -371,8 +375,18 @@
 			isa = PBXGroup;
 			children = (
 				047B24C02630718700E21DA6 /* String+Localization.swift */,
+				047B259526307EFE00E21DA6 /*  NSObject+Ext.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		047B258F26307E3000E21DA6 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1316DC05241116C60070CE2C /* BaseViewController.swift */,
+				047B259026307E4600E21DA6 /* SpinnerVC.swift */,
+			);
+			path = BaseClasses;
 			sourceTree = "<group>";
 		};
 		1316DC07241117730070CE2C /* UIViewController */ = {
@@ -677,6 +691,7 @@
 		7CFDC33622B6CFE900FF351E /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
+				047B258F26307E3000E21DA6 /* BaseClasses */,
 				7CC57CB125CFDB0300C58D27 /* MemoryManagment */,
 				7C22859625598F760080DF81 /* Closures */,
 				131FCD5E23F6F982002A72FE /* RealmSwift */,
@@ -694,7 +709,6 @@
 				7CFDC38C22B6CFE900FF351E /* Accordeon_Table */,
 				7CFDC39222B6CFE900FF351E /* SystemTransitions */,
 				7CFDC39522B6CFE900FF351E /* DebugVC.swift */,
-				1316DC05241116C60070CE2C /* BaseViewController.swift */,
 			);
 			path = UserStory;
 			sourceTree = "<group>";
@@ -1279,6 +1293,7 @@
 				1316DB8D241029B60070CE2C /* ViperDataSource.swift in Sources */,
 				7CFDC3C222B6CFE900FF351E /* CoreDataOpetations.swift in Sources */,
 				7CFDC39822B6CFE900FF351E /* ExampleView.m in Sources */,
+				047B259626307EFE00E21DA6 /*  NSObject+Ext.swift in Sources */,
 				7CFDC39622B6CFE900FF351E /* ExampleViewModel.m in Sources */,
 				7C906340240ED6DE0055BCD8 /* BaseNavigationController.swift in Sources */,
 				7CFDC3B322B6CFE900FF351E /* KVO_VC.swift in Sources */,
@@ -1305,6 +1320,7 @@
 				7CFDC3CA22B6CFE900FF351E /* PrivacyTitleCell.swift in Sources */,
 				7CFDC3C322B6CFE900FF351E /* NSManagedObject+Ext.swift in Sources */,
 				7CFDC39F22B6CFE900FF351E /* TransitionPushVC.swift in Sources */,
+				047B259126307E4600E21DA6 /* SpinnerVC.swift in Sources */,
 				7CFDC3AD22B6CFE900FF351E /* PersonModel.swift in Sources */,
 				7CFDC39C22B6CFE900FF351E /* User.swift in Sources */,
 				7CFDC3C822B6CFE900FF351E /* GCDViewModel.swift in Sources */,

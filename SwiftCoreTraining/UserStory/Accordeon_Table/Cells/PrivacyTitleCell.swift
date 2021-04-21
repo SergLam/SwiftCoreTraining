@@ -1,3 +1,4 @@
+
 import UIKit
 
 final class PrivacyTitleCell: UITableViewCell {
@@ -23,10 +24,18 @@ final class PrivacyTitleCell: UITableViewCell {
         
         addSubview(separatorView)
         separatorView.backgroundColor = .gray
-        separatorView.snp.makeConstraints { (make) in
-            make.bottom.leading.trailing.equalToSuperview()
-            make.height.equalTo(1)
-        }
+        
+        separatorView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let separatorViewConstraints: [NSLayoutConstraint] = [
+        
+            separatorView.heightAnchor.constraint(equalToConstant: 1.0),
+            separatorView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            separatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            separatorView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+        ]
+        NSLayoutConstraint.activate(separatorViewConstraints)
+        
     }
     
     func update(_ titleText: String, _ shouldExpand: Bool) {

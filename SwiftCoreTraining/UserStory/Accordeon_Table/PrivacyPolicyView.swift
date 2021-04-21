@@ -1,5 +1,5 @@
-import UIKit
 import SnapKit
+import UIKit
 
 protocol PrivacyPolicyViewDelegate: class {
     

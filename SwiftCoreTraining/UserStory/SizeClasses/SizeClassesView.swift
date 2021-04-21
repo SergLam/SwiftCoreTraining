@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 final class SizeClassesView: UIView {
     
@@ -29,7 +28,7 @@ final class SizeClassesView: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         let imageViewConstraints: [NSLayoutConstraint] = [
-        
+            
             imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
@@ -38,7 +37,15 @@ final class SizeClassesView: UIView {
         ]
         NSLayoutConstraint.activate(imageViewConstraints)
         
-        let url = URL(string: "https://picsum.photos/500/300/?image=702")
-        imageView.kf.setImage(with: url)
+        guard let url = URL(string: "https://picsum.photos/500/300/?image=702") else {
+            return
+        }
+        URLSession.shared.dataTask(with: url) { [weak self] data, _, _ in
+            guard let data = data else { return }
+            self?.executeOnMain {
+                self?.imageView.image = UIImage(data: data)
+            }
+        }
+        
     }
 }

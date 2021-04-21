@@ -1,61 +1,30 @@
 PODS:
   - Eureka (5.3.3)
-  - FBSDKCoreKit (9.2.0):
-    - FBSDKCoreKit/Basics (= 9.2.0)
-    - FBSDKCoreKit/Core (= 9.2.0)
-  - FBSDKCoreKit/Basics (9.2.0)
-  - FBSDKCoreKit/Core (9.2.0):
-    - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (9.2.0):
-    - FBSDKLoginKit/Login (= 9.2.0)
-  - FBSDKLoginKit/Login (9.2.0):
-    - FBSDKCoreKit (~> 9.2.0)
-  - FBSDKShareKit (9.2.0):
-    - FBSDKShareKit/Share (= 9.2.0)
-  - FBSDKShareKit/Share (9.2.0):
-    - FBSDKCoreKit (~> 9.2.0)
-  - Kingfisher (6.2.1)
   - Realm (10.7.2):
     - Realm/Headers (= 10.7.2)
   - Realm/Headers (10.7.2)
   - RealmSwift (10.7.2):
     - Realm (= 10.7.2)
   - SnapKit (5.0.1)
-  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Eureka (~> 5.3.3)
-  - FBSDKCoreKit (~> 9.2.0)
-  - FBSDKLoginKit (~> 9.2.0)
-  - FBSDKShareKit (~> 9.2.0)
-  - Kingfisher (~> 6.2.1)
   - RealmSwift (~> 10.7.2)
   - SnapKit (~> 5.0.1)
-  - SVProgressHUD (~> 2.2.5)
 
 SPEC REPOS:
   trunk:
     - Eureka
-    - FBSDKCoreKit
-    - FBSDKLoginKit
-    - FBSDKShareKit
-    - Kingfisher
     - Realm
     - RealmSwift
     - SnapKit
-    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Eureka: e6d720290c56bb23333ad1a0e020b2a98a0e9a43
-  FBSDKCoreKit: dace5abafc2fd9272733e6d027bcf18102712117
-  FBSDKLoginKit: 43f377b451d391f5bc9dd774f51a391db1072029
-  FBSDKShareKit: 1210ece9e8f516ef0bb40ac329929a2874aef274
-  Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
   Realm: e523da9ade306c5ae87e85dc09fdef148d3e1cc1
   RealmSwift: 4f6758c3adbdcc87f7b7777107226532a077f61c
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 994091bbd6bc0efeaf3a7066b08a46dbf7082bb3
+PODFILE CHECKSUM: 8993f7b5dcd41ea49d76f450e981e1217e69b292
 
 COCOAPODS: 1.10.1

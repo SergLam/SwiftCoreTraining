@@ -7,9 +7,6 @@ install! 'cocoapods', :disable_input_output_paths => true, :warn_for_unused_mast
 use_frameworks!
 inhibit_all_warnings!
 
-# https://github.com/strongself/Generamba/wiki/Rambafile-Structure
-# https://github.com/strongself/Generamba
-
 workspace 'SwiftCoreTraining'
 
 project 'SwiftCoreTraining'
@@ -22,15 +19,6 @@ def development_pods
   # UI
   pod 'Eureka', '~> 5.3.3'
   pod 'SnapKit', '~> 5.0.1'
-  pod 'SVProgressHUD', '~> 2.2.5'
-  
-  # Networking
-  pod 'Kingfisher', '~> 6.2.1'
-  
-  # Social auth - Facebook
-  pod 'FBSDKCoreKit', '~> 9.2.0'
-  pod 'FBSDKLoginKit', '~> 9.2.0'
-  pod 'FBSDKShareKit', '~> 9.2.0'
   
   # Database
   pod 'RealmSwift', '~> 10.7.2'

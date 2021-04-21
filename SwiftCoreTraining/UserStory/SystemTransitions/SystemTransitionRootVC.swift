@@ -27,13 +27,20 @@ class SystemTransitionRootVC: BaseViewController {
         button.setTitle("Push view controler", for: .normal)
         button.addTarget(self, action: #selector(pushVC), for: .touchUpInside)
         
-        button.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-            make.width.equalTo(250)
-        }
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        let buttonConstraints: [NSLayoutConstraint] = [
+        
+            button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            button.widthAnchor.constraint(equalToConstant: 250.0)
+        ]
+        NSLayoutConstraint.activate(buttonConstraints)
+        
     }
     
-    @objc func pushVC() {
+    @objc
+    private func pushVC() {
         let vc = SystemTransitionPushVC()
         navigationController?.addFlipTransition()
         navigationController?.pushViewController(vc, animated: true)

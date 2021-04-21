@@ -37,9 +37,6 @@ final class ViperView: UIView {
         ]
         NSLayoutConstraint.activate(tableViewConstraints)
         
-        tableView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
     }
     
 }

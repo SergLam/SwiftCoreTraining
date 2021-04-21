@@ -23,12 +23,21 @@ final class TransitionPushView: UIView {
     }
     
     private func setupLayout() {
+        
         backgroundColor = .white
         addSubview(bigImageView)
-        bigImageView.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-            make.size.equalTo(UIScreen.main.bounds.width)
-        }
+        
+        bigImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let bigImageViewConstraints: [NSLayoutConstraint] = [
+        
+            bigImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            bigImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            bigImageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width),
+            bigImageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
+        ]
+        NSLayoutConstraint.activate(bigImageViewConstraints)
+        
         bigImageView.image = UIImage(named: "avatarPlaceholder")
     }
 }

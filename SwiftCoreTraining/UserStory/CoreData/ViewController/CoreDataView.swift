@@ -6,6 +6,7 @@
 //  Copyright © 2019 serglam. All rights reserved.
 //
 
+import SnapKit
 import UIKit
 
 final class CoreDataView: UIView {
@@ -29,6 +30,7 @@ final class CoreDataView: UIView {
     }
     
     private func setupLayout() {
+        
         backgroundColor = .white
         addSubview(scrollView)
         scrollView.snp.makeConstraints { (make) in

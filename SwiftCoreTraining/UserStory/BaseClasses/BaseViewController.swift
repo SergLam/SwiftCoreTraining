@@ -12,6 +12,8 @@ import UIKit
 
 class BaseViewController: UIViewController, ProgressShowable, ExternalURLOpenable, StatusBarResizable {
     
+    var hud: SpinnerVC = SpinnerVC()
+    
     // MARK: - Life cycle
     deinit {
         NotificationCenter.default.removeObserver(self)

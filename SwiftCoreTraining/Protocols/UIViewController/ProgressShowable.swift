@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SVProgressHUD
 
 protocol ProgressShowable {
     
@@ -16,28 +15,40 @@ protocol ProgressShowable {
     func hideProgress(completion: @escaping VoidClosure)
 }
 
-extension ProgressShowable where Self: UIViewController {
+extension ProgressShowable where Self: BaseViewController {
     
     func showProgress() {
         
-        DispatchQueue.main.async {
-            SVProgressHUD.setDefaultMaskType(.clear)
-            SVProgressHUD.show(withStatus: "loading".localized)
+        executeOnMain { [weak self] in
+            guard let self = self else { return }
+            
+            self.addChild(self.hud)
+            self.hud.view.frame = self.view.frame
+            self.view.addSubview(self.hud.view)
+            self.hud.didMove(toParent: self)
+            
         }
     }
     
     func hideProgress() {
         
-        DispatchQueue.main.async {
-            SVProgressHUD.dismiss()
+        executeOnMain { [weak self] in
+            
+            self?.hud.willMove(toParent: nil)
+            self?.hud.view.removeFromSuperview()
+            self?.hud.removeFromParent()
         }
     }
     
     func hideProgress(completion: @escaping VoidClosure) {
-        DispatchQueue.main.async {
-            SVProgressHUD.dismiss(completion: {
-                completion()
-            })
+        
+        executeOnMain { [weak self] in
+            
+            self?.hud.willMove(toParent: nil)
+            self?.hud.view.removeFromSuperview()
+            self?.hud.removeFromParent()
+            completion()
         }
     }
+    
 }
