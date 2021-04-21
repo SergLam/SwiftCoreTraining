@@ -32,7 +32,7 @@ final class PrivacyDetailsCell: UITableViewCell {
         let separatorViewConstraints: [NSLayoutConstraint] = [
         
             separatorView.heightAnchor.constraint(equalToConstant: 1.0),
-            separatorView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            separatorView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
             separatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             separatorView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ]
