@@ -8,7 +8,6 @@
 
 import UIKit
 import Eureka
-import DZNEmptyDataSet
 
 final class DebugVC: FormViewController, DebugVCShowable {
     
@@ -16,7 +15,6 @@ final class DebugVC: FormViewController, DebugVCShowable {
         super.viewDidLoad()
         title = "DebugVC"
         view.accessibilityLabel = "DebugVCView"
-        self.tableView.emptyDataSetDelegate = self
         setupForm()
     }
     
@@ -29,17 +27,6 @@ final class DebugVC: FormViewController, DebugVCShowable {
                     
                     let personsVC = ViperRouter.createModule()
                     self.navigationController?.pushViewController(personsVC, animated: true)
-                })
-            +++ Section("WebSockets")
-            <<< LabelRow() { row in
-                row.title = "WebSockets - StarScream"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(WebSocketStarscreamVC(), animated: true)
-                })
-            <<< LabelRow() { row in
-                row.title = "WebSockets - Socket.IO"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(WebSocketSocketIOVC(), animated: true)
                 })
             +++ Section("Closures")
             <<< LabelRow() { row in
@@ -139,14 +126,5 @@ final class DebugVC: FormViewController, DebugVCShowable {
                 }.onCellSelection({ [unowned self] (_, _) in
                     self.navigationController?.pushViewController(XMLParserVC(), animated: true)
                 })
-            <<< LabelRow() { row in
-                row.title = "CustomHTMLParser VC"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(CustomHTMLParserVC(), animated: true)
-                })
     }
-}
-
-extension DebugVC: DZNEmptyDataSetDelegate {
-    
 }

@@ -6,7 +6,8 @@ swift_library(
     name = "SwiftCoreTraining_Swift",
     srcs = glob(["SwiftCoreTraining/**/*.swift"]) ,
     visibility = ["//visibility:public"],
-    deps = [":Rswift"],
+    deps = ["//Vendor/SnapKit:SnapKit"],
+    # //Vendor/R.swift:R.swift
 )
 
 objc_library(
@@ -14,12 +15,6 @@ objc_library(
     hdrs = glob(["SwiftCoreTraining/UserStory/ObjcUsageInSwift/*.h"]),
     srcs = glob(["SwiftCoreTraining/UserStory/ObjcUsageInSwift/*.m"]),
     includes = ["SwiftCoreTraining/UserStory/ObjcUsageInSwift/**/"],
-    visibility = ["//visibility:public"],
-)
-
-swift_library(
-    name = "Rswift",
-    srcs = ["Vendor/R.swift/**/*.swift"],
     visibility = ["//visibility:public"],
 )
 

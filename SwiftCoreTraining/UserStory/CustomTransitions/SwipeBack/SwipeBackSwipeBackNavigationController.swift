@@ -6,7 +6,6 @@
 //  Copyright © 2020 SergLam. All rights reserved.
 //
 
-import SnapKit
 import UIKit
 
 // Fade animation: https://medium.com/@ludvigeriksson/custom-interactive-uinavigationcontroller-transition-animations-in-swift-4-a4b5e0cefb1e

@@ -17,7 +17,7 @@ struct One {
     var reference: A = A()
 }
 
-final class SubclassingVC: UIViewController {
+final class SubclassingVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

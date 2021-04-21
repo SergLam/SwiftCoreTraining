@@ -12,8 +12,6 @@ import UIKit
 
 typealias Storyboard = UIStoryboard
 
-typealias Localizable = R.string.localizable
-
 typealias TypeClosure<T> = (T) -> Void
 
 typealias VoidClosure = () -> Void

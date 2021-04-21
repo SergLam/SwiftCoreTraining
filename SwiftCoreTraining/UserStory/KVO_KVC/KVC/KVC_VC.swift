@@ -24,7 +24,7 @@ import UIKit
     @objc dynamic var skills: [String] = ["sit down", "stand up", "follow me", "play with ball", "guard owner"]
 }
 
-class KVC_VC: UIViewController {
+class KVC_VC: BaseViewController {
 //    https://developer.apple.com/documentation/swift/using_objective-c_runtime_features_in_swift
     
     @objc let human = Human(name: "John")

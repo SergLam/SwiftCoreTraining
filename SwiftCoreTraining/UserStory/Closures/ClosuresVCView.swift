@@ -6,7 +6,6 @@
 //  Copyright © 2020 serglam. All rights reserved.
 //
 
-import SnapKit
 import UIKit
 
 final class ClosuresVCView: UIView {

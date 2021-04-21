@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class GCDVC: UIViewController {
+final class GCDVC: BaseViewController {
     
     private let viewModel = GCDViewModel()
     

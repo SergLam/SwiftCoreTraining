@@ -8,7 +8,6 @@
 
 #import "ExampleView.h"
 #import "ExampleCell.h"
-#import "Masonry.h"
 
 @implementation ExampleView : UIView
 
@@ -24,9 +23,16 @@
 
 - (void) setupLayout {
     [self addSubview:_tableView];
-    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self).with.insets(self.safeAreaInsets);
-    }];
+    
+    _tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [_tableView.leadingAnchor constraintEqualToAnchor:self.safeAreaLayoutGuide.leadingAnchor],
+       [_tableView.trailingAnchor constraintEqualToAnchor:self.safeAreaLayoutGuide.trailingAnchor],
+       [_tableView.topAnchor constraintEqualToAnchor:self.safeAreaLayoutGuide.topAnchor],
+       [_tableView.bottomAnchor constraintEqualToAnchor:self.safeAreaLayoutGuide.bottomAnchor]
+    ]];
+    
     [_tableView registerClass:ExampleCell.class forCellReuseIdentifier: [ExampleCell reuseIdentifier]];
 }
 

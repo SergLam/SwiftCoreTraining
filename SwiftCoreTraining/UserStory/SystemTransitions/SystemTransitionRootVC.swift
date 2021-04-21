@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SystemTransitionRootVC: UIViewController {
+class SystemTransitionRootVC: BaseViewController {
     
     let button = UIButton()
     

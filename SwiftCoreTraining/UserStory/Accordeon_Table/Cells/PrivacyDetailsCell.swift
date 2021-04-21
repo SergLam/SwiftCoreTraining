@@ -1,5 +1,4 @@
 import UIKit
-import Rswift
 
 final class PrivacyDetailsCell: UITableViewCell {
     

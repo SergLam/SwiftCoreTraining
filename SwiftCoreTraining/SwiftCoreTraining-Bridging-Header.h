@@ -11,5 +11,4 @@
 
 #endif /* SwiftCoreTraining_Bridging_Header_h */
 
-#import "DZNEmptyDataSet/UIScrollView+EmptyDataSet.h"
 #import "ExampleVC.h"

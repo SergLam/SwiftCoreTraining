@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class TransitionPushVC: UIViewController {
+final class TransitionPushVC: BaseViewController {
     
     let contentView = TransitionPushView()
     

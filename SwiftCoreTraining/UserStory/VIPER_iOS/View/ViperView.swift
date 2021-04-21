@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 final class ViperView: UIView {
     
@@ -26,6 +25,18 @@ final class ViperView: UIView {
     private func setupLayout() {
         
         addSubview(tableView)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let tableViewConstraints: [NSLayoutConstraint] = [
+        
+            tableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+        ]
+        NSLayoutConstraint.activate(tableViewConstraints)
+        
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }

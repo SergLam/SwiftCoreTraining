@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CustomTransitionsVC: UIViewController {
+final class CustomTransitionsVC: BaseViewController {
     
     let contentView = CustomTransitionsView()
     

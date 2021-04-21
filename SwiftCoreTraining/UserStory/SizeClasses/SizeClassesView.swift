@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 import Kingfisher
 
 final class SizeClassesView: UIView {
@@ -26,11 +25,19 @@ final class SizeClassesView: UIView {
     private func setupLayout() {
         addSubview(imageView)
         imageView.contentMode = .scaleAspectFit
-        imageView.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-            make.left.right.equalToSuperview()
-            make.height.equalTo(UIScreen.main.bounds.width * 1.67)
-        }
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let imageViewConstraints: [NSLayoutConstraint] = [
+        
+            imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 1.67)
+        ]
+        NSLayoutConstraint.activate(imageViewConstraints)
+        
         let url = URL(string: "https://picsum.photos/500/300/?image=702")
         imageView.kf.setImage(with: url)
     }

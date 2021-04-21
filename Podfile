@@ -21,14 +21,10 @@ def development_pods
   
   # UI
   pod 'Eureka', '~> 5.3.3'
-  pod 'DZNEmptyDataSet', '~> 1.8.1'
   pod 'SnapKit', '~> 5.0.1'
-  pod 'R.swift', '~> 5.4.0'
   pod 'SVProgressHUD', '~> 2.2.5'
   
   # Networking
-  pod 'Moya', '~> 14.0.0'
-  pod 'ReachabilitySwift', '~> 5.0.0'
   pod 'Kingfisher', '~> 6.2.1'
   
   # Social auth - Facebook
@@ -36,27 +32,8 @@ def development_pods
   pod 'FBSDKLoginKit', '~> 9.2.0'
   pod 'FBSDKShareKit', '~> 9.2.0'
   
-  # Social auth - Google
-  pod 'GoogleSignIn', '~> 5.0.2'
-  
-  # Firebase
-  pod 'FirebaseCore', '~> 7.10.0'
-  pod 'Firebase/Auth', '~> 7.10.0'
-  pod 'Firebase/Analytics', '~> 7.10.0'
-  
   # Database
   pod 'RealmSwift', '~> 10.7.2'
-  
-  # WebSockets
-  pod 'Starscream', '~> 3.1'
-  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
-  
-  # HTML Parsing
-  pod 'Kanna', '~> 5.2.4'
-  
-  #Objc Pods
-  pod 'Masonry', '~> 1.1.0'
-  pod 'SDWebImage', '~> 5.11.0'
   
 end
 

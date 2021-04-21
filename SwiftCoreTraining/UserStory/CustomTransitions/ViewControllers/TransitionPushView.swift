@@ -29,6 +29,6 @@ final class TransitionPushView: UIView {
             make.center.equalToSuperview()
             make.size.equalTo(UIScreen.main.bounds.width)
         }
-        bigImageView.image = R.image.avatarPlaceholder()
+        bigImageView.image = UIImage(named: "avatarPlaceholder")
     }
 }

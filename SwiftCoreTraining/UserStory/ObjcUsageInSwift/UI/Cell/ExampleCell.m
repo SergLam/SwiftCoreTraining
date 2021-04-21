@@ -32,25 +32,42 @@
     _avatarImage.layer.cornerRadius = imageSize / 2;
     _avatarImage.backgroundColor = UIColor.grayColor;
     _avatarImage.clipsToBounds = true;
-    [_avatarImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.bottom.equalTo(self.contentView).insets(UIEdgeInsetsMake(10, 10, 10, 10));
-        make.size.equalTo(@(50));
-    }];
+    
+    _avatarImage.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [_avatarImage.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant: 10.0],
+       [_avatarImage.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant: -10.0],
+       [_avatarImage.topAnchor constraintEqualToAnchor:self.contentView.topAnchor constant: 10.0],
+       [_avatarImage.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant: -10.0]
+    ]];
     
     _userNameLabel = [[UILabel alloc] init];
     [self.contentView addSubview: _userNameLabel];
     _userNameLabel.font = [UIFont systemFontOfSize:(25)];
     _userNameLabel.textColor = UIColor.blackColor;
-    [_userNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.avatarImage.mas_right).offset(10);
-        make.right.equalTo(self.contentView);
-        make.centerY.equalTo(self.avatarImage);
-    }];
+    
+    [NSLayoutConstraint activateConstraints:@[
+        [_userNameLabel.leadingAnchor constraintEqualToAnchor:self.avatarImage.trailingAnchor constant: 10.0],
+       [_userNameLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant: -10.0],
+       [_userNameLabel.centerYAnchor constraintEqualToAnchor:self.avatarImage.centerYAnchor],
+    ]];
+    
 }
 
 - (void) updateUI:(UserModel *) user {
-    [self.avatarImage sd_setImageWithURL:[NSURL URLWithString:user.avatarURL] placeholderImage:[UIImage imageNamed:@"avatarPlaceholder.png"]  options:SDWebImageRefreshCached];
-   
+    
+    [NSURLSession.sharedSession dataTaskWithURL:[NSURL URLWithString:user.avatarURL] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        __weak __typeof__(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            __typeof__(self) strongSelf = weakSelf;
+            strongSelf.avatarImage.image = [UIImage imageWithData:data];
+        });
+        
+    }];
+    
     _userNameLabel.text = user.userName;
 }
 

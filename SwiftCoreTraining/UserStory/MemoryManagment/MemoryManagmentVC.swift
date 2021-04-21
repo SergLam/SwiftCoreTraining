@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class MemoryManagmentVC: UIViewController {
+final class MemoryManagmentVC: BaseViewController {
     
     private let viewModel = MemoryManagmentViewModel()
     

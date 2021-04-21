@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		040B00702625F5030001A5C3 /* UIView+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B006F2625F5030001A5C3 /* UIView+AddAction.swift */; };
 		040B008A2625F6AC0001A5C3 /* SharedTypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B00892625F6AC0001A5C3 /* SharedTypeAliases.swift */; };
+		047B24C12630718700E21DA6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B24C02630718700E21DA6 /* String+Localization.swift */; };
 		1316DB8D241029B60070CE2C /* ViperDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DB8C241029B60070CE2C /* ViperDataSource.swift */; };
 		1316DC06241116C60070CE2C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC05241116C60070CE2C /* BaseViewController.swift */; };
 		1316DC0A241117880070CE2C /* StatusBarResizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC08241117870070CE2C /* StatusBarResizable.swift */; };
@@ -49,7 +50,6 @@
 		7CC57CC125CFDC1E00C58D27 /* TestMemoryClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC57CC025CFDC1E00C58D27 /* TestMemoryClass.swift */; };
 		7CC57CFA25CFE0AB00C58D27 /* ClosuresVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC57CF925CFE0AB00C58D27 /* ClosuresVCViewModel.swift */; };
 		7CC57D0025CFE3F100C58D27 /* MyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC57CFF25CFE3F100C58D27 /* MyObject.swift */; };
-		7CDB281B22638BC800546F9C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB281A22638BC800546F9C /* R.generated.swift */; };
 		7CDB282B2263CC5900546F9C /* UIScreen+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */; };
 		7CED219323E0DBB500A37499 /* ZoomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED219023E0DBB500A37499 /* ZoomTransitionController.swift */; };
 		7CED219423E0DBB500A37499 /* ZoomDismissalInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CED219123E0DBB500A37499 /* ZoomDismissalInteractionController.swift */; };
@@ -87,15 +87,8 @@
 		7CFDC3B422B6CFE900FF351E /* KVC_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC36C22B6CFE900FF351E /* KVC_VC.swift */; };
 		7CFDC3B522B6CFE900FF351E /* page.html in Resources */ = {isa = PBXBuildFile; fileRef = 7CFDC36E22B6CFE900FF351E /* page.html */; };
 		7CFDC3B622B6CFE900FF351E /* AlgorhitmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC36F22B6CFE900FF351E /* AlgorhitmsVC.swift */; };
-		7CFDC3B722B6CFE900FF351E /* CustomHTMLParserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC37022B6CFE900FF351E /* CustomHTMLParserVC.swift */; };
 		7CFDC3B822B6CFE900FF351E /* RecursiveAlgorithmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC37122B6CFE900FF351E /* RecursiveAlgorithmsVC.swift */; };
 		7CFDC3B922B6CFE900FF351E /* XMLParserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC37222B6CFE900FF351E /* XMLParserVC.swift */; };
-		7CFDC3BA22B6CFE900FF351E /* WebSocketSocketIOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC37522B6CFE900FF351E /* WebSocketSocketIOVC.swift */; };
-		7CFDC3BB22B6CFE900FF351E /* SocketCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC37622B6CFE900FF351E /* SocketCalls.swift */; };
-		7CFDC3BC22B6CFE900FF351E /* WebSocketSocketIOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC37722B6CFE900FF351E /* WebSocketSocketIOView.swift */; };
-		7CFDC3BD22B6CFE900FF351E /* WebSocketStarscreamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC37922B6CFE900FF351E /* WebSocketStarscreamVC.swift */; };
-		7CFDC3BE22B6CFE900FF351E /* SocketTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC37A22B6CFE900FF351E /* SocketTarget.swift */; };
-		7CFDC3BF22B6CFE900FF351E /* WebSocketStarscreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC37B22B6CFE900FF351E /* WebSocketStarscreamView.swift */; };
 		7CFDC3C022B6CFE900FF351E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC37D22B6CFE900FF351E /* CoreDataManager.swift */; };
 		7CFDC3C122B6CFE900FF351E /* DatabaseOne.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC37E22B6CFE900FF351E /* DatabaseOne.xcdatamodeld */; };
 		7CFDC3C222B6CFE900FF351E /* CoreDataOpetations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC38022B6CFE900FF351E /* CoreDataOpetations.swift */; };
@@ -143,6 +136,7 @@
 /* Begin PBXFileReference section */
 		040B006F2625F5030001A5C3 /* UIView+AddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAction.swift"; sourceTree = "<group>"; };
 		040B00892625F6AC0001A5C3 /* SharedTypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTypeAliases.swift; sourceTree = "<group>"; };
+		047B24C02630718700E21DA6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		056826C7458D32F6F304219A /* Pods-App-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-SwiftCoreTraining/Pods-App-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		109A922D1A59CE7844434F86 /* Pods-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		1316DB8C241029B60070CE2C /* ViperDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDataSource.swift; sourceTree = "<group>"; };
@@ -200,7 +194,6 @@
 		7CC57CC025CFDC1E00C58D27 /* TestMemoryClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMemoryClass.swift; sourceTree = "<group>"; };
 		7CC57CF925CFE0AB00C58D27 /* ClosuresVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosuresVCViewModel.swift; sourceTree = "<group>"; };
 		7CC57CFF25CFE3F100C58D27 /* MyObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyObject.swift; sourceTree = "<group>"; };
-		7CDB281A22638BC800546F9C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = SwiftCoreTraining/Resources/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Ext.swift"; sourceTree = "<group>"; };
 		7CE5D7D2221F37DD0049E3A9 /* SwiftCoreTraining-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftCoreTraining-Bridging-Header.h"; sourceTree = "<group>"; };
 		7CED219023E0DBB500A37499 /* ZoomTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomTransitionController.swift; sourceTree = "<group>"; };
@@ -244,15 +237,8 @@
 		7CFDC36C22B6CFE900FF351E /* KVC_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVC_VC.swift; sourceTree = "<group>"; };
 		7CFDC36E22B6CFE900FF351E /* page.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = page.html; sourceTree = "<group>"; };
 		7CFDC36F22B6CFE900FF351E /* AlgorhitmsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorhitmsVC.swift; sourceTree = "<group>"; };
-		7CFDC37022B6CFE900FF351E /* CustomHTMLParserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHTMLParserVC.swift; sourceTree = "<group>"; };
 		7CFDC37122B6CFE900FF351E /* RecursiveAlgorithmsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveAlgorithmsVC.swift; sourceTree = "<group>"; };
 		7CFDC37222B6CFE900FF351E /* XMLParserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParserVC.swift; sourceTree = "<group>"; };
-		7CFDC37522B6CFE900FF351E /* WebSocketSocketIOVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketSocketIOVC.swift; sourceTree = "<group>"; };
-		7CFDC37622B6CFE900FF351E /* SocketCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketCalls.swift; sourceTree = "<group>"; };
-		7CFDC37722B6CFE900FF351E /* WebSocketSocketIOView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketSocketIOView.swift; sourceTree = "<group>"; };
-		7CFDC37922B6CFE900FF351E /* WebSocketStarscreamVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketStarscreamVC.swift; sourceTree = "<group>"; };
-		7CFDC37A22B6CFE900FF351E /* SocketTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketTarget.swift; sourceTree = "<group>"; };
-		7CFDC37B22B6CFE900FF351E /* WebSocketStarscreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketStarscreamView.swift; sourceTree = "<group>"; };
 		7CFDC37D22B6CFE900FF351E /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		7CFDC37F22B6CFE900FF351E /* DatabaseOne.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DatabaseOne.xcdatamodel; sourceTree = "<group>"; };
 		7CFDC38022B6CFE900FF351E /* CoreDataOpetations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataOpetations.swift; sourceTree = "<group>"; };
@@ -370,6 +356,25 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		047B24BE2630716300E21DA6 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				040B006D2625F4E30001A5C3 /* UIView */,
+				7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */,
+				7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */,
+				9C295B372269BD9B00527898 /* UIButton+Ext.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		047B24BF2630716E00E21DA6 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				047B24C02630718700E21DA6 /* String+Localization.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		1316DC07241117730070CE2C /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,10 +444,8 @@
 		7C1ADDC72206EFBB00F70F2C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				040B006D2625F4E30001A5C3 /* UIView */,
-				7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */,
-				7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */,
-				9C295B372269BD9B00527898 /* UIButton+Ext.swift */,
+				047B24BF2630716E00E21DA6 /* Foundation */,
+				047B24BE2630716300E21DA6 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -685,7 +688,6 @@
 				7CFDC36622B6CFE900FF351E /* AssociatedKeyValues */,
 				7CFDC36822B6CFE900FF351E /* KVO_KVC */,
 				7CFDC36D22B6CFE900FF351E /* Algorithms */,
-				7CFDC37322B6CFE900FF351E /* WebSockets */,
 				7CFDC37C22B6CFE900FF351E /* CoreData */,
 				7CFDC38722B6CFE900FF351E /* GCD */,
 				7CFDC38A22B6CFE900FF351E /* Access Levels */,
@@ -874,40 +876,10 @@
 			children = (
 				7CFDC36E22B6CFE900FF351E /* page.html */,
 				7CFDC36F22B6CFE900FF351E /* AlgorhitmsVC.swift */,
-				7CFDC37022B6CFE900FF351E /* CustomHTMLParserVC.swift */,
 				7CFDC37122B6CFE900FF351E /* RecursiveAlgorithmsVC.swift */,
 				7CFDC37222B6CFE900FF351E /* XMLParserVC.swift */,
 			);
 			path = Algorithms;
-			sourceTree = "<group>";
-		};
-		7CFDC37322B6CFE900FF351E /* WebSockets */ = {
-			isa = PBXGroup;
-			children = (
-				7CFDC37422B6CFE900FF351E /* Socket.io */,
-				7CFDC37822B6CFE900FF351E /* StarScream */,
-			);
-			path = WebSockets;
-			sourceTree = "<group>";
-		};
-		7CFDC37422B6CFE900FF351E /* Socket.io */ = {
-			isa = PBXGroup;
-			children = (
-				7CFDC37522B6CFE900FF351E /* WebSocketSocketIOVC.swift */,
-				7CFDC37622B6CFE900FF351E /* SocketCalls.swift */,
-				7CFDC37722B6CFE900FF351E /* WebSocketSocketIOView.swift */,
-			);
-			path = Socket.io;
-			sourceTree = "<group>";
-		};
-		7CFDC37822B6CFE900FF351E /* StarScream */ = {
-			isa = PBXGroup;
-			children = (
-				7CFDC37922B6CFE900FF351E /* WebSocketStarscreamVC.swift */,
-				7CFDC37A22B6CFE900FF351E /* SocketTarget.swift */,
-				7CFDC37B22B6CFE900FF351E /* WebSocketStarscreamView.swift */,
-			);
-			path = StarScream;
 			sourceTree = "<group>";
 		};
 		7CFDC37C22B6CFE900FF351E /* CoreData */ = {
@@ -980,7 +952,6 @@
 		7CFDC3D322B6D0D000FF351E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7CDB281A22638BC800546F9C /* R.generated.swift */,
 				040B00872625F6580001A5C3 /* LaunchScreen */,
 				040B00782625F5610001A5C3 /* Images */,
 				040B00772625F5510001A5C3 /* Localization */,
@@ -1021,12 +992,10 @@
 			buildConfigurationList = 7C2F037021FCC5D200A50936 /* Build configuration list for PBXNativeTarget "SwiftCoreTraining" */;
 			buildPhases = (
 				EA0A9845F6942D7DE111C3EF /* [CP] Check Pods Manifest.lock */,
-				7CDB281922638B2A00546F9C /* R.swift */,
 				7C2F034421FCC5D000A50936 /* Sources */,
 				7C2F034521FCC5D000A50936 /* Frameworks */,
 				7C2F034621FCC5D000A50936 /* Resources */,
 				BDE357D9FD28BC1F4A9DCC5D /* [CP] Embed Pods Frameworks */,
-				43CAA4406DC46839A7FFAAFE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1046,7 +1015,6 @@
 				7C2F035921FCC5D200A50936 /* Frameworks */,
 				7C2F035A21FCC5D200A50936 /* Resources */,
 				CAD27158102CD98E7F3BEC80 /* [CP] Embed Pods Frameworks */,
-				EC918CF5DDB52CA6D4439F1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1067,7 +1035,6 @@
 				7C2F036421FCC5D200A50936 /* Frameworks */,
 				7C2F036521FCC5D200A50936 /* Resources */,
 				28B6958CDA9F7F9F9DB5E81C /* [CP] Embed Pods Frameworks */,
-				362E1A2129F4653B74E8A59B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1167,56 +1134,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTrainingUITests/Pods-App-SwiftCoreTrainingUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		362E1A2129F4653B74E8A59B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTrainingUITests/Pods-App-SwiftCoreTrainingUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		43CAA4406DC46839A7FFAAFE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTraining/Pods-App-SwiftCoreTraining-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7CDB281922638B2A00546F9C /* R.swift */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
-			);
-			name = R.swift;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				$SRCROOT/SwiftCoreTraining/Resources/R.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/SwiftCoreTraining/Resources/R.generated.swift\"\n";
-		};
 		954B60FF53BDAFD76A6E7D42 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1313,21 +1230,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EC918CF5DDB52CA6D4439F1D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTrainingTests/Pods-App-SwiftCoreTrainingTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1348,14 +1250,12 @@
 				040B00702625F5030001A5C3 /* UIView+AddAction.swift in Sources */,
 				7CFDC3A422B6CFE900FF351E /* FadePushAnimator.swift in Sources */,
 				7C3B5C4924B9FDA30058B9A8 /* Person.m in Sources */,
-				7CFDC3B722B6CFE900FF351E /* CustomHTMLParserVC.swift in Sources */,
 				7CC57CBB25CFDB5600C58D27 /* MemoryManagmentViewModel.swift in Sources */,
 				7CFDC3B122B6CFE900FF351E /* SizeClassesVC.swift in Sources */,
 				131FCDAE23F70F2F002A72FE /* Realm+Ext.swift in Sources */,
 				131FCDAB23F70F2F002A72FE /* PredicateBuilder.swift in Sources */,
 				7CFDC3A822B6CFE900FF351E /* VIPERProtocols.swift in Sources */,
 				7CFDC3C722B6CFE900FF351E /* GCDVC.swift in Sources */,
-				7CFDC3BF22B6CFE900FF351E /* WebSocketStarscreamView.swift in Sources */,
 				7C90633B240ED6DE0055BCD8 /* Animator.swift in Sources */,
 				7CFDC3B022B6CFE900FF351E /* SizeClassesView.swift in Sources */,
 				7CED219523E0DBB500A37499 /* ZoomAnimator.swift in Sources */,
@@ -1364,7 +1264,6 @@
 				7CFDC3CB22B6CFE900FF351E /* PrivacyDetailsCell.swift in Sources */,
 				1316DC06241116C60070CE2C /* BaseViewController.swift in Sources */,
 				7CFDC3A322B6CFE900FF351E /* ZoomPopAnimator.swift in Sources */,
-				7CFDC3BB22B6CFE900FF351E /* SocketCalls.swift in Sources */,
 				7C2285A825598FAE0080DF81 /* ClosuresVCView.swift in Sources */,
 				7CFDC3C422B6CFE900FF351E /* test.xcdatamodeld in Sources */,
 				7C90633A240ED6DE0055BCD8 /* Interactor.swift in Sources */,
@@ -1383,21 +1282,17 @@
 				7CFDC39622B6CFE900FF351E /* ExampleViewModel.m in Sources */,
 				7C906340240ED6DE0055BCD8 /* BaseNavigationController.swift in Sources */,
 				7CFDC3B322B6CFE900FF351E /* KVO_VC.swift in Sources */,
-				7CDB281B22638BC800546F9C /* R.generated.swift in Sources */,
 				7C4FA41524B3996400ECE2E5 /* House.m in Sources */,
 				7CFDC39722B6CFE900FF351E /* ExampleCell.m in Sources */,
 				7CFDC39922B6CFE900FF351E /* UserModel.m in Sources */,
-				7CFDC3BD22B6CFE900FF351E /* WebSocketStarscreamVC.swift in Sources */,
 				7CC57CB325CFDB3600C58D27 /* MemoryManagmentVC.swift in Sources */,
 				7CC0B60222A312090072EB49 /* ReusableView.swift in Sources */,
 				7CED219323E0DBB500A37499 /* ZoomTransitionController.swift in Sources */,
 				7CFDC3C522B6CFE900FF351E /* CoreDataVC.swift in Sources */,
 				7CFDC39A22B6CFE900FF351E /* ExampleVC.m in Sources */,
-				7CFDC3BA22B6CFE900FF351E /* WebSocketSocketIOVC.swift in Sources */,
 				7C22859825598F8C0080DF81 /* ClosuresVC.swift in Sources */,
 				7C906341240ED6DE0055BCD8 /* Coordinator.swift in Sources */,
 				7CFDC3A122B6CFE900FF351E /* CustomAnimator.swift in Sources */,
-				7CFDC3BC22B6CFE900FF351E /* WebSocketSocketIOView.swift in Sources */,
 				1316DC0A241117880070CE2C /* StatusBarResizable.swift in Sources */,
 				7CFDC3CC22B6CFE900FF351E /* PrivacyPolicyVC.swift in Sources */,
 				7CFDC39D22B6CFE900FF351E /* CustomTransitionsVC.swift in Sources */,
@@ -1415,6 +1310,7 @@
 				7CFDC3C822B6CFE900FF351E /* GCDViewModel.swift in Sources */,
 				7CFDC3A022B6CFE900FF351E /* CustomTransitionsView.swift in Sources */,
 				7CFDC39E22B6CFE900FF351E /* TransitionPushView.swift in Sources */,
+				047B24C12630718700E21DA6 /* String+Localization.swift in Sources */,
 				7CFDC3CF22B6CFE900FF351E /* SystemTransitionRootVC.swift in Sources */,
 				7CC0B60422A3124B0072EB49 /* NibLoadableView.swift in Sources */,
 				7CFDC3AA22B6CFE900FF351E /* PersonCell.swift in Sources */,
@@ -1424,7 +1320,6 @@
 				7CED219423E0DBB500A37499 /* ZoomDismissalInteractionController.swift in Sources */,
 				7CFDC3C122B6CFE900FF351E /* DatabaseOne.xcdatamodeld in Sources */,
 				7CFDC39B22B6CFE900FF351E /* ArraySetVC.swift in Sources */,
-				7CFDC3BE22B6CFE900FF351E /* SocketTarget.swift in Sources */,
 				7C3B5C4D24BA00B80058B9A8 /* Bedroom.m in Sources */,
 				9C295B382269BD9B00527898 /* UIButton+Ext.swift in Sources */,
 				7CFDC3B422B6CFE900FF351E /* KVC_VC.swift in Sources */,

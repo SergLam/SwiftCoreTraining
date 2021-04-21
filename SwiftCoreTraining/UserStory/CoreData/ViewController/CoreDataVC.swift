@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-final class CoreDataVC: UIViewController {
+final class CoreDataVC: BaseViewController {
     
     let dbManager = CoreDataManager.shared
     let contentView = CoreDataView()

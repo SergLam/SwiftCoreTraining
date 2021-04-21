@@ -1,6 +1,6 @@
 import UIKit
 
-final class PrivacyPolicyVC: UIViewController {
+final class PrivacyPolicyVC: BaseViewController {
     
     private let contentView = PrivacyPolicyView()
     

@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Masonry/Masonry.h>
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "UserModel.h"
 
 NS_ASSUME_NONNULL_BEGIN

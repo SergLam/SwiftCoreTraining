@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViperVC: UIViewController, ProgressShowable {
+final class ViperVC: BaseViewController {
 
     var presenter: ViewToPresenterProtocol? = nil
     private var personsList = Array<PersonModel>()

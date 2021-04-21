@@ -22,7 +22,7 @@ extension ProgressShowable where Self: UIViewController {
         
         DispatchQueue.main.async {
             SVProgressHUD.setDefaultMaskType(.clear)
-            SVProgressHUD.show(withStatus: Localizable.loading())
+            SVProgressHUD.show(withStatus: "loading".localized)
         }
     }
     

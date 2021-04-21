@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import SnapKit
 
 final class CustomTransitionsView: UIView {
     
-    let image = R.image.avatarPlaceholder()
+    let image = UIImage(named: "avatarPlaceholder")
     let imageView = UIImageView()
     
     override init(frame: CGRect) {
@@ -25,14 +24,22 @@ final class CustomTransitionsView: UIView {
     }
     
     private func setupLayout() {
+        
         backgroundColor = .white
+        
         addSubview(imageView)
-        imageView.snp.makeConstraints { (make) in
-            make.center.equalToSuperview()
-            make.width.height.equalTo(50)
-        }
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        let imageViewConstraints: [NSLayoutConstraint] = [
+        
+            imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            imageView.widthAnchor.constraint(equalToConstant: 50),
+            imageView.heightAnchor.constraint(equalToConstant: 50)
+        ]
+        NSLayoutConstraint.activate(imageViewConstraints)
         
     }
     

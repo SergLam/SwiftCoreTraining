@@ -1,5 +1,4 @@
 import UIKit
-import Rswift
 
 final class PrivacyTitleCell: UITableViewCell {
     
@@ -36,7 +35,7 @@ final class PrivacyTitleCell: UITableViewCell {
         
         let button = UIButton(type: .custom)
         button.bounds.size = CGSize(width: 15, height: 15)
-        button.setImage(R.image.disclosureIndicatorGray(), for: .normal)
+        button.setImage(UIImage(named: "disclosureIndicatorGray"), for: .normal)
         
         if !shouldExpand {
             let rotationTransform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)

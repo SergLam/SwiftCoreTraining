@@ -21,13 +21,6 @@ new_pod_repository(
 )
 
 new_pod_repository(
-  name = "R.swift",
-  url = "https://github.com/mac-cain13/R.swift/archive/refs/tags/v5.4.0.zip",
-  podspec_url = "./Vendor/R.swift/R.swift-5.4.0/R.swift.podspec",
-  inhibit_warnings = True,
-)
-
-new_pod_repository(
   name = "SVProgressHUD",
   url = "https://github.com/SVProgressHUD/SVProgressHUD/archive/refs/tags/2.2.5.zip",
   podspec_url = "./Vendor/SVProgressHUD/SVProgressHUD-2.2.5/SVProgressHUD.podspec",
