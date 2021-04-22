@@ -4,7 +4,10 @@ load("@build_bazel_rules_apple//apple:ios.bzl",
     "ios_framework",
 )
 
-load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
+load("@build_bazel_rules_swift//swift:swift.bzl", 
+"swift_library",
+"swift_import"
+)
 
 load("//build-system/bazel-utils:plist_fragment.bzl",
     "plist_fragment",
@@ -12,27 +15,20 @@ load("//build-system/bazel-utils:plist_fragment.bzl",
 
 swift_library(
     name = "SwiftCoreTraining_Swift",
-    srcs = glob(["SwiftCoreTraining/**/*.swift"]) ,
+    srcs = glob(["SwiftCoreTraining/**/*.swift"]),
     visibility = ["//visibility:public"],
-    deps = ["//Vendor/Eureka:Eureka"],
-    # //Vendor/Eureka:Eureka
+    deps = [":Eureka"],
 )
 
-ios_framework(
+swift_library(
     name = "Eureka",
-    bundle_id = "com.serglam.SwiftCoreTraining.Eureka",
-    families = [
-        "iphone",
-        "ipad",
-    ],
-    infoplists = [
-        ":EurekaInfoPlist",
-        ":BuildNumberInfoPlist",
-        ":VersionInfoPlist",
-    ],
-    minimum_os_version = "13.0",
+    module_name = "Eureka",
+    srcs = glob(
+        ["Vendor/Eureka/Eureka-5.3.3/Source/**/*.swift"]
+    ),
+    visibility = ["//visibility:public"],
     deps = [
-        "//Vendor/Eureka:Eureka",
+      "//Vendor/Eureka:Eureka",
     ],
 )
 
@@ -52,12 +48,28 @@ ios_application(
         "ipad",
     ],
     frameworks = [
-        ":Eureka"
+        ":SwiftCoreTraining_Swift"
     ],
     minimum_os_version = "13.0",
     infoplists = [":SwiftCoreTraining/BundleFiles/Plist/Info.plist"],
     visibility = ["//visibility:public"],
-    deps = [":SwiftCoreTraining_Swift", ":SwiftCoreTraining_ObjC"],
+    deps = [":SwiftCoreTraining_ObjC"],
+)
+
+plist_fragment(
+    name = "MainTargetInfoPlist",
+    extension = "plist",
+    template =
+    """
+    <key>CFBundleIdentifier</key>
+    <string>com.serglam.SwiftCoreTraining</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleName</key>
+    <string>Eureka</string>
+    <key>CFBundlePackageType</key>
+    <string>FMWK</string>
+    """
 )
 
 plist_fragment(
