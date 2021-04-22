@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0401607326316B9F00D8DE43 /* DebugScreenTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401607226316B9F00D8DE43 /* DebugScreenTableSection.swift */; };
 		040B00702625F5030001A5C3 /* UIView+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B006F2625F5030001A5C3 /* UIView+AddAction.swift */; };
 		040B008A2625F6AC0001A5C3 /* SharedTypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B00892625F6AC0001A5C3 /* SharedTypeAliases.swift */; };
 		047B24C12630718700E21DA6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B24C02630718700E21DA6 /* String+Localization.swift */; };
@@ -150,6 +151,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0401607226316B9F00D8DE43 /* DebugScreenTableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugScreenTableSection.swift; sourceTree = "<group>"; };
 		040B006F2625F5030001A5C3 /* UIView+AddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAction.swift"; sourceTree = "<group>"; };
 		040B00892625F6AC0001A5C3 /* SharedTypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTypeAliases.swift; sourceTree = "<group>"; };
 		047B24C02630718700E21DA6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
@@ -331,6 +333,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0401607126316B4600D8DE43 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				0401607226316B9F00D8DE43 /* DebugScreenTableSection.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
 		040B006D2625F4E30001A5C3 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,7 +469,7 @@
 		7C17966C2630AD1000EAC908 /* DebugScreen */ = {
 			isa = PBXGroup;
 			children = (
-				7C1796E52630B33500EAC908 /* DataModels */,
+				0401607126316B4600D8DE43 /* DataModels */,
 				7C1796DA2630B2F200EAC908 /* TableController */,
 				7CFDC39522B6CFE900FF351E /* DebugVC.swift */,
 			);
@@ -573,13 +583,6 @@
 				7C1796DC2630B2F200EAC908 /* DebugScreenTableCellsFactory.swift */,
 			);
 			path = TableController;
-			sourceTree = "<group>";
-		};
-		7C1796E52630B33500EAC908 /* DataModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataModels;
 			sourceTree = "<group>";
 		};
 		7C1ADDC72206EFBB00F70F2C /* Extensions */ = {
@@ -1467,6 +1470,7 @@
 				7CFDC3A022B6CFE900FF351E /* CustomTransitionsView.swift in Sources */,
 				7CFDC39E22B6CFE900FF351E /* TransitionPushView.swift in Sources */,
 				047B24C12630718700E21DA6 /* String+Localization.swift in Sources */,
+				0401607326316B9F00D8DE43 /* DebugScreenTableSection.swift in Sources */,
 				7CFDC3CF22B6CFE900FF351E /* SystemTransitionRootVC.swift in Sources */,
 				7CC0B60422A3124B0072EB49 /* NibLoadableView.swift in Sources */,
 				7CFDC3AA22B6CFE900FF351E /* PersonCell.swift in Sources */,
