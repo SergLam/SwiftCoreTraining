@@ -47,13 +47,10 @@ ios_application(
         "iphone",
         "ipad",
     ],
-    frameworks = [
-        ":SwiftCoreTraining_Swift"
-    ],
     minimum_os_version = "13.0",
     infoplists = [":SwiftCoreTraining/BundleFiles/Plist/Info.plist"],
     visibility = ["//visibility:public"],
-    deps = [":SwiftCoreTraining_ObjC"],
+    deps = [":SwiftCoreTraining_ObjC, :SwiftCoreTraining_Swift"],
 )
 
 plist_fragment(
