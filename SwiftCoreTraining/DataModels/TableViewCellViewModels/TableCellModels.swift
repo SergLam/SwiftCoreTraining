@@ -11,6 +11,8 @@ import UIKit
 enum TableCellType: String {
     
     case debugScreenCell
+    
+    case unknown
 }
 
 protocol TableCellModel {

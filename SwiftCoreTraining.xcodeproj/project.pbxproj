@@ -13,6 +13,12 @@
 		047B24C12630718700E21DA6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B24C02630718700E21DA6 /* String+Localization.swift */; };
 		047B259126307E4600E21DA6 /* SpinnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B259026307E4600E21DA6 /* SpinnerVC.swift */; };
 		047B259626307EFE00E21DA6 /*  NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B259526307EFE00E21DA6 /*  NSObject+Ext.swift */; };
+		04D522FA2632AB8400084891 /* UniqueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D522F92632AB8400084891 /* UniqueIdentifiable.swift */; };
+		04D523022632AEFC00084891 /* DebugVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D523012632AEFC00084891 /* DebugVCView.swift */; };
+		04D523082632B21D00084891 /* UINavigationController+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D523072632B21D00084891 /* UINavigationController+Transition.swift */; };
+		04D523102632B24200084891 /* UINavigationController+NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5230F2632B24200084891 /* UINavigationController+NavBar.swift */; };
+		04D523162632B30700084891 /* UIViewController+NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D523152632B30700084891 /* UIViewController+NavBar.swift */; };
+		04D5231F2632B39E00084891 /* UIImage+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5231E2632B39E00084891 /* UIImage+Init.swift */; };
 		1316DB8D241029B60070CE2C /* ViperDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DB8C241029B60070CE2C /* ViperDataSource.swift */; };
 		1316DC06241116C60070CE2C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC05241116C60070CE2C /* BaseViewController.swift */; };
 		1316DC0A241117880070CE2C /* StatusBarResizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC08241117870070CE2C /* StatusBarResizable.swift */; };
@@ -157,6 +163,12 @@
 		047B24C02630718700E21DA6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		047B259026307E4600E21DA6 /* SpinnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerVC.swift; sourceTree = "<group>"; };
 		047B259526307EFE00E21DA6 /*  NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NSObject+Ext.swift"; sourceTree = "<group>"; };
+		04D522F92632AB8400084891 /* UniqueIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueIdentifiable.swift; sourceTree = "<group>"; };
+		04D523012632AEFC00084891 /* DebugVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugVCView.swift; sourceTree = "<group>"; };
+		04D523072632B21D00084891 /* UINavigationController+Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transition.swift"; sourceTree = "<group>"; };
+		04D5230F2632B24200084891 /* UINavigationController+NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+NavBar.swift"; sourceTree = "<group>"; };
+		04D523152632B30700084891 /* UIViewController+NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavBar.swift"; sourceTree = "<group>"; };
+		04D5231E2632B39E00084891 /* UIImage+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Init.swift"; sourceTree = "<group>"; };
 		056826C7458D32F6F304219A /* Pods-App-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-SwiftCoreTraining/Pods-App-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		109A922D1A59CE7844434F86 /* Pods-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		1316DB8C241029B60070CE2C /* ViperDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDataSource.swift; sourceTree = "<group>"; };
@@ -401,8 +413,10 @@
 		047B24BE2630716300E21DA6 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				04D5231D2632B39000084891 /* UIImage */,
+				04D523142632B28000084891 /* UIViewController */,
+				04D523062632B1DE00084891 /* UINavigationController */,
 				040B006D2625F4E30001A5C3 /* UIView */,
-				7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */,
 				7CDB282A2263CC5900546F9C /* UIScreen+Ext.swift */,
 				9C295B372269BD9B00527898 /* UIButton+Ext.swift */,
 			);
@@ -425,6 +439,32 @@
 				047B259026307E4600E21DA6 /* SpinnerVC.swift */,
 			);
 			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		04D523062632B1DE00084891 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */,
+				04D523072632B21D00084891 /* UINavigationController+Transition.swift */,
+				04D5230F2632B24200084891 /* UINavigationController+NavBar.swift */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
+		04D523142632B28000084891 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04D523152632B30700084891 /* UIViewController+NavBar.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		04D5231D2632B39000084891 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				04D5231E2632B39E00084891 /* UIImage+Init.swift */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 		1316DC07241117730070CE2C /* UIViewController */ = {
@@ -472,6 +512,7 @@
 				0401607126316B4600D8DE43 /* DataModels */,
 				7C1796DA2630B2F200EAC908 /* TableController */,
 				7CFDC39522B6CFE900FF351E /* DebugVC.swift */,
+				04D523012632AEFC00084891 /* DebugVCView.swift */,
 			);
 			path = DebugScreen;
 			sourceTree = "<group>";
@@ -570,8 +611,8 @@
 		7C1796C82630B1D000EAC908 /* DebugScreenTableHeaderFooterView */ = {
 			isa = PBXGroup;
 			children = (
-				7C1796C92630B1D000EAC908 /* DebugScreenTableHeaderFooterView.swift */,
 				7C1796CA2630B1D000EAC908 /* DebugScreenTableHeaderFooterViewVM.swift */,
+				7C1796C92630B1D000EAC908 /* DebugScreenTableHeaderFooterView.swift */,
 			);
 			path = DebugScreenTableHeaderFooterView;
 			sourceTree = "<group>";
@@ -781,6 +822,7 @@
 				7C906334240ED6DE0055BCD8 /* Navigation */,
 				7CC0B60122A312090072EB49 /* ReusableView.swift */,
 				7CC0B60322A3124B0072EB49 /* NibLoadableView.swift */,
+				04D522F92632AB8400084891 /* UniqueIdentifiable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1142,7 +1184,6 @@
 				7C2F034421FCC5D000A50936 /* Sources */,
 				7C2F034521FCC5D000A50936 /* Frameworks */,
 				7C2F034621FCC5D000A50936 /* Resources */,
-				BDE357D9FD28BC1F4A9DCC5D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1161,7 +1202,6 @@
 				7C2F035821FCC5D200A50936 /* Sources */,
 				7C2F035921FCC5D200A50936 /* Frameworks */,
 				7C2F035A21FCC5D200A50936 /* Resources */,
-				CAD27158102CD98E7F3BEC80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1181,7 +1221,6 @@
 				7C2F036321FCC5D200A50936 /* Sources */,
 				7C2F036421FCC5D200A50936 /* Frameworks */,
 				7C2F036521FCC5D200A50936 /* Resources */,
-				28B6958CDA9F7F9F9DB5E81C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1266,21 +1305,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		28B6958CDA9F7F9F9DB5E81C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTrainingUITests/Pods-App-SwiftCoreTrainingUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		954B60FF53BDAFD76A6E7D42 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1303,21 +1327,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BDE357D9FD28BC1F4A9DCC5D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTraining/Pods-App-SwiftCoreTraining-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C35EFD3F2C814054E6D5CDE5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1338,21 +1347,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CAD27158102CD98E7F3BEC80 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTrainingTests/Pods-App-SwiftCoreTrainingTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EA0A9845F6942D7DE111C3EF /* [CP] Check Pods Manifest.lock */ = {
@@ -1402,6 +1396,7 @@
 				040B00702625F5030001A5C3 /* UIView+AddAction.swift in Sources */,
 				7CFDC3A422B6CFE900FF351E /* FadePushAnimator.swift in Sources */,
 				7C3B5C4924B9FDA30058B9A8 /* Person.m in Sources */,
+				04D523082632B21D00084891 /* UINavigationController+Transition.swift in Sources */,
 				7CC57CBB25CFDB5600C58D27 /* MemoryManagmentViewModel.swift in Sources */,
 				7CFDC3B122B6CFE900FF351E /* SizeClassesVC.swift in Sources */,
 				7CFDC3A822B6CFE900FF351E /* VIPERProtocols.swift in Sources */,
@@ -1414,6 +1409,7 @@
 				7CFDC3CB22B6CFE900FF351E /* PrivacyDetailsCell.swift in Sources */,
 				1316DC06241116C60070CE2C /* BaseViewController.swift in Sources */,
 				7CFDC3A322B6CFE900FF351E /* ZoomPopAnimator.swift in Sources */,
+				04D523162632B30700084891 /* UIViewController+NavBar.swift in Sources */,
 				7C2285A825598FAE0080DF81 /* ClosuresVCView.swift in Sources */,
 				7CFDC3C422B6CFE900FF351E /* test.xcdatamodeld in Sources */,
 				7C90633A240ED6DE0055BCD8 /* Interactor.swift in Sources */,
@@ -1428,9 +1424,11 @@
 				7CFDC3C022B6CFE900FF351E /* CoreDataManager.swift in Sources */,
 				7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */,
 				7C906338240ED6DE0055BCD8 /* View.swift in Sources */,
+				04D523102632B24200084891 /* UINavigationController+NavBar.swift in Sources */,
 				7CFDC3D022B6CFE900FF351E /* DebugVC.swift in Sources */,
 				1316DB8D241029B60070CE2C /* ViperDataSource.swift in Sources */,
 				7CFDC3C222B6CFE900FF351E /* CoreDataOpetations.swift in Sources */,
+				04D522FA2632AB8400084891 /* UniqueIdentifiable.swift in Sources */,
 				7CFDC39822B6CFE900FF351E /* ExampleView.m in Sources */,
 				047B259626307EFE00E21DA6 /*  NSObject+Ext.swift in Sources */,
 				7C1796CD2630B1D000EAC908 /* DebugScreenTableHeaderFooterViewVM.swift in Sources */,
@@ -1473,6 +1471,7 @@
 				0401607326316B9F00D8DE43 /* DebugScreenTableSection.swift in Sources */,
 				7CFDC3CF22B6CFE900FF351E /* SystemTransitionRootVC.swift in Sources */,
 				7CC0B60422A3124B0072EB49 /* NibLoadableView.swift in Sources */,
+				04D5231F2632B39E00084891 /* UIImage+Init.swift in Sources */,
 				7CFDC3AA22B6CFE900FF351E /* PersonCell.swift in Sources */,
 				7CFDC3B822B6CFE900FF351E /* RecursiveAlgorithmsVC.swift in Sources */,
 				7CFDC3B222B6CFE900FF351E /* DebugVCShowable.swift in Sources */,
@@ -1486,6 +1485,7 @@
 				7C17968F2630AE2B00EAC908 /* TableHeaderFooterModels.swift in Sources */,
 				7C1796912630AE2B00EAC908 /* CollectionHeaderFooterModels.swift in Sources */,
 				7CFDC3B422B6CFE900FF351E /* KVC_VC.swift in Sources */,
+				04D523022632AEFC00084891 /* DebugVCView.swift in Sources */,
 				7C1796902630AE2B00EAC908 /* CollectionCellModels.swift in Sources */,
 				040B008A2625F6AC0001A5C3 /* SharedTypeAliases.swift in Sources */,
 				7C3B5C5124BA3D840058B9A8 /* Book.m in Sources */,

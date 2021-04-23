@@ -26,6 +26,7 @@
 }
 
 - (void) setupLayout{
+    
     _avatarImage = [[UIImageView alloc] init];
     [self.contentView addSubview: _avatarImage];
     const CGFloat imageSize = (CGFloat)50.0;
@@ -37,9 +38,11 @@
     
     [NSLayoutConstraint activateConstraints:@[
         [_avatarImage.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant: 10.0],
-       [_avatarImage.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant: -10.0],
-       [_avatarImage.topAnchor constraintEqualToAnchor:self.contentView.topAnchor constant: 10.0],
-       [_avatarImage.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant: -10.0]
+        [_avatarImage.widthAnchor constraintEqualToConstant:imageSize],
+        [_avatarImage.heightAnchor constraintEqualToConstant:imageSize],
+        [_avatarImage.centerYAnchor constraintEqualToAnchor:self.contentView.centerYAnchor],
+       [_avatarImage.topAnchor constraintGreaterThanOrEqualToAnchor:self.contentView.topAnchor constant: 10.0],
+       [_avatarImage.bottomAnchor constraintGreaterThanOrEqualToAnchor:self.contentView.bottomAnchor constant: -10.0]
     ]];
     
     _userNameLabel = [[UILabel alloc] init];
@@ -47,9 +50,11 @@
     _userNameLabel.font = [UIFont systemFontOfSize:(25)];
     _userNameLabel.textColor = UIColor.blackColor;
     
+    _userNameLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    
     [NSLayoutConstraint activateConstraints:@[
         [_userNameLabel.leadingAnchor constraintEqualToAnchor:self.avatarImage.trailingAnchor constant: 10.0],
-       [_userNameLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant: -10.0],
+       [_userNameLabel.trailingAnchor constraintLessThanOrEqualToAnchor:self.contentView.trailingAnchor constant:-10.0],
        [_userNameLabel.centerYAnchor constraintEqualToAnchor:self.avatarImage.centerYAnchor],
     ]];
     

@@ -12,6 +12,7 @@ enum TableHeaderFooterType: Int {
     
     case debugScreenHeader
     
+    case unknown
 }
 
 protocol TableHeaderFooterModel {

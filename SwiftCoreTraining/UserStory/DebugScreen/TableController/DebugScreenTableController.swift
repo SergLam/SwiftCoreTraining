@@ -10,6 +10,7 @@ import UIKit
 
 protocol DebugScreenTableControllerDelegate: class {
     
+    func didSelectItem(at index: IndexPath, item: DebugScreenTableViewCellVM)
 }
 
 final class DebugScreenTableController: NSObject, TableController {
@@ -18,10 +19,16 @@ final class DebugScreenTableController: NSObject, TableController {
     
     var updatesQueue: DispatchQueue = DispatchQueue(label: "\(NSStringFromClass(DebugScreenTableController.self)).collection.updates", qos: .userInteractive, attributes: [], autoreleaseFrequency: .workItem, target: nil)
     
-    var dataSource: [TableViewSectionVM] = [
-        // NOTE: - Insert some initial models values if needed
-    ]
-    
+    var dataSource: [TableViewSectionVM] = DebugScreenTableSection.allCases.map{
+        
+        var cells: [TableCellModel] = []
+        for (index, title) in $0.sectionRowsTitles.enumerated() {
+            let model = DebugScreenTableViewCellVM(data: title, viewController: $0.viewControllers[index])
+            cells.append(model)
+        }
+        return TableViewSectionViewModel(header: DebugScreenTableHeaderFooterViewVM(data: $0.title), footer: nil, cells: cells)
+    }
+        
     var factory: TableCellsFactory = DebugScreenTableCellsFactory()
     
     var tableView: UITableView
@@ -81,6 +88,16 @@ extension DebugScreenTableController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension DebugScreenTableController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let section: Int = indexPath.section
+        let row: Int = indexPath.row
+        guard let model: DebugScreenTableViewCellVM = dataSource[section].cells[row] as? DebugScreenTableViewCellVM else {
+            return
+        }
+        delegate?.didSelectItem(at: indexPath, item: model)
+    }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         

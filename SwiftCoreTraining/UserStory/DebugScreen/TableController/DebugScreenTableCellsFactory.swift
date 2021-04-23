@@ -31,30 +31,29 @@ final class DebugScreenTableCellsFactory: TableCellsFactory {
     func registerAllCells(for tableView: UITableView) {
         
         cellTypes.forEach{
-            let bundle = Bundle(for: $0)
-            let nib = UINib(nibName: $0.reuseIdentifier, bundle: bundle)
-            tableView.register(nib, forCellReuseIdentifier: $0.reuseIdentifier)
+            
+            tableView.register($0, forCellReuseIdentifier: $0.reuseIdentifier)
         }
         headerFooterTypes.forEach{
-            let bundle = Bundle(for: $0)
-            let nib = UINib(nibName: $0.reuseIdentifier, bundle: bundle)
-            tableView.register(nib, forHeaderFooterViewReuseIdentifier: $0.reuseIdentifier)
+            
+            tableView.register($0, forHeaderFooterViewReuseIdentifier: $0.reuseIdentifier)
         }
     }
     
     func generateCell(for viewModel: TableCellModel, tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell {
         
         switch viewModel.type {
-        default:
+        case .debugScreenCell:
             
-            // NOTE: - dequeueReusableCell example = cell update
-//            guard let model = viewModel as? MyProfileHeaderTableViewCellVM else {
-//                assertionFailure("Invalid model type")
-//                return UITableViewCell()
-//            }
-//            let cell = view.dequeueReusableCell(MyProfileHeaderTableViewCell.self, for: indexPath)
-//            cell.configureWithModel(model)
-//            return cell
+            guard let model = viewModel as? DebugScreenTableViewCellVM else {
+                assertionFailure("Invalid model type")
+                return UITableViewCell()
+            }
+            let cell = tableView.dequeueReusableCell(DebugScreenTableViewCell.self, for: indexPath)
+            cell.configureWithModel(model)
+            return cell
+            
+        default:
             
             assertionFailure("Invalid cell type")
             return UITableViewCell()
@@ -63,17 +62,15 @@ final class DebugScreenTableCellsFactory: TableCellsFactory {
     
     func generateHeader(for viewModel: TableHeaderFooterModel, tableView: UITableView, at section: Int) -> UIView? {
         
-        switch section {
-        case 0:
+        switch viewModel.type {
+        case .debugScreenHeader:
             
-//            let header = tableView.dequeueReusable(headerFooterView: MyPublicationsListHeaderView.self)
-//            guard let model = viewModel as? MyPublicationsListHeaderViewVM else {
-//                return nil
-//            }
-//            header.update(with: model)
-//            return header
-            
-            return nil
+            let header = tableView.dequeueReusable(headerFooterView: DebugScreenTableHeaderFooterView.self)
+            guard let model = viewModel as? DebugScreenTableHeaderFooterViewVM else {
+                return nil
+            }
+            header.update(with: model)
+            return header
             
         default:
             return nil

@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ArraySetVC: UIViewController {
+final class ArraySetVC: BaseViewController {
     
     var usersArray: [User] = []
     var usersSet = Set<User>()

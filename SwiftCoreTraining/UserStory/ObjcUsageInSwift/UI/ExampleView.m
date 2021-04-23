@@ -22,8 +22,9 @@
 }
 
 - (void) setupLayout {
-    [self addSubview:_tableView];
     
+    [self addSubview:_tableView];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [NSLayoutConstraint activateConstraints:@[

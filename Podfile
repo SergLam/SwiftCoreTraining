@@ -16,9 +16,6 @@ def development_pods
   use_frameworks!
   inhibit_all_warnings!
   
-  # UI
-  pod 'Eureka', '~> 5.3.3'
-  
 end
 
 abstract_target 'App' do

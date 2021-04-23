@@ -10,7 +10,9 @@ import MessageUI
 import SafariServices
 import UIKit
 
-class BaseViewController: UIViewController, ProgressShowable, ExternalURLOpenable, StatusBarResizable {
+class BaseViewController: UIViewController, ProgressShowable, ExternalURLOpenable, StatusBarResizable, UniqueIdentifiable {
+    
+    var identifier: UUID = UUID()
     
     var hud: SpinnerVC = SpinnerVC()
     

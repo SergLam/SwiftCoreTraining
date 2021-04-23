@@ -35,7 +35,7 @@ public final class DebugScreenTableHeaderFooterView: UITableViewHeaderFooterView
     }
     
     // MARK: - Public functions
-    public func configureWithModel(_ model: DebugScreenTableHeaderFooterViewVM?) {
+    public func update(with model: DebugScreenTableHeaderFooterViewVM?) {
         
         cellTextLabel.text = model?.data
     }
@@ -48,10 +48,12 @@ public final class DebugScreenTableHeaderFooterView: UITableViewHeaderFooterView
     
     private func setupLayout() {
         
+        contentView.backgroundColor = UIColor.blue
+        
         contentView.addSubview(cellTextLabel)
         cellTextLabel.font = cellTextLabelFont
         cellTextLabel.numberOfLines = 0
-        cellTextLabel.textColor = UIColor.lightGray
+        cellTextLabel.textColor = UIColor.white
         
         cellTextLabel.translatesAutoresizingMaskIntoConstraints = false
         

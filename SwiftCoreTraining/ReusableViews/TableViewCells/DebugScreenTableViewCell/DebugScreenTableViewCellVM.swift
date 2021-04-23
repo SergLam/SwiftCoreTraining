@@ -19,10 +19,12 @@ struct DebugScreenTableViewCellVM: TableCellModel {
     }
     
     var data: String
+    var viewController: UIViewController
     
-    init(data: String) {
+    init(data: String, viewController: UIViewController) {
         
         self.data = data
+        self.viewController = viewController
     }
     
 }
@@ -32,7 +34,7 @@ extension DebugScreenTableViewCellVM: Equatable {
     
     public static func == (lhs: DebugScreenTableViewCellVM, rhs: DebugScreenTableViewCellVM) -> Bool {
         
-        return lhs.data == rhs.data
+        return lhs.data == rhs.data && lhs.viewController == rhs.viewController
     }
     
 }

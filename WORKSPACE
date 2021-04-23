@@ -1,9 +1,20 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
+    name = "com_google_protobuf",
+    urls = ["https://github.com/protocolbuffers/protobuf/archive/v3.14.0.zip"],
+    sha256 = "bf0e5070b4b99240183b29df78155eee335885e53a8af8683964579c214ad301",
+    strip_prefix = "protobuf-3.14.0",
+    type = "zip",
+)
+
+load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
+protobuf_deps()
+
+http_archive(
     name = "build_bazel_rules_apple",
-    sha256 = "a41a75c291c69676b9974458ceee09aea60cee0e1ee282e27cdc90b679dfd30f",
-    url = "https://github.com/bazelbuild/rules_apple/releases/download/0.21.2/rules_apple.0.21.2.tar.gz",
+    sha256 = "84f34c95e68f65618b54c545f75e2df73559af47fb42ae28b17189fcebb7ed17",
+    url = "https://github.com/bazelbuild/rules_apple/releases/download/0.31.1/rules_apple.0.31.1.tar.gz",
 )
 
 load(
@@ -21,23 +32,8 @@ load(
 swift_rules_dependencies()
 
 load(
-    "@build_bazel_rules_swift//swift:extras.bzl",
-    "swift_rules_extra_dependencies",
+    "@build_bazel_apple_support//lib:repositories.bzl",
+    "apple_support_dependencies",
 )
 
-swift_rules_extra_dependencies()
-
-load(
-    "@com_google_protobuf//:protobuf_deps.bzl",
-    "protobuf_deps",
-)
-
-http_archive(
-    name = "rules_pods",
-    sha256 = "31b3ee6c32c6047008e6820af36573019ac7a25ea421222c638277984e9cde27",
-    url = "https://github.com/pinterest/PodToBUILD/releases/download/3.4.1-ea20598f/PodToBUILD.zip",
-)
-
-load("@rules_pods//BazelExtensions:workspace.bzl", "new_pod_repository")
-
-protobuf_deps()
+apple_support_dependencies()

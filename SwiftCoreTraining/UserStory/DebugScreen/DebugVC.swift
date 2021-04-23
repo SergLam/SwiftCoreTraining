@@ -7,124 +7,40 @@
 //
 
 import UIKit
-import Eureka
 
-final class DebugVC: FormViewController, DebugVCShowable {
+final class DebugVC: BaseViewController, DebugVCShowable {
+    
+    private lazy var contentView: DebugVCView = DebugVCView(frame: UIScreen.main.bounds)
+    
+    private var tableController: DebugScreenTableController?
+    
+    override func loadView() {
+        view = contentView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "DebugVC"
         view.accessibilityLabel = "DebugVCView"
-        setupForm()
+        initialSetup()
     }
     
-    private func setupForm() {
-        form
-            +++ Section("VIPER Architecture in iOS")
-            <<< LabelRow() { row in
-                row.title = "Viper VC"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    
-                    let personsVC = ViperRouter.createModule()
-                    self.navigationController?.pushViewController(personsVC, animated: true)
-                })
-            +++ Section("Closures")
-            <<< LabelRow() { row in
-                row.title = "ClosuresVC"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(ClosuresVC(), animated: true)
-                })
-            +++ Section("Memory Managment")
-            <<< LabelRow() { row in
-                row.title = "MemoryManagmentVC"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(MemoryManagmentVC(), animated: true)
-                })
-            +++ Section("KVO_KVC")
-            <<< LabelRow() { row in
-                row.title = "KVO_View_Controller"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(KVO_VC(), animated: true)
-                })
-            <<< LabelRow() { row in
-                row.title = "KVC_View_Controller"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(KVC_VC(), animated: true)
-                })
-            +++ Section("Core Data")
-            <<< LabelRow() { row in
-                row.title = "Core Data VC"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(CoreDataVC(), animated: true)
-                })
-            +++ Section("GCD")
-            <<< LabelRow() { row in
-                row.title = "GCDVC"
-                }.onCellSelection({ [unowned self] _, _ in
-                    self.navigationController?.pushViewController(GCDVC(), animated: true)
-                })
-            +++ Section("UI")
-            <<< LabelRow() { row in
-                row.title = "Accordion table view"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.present(PrivacyPolicyVC(), animated: true, completion: nil)
-                })
-            <<< LabelRow() { row in
-                row.title = "SizeClasses (Orientation adaptive layout)"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(SizeClassesVC(), animated: true)
-                })
-            <<< LabelRow() { row in
-                row.title = "CustomTransitions (Animations)"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(CustomTransitionsVC(), animated: true)
-                })
-            <<< LabelRow() { row in
-                row.title = "SystemTransitions"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(SystemTransitionRootVC(), animated: true)
-                })
-            
-            +++ Section("Swift Basics")
-            <<< LabelRow() { row in
-                row.title = "SubclassingVC"
-                }.onCellSelection({ [unowned self] (_, _) in
-                 self.navigationController?.pushViewController(SubclassingVC(), animated: true)
-                })
-            +++ Section("Data structures and algorightms")
-            <<< LabelRow() { row in
-                row.title = "Array-Set convertions"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(ArraySetVC(), animated: true)
-                })
-            +++ Section("Objc features!")
-            <<< LabelRow() { row in
-                row.title = "ObjC example view controller"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(ExampleVC(), animated: true)
-                })
-            <<< LabelRow() { row in
-                row.title = "Objc_associatedKeyValues"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    // DebugVCShowable
-                    self.showDebugVC()
-                })
-            +++ Section("Algorithms")
-            <<< LabelRow() { row in
-                row.title = "Algorithms"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(AlgorhitmsVC(), animated: true)
-                })
-            <<< LabelRow() { row in
-                row.title = "RecursiveAlgorithms VC"
-                }.onCellSelection({ [unowned self] (_,_) in
-                    self.navigationController?.pushViewController(RecursiveAlgorithmsVC(), animated: true)
-                })
-            +++ Section("XML Parsing")
-            <<< LabelRow() { row in
-                row.title = "XMLParser VC"
-                }.onCellSelection({ [unowned self] (_, _) in
-                    self.navigationController?.pushViewController(XMLParserVC(), animated: true)
-                })
+    private func initialSetup() {
+        
+        tableController = DebugScreenTableController(tableView: contentView.tableView)
+        tableController?.delegate = self
+        contentView.tableView.reloadData()
+        setWhiteNavigationBar()
     }
+    
+}
+
+// MARK: - DebugScreenTableControllerDelegate
+extension DebugVC: DebugScreenTableControllerDelegate {
+    
+    func didSelectItem(at index: IndexPath, item: DebugScreenTableViewCellVM) {
+        
+        navigationController?.pushViewController(item.viewController, animated: true)
+    }
+    
 }
