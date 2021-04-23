@@ -1,6 +1,8 @@
 
 load("@build_bazel_rules_apple//apple:ios.bzl",
     "ios_application",
+    "ios_unit_test",
+    "ios_ui_test",
 )
 
 load("@build_bazel_rules_swift//swift:swift.bzl", 
@@ -36,4 +38,22 @@ ios_application(
     launch_storyboard = ":SwiftCoreTraining/Resources/LaunchScreen/LaunchScreen.storyboard",
     visibility = ["//visibility:public"],
     deps = [":SwiftCoreTraining_ObjC", ":SwiftCoreTraining_Swift"],
+)
+
+ios_unit_test(
+    name = "SwiftCoreTraining_Unit_Test",
+    minimum_os_version = "13.0",
+    test_host = ":SwiftCoreTraining",
+    infoplists = [
+        ":SwiftCoreTrainingTests/Info.plist"
+    ],
+)
+
+ios_ui_test(
+    name = "SwiftCoreTraining_UI_Test",
+    minimum_os_version = "13.0",
+    test_host = ":SwiftCoreTraining",
+    infoplists = [
+        ":SwiftCoreTrainingUITests/Info.plist"
+    ],
 )
