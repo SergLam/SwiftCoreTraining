@@ -1,0 +1,29 @@
+
+<Scheme LastUpgradeVersion="1000" version="1.3">
+    <BuildAction parallelizeBuildables="YES" buildImplicitDependencies="YES">
+        <BuildActionEntries>
+            <BuildActionEntry buildForRunning="YES" buildForProfiling="YES" buildForTesting="YES" buildForArchiving="YES" buildForAnalyzing="YES">
+                <BuildableReference BlueprintIdentifier="E088412BAFA7E2B600000000" BuildableName="lib-SwiftCoreTrainingTests.a" BlueprintName="-SwiftCoreTrainingTests" ReferencedContainer="container:SwiftCoreTraining.xcodeproj" BuildableIdentifier="primary"></BuildableReference>
+            </BuildActionEntry>
+        </BuildActionEntries>
+    </BuildAction>
+    <TestAction buildConfiguration="__TulsiTestRunner_Debug" shouldUseLaunchSchemeArgsEnv="YES" selectedLauncherIdentifier="Xcode.DebuggerFoundation.Launcher.LLDB" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" customLLDBInitFile="$(PROJECT_FILE_PATH)/.tulsi/Utils/lldbinit">
+        <Testables></Testables>
+        <BuildableProductRunnable runnableDebuggingMode="0">
+            <BuildableReference BuildableName="lib-SwiftCoreTrainingTests.a" BlueprintName="-SwiftCoreTrainingTests" ReferencedContainer="container:SwiftCoreTraining.xcodeproj" BuildableIdentifier="primary" BlueprintIdentifier="E088412BAFA7E2B600000000"></BuildableReference>
+        </BuildableProductRunnable>
+    </TestAction>
+    <LaunchAction buildConfiguration="Debug" ignoresPersistentStateOnLaunch="NO" selectedLauncherIdentifier="Xcode.DebuggerFoundation.Launcher.LLDB" debugServiceExtension="internal" allowLocationSimulation="YES" useCustomWorkingDirectory="NO" customLLDBInitFile="$(PROJECT_FILE_PATH)/.tulsi/Utils/lldbinit" launchStyle="0" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" debugDocumentVersioning="YES">
+        <EnvironmentVariables></EnvironmentVariables>
+        <MacroExpansion>
+            <BuildableReference BuildableName="lib-SwiftCoreTrainingTests.a" ReferencedContainer="container:SwiftCoreTraining.xcodeproj" BlueprintName="-SwiftCoreTrainingTests" BuildableIdentifier="primary" BlueprintIdentifier="E088412BAFA7E2B600000000"></BuildableReference>
+        </MacroExpansion>
+    </LaunchAction>
+    <ProfileAction shouldUseLaunchSchemeArgsEnv="YES" debugDocumentVersioning="YES" buildConfiguration="__TulsiTestRunner_Release" useCustomWorkingDirectory="NO">
+        <MacroExpansion>
+            <BuildableReference BlueprintIdentifier="E088412BAFA7E2B600000000" BuildableName="lib-SwiftCoreTrainingTests.a" BlueprintName="-SwiftCoreTrainingTests" ReferencedContainer="container:SwiftCoreTraining.xcodeproj" BuildableIdentifier="primary"></BuildableReference>
+        </MacroExpansion>
+    </ProfileAction>
+    <AnalyzeAction buildConfiguration="Debug"></AnalyzeAction>
+    <ArchiveAction revealArchiveInOrganizer="YES" buildConfiguration="Release"></ArchiveAction>
+</Scheme>

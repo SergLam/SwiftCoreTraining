@@ -29,15 +29,29 @@ swift_library(
 ios_application(
     name = "SwiftCoreTraining",
     bundle_id = "com.serglam.SwiftCoreTraining",
+    bundle_name = "SwiftCoreTraining",
     families = [
         "iphone",
         "ipad",
     ],
     minimum_os_version = "13.0",
+
     infoplists = [":SwiftCoreTraining/BundleFiles/Plist/Info.plist"],
+    version = "1.0",
+    
+    resources = [":SwiftCoreTraining/Resources/Images/Assets.xcassets"],
     launch_storyboard = ":SwiftCoreTraining/Resources/LaunchScreen/LaunchScreen.storyboard",
+    strings = [":SwiftCoreTraining/Resources/Localization/Localizable.strings"],
+
     visibility = ["//visibility:public"],
     deps = [":SwiftCoreTraining_ObjC", ":SwiftCoreTraining_Swift"],
+)
+
+# Unit testing
+
+swift_library(
+    name = "SwiftCoreTrainingTests",
+    srcs = glob(["SwiftCoreTrainingTests/**/*.swift"]),   
 )
 
 ios_unit_test(
@@ -47,6 +61,14 @@ ios_unit_test(
     infoplists = [
         ":SwiftCoreTrainingTests/Info.plist"
     ],
+    deps = [":SwiftCoreTrainingTests"],
+)
+
+# UI testing
+
+swift_library(
+    name = "SwiftCoreTrainingUITests",
+    srcs = glob(["SwiftCoreTrainingUITests/**/*.swift"]),   
 )
 
 ios_ui_test(
@@ -56,4 +78,5 @@ ios_ui_test(
     infoplists = [
         ":SwiftCoreTrainingUITests/Info.plist"
     ],
+    deps = [":SwiftCoreTrainingUITests"],
 )
