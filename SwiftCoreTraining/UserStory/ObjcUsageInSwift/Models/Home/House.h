@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Bedroom.h"
+#import "../Bedroom/Bedroom.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

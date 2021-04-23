@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Person.h"
+#import "../Person/Person.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

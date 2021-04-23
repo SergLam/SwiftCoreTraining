@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ExampleView.h"
-#import "ExampleViewModel.h"
-#import "ExampleCell.h"
-#import "UserModel.h"
+#import "../ViewModel/ExampleViewModel.h"
+#import "Cell/ExampleCell.h"
+#import "../DataModel/UserModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

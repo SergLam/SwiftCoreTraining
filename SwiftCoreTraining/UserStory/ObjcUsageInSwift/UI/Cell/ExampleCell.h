@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UserModel.h"
+#import "../../DataModel/UserModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
