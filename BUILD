@@ -45,3 +45,39 @@ ios_application(
     visibility = ["//visibility:public"],
     deps = [":SwiftCoreTraining_ObjC", ":SwiftCoreTraining_Swift"],
 )
+
+# Unit testing
+
+swift_library(
+    name = "SwiftCoreTrainingTests",
+    srcs = glob(["SwiftCoreTrainingTests/**/*.swift"]),   
+    visibility = ["//visibility:public"],
+)
+
+ios_unit_test(
+    name = "SwiftCoreTraining_Unit_Test",
+    minimum_os_version = "13.0",
+    test_host = ":SwiftCoreTraining",
+    infoplists = [
+        ":SwiftCoreTrainingTests/Info.plist"
+    ],
+    deps = [":SwiftCoreTrainingTests"],
+)
+
+# UI testing
+
+swift_library(
+    name = "SwiftCoreTrainingUITests",
+    srcs = glob(["SwiftCoreTrainingUITests/**/*.swift"]),   
+    visibility = ["//visibility:public"],
+)
+
+ios_ui_test(
+    name = "SwiftCoreTraining_UI_Test",
+    minimum_os_version = "13.0",
+    test_host = ":SwiftCoreTraining",
+    infoplists = [
+        ":SwiftCoreTrainingUITests/Info.plist"
+    ],
+    deps = [":SwiftCoreTrainingUITests"],
+)
