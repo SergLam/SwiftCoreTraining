@@ -16,8 +16,6 @@
   },
   "projectName" : "SwiftCoreTraining",
   "sourceFilters" : [
-    "SwiftCoreTraining/...",
-    "SwiftCoreTrainingTests/...",
-    "SwiftCoreTrainingUITests/..."
+
   ]
 }

@@ -142,21 +142,13 @@ BUILD_SETTINGS = BazelBuildSettings(
     '/private/var/tmp/_bazel_sliamtsev/23b567450efec3e3f04e718d660bfa6c/execroot/__main__',
     'ios_x86_64',
     {
-        'tvos_x86_64': [
-            '--apple_platform_type=tvos',
-            '--tvos_cpus=x86_64',
-        ],
-        'watchos_x86_64': [
+        'watchos_arm64_32': [
             '--apple_platform_type=watchos',
-            '--watchos_cpus=i386',
+            '--watchos_cpus=armv7k,arm64_32',
         ],
-        'macos_arm64': [
-            '--apple_platform_type=macos',
-            '--cpu=darwin_arm64',
-        ],
-        'ios_x86_64': [
+        'ios_i386': [
             '--apple_platform_type=ios',
-            '--cpu=ios_x86_64',
+            '--cpu=ios_i386',
             '--watchos_cpus=i386',
         ],
         'ios_arm64e': [
@@ -164,53 +156,61 @@ BUILD_SETTINGS = BazelBuildSettings(
             '--cpu=ios_arm64e',
             '--watchos_cpus=armv7k,arm64_32',
         ],
-        'watchos_i386': [
-            '--apple_platform_type=watchos',
-            '--watchos_cpus=i386',
-        ],
-        'ios_armv7': [
+        'ios_x86_64': [
             '--apple_platform_type=ios',
-            '--cpu=ios_armv7',
-            '--watchos_cpus=armv7k',
-        ],
-        'macos_x86_64': [
-            '--apple_platform_type=macos',
-            '--cpu=darwin_x86_64',
-        ],
-        'macos_arm64e': [
-            '--apple_platform_type=macos',
-            '--cpu=darwin_arm64e',
-        ],
-        'ios_i386': [
-            '--apple_platform_type=ios',
-            '--cpu=ios_i386',
+            '--cpu=ios_x86_64',
             '--watchos_cpus=i386',
-        ],
-        'tvos_arm64': [
-            '--apple_platform_type=tvos',
-            '--tvos_cpus=arm64',
-        ],
-        'watchos_armv7k': [
-            '--apple_platform_type=watchos',
-            '--watchos_cpus=armv7k,arm64_32',
         ],
         'ios_arm64': [
             '--apple_platform_type=ios',
             '--cpu=ios_arm64',
             '--watchos_cpus=armv7k,arm64_32',
         ],
-        'watchos_arm64_32': [
+        'macos_x86_64': [
+            '--apple_platform_type=macos',
+            '--cpu=darwin_x86_64',
+        ],
+        'macos_arm64': [
+            '--apple_platform_type=macos',
+            '--cpu=darwin_arm64',
+        ],
+        'tvos_x86_64': [
+            '--apple_platform_type=tvos',
+            '--tvos_cpus=x86_64',
+        ],
+        'watchos_armv7k': [
             '--apple_platform_type=watchos',
             '--watchos_cpus=armv7k,arm64_32',
         ],
+        'watchos_x86_64': [
+            '--apple_platform_type=watchos',
+            '--watchos_cpus=i386',
+        ],
+        'watchos_i386': [
+            '--apple_platform_type=watchos',
+            '--watchos_cpus=i386',
+        ],
+        'macos_arm64e': [
+            '--apple_platform_type=macos',
+            '--cpu=darwin_arm64e',
+        ],
+        'tvos_arm64': [
+            '--apple_platform_type=tvos',
+            '--tvos_cpus=arm64',
+        ],
+        'ios_armv7': [
+            '--apple_platform_type=ios',
+            '--cpu=ios_armv7',
+            '--watchos_cpus=armv7k',
+        ],
     },
     set([
+        '//:SwiftCoreTraining_Swift',
+        '//:SwiftCoreTraining',
+        '//:SwiftCoreTraining_UI_Test',
+        '//:SwiftCoreTrainingTests',
         '//:SwiftCoreTrainingUITests',
         '//:SwiftCoreTraining_Unit_Test',
-        '//:SwiftCoreTraining',
-        '//:SwiftCoreTrainingTests',
-        '//:SwiftCoreTraining_Swift',
-        '//:SwiftCoreTraining_UI_Test',
     ]),
     BazelFlagsSet(
         debug = BazelFlags(

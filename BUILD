@@ -37,46 +37,11 @@ ios_application(
     minimum_os_version = "13.0",
 
     infoplists = [":SwiftCoreTraining/BundleFiles/Plist/Info.plist"],
-    version = "1.0",
-    
+
     resources = [":SwiftCoreTraining/Resources/Images/Assets.xcassets"],
     launch_storyboard = ":SwiftCoreTraining/Resources/LaunchScreen/LaunchScreen.storyboard",
-    strings = [":SwiftCoreTraining/Resources/Localization/Localizable.strings"],
+    strings = [":SwiftCoreTraining/Resources/Localization/en.lproj/Localizable.strings"],
 
     visibility = ["//visibility:public"],
     deps = [":SwiftCoreTraining_ObjC", ":SwiftCoreTraining_Swift"],
-)
-
-# Unit testing
-
-swift_library(
-    name = "SwiftCoreTrainingTests",
-    srcs = glob(["SwiftCoreTrainingTests/**/*.swift"]),   
-)
-
-ios_unit_test(
-    name = "SwiftCoreTraining_Unit_Test",
-    minimum_os_version = "13.0",
-    test_host = ":SwiftCoreTraining",
-    infoplists = [
-        ":SwiftCoreTrainingTests/Info.plist"
-    ],
-    deps = [":SwiftCoreTrainingTests"],
-)
-
-# UI testing
-
-swift_library(
-    name = "SwiftCoreTrainingUITests",
-    srcs = glob(["SwiftCoreTrainingUITests/**/*.swift"]),   
-)
-
-ios_ui_test(
-    name = "SwiftCoreTraining_UI_Test",
-    minimum_os_version = "13.0",
-    test_host = ":SwiftCoreTraining",
-    infoplists = [
-        ":SwiftCoreTrainingUITests/Info.plist"
-    ],
-    deps = [":SwiftCoreTrainingUITests"],
 )
