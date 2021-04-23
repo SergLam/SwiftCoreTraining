@@ -5,7 +5,9 @@
     }
   },
   "packages" : [
-    ""
+    "",
+    "SwiftCoreTrainingTests",
+    "SwiftCoreTrainingUITests"
   ],
   "projectName" : "SwiftCoreTraining",
   "workspaceRoot" : ".."
