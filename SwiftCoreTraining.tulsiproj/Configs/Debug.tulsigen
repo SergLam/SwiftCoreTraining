@@ -1,17 +1,11 @@
 {
   "additionalFilePaths" : [
-    "SwiftCoreTrainingTests/BUILD",
-    "SwiftCoreTrainingUITests/BUILD",
     "/BUILD"
   ],
   "buildTargets" : [
     "//:SwiftCoreTraining",
-    "//:SwiftCoreTraining_ObjC",
-    "//:SwiftCoreTraining_Swift",
-    "//SwiftCoreTrainingTests:SwiftCoreTrainingTests",
-    "//SwiftCoreTrainingTests:SwiftCoreTraining_Unit_Test",
-    "//SwiftCoreTrainingUITests:SwiftCoreTrainingUITests",
-    "//SwiftCoreTrainingUITests:SwiftCoreTraining_UI_Test"
+    "//:SwiftCoreTraining_UI_Test",
+    "//:SwiftCoreTraining_Unit_Test"
   ],
   "optionSet" : {
     "BazelBuildOptionsDebug" : {
@@ -56,6 +50,9 @@
   },
   "projectName" : "SwiftCoreTraining",
   "sourceFilters" : [
-
+    "SwiftCoreTraining/...",
+    "SwiftCoreTrainingTests/...",
+    "SwiftCoreTrainingUITests/...",
+    "external/..."
   ]
 }

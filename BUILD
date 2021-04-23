@@ -38,7 +38,7 @@ ios_application(
 
     infoplists = [":SwiftCoreTraining/BundleFiles/Plist/Info.plist"],
 
-    resources = [":SwiftCoreTraining/Resources/Images/Assets.xcassets"],
+    resources = glob([":SwiftCoreTraining/Resources/Images/Assets.xcassets/**"]),
     launch_storyboard = ":SwiftCoreTraining/Resources/LaunchScreen/LaunchScreen.storyboard",
     strings = [":SwiftCoreTraining/Resources/Localization/en.lproj/Localizable.strings"],
 

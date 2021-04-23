@@ -4,10 +4,6 @@
   ],
   "buildTargets" : [
     "//:SwiftCoreTraining",
-    "//:SwiftCoreTrainingTests",
-    "//:SwiftCoreTrainingUITests",
-    "//:SwiftCoreTraining_ObjC",
-    "//:SwiftCoreTraining_Swift",
     "//:SwiftCoreTraining_UI_Test",
     "//:SwiftCoreTraining_Unit_Test"
   ],
@@ -16,6 +12,9 @@
   },
   "projectName" : "SwiftCoreTraining",
   "sourceFilters" : [
-
+    "SwiftCoreTraining/...",
+    "SwiftCoreTrainingTests/...",
+    "SwiftCoreTrainingUITests/...",
+    "external/..."
   ]
 }
