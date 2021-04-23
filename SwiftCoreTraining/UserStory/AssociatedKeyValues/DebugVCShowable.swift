@@ -6,8 +6,7 @@
 //  Copyright © 2019 serglam. All rights reserved.
 //
 
-import Foundation
-
+import UIKit
 
 fileprivate var storeKey = "SomeProtocol_propertyKey"
 
