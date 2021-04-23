@@ -19,6 +19,10 @@
 		04D523102632B24200084891 /* UINavigationController+NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5230F2632B24200084891 /* UINavigationController+NavBar.swift */; };
 		04D523162632B30700084891 /* UIViewController+NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D523152632B30700084891 /* UIViewController+NavBar.swift */; };
 		04D5231F2632B39E00084891 /* UIImage+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5231E2632B39E00084891 /* UIImage+Init.swift */; };
+		04D523312632E91900084891 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D523302632E91900084891 /* Employee.swift */; };
+		04D523392632E93D00084891 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D523382632E93D00084891 /* Department.swift */; };
+		04D5233E2632E94D00084891 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5233D2632E94D00084891 /* Company.swift */; };
+		04D523432632E9BD00084891 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D523422632E9BD00084891 /* CoreData.framework */; };
 		1316DB8D241029B60070CE2C /* ViperDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DB8C241029B60070CE2C /* ViperDataSource.swift */; };
 		1316DC06241116C60070CE2C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC05241116C60070CE2C /* BaseViewController.swift */; };
 		1316DC0A241117880070CE2C /* StatusBarResizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC08241117870070CE2C /* StatusBarResizable.swift */; };
@@ -169,6 +173,10 @@
 		04D5230F2632B24200084891 /* UINavigationController+NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+NavBar.swift"; sourceTree = "<group>"; };
 		04D523152632B30700084891 /* UIViewController+NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavBar.swift"; sourceTree = "<group>"; };
 		04D5231E2632B39E00084891 /* UIImage+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Init.swift"; sourceTree = "<group>"; };
+		04D523302632E91900084891 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		04D523382632E93D00084891 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
+		04D5233D2632E94D00084891 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		04D523422632E9BD00084891 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		056826C7458D32F6F304219A /* Pods-App-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-SwiftCoreTraining/Pods-App-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		109A922D1A59CE7844434F86 /* Pods-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		1316DB8C241029B60070CE2C /* ViperDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDataSource.swift; sourceTree = "<group>"; };
@@ -323,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E8371748BBA7786EB00893F /* Pods_App_SwiftCoreTraining.framework in Frameworks */,
+				04D523432632E9BD00084891 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +476,43 @@
 			path = UIImage;
 			sourceTree = "<group>";
 		};
+		04D5232C2632E82B00084891 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7CFDC37D22B6CFE900FF351E /* CoreDataManager.swift */,
+				7CFDC37E22B6CFE900FF351E /* DatabaseOne.xcdatamodeld */,
+				7CFDC38222B6CFE900FF351E /* test.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		04D5232D2632E84E00084891 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7CFDC38122B6CFE900FF351E /* NSManagedObject+Ext.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		04D5232E2632E88000084891 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7C1796862630AE2B00EAC908 /* TableViewCellViewModels */,
+				7C17968A2630AE2B00EAC908 /* CollectionViewCellModels */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		04D5232F2632E88400084891 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				04D5233D2632E94D00084891 /* Company.swift */,
+				04D523382632E93D00084891 /* Department.swift */,
+				04D523302632E91900084891 /* Employee.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		1316DC07241117730070CE2C /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +545,7 @@
 		65AA712967BD7B4D1B86074E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04D523422632E9BD00084891 /* CoreData.framework */,
 				BCD9746E8A4740D4CAB0AB3F /* Pods_App_SwiftCoreTraining.framework */,
 				161AE6A1765531DE4B4DE004 /* Pods_App_SwiftCoreTrainingTests.framework */,
 				8D4C2B9D7BC0719AF0FA2060 /* Pods_App_SwiftCoreTrainingUITests.framework */,
@@ -542,8 +589,8 @@
 		7C1796852630ADA500EAC908 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
-				7C1796862630AE2B00EAC908 /* TableViewCellViewModels */,
-				7C17968A2630AE2B00EAC908 /* CollectionViewCellModels */,
+				04D5232F2632E88400084891 /* CoreData */,
+				04D5232E2632E88000084891 /* UI */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -629,6 +676,7 @@
 		7C1ADDC72206EFBB00F70F2C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				04D5232D2632E84E00084891 /* CoreData */,
 				047B24BF2630716E00E21DA6 /* Foundation */,
 				047B24BE2630716300E21DA6 /* UIKit */,
 			);
@@ -783,6 +831,7 @@
 		7C64B84B224628F100480D88 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				04D5232C2632E82B00084891 /* CoreData */,
 				7C17969B2630AECC00EAC908 /* UI */,
 			);
 			path = Services;
@@ -1074,11 +1123,7 @@
 		7CFDC37C22B6CFE900FF351E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				7CFDC37D22B6CFE900FF351E /* CoreDataManager.swift */,
-				7CFDC37E22B6CFE900FF351E /* DatabaseOne.xcdatamodeld */,
 				7CFDC38022B6CFE900FF351E /* CoreDataOpetations.swift */,
-				7CFDC38122B6CFE900FF351E /* NSManagedObject+Ext.swift */,
-				7CFDC38222B6CFE900FF351E /* test.xcdatamodeld */,
 				7CFDC38422B6CFE900FF351E /* ViewController */,
 			);
 			path = CoreData;
@@ -1437,6 +1482,7 @@
 				7CFDC3B322B6CFE900FF351E /* KVO_VC.swift in Sources */,
 				7C4FA41524B3996400ECE2E5 /* House.m in Sources */,
 				7C1796B92630B05700EAC908 /* DebugScreenTableViewCell.swift in Sources */,
+				04D5233E2632E94D00084891 /* Company.swift in Sources */,
 				7CFDC39722B6CFE900FF351E /* ExampleCell.m in Sources */,
 				7CFDC39922B6CFE900FF351E /* UserModel.m in Sources */,
 				7CC57CB325CFDB3600C58D27 /* MemoryManagmentVC.swift in Sources */,
@@ -1469,6 +1515,7 @@
 				7CFDC39E22B6CFE900FF351E /* TransitionPushView.swift in Sources */,
 				047B24C12630718700E21DA6 /* String+Localization.swift in Sources */,
 				0401607326316B9F00D8DE43 /* DebugScreenTableSection.swift in Sources */,
+				04D523312632E91900084891 /* Employee.swift in Sources */,
 				7CFDC3CF22B6CFE900FF351E /* SystemTransitionRootVC.swift in Sources */,
 				7CC0B60422A3124B0072EB49 /* NibLoadableView.swift in Sources */,
 				04D5231F2632B39E00084891 /* UIImage+Init.swift in Sources */,
@@ -1486,6 +1533,7 @@
 				7C1796912630AE2B00EAC908 /* CollectionHeaderFooterModels.swift in Sources */,
 				7CFDC3B422B6CFE900FF351E /* KVC_VC.swift in Sources */,
 				04D523022632AEFC00084891 /* DebugVCView.swift in Sources */,
+				04D523392632E93D00084891 /* Department.swift in Sources */,
 				7C1796902630AE2B00EAC908 /* CollectionCellModels.swift in Sources */,
 				040B008A2625F6AC0001A5C3 /* SharedTypeAliases.swift in Sources */,
 				7C3B5C5124BA3D840058B9A8 /* Book.m in Sources */,
@@ -1672,6 +1720,7 @@
 				DEVELOPMENT_ASSET_PATHS = SwiftCoreTraining/Resources/Images/Assets.xcassets;
 				DEVELOPMENT_TEAM = MDWBDEPC5G;
 				ENABLE_BITCODE = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/Plist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1696,6 +1745,7 @@
 				DEVELOPMENT_ASSET_PATHS = SwiftCoreTraining/Resources/Images/Assets.xcassets;
 				DEVELOPMENT_TEAM = MDWBDEPC5G;
 				ENABLE_BITCODE = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftCoreTraining/BundleFiles/Plist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

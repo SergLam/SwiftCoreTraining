@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D64" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Company" representedClassName="Company" syncable="YES" coreSpotlightDisplayNameExpression="Company">
+        <attribute name="companyID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="departments" optional="YES" attributeType="Transformable"/>
+        <attribute name="monthIncome" optional="YES" attributeType="Decimal" defaultValueString="0"/>
+        <attribute name="numberOfEmployee" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Department" representedClassName="Department" syncable="YES" coreSpotlightDisplayNameExpression="Department">
+        <attribute name="companyID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="employees" optional="YES" attributeType="Transformable"/>
+        <attribute name="monthIncome" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Employee" representedClassName="Employee" syncable="YES" coreSpotlightDisplayNameExpression="Employee">
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="String"/>
+        <attribute name="salary" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+    </entity>
+    <fetchRequest name="FetchRequest" entity="Company"/>
+    <elements>
+        <element name="Company" positionX="-441.6328125" positionY="-14.34765625" width="128" height="104"/>
+        <element name="Department" positionX="-234.76953125" positionY="-16.00390625" width="128" height="89"/>
+        <element name="Employee" positionX="-46.21484375" positionY="-7.3671875" width="128" height="104"/>
+    </elements>
+</model>

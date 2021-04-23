@@ -111,7 +111,14 @@ enum DebugScreenTableSection: Int, CaseIterable {
         case .dataStructuresAndAlgorightms:
             return [ArraySetVC()]
         case .objcFeatures:
-            return [ExampleVC(),
+            
+            // NOTE: - Fucking bazel -
+//            Undefined symbols for architecture x86_64:
+//              "_OBJC_CLASS_$_ExampleVC", referenced from:
+//                  objc-class-ref in libSwiftCoreTraining_Swift.a(DebugScreenTableSection.swift.o)
+//            ld: symbol(s) not found for architecture x86_64
+            
+            return [/*ExampleVC()*/DebugVC(),
                     DebugVC()]
         case .algorithms:
             return [AlgorhitmsVC(),
