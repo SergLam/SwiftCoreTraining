@@ -9,6 +9,8 @@ load("@build_bazel_rules_swift//swift:swift.bzl",
 "swift_library",
 )
 
+# Main app code
+
 objc_library(
     name = "SwiftCoreTraining_ObjC",
     hdrs = glob(["SwiftCoreTraining/UserStory/ObjcUsageInSwift/*.h"]),
@@ -36,14 +38,39 @@ ios_application(
     ],
     minimum_os_version = "13.0",
 
-    infoplists = [":SwiftCoreTraining/BundleFiles/Plist/Info.plist"],
+    resources = glob([
 
-    resources = glob([":SwiftCoreTraining/Resources/Images/Assets.xcassets/**"]),
+        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/*.png",
+        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/**/*.png",
+        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/*.pdf",
+        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/**/*.pdf",
+        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/*.svg",
+        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/**/*.svg",
+        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/*.json",
+        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/**/*.json",
+
+        "SwiftCoreTraining/Resources/Images/Images.xcassets/*.png",
+        "SwiftCoreTraining/Resources/Images/Images.xcassets/**/*.png",
+        "SwiftCoreTraining/Resources/Images/Images.xcassets/*.pdf",
+        "SwiftCoreTraining/Resources/Images/Images.xcassets/**/*.pdf",
+        "SwiftCoreTraining/Resources/Images/Images.xcassets/*.svg",
+        "SwiftCoreTraining/Resources/Images/Images.xcassets/**/*.svg",
+        "SwiftCoreTraining/Resources/Images/Images.xcassets/*.json",
+        "SwiftCoreTraining/Resources/Images/Images.xcassets/**/*.json",
+
+        "SwiftCoreTraining/Resources/Images/*.xcassets",
+        "SwiftCoreTraining/Resources/Images/**/*.xcassets",
+    ]),
+
+    infoplists = [":SwiftCoreTraining/BundleFiles/Plist/Info.plist"],
     launch_storyboard = ":SwiftCoreTraining/Resources/LaunchScreen/LaunchScreen.storyboard",
     strings = [":SwiftCoreTraining/Resources/Localization/en.lproj/Localizable.strings"],
 
     visibility = ["//visibility:public"],
-    deps = [":SwiftCoreTraining_ObjC", ":SwiftCoreTraining_Swift"],
+    deps = [
+        ":SwiftCoreTraining_ObjC", 
+        ":SwiftCoreTraining_Swift",
+    ],
 )
 
 # Unit testing

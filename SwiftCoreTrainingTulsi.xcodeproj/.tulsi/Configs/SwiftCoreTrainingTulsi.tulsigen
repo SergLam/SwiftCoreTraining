@@ -1,0 +1,20 @@
+{
+  "additionalFilePaths" : [
+    "/BUILD"
+  ],
+  "buildTargets" : [
+    "//:SwiftCoreTraining",
+    "//:SwiftCoreTraining_UI_Test",
+    "//:SwiftCoreTraining_Unit_Test"
+  ],
+  "optionSet" : {
+
+  },
+  "projectName" : "SwiftCoreTrainingTulsi",
+  "sourceFilters" : [
+    "SwiftCoreTraining/...",
+    "SwiftCoreTrainingTests/...",
+    "SwiftCoreTrainingUITests/...",
+    "external/..."
+  ]
+}

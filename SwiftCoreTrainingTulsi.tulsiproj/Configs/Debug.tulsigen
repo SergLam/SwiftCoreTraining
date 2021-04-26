@@ -48,7 +48,7 @@
       "p" : "$(inherited)"
     }
   },
-  "projectName" : "SwiftCoreTraining",
+  "projectName" : "SwiftCoreTrainingTulsi",
   "sourceFilters" : [
     "SwiftCoreTraining/...",
     "SwiftCoreTrainingTests/...",
