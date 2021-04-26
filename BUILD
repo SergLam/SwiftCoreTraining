@@ -38,29 +38,12 @@ ios_application(
     ],
     minimum_os_version = "13.0",
 
-    resources = glob([
-
-        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/*.png",
-        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/**/*.png",
-        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/*.pdf",
-        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/**/*.pdf",
-        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/*.svg",
-        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/**/*.svg",
-        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/*.json",
-        "SwiftCoreTraining/Resources/Images/AppIcons.xcassets/**/*.json",
-
-        "SwiftCoreTraining/Resources/Images/Images.xcassets/*.png",
-        "SwiftCoreTraining/Resources/Images/Images.xcassets/**/*.png",
-        "SwiftCoreTraining/Resources/Images/Images.xcassets/*.pdf",
-        "SwiftCoreTraining/Resources/Images/Images.xcassets/**/*.pdf",
-        "SwiftCoreTraining/Resources/Images/Images.xcassets/*.svg",
-        "SwiftCoreTraining/Resources/Images/Images.xcassets/**/*.svg",
-        "SwiftCoreTraining/Resources/Images/Images.xcassets/*.json",
-        "SwiftCoreTraining/Resources/Images/Images.xcassets/**/*.json",
-
-        "SwiftCoreTraining/Resources/Images/*.xcassets",
-        "SwiftCoreTraining/Resources/Images/**/*.xcassets",
-    ]),
+    app_icons = [
+        "//SwiftCoreTraining/Resources/Images:AppIcon",
+    ],
+    resources = [
+        "//SwiftCoreTraining/Resources/Images:Images",
+    ],
 
     infoplists = [":SwiftCoreTraining/BundleFiles/Plist/Info.plist"],
     launch_storyboard = ":SwiftCoreTraining/Resources/LaunchScreen/LaunchScreen.storyboard",

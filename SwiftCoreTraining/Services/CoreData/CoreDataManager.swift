@@ -13,17 +13,22 @@ typealias OperationResult = ((Bool, String) -> (Void))
 
 final class CoreDataManager: NSObject {
     
-    static let shared = CoreDataManager.init(modelFileName: "DatabaseOne"){}
+    static let shared = CoreDataManager(modelFileName: "DatabaseOne"){}
     
     private var coordinator: NSPersistentStoreCoordinator
     private var model: NSManagedObjectModel
     public  var context: NSManagedObjectContext
     private var container: NSPersistentContainer
     
-    init(modelFileName: String, completion: @escaping () -> ()) {
+    init?(modelFileName: String, completion: @escaping () -> ()) {
         
-        let modelURL = Bundle.main.url(forResource: modelFileName, withExtension: "momd")!
-        model = NSManagedObjectModel(contentsOf: modelURL)!
+        guard let modelURL = Bundle.main.url(forResource: modelFileName, withExtension: "momd") else {
+            return nil
+        }
+        guard let model = NSManagedObjectModel(contentsOf: modelURL) else {
+            return nil
+        }
+        self.model = model
         
         coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
         

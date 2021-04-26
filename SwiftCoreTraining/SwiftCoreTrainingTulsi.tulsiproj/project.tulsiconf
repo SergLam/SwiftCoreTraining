@@ -5,8 +5,9 @@
     }
   },
   "packages" : [
-    ""
+    "",
+    "SwiftCoreTraining/Resources/Images"
   ],
   "projectName" : "SwiftCoreTrainingTulsi",
-  "workspaceRoot" : ".."
+  "workspaceRoot" : "../.."
 }

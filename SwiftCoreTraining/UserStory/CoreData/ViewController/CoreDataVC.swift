@@ -30,17 +30,22 @@ final class CoreDataVC: BaseViewController {
         }
     }
     
-    @objc func performOperation(_ button: UIButton) {
+    @objc
+    private func performOperation(_ button: UIButton) {
+        
+        guard let manager = dbManager else {
+            return
+        }
         let index = button.tag
         let operation = CoreDataOpetations.allCases[index]
         switch operation {
         case .write:
-            let company = Company.init(context: dbManager.context)
-            company.companyID = Int64(dbManager.readAllObjects(Company.self).count)
+            let company = Company.init(context: manager.context)
+            company.companyID = Int64(manager.readAllObjects(Company.self).count)
             company.monthIncome = 1000
             company.numberOfEmployee = Int64(500)
             company.title = "Test company\(company.companyID)"
-            dbManager.write(shouldUpdate: true, entities: [company]) { [unowned self] (result) -> (Void) in
+            manager.write(shouldUpdate: true, entities: [company]) { [unowned self] (result) -> (Void) in
                 if result {
                     AlertPresenter.showSuccessMessage(at: self, message: "New company added successfully")
                 } else {
@@ -48,16 +53,16 @@ final class CoreDataVC: BaseViewController {
                 }
             }
         case .fetchObjectsByParameter:
-            guard let objects = dbManager.fetchObjects("numberOfEmployee", 500, Company.self) else {
+            guard let objects = manager.fetchObjects("numberOfEmployee", 500, Company.self) else {
                 AlertPresenter.showSuccessMessage(at: self, message: "Empty fetsh request result")
                 return
             }
             AlertPresenter.showSuccessMessage(at: self, message: String.init(describing: objects.count))
         case .readAllObjects:
-            let objects = dbManager.readAllObjects(Company.self)
+            let objects = manager.readAllObjects(Company.self)
             AlertPresenter.showSuccessMessage(at: self, message: String.init(describing: objects.count))
         case .deleteObjectsByParameter:
-            dbManager.deleteObjects("numberOfEmployee", 500, Company.self) { (result, description) in
+            manager.deleteObjects("numberOfEmployee", 500, Company.self) { (result, description) in
                 if result {
                     AlertPresenter.showSuccessMessage(at: self, message: description)
                 } else {
@@ -65,7 +70,7 @@ final class CoreDataVC: BaseViewController {
                 }
             }
         case .deleteAll:
-            dbManager.deleteAll(Company.self) { (result, description) -> (Void) in
+            manager.deleteAll(Company.self) { (result, description) -> (Void) in
                 if result {
                     AlertPresenter.showSuccessMessage(at: self, message: description)
                 } else {

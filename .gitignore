@@ -74,5 +74,9 @@ fastlane/test_output
 Templates/
 Generated_Code/
 
-## Bazel + Tulsi
+# Bazel + Tulsi
+bazel-bazel-tulsi-ios/
+bazel-bin/
+bazel-out/
+bazel-testlogs/
 Vendor/
