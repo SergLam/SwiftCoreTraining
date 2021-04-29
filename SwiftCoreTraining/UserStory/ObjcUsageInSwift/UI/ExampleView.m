@@ -7,7 +7,7 @@
 //
 
 #import "ExampleView.h"
-#import "ExampleCell.h"
+#import "Cell/ExampleCell.h"
 
 @implementation ExampleView : UIView
 

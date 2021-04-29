@@ -13,8 +13,8 @@ load("@build_bazel_rules_swift//swift:swift.bzl",
 
 objc_library(
     name = "SwiftCoreTraining_ObjC",
-    hdrs = glob(["SwiftCoreTraining/UserStory/ObjcUsageInSwift/*.h"]),
-    srcs = glob(["SwiftCoreTraining/UserStory/ObjcUsageInSwift/*.m"]),
+    hdrs = glob(["SwiftCoreTraining/UserStory/ObjcUsageInSwift/**/*.h"]),
+    srcs = glob(["SwiftCoreTraining/UserStory/ObjcUsageInSwift/**/*.m"]),
     includes = ["SwiftCoreTraining/UserStory/ObjcUsageInSwift/**/"],
     visibility = ["//visibility:public"],
 )

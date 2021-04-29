@@ -7,7 +7,6 @@ build \
   --strategy=Genrule=standalone \
   --spawn_strategy=standalone \
   --strategy=SwiftCompile=standalone \
-  --copt=GCC_SYMBOLS_PRIVATE_EXTERN=no \
 
 build --define RULES_SWIFT_BUILD_DUMMY_WORKER=1
 
