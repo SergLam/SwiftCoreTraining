@@ -1,7 +1,7 @@
 
 import UIKit
 
-protocol PrivacyPolicyViewDelegate: class {
+protocol PrivacyPolicyViewDelegate: AnyObject {
     
     func didTapCloseButton()
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol Module: class {
+protocol Module: AnyObject {
     func viewToPresent() -> View
 }
 

@@ -6,6 +6,7 @@
 //  Copyright © 2021 Serg Liamtsev. All rights reserved.
 //
 
+// import SwiftCoreTraining_ObjC
 import UIKit
 
 enum DebugScreenTableSection: Int, CaseIterable {
@@ -118,7 +119,7 @@ enum DebugScreenTableSection: Int, CaseIterable {
 //                  objc-class-ref in libSwiftCoreTraining_Swift.a(DebugScreenTableSection.swift.o)
 //            ld: symbol(s) not found for architecture x86_64
             
-            return [/*ExampleVC()*/DebugVC(),
+            return [ExampleVC(),
                     DebugVC()]
         case .algorithms:
             return [AlgorhitmsVC(),

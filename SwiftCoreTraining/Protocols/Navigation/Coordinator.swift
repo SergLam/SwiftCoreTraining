@@ -11,7 +11,7 @@ import UIKit
 // https://www.hackingwithswift.com/articles/175/advanced-coordinator-pattern-tutorial-ios
 // https://medium.com/@pavlepesic/flow-coordination-pattern-5eb60cd220d5
 
-protocol Coordinator: class {
+protocol Coordinator: AnyObject {
     
     // NOTE: Required for Equitable conformance - delete coordinator from childCoordinators array
     var identifier: String{ get }

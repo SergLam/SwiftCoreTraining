@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol Animator: class {
+protocol Animator: AnyObject {
     
 }

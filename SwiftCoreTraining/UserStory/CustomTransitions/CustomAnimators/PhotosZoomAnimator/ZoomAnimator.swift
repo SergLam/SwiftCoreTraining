@@ -9,7 +9,7 @@
 import UIKit
 // https://medium.com/flawless-app-stories/create-transition-and-interaction-like-ios-photos-app-2b9f16313d3
 // https://github.com/masamichiueta/FluidPhoto
-protocol ZoomAnimatorDelegate: class {
+protocol ZoomAnimatorDelegate: AnyObject {
     func transitionWillStartWith(zoomAnimator: ZoomAnimator)
     func transitionDidEndWith(zoomAnimator: ZoomAnimator)
     func referenceImageView(for zoomAnimator: ZoomAnimator) -> UIImageView?

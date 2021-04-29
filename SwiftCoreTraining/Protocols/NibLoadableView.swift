@@ -7,7 +7,7 @@
 //
 
 import UIKit
-protocol NibLoadableView: class {}
+protocol NibLoadableView: AnyObject {}
 extension NibLoadableView where Self: UIView {
     static func instantiateFromNib() -> Self {
         return instantiateFromNib(nibName: nil)

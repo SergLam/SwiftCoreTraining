@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DebugScreenTableControllerDelegate: class {
+protocol DebugScreenTableControllerDelegate: AnyObject {
     
     func didSelectItem(at index: IndexPath, item: DebugScreenTableViewCellVM)
 }

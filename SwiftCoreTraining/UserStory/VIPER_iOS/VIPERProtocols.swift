@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol ViewToPresenterProtocol: class {
+protocol ViewToPresenterProtocol: AnyObject {
     
     var view: PresenterToViewProtocol? { get set }
     var interactor: PresenterToInteractorProtocol? { get set }
@@ -19,25 +19,25 @@ protocol ViewToPresenterProtocol: class {
     
 }
 
-protocol PresenterToViewProtocol: class {
+protocol PresenterToViewProtocol: AnyObject {
     
     func showPersons(personsArray: Array<PersonModel>)
     func showError(error: String)
 }
 
-protocol PresenterToRouterProtocol: class {
+protocol PresenterToRouterProtocol: AnyObject {
     
     static func createModule() -> ViperVC
     func pushToMovieScreen(navigationConroller: UINavigationController)
 }
 
-protocol PresenterToInteractorProtocol: class {
+protocol PresenterToInteractorProtocol: AnyObject {
     
     var presenter:InteractorToPresenterProtocol? { get set }
     func fetchPersons()
 }
 
-protocol InteractorToPresenterProtocol: class {
+protocol InteractorToPresenterProtocol: AnyObject {
     
     func personsFetchedSuccess(personsModelArray: Array<PersonModel>)
     func personsFetchFailed(error: String)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DebugScreenTableCellsFactoryDelegate: class {
+protocol DebugScreenTableCellsFactoryDelegate: AnyObject {
     
 }
 

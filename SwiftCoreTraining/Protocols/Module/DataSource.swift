@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol DataSource: class {
+protocol DataSource: AnyObject {
     
 }
