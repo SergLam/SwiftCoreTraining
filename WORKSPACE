@@ -50,3 +50,8 @@ load(
 )
 
 apple_support_dependencies()
+
+http_archive(
+    name = "rules_pods",
+    urls = ["https://github.com/SergLamGridDynamics/PodToBUILD/releases/download/3.4.1-f8fd0d1/PodToBUILD.zip"],
+)

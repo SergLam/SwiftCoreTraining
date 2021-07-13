@@ -6,6 +6,7 @@
 //  Copyright © 2019 serglam. All rights reserved.
 //
 
+import Eureka
 import UIKit
 
 final class DebugVC: BaseViewController, DebugVCShowable {

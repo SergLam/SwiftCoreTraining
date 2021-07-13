@@ -12,6 +12,7 @@ import UIKit
 enum DebugScreenTableSection: Int, CaseIterable {
     
     case viper = 0
+    case inheritance
     case closures
     case memoryManagment
     case kwoKvc
@@ -28,6 +29,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
         switch self {
         case .viper:
             return "VIPER Architecture in iOS"
+        case .inheritance:
+            return "Inheritance"
         case .closures:
             return "Closures"
         case .memoryManagment:
@@ -57,6 +60,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
         switch self {
         case .viper:
             return ["Viper VC"]
+        case .inheritance:
+            return ["Inheritance VC"]
         case .closures:
             return ["ClosuresVC"]
         case .memoryManagment:
@@ -91,6 +96,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
         switch self {
         case .viper:
             return [ViperRouter.createModule()]
+        case .inheritance:
+            return [InheritanceVC()]
         case .closures:
             return [ClosuresVC()]
         case .memoryManagment:

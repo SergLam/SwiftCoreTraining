@@ -13,6 +13,8 @@
 		047B24C12630718700E21DA6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B24C02630718700E21DA6 /* String+Localization.swift */; };
 		047B259126307E4600E21DA6 /* SpinnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B259026307E4600E21DA6 /* SpinnerVC.swift */; };
 		047B259626307EFE00E21DA6 /*  NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B259526307EFE00E21DA6 /*  NSObject+Ext.swift */; };
+		04C14958269D7BCF006FC1D8 /* InheritanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C14957269D7BCF006FC1D8 /* InheritanceVC.swift */; };
+		04C1495A269D7BF7006FC1D8 /* InheritanceVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C14959269D7BF7006FC1D8 /* InheritanceVCViewModel.swift */; };
 		04D522FA2632AB8400084891 /* UniqueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D522F92632AB8400084891 /* UniqueIdentifiable.swift */; };
 		04D523022632AEFC00084891 /* DebugVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D523012632AEFC00084891 /* DebugVCView.swift */; };
 		04D523082632B21D00084891 /* UINavigationController+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D523072632B21D00084891 /* UINavigationController+Transition.swift */; };
@@ -170,6 +172,8 @@
 		047B24C02630718700E21DA6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		047B259026307E4600E21DA6 /* SpinnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerVC.swift; sourceTree = "<group>"; };
 		047B259526307EFE00E21DA6 /*  NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NSObject+Ext.swift"; sourceTree = "<group>"; };
+		04C14957269D7BCF006FC1D8 /* InheritanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InheritanceVC.swift; sourceTree = "<group>"; };
+		04C14959269D7BF7006FC1D8 /* InheritanceVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InheritanceVCViewModel.swift; sourceTree = "<group>"; };
 		04D522F92632AB8400084891 /* UniqueIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueIdentifiable.swift; sourceTree = "<group>"; };
 		04D523012632AEFC00084891 /* DebugVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugVCView.swift; sourceTree = "<group>"; };
 		04D523072632B21D00084891 /* UINavigationController+Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transition.swift"; sourceTree = "<group>"; };
@@ -455,6 +459,15 @@
 				047B259026307E4600E21DA6 /* SpinnerVC.swift */,
 			);
 			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		04C14956269D7B9F006FC1D8 /* Inheritance */ = {
+			isa = PBXGroup;
+			children = (
+				04C14957269D7BCF006FC1D8 /* InheritanceVC.swift */,
+				04C14959269D7BF7006FC1D8 /* InheritanceVCViewModel.swift */,
+			);
+			path = Inheritance;
 			sourceTree = "<group>";
 		};
 		04D523062632B1DE00084891 /* UINavigationController */ = {
@@ -932,6 +945,7 @@
 		7CFDC33622B6CFE900FF351E /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
+				04C14956269D7B9F006FC1D8 /* Inheritance */,
 				7C17966C2630AD1000EAC908 /* DebugScreen */,
 				047B258F26307E3000E21DA6 /* BaseClasses */,
 				7CC57CB125CFDB0300C58D27 /* MemoryManagment */,
@@ -1246,6 +1260,7 @@
 				7C2F034421FCC5D000A50936 /* Sources */,
 				7C2F034521FCC5D000A50936 /* Frameworks */,
 				7C2F034621FCC5D000A50936 /* Resources */,
+				FE9358749428E0138F14070F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1264,6 +1279,7 @@
 				7C2F035821FCC5D200A50936 /* Sources */,
 				7C2F035921FCC5D200A50936 /* Frameworks */,
 				7C2F035A21FCC5D200A50936 /* Resources */,
+				952916F61A6E2F180A89F4D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1283,6 +1299,7 @@
 				7C2F036321FCC5D200A50936 /* Sources */,
 				7C2F036421FCC5D200A50936 /* Frameworks */,
 				7C2F036521FCC5D200A50936 /* Resources */,
+				F197B69491634D302DEBCA4F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1370,6 +1387,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		952916F61A6E2F180A89F4D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTrainingTests/Pods-App-SwiftCoreTrainingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		954B60FF53BDAFD76A6E7D42 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1436,6 +1468,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F197B69491634D302DEBCA4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTrainingUITests/Pods-App-SwiftCoreTrainingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE9358749428E0138F14070F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTraining/Pods-App-SwiftCoreTraining-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1445,6 +1507,7 @@
 			files = (
 				7C1796812630AD3A00EAC908 /* CollectionCellsFactory.swift in Sources */,
 				1316DC0B241117880070CE2C /* ExternalURLOpenable.swift in Sources */,
+				04C1495A269D7BF7006FC1D8 /* InheritanceVCViewModel.swift in Sources */,
 				7CC57CFA25CFE0AB00C58D27 /* ClosuresVCViewModel.swift in Sources */,
 				7CFDC3CE22B6CFE900FF351E /* SystemTransitionPushVC.swift in Sources */,
 				7CFDC3A222B6CFE900FF351E /* ZoomPushAnimator.swift in Sources */,
@@ -1468,6 +1531,7 @@
 				7CFDC3C722B6CFE900FF351E /* GCDVC.swift in Sources */,
 				7C90633B240ED6DE0055BCD8 /* Animator.swift in Sources */,
 				7CFDC3B022B6CFE900FF351E /* SizeClassesView.swift in Sources */,
+				04C14958269D7BCF006FC1D8 /* InheritanceVC.swift in Sources */,
 				7CED219523E0DBB500A37499 /* ZoomAnimator.swift in Sources */,
 				7C90633D240ED6DE0055BCD8 /* DataSource.swift in Sources */,
 				7CFDC3B922B6CFE900FF351E /* XMLParserVC.swift in Sources */,

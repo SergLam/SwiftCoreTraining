@@ -25,7 +25,7 @@ swift_library(
     swiftc_inputs = [":SwiftCoreTraining/SwiftCoreTraining-Bridging-Header.h"],
     copts = ["-import-objc-header", "$(location :SwiftCoreTraining/SwiftCoreTraining-Bridging-Header.h)",],
     visibility = ["//visibility:public"],
-    deps = [":SwiftCoreTraining_ObjC"]
+    deps = [":SwiftCoreTraining_ObjC", "//Vendor/Eureka:Eureka"]
 )
 
 ios_application(
