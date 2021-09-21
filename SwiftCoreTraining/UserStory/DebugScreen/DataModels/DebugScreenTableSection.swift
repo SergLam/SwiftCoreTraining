@@ -11,7 +11,8 @@ import UIKit
 
 enum DebugScreenTableSection: Int, CaseIterable {
     
-    case viper = 0
+    case combine = 0
+    case viper
     case inheritance
     case closures
     case memoryManagment
@@ -27,6 +28,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
     
     var title: String {
         switch self {
+        case .combine:
+            return "Combine Framework"
         case .viper:
             return "VIPER Architecture in iOS"
         case .inheritance:
@@ -58,6 +61,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
     
     var sectionRowsTitles: [String] {
         switch self {
+        case .combine:
+            return ["Combine VC"]
         case .viper:
             return ["Viper VC"]
         case .inheritance:
@@ -94,6 +99,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
     
     var viewControllers: [UIViewController] {
         switch self {
+        case .combine:
+            return [CombineVC()]
         case .viper:
             return [ViperRouter.createModule()]
         case .inheritance:

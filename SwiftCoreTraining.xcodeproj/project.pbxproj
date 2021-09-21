@@ -28,6 +28,8 @@
 		04E50BF02636D24000F65504 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E50BEF2636D24000F65504 /* Images.xcassets */; };
 		04E50C002636D93000F65504 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E50BFE2636D93000F65504 /* Images.xcassets */; };
 		04E50C012636D93000F65504 /* AppIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E50BFF2636D93000F65504 /* AppIcons.xcassets */; };
+		04FA6DC926FA6DBD00C52E86 /* CombineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA6DC826FA6DBD00C52E86 /* CombineVC.swift */; };
+		04FA6DCB26FA6DCB00C52E86 /* CombineVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA6DCA26FA6DCB00C52E86 /* CombineVCViewModel.swift */; };
 		1316DB8D241029B60070CE2C /* ViperDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DB8C241029B60070CE2C /* ViperDataSource.swift */; };
 		1316DC06241116C60070CE2C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC05241116C60070CE2C /* BaseViewController.swift */; };
 		1316DC0A241117880070CE2C /* StatusBarResizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1316DC08241117870070CE2C /* StatusBarResizable.swift */; };
@@ -187,6 +189,8 @@
 		04E50BEF2636D24000F65504 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04E50BFE2636D93000F65504 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04E50BFF2636D93000F65504 /* AppIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcons.xcassets; sourceTree = "<group>"; };
+		04FA6DC826FA6DBD00C52E86 /* CombineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineVC.swift; sourceTree = "<group>"; };
+		04FA6DCA26FA6DCB00C52E86 /* CombineVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineVCViewModel.swift; sourceTree = "<group>"; };
 		056826C7458D32F6F304219A /* Pods-App-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-SwiftCoreTraining/Pods-App-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		109A922D1A59CE7844434F86 /* Pods-SwiftCoreTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCoreTraining.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCoreTraining/Pods-SwiftCoreTraining.release.xcconfig"; sourceTree = "<group>"; };
 		1316DB8C241029B60070CE2C /* ViperDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperDataSource.swift; sourceTree = "<group>"; };
@@ -540,6 +544,15 @@
 				04E50BFF2636D93000F65504 /* AppIcons.xcassets */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		04FA6DC726FA6DA000C52E86 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				04FA6DC826FA6DBD00C52E86 /* CombineVC.swift */,
+				04FA6DCA26FA6DCB00C52E86 /* CombineVCViewModel.swift */,
+			);
+			path = Combine;
 			sourceTree = "<group>";
 		};
 		1316DC07241117730070CE2C /* UIViewController */ = {
@@ -945,6 +958,7 @@
 		7CFDC33622B6CFE900FF351E /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
+				04FA6DC726FA6DA000C52E86 /* Combine */,
 				04C14956269D7B9F006FC1D8 /* Inheritance */,
 				7C17966C2630AD1000EAC908 /* DebugScreen */,
 				047B258F26307E3000E21DA6 /* BaseClasses */,
@@ -1539,6 +1553,7 @@
 				1316DC06241116C60070CE2C /* BaseViewController.swift in Sources */,
 				7CFDC3A322B6CFE900FF351E /* ZoomPopAnimator.swift in Sources */,
 				04D523162632B30700084891 /* UIViewController+NavBar.swift in Sources */,
+				04FA6DC926FA6DBD00C52E86 /* CombineVC.swift in Sources */,
 				7C2285A825598FAE0080DF81 /* ClosuresVCView.swift in Sources */,
 				7CFDC3C422B6CFE900FF351E /* test.xcdatamodeld in Sources */,
 				7C90633A240ED6DE0055BCD8 /* Interactor.swift in Sources */,
@@ -1619,6 +1634,7 @@
 				04D523022632AEFC00084891 /* DebugVCView.swift in Sources */,
 				04D523392632E93D00084891 /* Department.swift in Sources */,
 				7C1796902630AE2B00EAC908 /* CollectionCellModels.swift in Sources */,
+				04FA6DCB26FA6DCB00C52E86 /* CombineVCViewModel.swift in Sources */,
 				040B008A2625F6AC0001A5C3 /* SharedTypeAliases.swift in Sources */,
 				7C3B5C5124BA3D840058B9A8 /* Book.m in Sources */,
 				7CFDC3CD22B6CFE900FF351E /* PrivacyPolicyView.swift in Sources */,
