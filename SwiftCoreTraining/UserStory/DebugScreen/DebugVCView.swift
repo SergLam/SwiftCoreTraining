@@ -22,6 +22,9 @@ final class DebugVCView: UIView {
     }
     
     private func setupLayout() {
+        
+        backgroundColor = UIColor.white
+        
         addSubview(tableView)
         tableView.contentMode = .scaleAspectFit
         

@@ -41,6 +41,13 @@ final class DebugScreenTableController: NSObject, TableController {
         super.init()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .none
+        tableView.tableFooterView = nil
+        tableView.tableFooterView?.isHidden = true
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
         if let factory = self.factory as? DebugScreenTableCellsFactory {
             factory.delegate = self
         }

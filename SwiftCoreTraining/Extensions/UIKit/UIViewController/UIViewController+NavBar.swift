@@ -46,6 +46,9 @@ extension UIViewController {
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = false
         }
+        if #available(iOS 15.0, *) {
+            navigationController?.navigationBar.isTranslucent = true
+        }
         navigationController?.navigationBar.shadowImage = nil
         guard let image = UIImage(color: .white) else {
             assertionFailure("Unable to create image")

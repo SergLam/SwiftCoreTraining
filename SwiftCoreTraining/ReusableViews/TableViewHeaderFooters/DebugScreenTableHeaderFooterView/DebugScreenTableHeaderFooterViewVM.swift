@@ -15,7 +15,7 @@ public struct DebugScreenTableHeaderFooterViewVM: TableHeaderFooterModel {
     }
     
     var rowHeight: CGFloat {
-        return UITableView.automaticDimension
+        return 44.0
     }
     
     var data: String

@@ -13,6 +13,9 @@ final class DebugScreenTableViewCell: UITableViewCell, TableViewCell {
     private let cellTextLabel: UILabel = UILabel()
     private let cellTextLabelFont: UIFont = UIFont.systemFont(ofSize: 16.0, weight: .regular)
     
+    private let bottomSeparatorView: UIView = UIView()
+    private let bottomSeparatorViewColor: UIColor = UIColor.systemGray
+    
     // MARK: - Life cycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -57,6 +60,17 @@ final class DebugScreenTableViewCell: UITableViewCell, TableViewCell {
         ]
         
         NSLayoutConstraint.activate(cellTextLabelConstraints)
+        
+        contentView.addSubview(bottomSeparatorView)
+        bottomSeparatorView.backgroundColor = bottomSeparatorViewColor
+        
+        bottomSeparatorView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            bottomSeparatorView.heightAnchor.constraint(equalToConstant: 0.5),
+            bottomSeparatorView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            bottomSeparatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            bottomSeparatorView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+        ])
     }
     
 }

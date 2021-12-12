@@ -13,6 +13,11 @@
 		047B24C12630718700E21DA6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B24C02630718700E21DA6 /* String+Localization.swift */; };
 		047B259126307E4600E21DA6 /* SpinnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B259026307E4600E21DA6 /* SpinnerVC.swift */; };
 		047B259626307EFE00E21DA6 /*  NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047B259526307EFE00E21DA6 /*  NSObject+Ext.swift */; };
+		04B8574527665B2D00C0265B /* UINavigationController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8574427665B2D00C0265B /* UINavigationController+Navigation.swift */; };
+		04B8574827665B6400C0265B /* UINavigationBar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8574727665B6400C0265B /* UINavigationBar+Ext.swift */; };
+		04B8574B27665C0D00C0265B /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8574A27665C0D00C0265B /* UIColor+Ext.swift */; };
+		04B8574E27665C6C00C0265B /* LoggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8574D27665C6C00C0265B /* LoggerService.swift */; };
+		04B8575127665CFA00C0265B /* OSLog+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8575027665CFA00C0265B /* OSLog+Ext.swift */; };
 		04C14958269D7BCF006FC1D8 /* InheritanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C14957269D7BCF006FC1D8 /* InheritanceVC.swift */; };
 		04C1495A269D7BF7006FC1D8 /* InheritanceVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C14959269D7BF7006FC1D8 /* InheritanceVCViewModel.swift */; };
 		04D522FA2632AB8400084891 /* UniqueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D522F92632AB8400084891 /* UniqueIdentifiable.swift */; };
@@ -174,6 +179,11 @@
 		047B24C02630718700E21DA6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		047B259026307E4600E21DA6 /* SpinnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerVC.swift; sourceTree = "<group>"; };
 		047B259526307EFE00E21DA6 /*  NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NSObject+Ext.swift"; sourceTree = "<group>"; };
+		04B8574427665B2D00C0265B /* UINavigationController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Navigation.swift"; sourceTree = "<group>"; };
+		04B8574727665B6400C0265B /* UINavigationBar+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Ext.swift"; sourceTree = "<group>"; };
+		04B8574A27665C0D00C0265B /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		04B8574D27665C6C00C0265B /* LoggerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerService.swift; sourceTree = "<group>"; };
+		04B8575027665CFA00C0265B /* OSLog+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+Ext.swift"; sourceTree = "<group>"; };
 		04C14957269D7BCF006FC1D8 /* InheritanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InheritanceVC.swift; sourceTree = "<group>"; };
 		04C14959269D7BF7006FC1D8 /* InheritanceVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InheritanceVCViewModel.swift; sourceTree = "<group>"; };
 		04D522F92632AB8400084891 /* UniqueIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueIdentifiable.swift; sourceTree = "<group>"; };
@@ -437,6 +447,7 @@
 		047B24BE2630716300E21DA6 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				04B8574627665B6400C0265B /* UINavigationBar */,
 				04D5231D2632B39000084891 /* UIImage */,
 				04D523142632B28000084891 /* UIViewController */,
 				04D523062632B1DE00084891 /* UINavigationController */,
@@ -465,6 +476,38 @@
 			path = BaseClasses;
 			sourceTree = "<group>";
 		};
+		04B8574627665B6400C0265B /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				04B8574727665B6400C0265B /* UINavigationBar+Ext.swift */,
+			);
+			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
+		04B8574927665BBA00C0265B /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				04B8574A27665C0D00C0265B /* UIColor+Ext.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		04B8574C27665C5600C0265B /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				04B8574D27665C6C00C0265B /* LoggerService.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		04B8574F27665CEE00C0265B /* os */ = {
+			isa = PBXGroup;
+			children = (
+				04B8575027665CFA00C0265B /* OSLog+Ext.swift */,
+			);
+			path = os;
+			sourceTree = "<group>";
+		};
 		04C14956269D7B9F006FC1D8 /* Inheritance */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +523,7 @@
 				7C1ADDC82206EFD000F70F2C /* UINavigationController+Ext.swift */,
 				04D523072632B21D00084891 /* UINavigationController+Transition.swift */,
 				04D5230F2632B24200084891 /* UINavigationController+NavBar.swift */,
+				04B8574427665B2D00C0265B /* UINavigationController+Navigation.swift */,
 			);
 			path = UINavigationController;
 			sourceTree = "<group>";
@@ -718,6 +762,7 @@
 		7C1ADDC72206EFBB00F70F2C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				04B8574F27665CEE00C0265B /* os */,
 				04D5232D2632E84E00084891 /* CoreData */,
 				047B24BF2630716E00E21DA6 /* Foundation */,
 				047B24BE2630716300E21DA6 /* UIKit */,
@@ -873,6 +918,7 @@
 		7C64B84B224628F100480D88 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				04B8574C27665C5600C0265B /* Logger */,
 				04D5232C2632E82B00084891 /* CoreData */,
 				7C17969B2630AECC00EAC908 /* UI */,
 			);
@@ -1230,6 +1276,7 @@
 		7CFDC3D322B6D0D000FF351E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04B8574927665BBA00C0265B /* Colors */,
 				04E50BFD2636D93000F65504 /* Images */,
 				040B00872625F6580001A5C3 /* LaunchScreen */,
 				040B00782625F5610001A5C3 /* Images */,
@@ -1534,6 +1581,7 @@
 				7C906339240ED6DE0055BCD8 /* ModuleConfigurator.swift in Sources */,
 				7C1796DD2630B2F200EAC908 /* DebugScreenTableController.swift in Sources */,
 				7C17968D2630AE2B00EAC908 /* TableCellModels.swift in Sources */,
+				04B8574527665B2D00C0265B /* UINavigationController+Navigation.swift in Sources */,
 				7C1796CC2630B1D000EAC908 /* DebugScreenTableHeaderFooterView.swift in Sources */,
 				040B00702625F5030001A5C3 /* UIView+AddAction.swift in Sources */,
 				7CFDC3A422B6CFE900FF351E /* FadePushAnimator.swift in Sources */,
@@ -1580,10 +1628,12 @@
 				7C906340240ED6DE0055BCD8 /* BaseNavigationController.swift in Sources */,
 				7CFDC3B322B6CFE900FF351E /* KVO_VC.swift in Sources */,
 				7C4FA41524B3996400ECE2E5 /* House.m in Sources */,
+				04B8575127665CFA00C0265B /* OSLog+Ext.swift in Sources */,
 				7C1796B92630B05700EAC908 /* DebugScreenTableViewCell.swift in Sources */,
 				04D5233E2632E94D00084891 /* Company.swift in Sources */,
 				7CFDC39722B6CFE900FF351E /* ExampleCell.m in Sources */,
 				7CFDC39922B6CFE900FF351E /* UserModel.m in Sources */,
+				04B8574827665B6400C0265B /* UINavigationBar+Ext.swift in Sources */,
 				7CC57CB325CFDB3600C58D27 /* MemoryManagmentVC.swift in Sources */,
 				7CC0B60222A312090072EB49 /* ReusableView.swift in Sources */,
 				7CED219323E0DBB500A37499 /* ZoomTransitionController.swift in Sources */,
@@ -1604,6 +1654,7 @@
 				7CFDC3C922B6CFE900FF351E /* SubclassingVC.swift in Sources */,
 				7CFDC3CA22B6CFE900FF351E /* PrivacyTitleCell.swift in Sources */,
 				7CFDC3C322B6CFE900FF351E /* NSManagedObject+Ext.swift in Sources */,
+				04B8574E27665C6C00C0265B /* LoggerService.swift in Sources */,
 				7CFDC39F22B6CFE900FF351E /* TransitionPushVC.swift in Sources */,
 				047B259126307E4600E21DA6 /* SpinnerVC.swift in Sources */,
 				7CFDC3AD22B6CFE900FF351E /* PersonModel.swift in Sources */,
@@ -1614,6 +1665,7 @@
 				7CFDC39E22B6CFE900FF351E /* TransitionPushView.swift in Sources */,
 				047B24C12630718700E21DA6 /* String+Localization.swift in Sources */,
 				0401607326316B9F00D8DE43 /* DebugScreenTableSection.swift in Sources */,
+				04B8574B27665C0D00C0265B /* UIColor+Ext.swift in Sources */,
 				04D523312632E91900084891 /* Employee.swift in Sources */,
 				7CFDC3CF22B6CFE900FF351E /* SystemTransitionRootVC.swift in Sources */,
 				7CC0B60422A3124B0072EB49 /* NibLoadableView.swift in Sources */,

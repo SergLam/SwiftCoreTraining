@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let navVC = UINavigationController(rootViewController: DebugVC())
+        navVC.setWhiteNavigationBar()
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()
         return true

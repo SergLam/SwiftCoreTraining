@@ -15,7 +15,7 @@ struct DebugScreenTableViewCellVM: TableCellModel {
     }
     
     var rowHeight: CGFloat {
-        return UITableView.automaticDimension
+        return 44.0
     }
     
     var data: String
