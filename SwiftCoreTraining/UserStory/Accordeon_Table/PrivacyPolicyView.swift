@@ -1,3 +1,10 @@
+//
+//  PrivacyPolicyView.swift
+//  SwiftCoreTraining
+//
+//  Created by Serg Liamthev on 12/14/21.
+//  Copyright © 2021 serglam. All rights reserved.
+//
 
 import UIKit
 

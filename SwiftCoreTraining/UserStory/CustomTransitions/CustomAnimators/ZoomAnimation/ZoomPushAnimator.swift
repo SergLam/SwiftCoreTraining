@@ -45,7 +45,7 @@ extension ZoomPushAnimator: UIViewControllerAnimatedTransitioning {
             self.viewToZoom.transform = CGAffineTransform(scaleX: endViewSize.width / initialViewSize.width, y: endViewSize.height / initialViewSize.height)
             
             self.viewToZoom.center = screenCenter
-        }) { (finished) in
+        }) { _ in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
     }

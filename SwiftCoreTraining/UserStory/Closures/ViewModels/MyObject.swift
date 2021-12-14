@@ -8,15 +8,15 @@
 
 import Foundation
 
-//final class MyObject {
+// final class MyObject {
 //
-//    var name: String
+//     var name: String
 //
-//    init(name: String) {
+//     init(name: String) {
 //
-//        self.name = name
-//    }
-//}
+//         self.name = name
+//     }
+// }
 
 struct MyObject {
 

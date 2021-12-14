@@ -6,8 +6,8 @@
 //  Copyright © 2021 Serg Liamtsev. All rights reserved.
 //
 
-import Foundation
 import CoreData
+import Foundation
 
 public class Department: NSManagedObject {
 
@@ -15,5 +15,4 @@ public class Department: NSManagedObject {
     @NSManaged var employees: [Employee]
     @NSManaged var monthIncome: Decimal
     @NSManaged var title: String
-    
 }

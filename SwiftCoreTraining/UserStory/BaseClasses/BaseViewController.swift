@@ -46,8 +46,6 @@ class BaseViewController: UIViewController, ProgressShowable, ExternalURLOpenabl
         }
     }
     
-   
-    
 }
 
 // MARK: - MFMailComposeViewControllerDelegate

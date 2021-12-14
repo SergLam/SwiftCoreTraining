@@ -37,7 +37,7 @@ extension FadePushAnimator: UIViewControllerAnimatedTransitioning {
             // Show view controller, with fade in animation
             toView.alpha = 1
            
-        }) { (finished) in
+        }) { _ in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
     }

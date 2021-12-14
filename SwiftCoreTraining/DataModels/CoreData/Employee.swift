@@ -6,8 +6,8 @@
 //  Copyright © 2021 Serg Liamtsev. All rights reserved.
 //
 
-import Foundation
 import CoreData
+import Foundation
 
 public class Employee: NSManagedObject {
 

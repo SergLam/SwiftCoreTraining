@@ -27,9 +27,9 @@ class AlertPresenter {
     static func showInputAlert(at vc: UIViewController,
                                message: String,
                                placeholder: String? = nil,
-                               completion: @escaping (String) -> (Void)) {
+                               completion: @escaping (String) -> Void) {
         let alert = UIAlertController(title: "Input data", message: message, preferredStyle: .alert)
-        alert.addTextField { (textField) in
+        alert.addTextField { textField in
             textField.placeholder = placeholder
             textField.keyboardAppearance = .alert
             textField.keyboardType = .asciiCapable

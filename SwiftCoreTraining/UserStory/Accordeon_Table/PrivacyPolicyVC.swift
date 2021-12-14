@@ -1,3 +1,11 @@
+//
+//  PrivacyPolicyVC.swift
+//  SwiftCoreTraining
+//
+//  Created by Serg Liamthev on 12/14/21.
+//  Copyright © 2021 serglam. All rights reserved.
+//
+
 import UIKit
 
 final class PrivacyPolicyVC: BaseViewController {
@@ -64,7 +72,6 @@ final class PrivacyPolicyVC: BaseViewController {
     
 }
 
-
 // MARK: - UITableViewDataSource
 extension PrivacyPolicyVC: UITableViewDataSource {
     
@@ -96,7 +103,6 @@ extension PrivacyPolicyVC: UITableViewDataSource {
     
 }
 
-
 // MARK: - UITableViewDelegate
 extension PrivacyPolicyVC: UITableViewDelegate {
     
@@ -120,7 +126,7 @@ extension PrivacyPolicyVC: UITableViewDelegate {
         }
         
         var indexes: [IndexPath] = []
-        for (index, _) in cellStates.enumerated() {
+        for index in cellStates.indices {
             
             if index % 2 == 0 {
                 indexes.append(IndexPath(row: index, section: 0))
@@ -139,7 +145,6 @@ extension PrivacyPolicyVC: UITableViewDelegate {
     }
     
 }
-
 
 // MARK: - PrivacyPolicyViewDelegate
 extension PrivacyPolicyVC: PrivacyPolicyViewDelegate {

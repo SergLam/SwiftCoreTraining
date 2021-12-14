@@ -16,5 +16,4 @@ final class Company: NSManagedObject {
     @NSManaged var monthIncome: Decimal
     @NSManaged var numberOfEmployee: Int64
     @NSManaged var title: String
-    
 }

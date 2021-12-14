@@ -20,7 +20,6 @@ extension UITableViewHeaderFooterView: ReusableView {}
 
 extension UITableView {
     
-    
     // MARK: Register table view cell
     func register<T: UITableViewCell>(_: T.Type) {
         register(T.self, forCellReuseIdentifier: T.reuseIdentifier)
@@ -39,19 +38,18 @@ extension UITableView {
         return cell
     }
     
-    
-    // MARK:  Register header footer view
-    func register<T: UITableViewHeaderFooterView>(headerFooterView : T.Type) {
+    // MARK: - Register header footer view
+    func register<T: UITableViewHeaderFooterView>(headerFooterView: T.Type) {
         register(T.self, forHeaderFooterViewReuseIdentifier: T.reuseIdentifier)
     }
     
-    func register<T: UITableViewHeaderFooterView>(headerFooterView : T.Type) where T: NibLoadableView {
+    func register<T: UITableViewHeaderFooterView>(headerFooterView: T.Type) where T: NibLoadableView {
         let bundle = Bundle(for: T.self)
         let nib = UINib(nibName: T.reuseIdentifier, bundle: bundle)
         register(nib, forHeaderFooterViewReuseIdentifier: T.reuseIdentifier)
     }
     
-    func dequeueReusable<T: UITableViewHeaderFooterView>(headerFooterView : T.Type) -> T {
+    func dequeueReusable<T: UITableViewHeaderFooterView>(headerFooterView: T.Type) -> T {
         guard let view = dequeueReusableHeaderFooterView(withIdentifier: T.reuseIdentifier) as? T else {
             fatalError("Could not dequeue cell with idenHeaderFooterViewtifier: \(T.reuseIdentifier)")
         }
@@ -59,8 +57,6 @@ extension UITableView {
     }
     
 }
-
-
 
 // MARK: - Collection view
 extension UICollectionViewCell: ReusableView { }
@@ -82,4 +78,3 @@ extension UICollectionView {
         return cell
     }
 }
-

@@ -8,7 +8,7 @@
 
 import UIKit
 
-fileprivate var storeKey = "SomeProtocol_propertyKey"
+private var storeKey = "SomeProtocol_propertyKey"
 
 protocol DebugVCShowable {
     var property: DebugVC? { get set }
@@ -27,7 +27,7 @@ extension DebugVCShowable where Self: UIViewController {
             return property
         }
         set {
-            
+            print("shut up SwiftLint")
         }
     }
     

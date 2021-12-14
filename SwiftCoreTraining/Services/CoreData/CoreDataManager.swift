@@ -6,10 +6,10 @@
 //  Copyright © 2019 serglam. All rights reserved.
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-typealias OperationResult = ((Bool, String) -> (Void))
+typealias OperationResult = ((Bool, String) -> Void)
 
 final class CoreDataManager: NSObject {
     
@@ -20,7 +20,7 @@ final class CoreDataManager: NSObject {
     public  var context: NSManagedObjectContext
     private var container: NSPersistentContainer
     
-    init?(modelFileName: String, completion: @escaping () -> ()) {
+    init?(modelFileName: String, completion: @escaping () -> Void) {
         
         guard let modelURL = Bundle.main.url(forResource: modelFileName, withExtension: "momd") else {
             return nil
@@ -35,9 +35,8 @@ final class CoreDataManager: NSObject {
         context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         context.persistentStoreCoordinator = coordinator
         
-      
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let docURL = urls[urls.endIndex-1]
+        let docURL = urls[urls.endIndex - 1]
         
         /* The directory the application uses to store the Core Data store file.
          This code uses a file named "DataModel.sqlite" in the application's documents directory.
@@ -51,16 +50,16 @@ final class CoreDataManager: NSObject {
         }
         
         container = NSPersistentContainer(name: "SwiftCoreTraining")
-        container.loadPersistentStores() { (description, error) in
+        container.loadPersistentStores { description, error in
             if let error = error {
-                fatalError("Failed to load Core Data stack: \(error)")
+                fatalError("Failed to load Core Data stack: \(description) \(error)")
             }
             completion()
         }
     }
     
     // MARK: - Core Data Saving support
-    func saveContext(completion: @escaping (Bool) -> (Void)) {
+    func saveContext(completion: @escaping (Bool) -> Void) {
         if context.hasChanges {
             do {
                 try context.save()
@@ -81,7 +80,7 @@ extension CoreDataManager {
     
     // MARK: create and update opetations
     
-    func write<T: NSManagedObject>(shouldUpdate: Bool, entities: [T], completion: @escaping (Bool) -> (Void)) {
+    func write<T: NSManagedObject>(shouldUpdate: Bool, entities: [T], completion: @escaping (Bool) -> Void) {
         saveContext(completion: { result in
             completion(result)
         })
@@ -112,7 +111,6 @@ extension CoreDataManager {
         }
     }
     
-    
     // MARK: delete operations
     func deleteObjects<T: NSManagedObject>(_ fieldName: String, _ fieldValue: Any, _ entity: T.Type, completion: @escaping OperationResult) {
         guard let objects = fetchObjects(fieldName, fieldValue, entity) else {
@@ -133,7 +131,7 @@ extension CoreDataManager {
         
         do {
             try coordinator.execute(deleteRequest, with: context)
-            saveContext { (result) -> (Void) in
+            saveContext { result in
                 completion(result, "Objects deleted successfully")
             }
         } catch {

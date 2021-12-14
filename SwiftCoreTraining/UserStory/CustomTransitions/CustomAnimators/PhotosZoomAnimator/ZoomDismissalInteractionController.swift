@@ -57,7 +57,7 @@ class ZoomDismissalInteractionController: NSObject {
             let velocity = gestureRecognizer.velocity(in: fromVC.view)
             if velocity.y < 0 || newCenter.y < anchorPoint.y {
                 
-                //cancel
+                // cancel
                 UIView.animate(
                     withDuration: 0.5,
                     delay: 0,
@@ -69,7 +69,7 @@ class ZoomDismissalInteractionController: NSObject {
                         fromVC.view.alpha = 1.0
                         toVC.tabBarController?.tabBar.alpha = 0
                 },
-                    completion: { completed in
+                    completion: { _ in
                         
                         toReferenceImageView.isHidden = false
                         fromReferenceImageView.isHidden = false
@@ -84,7 +84,7 @@ class ZoomDismissalInteractionController: NSObject {
                 return
             }
             
-            //start animation
+            // start animation
             let finalTransitionSize = toReferenceImageViewFrame
             
             UIView.animate(withDuration: 0.25,
@@ -95,7 +95,7 @@ class ZoomDismissalInteractionController: NSObject {
                             transitionImageView.frame = finalTransitionSize
                             toVC.tabBarController?.tabBar.alpha = 1
                             
-            }, completion: { completed in
+            }, completion: { _ in
                 
                 transitionImageView.removeFromSuperview()
                 toReferenceImageView.isHidden = false

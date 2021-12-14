@@ -11,14 +11,14 @@ import UIKit
 /// protocol that Router must conform. Conteins all requried methods for
 protocol Router {
         
-    ///Root UINavigationController.
+    /// Root UINavigationController.
     var rootNavigationController: BaseNavigationController { get set }
     
     // Present screen.
     func present(_ controller: UIViewController, animated: Bool)
     func present(_ controller: UIViewController, animated: Bool, completion: VoidClosure?)
     
-    //Present screen on top.
+    // Present screen on top.
     func presentOnTop(_ controller: UIViewController, animated: Bool)
     func presentOnTop(_ controller: UIViewController, animated: Bool, completion: VoidClosure?)
     
@@ -34,7 +34,7 @@ protocol Router {
     func setAsRoot(_ controller: UIViewController, animated: Bool, hideNavigationBar: Bool)
     func setAsRoot(_ controller: UIViewController, animated: Bool, hideNavigationBar: Bool, transition: CATransition?)
     
-    //Uses a horizontal slide transition. Has no effect if the view screen is already in the stack.
+    // Uses a horizontal slide transition. Has no effect if the view screen is already in the stack.
     func push(_ controller: UIViewController)
     func push(_ controller: UIViewController, animated: Bool)
     func push(_ controller: UIViewController, animated: Bool, hideBottomBar: Bool)
@@ -42,12 +42,12 @@ protocol Router {
     func push(_ controller: UIViewController, animated: Bool, hideNavigationBar: Bool, transition: CATransition?)
     func push(_ controller: UIViewController, animated: Bool, hideNavigationBar: Bool, hideBottomBar: Bool, transition: CATransition?)
     
-    //Pops view controllers until the one specified is on top.
+    // Pops view controllers until the one specified is on top.
     func popScreen()
     func popScreen(animated: Bool)
     func popScreen(animation: CATransition)
     
-    //Pops until there's only a single view controller left on the stack. Returns the popped controllers.
+    // Pops until there's only a single view controller left on the stack. Returns the popped controllers.
     func popToRootScreen(animation: CATransition?)
     func popToRootScreen(animated: Bool)
 }

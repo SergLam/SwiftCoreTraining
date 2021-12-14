@@ -16,7 +16,7 @@ def development_pods
   use_frameworks!
   inhibit_all_warnings!
   
-  pod 'Eureka', '~> 5.3.3'
+  pod 'SwiftLint', '~> 0.45.1'
   
 end
 

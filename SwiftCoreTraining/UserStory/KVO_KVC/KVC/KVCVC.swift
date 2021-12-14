@@ -1,5 +1,5 @@
 //
-//  KVC_VC.swift
+//  KVCVC.swift
 //  SwiftCoreTraining
 //
 //  Created by Serg Liamthev on 4/20/19.
@@ -8,27 +8,29 @@
 
 import UIKit
 
-@objc class Human: NSObject {
+@objc
+class Human: NSObject {
     @objc dynamic var name: String
-    @objc dynamic var dog: Dog?
+    @objc dynamic var dog: HumanDog?
     
     init(name: String) {
         self.name = name
     }
 }
 
-@objc class Dog: NSObject {
+@objc
+class HumanDog: NSObject {
     @objc dynamic var name: String = "Wolf"
     @objc dynamic var age: Int = 3
     @objc dynamic var owner: Human?
     @objc dynamic var skills: [String] = ["sit down", "stand up", "follow me", "play with ball", "guard owner"]
 }
 
-class KVC_VC: BaseViewController {
+class KVCVC: BaseViewController {
 //    https://developer.apple.com/documentation/swift/using_objective-c_runtime_features_in_swift
     
     @objc let human = Human(name: "John")
-    @objc let dog = Dog()
+    @objc let dog = HumanDog()
     
     override func viewDidLoad() {
         super.viewDidLoad()

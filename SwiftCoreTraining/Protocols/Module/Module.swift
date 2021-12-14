@@ -11,4 +11,3 @@ import UIKit
 protocol Module: AnyObject {
     func viewToPresent() -> View
 }
-

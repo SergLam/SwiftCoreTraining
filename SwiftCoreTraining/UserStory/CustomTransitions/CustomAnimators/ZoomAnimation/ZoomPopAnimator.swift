@@ -44,10 +44,9 @@ extension ZoomPopAnimator: UIViewControllerAnimatedTransitioning {
             
             let screenCenter = CGPoint(x: UIScreen.width / 2, y: UIScreen.height / 2)
             self.viewToZoomOut.frame = self.viewToRestore.frame
-            self.viewToZoomOut.center =  screenCenter
+            self.viewToZoomOut.center = screenCenter
             
-            
-        }) { (finished) in
+        }) { _ in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
     }

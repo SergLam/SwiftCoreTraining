@@ -46,22 +46,22 @@ final class RecursiveAlgorithmsVC: BaseViewController {
         // Даны два целых числа A и В (каждое в отдельной строке).
         // Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
         if a < b - 1{
-            debugPrint(a+1)
-            printAllNumbersBetween(a+1, b)
+            debugPrint(a + 1)
+            printAllNumbersBetween(a + 1, b)
         }
-        if a - 1  > b {
-            debugPrint(a-1)
-            printAllNumbersBetween(a-1, b)
+        if a - 1 > b {
+            debugPrint(a - 1)
+            printAllNumbersBetween(a - 1, b)
         }
     }
     
     private func akkermanFunction(_ n: Int, _ m: Int) -> Int {
         if n == 0 {
-            return m+1
+            return m + 1
         } else if m == 0 {
-            return akkermanFunction(n-1, 1)
+            return akkermanFunction(n - 1, 1)
         } else {
-            return akkermanFunction(n-1, akkermanFunction(n, m-1))
+            return akkermanFunction(n - 1, akkermanFunction(n, m - 1))
         }
     }
     

@@ -1,16 +1,16 @@
 PODS:
-  - Eureka (5.3.3)
+  - SwiftLint (0.45.1)
 
 DEPENDENCIES:
-  - Eureka (~> 5.3.3)
+  - SwiftLint (~> 0.45.1)
 
 SPEC REPOS:
   trunk:
-    - Eureka
+    - SwiftLint
 
 SPEC CHECKSUMS:
-  Eureka: e6d720290c56bb23333ad1a0e020b2a98a0e9a43
+  SwiftLint: 06ac37e4d38c7068e0935bb30cda95f093bec761
 
-PODFILE CHECKSUM: c31f6ba0af100b9a6f04af9c68083dcc17127475
+PODFILE CHECKSUM: 20caa1ec1ce2b1fe02c9771644296329994099eb
 
 COCOAPODS: 1.11.2

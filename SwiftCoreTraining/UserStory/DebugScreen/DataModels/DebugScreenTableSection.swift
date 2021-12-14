@@ -110,8 +110,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
         case .memoryManagment:
             return [MemoryManagmentVC()]
         case .kwoKvc:
-            return [KVO_VC(),
-                    KVC_VC()]
+            return [KVOVC(),
+                    KVCVC()]
         case .coreData:
             return [CoreDataVC()]
         case .gcd:

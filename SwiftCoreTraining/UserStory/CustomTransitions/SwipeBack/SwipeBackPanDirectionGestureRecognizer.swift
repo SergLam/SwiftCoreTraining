@@ -82,6 +82,6 @@ final class PanDirectionGestureRecognizer: UIPanGestureRecognizer {
             }
             state = .cancelled
         }
-        
     }
+    
 }

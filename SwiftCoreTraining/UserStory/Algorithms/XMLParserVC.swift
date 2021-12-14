@@ -22,7 +22,6 @@ final class XMLParserVC: BaseViewController {
 //        debugPrint(parseResult)
     }
     
-    
 }
 
 extension XMLParserVC: XMLParserDelegate {
@@ -46,7 +45,7 @@ extension XMLParserVC: XMLParserDelegate {
     }
     
     // MARK: Delegate methods
-    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String] = [:]) {
         debugPrint("Did start element: \(elementName)")
         debugPrint(String(describing: namespaceURI))
         debugPrint(String(describing: qName))

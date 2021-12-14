@@ -22,14 +22,14 @@ final class ViperPresenter: ViewToPresenterProtocol {
     }
     
     func showMovieController(navigationController: UINavigationController) {
-        router?.pushToMovieScreen(navigationConroller:navigationController)
+        router?.pushToMovieScreen(navigationConroller: navigationController)
     }
     
 }
 
 extension ViperPresenter: InteractorToPresenterProtocol {
     
-    func personsFetchedSuccess(personsModelArray: Array<PersonModel>) {
+    func personsFetchedSuccess(personsModelArray: [PersonModel]) {
         view?.showPersons(personsArray: personsModelArray)
     }
     

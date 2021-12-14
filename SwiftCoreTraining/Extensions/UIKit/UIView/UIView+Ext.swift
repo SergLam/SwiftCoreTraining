@@ -55,7 +55,7 @@ extension UIView {
     
     func addRainbowBorder(width: CGFloat, cornerRadius: CGFloat) {
         let gradient = CAGradientLayer()
-        gradient.frame =  CGRect(origin: CGPoint.zero, size: bounds.size)
+        gradient.frame = CGRect(origin: CGPoint.zero, size: bounds.size)
         let colors = [UIColor.red, UIColor.green, UIColor.blue]
         gradient.colors = colors.map { $0.cgColor }
         gradient.startPoint = CGPoint(x: 0, y: 0.5)
@@ -78,7 +78,7 @@ extension UIView {
     
     func createGradientBorder(width: CGFloat, cornerRadius: CGFloat, colors: [UIColor]) -> CALayer {
         let gradient = CAGradientLayer()
-        gradient.frame =  CGRect(origin: CGPoint.zero, size: bounds.size)
+        gradient.frame = CGRect(origin: CGPoint.zero, size: bounds.size)
         gradient.colors = colors.map { $0.cgColor }
         gradient.startPoint = CGPoint(x: 0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1, y: 0.5)
@@ -99,4 +99,3 @@ extension UIView {
     }
     
 }
-

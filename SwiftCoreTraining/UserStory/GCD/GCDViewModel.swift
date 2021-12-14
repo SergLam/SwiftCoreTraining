@@ -17,7 +17,7 @@ final class GCDViewModel {
         var images: [UIImage] = []
         
         for i in 0..<10 {
-            imagesURL.append(url+"\(i)")
+            imagesURL.append(url + "\(i)")
         }
         
         let group = DispatchGroup()
@@ -25,8 +25,11 @@ final class GCDViewModel {
         for (index, image) in imagesURL.enumerated() {
             group.enter()
             DispatchQueue.global().async(group: group){
-                let url = URL(string: image)!
-                URLSession(configuration: .default).dataTask(with: url, completionHandler: { (data, response, error) in
+                guard let url = URL(string: image) else {
+                    group.leave()
+                    return
+                }
+                URLSession(configuration: .default).dataTask(with: url, completionHandler: { data, response, error in
                     guard
                         let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
                         let mimeType = response?.mimeType, mimeType.hasPrefix("image"),

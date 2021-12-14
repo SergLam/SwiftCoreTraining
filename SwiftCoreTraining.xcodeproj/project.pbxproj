@@ -123,7 +123,7 @@
 		7CFDC3B122B6CFE900FF351E /* SizeClassesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC36522B6CFE900FF351E /* SizeClassesVC.swift */; };
 		7CFDC3B222B6CFE900FF351E /* DebugVCShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC36722B6CFE900FF351E /* DebugVCShowable.swift */; };
 		7CFDC3B322B6CFE900FF351E /* KVO_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC36A22B6CFE900FF351E /* KVO_VC.swift */; };
-		7CFDC3B422B6CFE900FF351E /* KVC_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC36C22B6CFE900FF351E /* KVC_VC.swift */; };
+		7CFDC3B422B6CFE900FF351E /* KVCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC36C22B6CFE900FF351E /* KVCVC.swift */; };
 		7CFDC3B522B6CFE900FF351E /* page.html in Resources */ = {isa = PBXBuildFile; fileRef = 7CFDC36E22B6CFE900FF351E /* page.html */; };
 		7CFDC3B622B6CFE900FF351E /* AlgorhitmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC36F22B6CFE900FF351E /* AlgorhitmsVC.swift */; };
 		7CFDC3B822B6CFE900FF351E /* RecursiveAlgorithmsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDC37122B6CFE900FF351E /* RecursiveAlgorithmsVC.swift */; };
@@ -312,7 +312,7 @@
 		7CFDC36522B6CFE900FF351E /* SizeClassesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeClassesVC.swift; sourceTree = "<group>"; };
 		7CFDC36722B6CFE900FF351E /* DebugVCShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugVCShowable.swift; sourceTree = "<group>"; };
 		7CFDC36A22B6CFE900FF351E /* KVO_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVO_VC.swift; sourceTree = "<group>"; };
-		7CFDC36C22B6CFE900FF351E /* KVC_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVC_VC.swift; sourceTree = "<group>"; };
+		7CFDC36C22B6CFE900FF351E /* KVCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVCVC.swift; sourceTree = "<group>"; };
 		7CFDC36E22B6CFE900FF351E /* page.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = page.html; sourceTree = "<group>"; };
 		7CFDC36F22B6CFE900FF351E /* AlgorhitmsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorhitmsVC.swift; sourceTree = "<group>"; };
 		7CFDC37122B6CFE900FF351E /* RecursiveAlgorithmsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecursiveAlgorithmsVC.swift; sourceTree = "<group>"; };
@@ -1194,7 +1194,7 @@
 		7CFDC36B22B6CFE900FF351E /* KVC */ = {
 			isa = PBXGroup;
 			children = (
-				7CFDC36C22B6CFE900FF351E /* KVC_VC.swift */,
+				7CFDC36C22B6CFE900FF351E /* KVCVC.swift */,
 			);
 			path = KVC;
 			sourceTree = "<group>";
@@ -1318,10 +1318,10 @@
 			buildConfigurationList = 7C2F037021FCC5D200A50936 /* Build configuration list for PBXNativeTarget "SwiftCoreTraining" */;
 			buildPhases = (
 				EA0A9845F6942D7DE111C3EF /* [CP] Check Pods Manifest.lock */,
+				0460ACE52768E5AA00A45860 /* Swift Lint */,
 				7C2F034421FCC5D000A50936 /* Sources */,
 				7C2F034521FCC5D000A50936 /* Frameworks */,
 				7C2F034621FCC5D000A50936 /* Resources */,
-				FE9358749428E0138F14070F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1340,7 +1340,6 @@
 				7C2F035821FCC5D200A50936 /* Sources */,
 				7C2F035921FCC5D200A50936 /* Frameworks */,
 				7C2F035A21FCC5D200A50936 /* Resources */,
-				952916F61A6E2F180A89F4D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1360,7 +1359,6 @@
 				7C2F036321FCC5D200A50936 /* Sources */,
 				7C2F036421FCC5D200A50936 /* Frameworks */,
 				7C2F036521FCC5D200A50936 /* Resources */,
-				F197B69491634D302DEBCA4F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1448,20 +1446,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		952916F61A6E2F180A89F4D4 /* [CP] Embed Pods Frameworks */ = {
+		0460ACE52768E5AA00A45860 /* Swift Lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+			);
+			name = "Swift Lint";
 			outputFileListPaths = (
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTrainingTests/Pods-App-SwiftCoreTrainingTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		954B60FF53BDAFD76A6E7D42 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1527,36 +1528,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F197B69491634D302DEBCA4F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTrainingUITests/Pods-App-SwiftCoreTrainingUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FE9358749428E0138F14070F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-SwiftCoreTraining/Pods-App-SwiftCoreTraining-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1682,7 +1653,7 @@
 				7C1796B82630B05700EAC908 /* DebugScreenTableViewCellVM.swift in Sources */,
 				7C17968F2630AE2B00EAC908 /* TableHeaderFooterModels.swift in Sources */,
 				7C1796912630AE2B00EAC908 /* CollectionHeaderFooterModels.swift in Sources */,
-				7CFDC3B422B6CFE900FF351E /* KVC_VC.swift in Sources */,
+				7CFDC3B422B6CFE900FF351E /* KVCVC.swift in Sources */,
 				04D523022632AEFC00084891 /* DebugVCView.swift in Sources */,
 				04D523392632E93D00084891 /* Department.swift in Sources */,
 				7C1796902630AE2B00EAC908 /* CollectionCellModels.swift in Sources */,

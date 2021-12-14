@@ -10,10 +10,10 @@ import UIKit
 
 final class CustomAnimator: NSObject {
     
-    var duration : TimeInterval
-    var isPresenting : Bool
+    var duration: TimeInterval
+    var isPresenting: Bool
     
-    init(duration : TimeInterval, isPresenting : Bool) {
+    init(duration: TimeInterval, isPresenting: Bool) {
         self.duration = duration
         self.isPresenting = isPresenting
     }
@@ -45,7 +45,7 @@ extension CustomAnimator: UIViewControllerAnimatedTransitioning {
             detailView.alpha = self.isPresenting ? 1 : 0
         }
         
-        UIView.animate(withDuration: duration, animations: animations, completion: { (finished) in
+        UIView.animate(withDuration: duration, animations: animations, completion: { _ in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }

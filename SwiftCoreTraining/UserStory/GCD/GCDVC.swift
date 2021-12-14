@@ -23,10 +23,9 @@ final class GCDVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        //viewModel.loadImagesConcurently()
-//        viewModel.task2()
+        // viewModel.loadImagesConcurently()
+        // viewModel.task2()
         viewModel.task3()
     }
     
 }
-

@@ -6,8 +6,8 @@
 //  Copyright © 2019 serglam. All rights reserved.
 //
 
-import XCTest
 @testable import SwiftCoreTraining
+import XCTest
 
 final class SwiftCoreTrainingTests: XCTestCase {
 

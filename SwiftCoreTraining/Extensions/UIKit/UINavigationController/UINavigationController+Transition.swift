@@ -11,7 +11,7 @@ import UIKit
 extension UINavigationController {
  
     func addBottomPushTransition() {
-        let transition:CATransition = CATransition()
+        let transition: CATransition = CATransition()
         transition.duration = 0.5
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         transition.type = CATransitionType.push

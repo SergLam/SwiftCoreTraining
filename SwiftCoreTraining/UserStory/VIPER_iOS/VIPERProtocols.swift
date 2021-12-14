@@ -21,7 +21,7 @@ protocol ViewToPresenterProtocol: AnyObject {
 
 protocol PresenterToViewProtocol: AnyObject {
     
-    func showPersons(personsArray: Array<PersonModel>)
+    func showPersons(personsArray: [PersonModel])
     func showError(error: String)
 }
 
@@ -33,12 +33,12 @@ protocol PresenterToRouterProtocol: AnyObject {
 
 protocol PresenterToInteractorProtocol: AnyObject {
     
-    var presenter:InteractorToPresenterProtocol? { get set }
+    var presenter: InteractorToPresenterProtocol? { get set }
     func fetchPersons()
 }
 
 protocol InteractorToPresenterProtocol: AnyObject {
     
-    func personsFetchedSuccess(personsModelArray: Array<PersonModel>)
+    func personsFetchedSuccess(personsModelArray: [PersonModel])
     func personsFetchFailed(error: String)
 }

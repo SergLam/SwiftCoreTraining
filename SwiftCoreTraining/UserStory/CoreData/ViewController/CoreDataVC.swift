@@ -6,8 +6,8 @@
 //  Copyright © 2019 serglam. All rights reserved.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
 final class CoreDataVC: BaseViewController {
     
@@ -40,12 +40,12 @@ final class CoreDataVC: BaseViewController {
         let operation = CoreDataOpetations.allCases[index]
         switch operation {
         case .write:
-            let company = Company.init(context: manager.context)
+            let company = Company(context: manager.context)
             company.companyID = Int64(manager.readAllObjects(Company.self).count)
             company.monthIncome = 1000
             company.numberOfEmployee = Int64(500)
             company.title = "Test company\(company.companyID)"
-            manager.write(shouldUpdate: true, entities: [company]) { [unowned self] (result) -> (Void) in
+            manager.write(shouldUpdate: true, entities: [company]) { [unowned self] result -> Void in
                 if result {
                     AlertPresenter.showSuccessMessage(at: self, message: "New company added successfully")
                 } else {
@@ -57,12 +57,12 @@ final class CoreDataVC: BaseViewController {
                 AlertPresenter.showSuccessMessage(at: self, message: "Empty fetsh request result")
                 return
             }
-            AlertPresenter.showSuccessMessage(at: self, message: String.init(describing: objects.count))
+            AlertPresenter.showSuccessMessage(at: self, message: String(describing: objects.count))
         case .readAllObjects:
             let objects = manager.readAllObjects(Company.self)
-            AlertPresenter.showSuccessMessage(at: self, message: String.init(describing: objects.count))
+            AlertPresenter.showSuccessMessage(at: self, message: String(describing: objects.count))
         case .deleteObjectsByParameter:
-            manager.deleteObjects("numberOfEmployee", 500, Company.self) { (result, description) in
+            manager.deleteObjects("numberOfEmployee", 500, Company.self) { result, description in
                 if result {
                     AlertPresenter.showSuccessMessage(at: self, message: description)
                 } else {
@@ -70,7 +70,7 @@ final class CoreDataVC: BaseViewController {
                 }
             }
         case .deleteAll:
-            manager.deleteAll(Company.self) { (result, description) -> (Void) in
+            manager.deleteAll(Company.self) { result, description in
                 if result {
                     AlertPresenter.showSuccessMessage(at: self, message: description)
                 } else {

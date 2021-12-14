@@ -6,8 +6,8 @@
 //  Copyright © 2019 serglam. All rights reserved.
 //
 
-import Foundation
 import CoreData
+import Foundation
 
 extension NSManagedObject {
     

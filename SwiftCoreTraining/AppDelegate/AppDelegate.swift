@@ -6,8 +6,8 @@
 //  Copyright © 2019 serglam. All rights reserved.
 //
 
-import UIKit
 import CoreData
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,8 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         
-        CoreDataManager.shared?.saveContext(completion: { _ in})
+        CoreDataManager.shared?.saveContext(completion: { _ in })
     }
     
 }
-

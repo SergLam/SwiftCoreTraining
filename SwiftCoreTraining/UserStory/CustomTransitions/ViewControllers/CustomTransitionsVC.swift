@@ -34,17 +34,16 @@ final class CustomTransitionsVC: BaseViewController {
         contentView.imageView.addGestureRecognizer(tap)
     }
     
-    @objc func didTapImage() {
+    @objc
+    private func didTapImage() {
         let vc = TransitionPushVC()
         navigationController?.pushViewController(vc, animated: true)
     }
-    
     
 }
 
 // MARK: - UINavigationControllerDelegate
 extension CustomTransitionsVC: UINavigationControllerDelegate {
-    
     
     func navigationController(_ navigationController: UINavigationController,
                               animationControllerFor operation: UINavigationController.Operation,

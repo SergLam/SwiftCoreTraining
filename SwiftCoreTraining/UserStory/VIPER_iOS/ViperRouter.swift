@@ -33,5 +33,4 @@ final class ViperRouter: PresenterToRouterProtocol {
         navigationConroller.pushViewController(vc, animated: true)
     }
     
-    
 }

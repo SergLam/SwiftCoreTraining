@@ -10,8 +10,8 @@ import UIKit
 
 final class ViperVC: BaseViewController {
 
-    var presenter: ViewToPresenterProtocol? = nil
-    private var personsList = Array<PersonModel>()
+    var presenter: ViewToPresenterProtocol?
+    private var personsList: [PersonModel] = []
     
     private let contentView = ViperView()
     
@@ -72,7 +72,7 @@ extension ViperVC: UITableViewDelegate {
 // MARK: PresenterToViewProtocol
 extension ViperVC: PresenterToViewProtocol {
     
-    func showPersons(personsArray: Array<PersonModel>) {
+    func showPersons(personsArray: [PersonModel]) {
         
         hideProgress()
         personsList = personsArray
