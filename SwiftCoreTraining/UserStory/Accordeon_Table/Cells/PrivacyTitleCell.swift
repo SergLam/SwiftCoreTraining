@@ -61,3 +61,41 @@ final class PrivacyTitleCell: UITableViewCell {
     }
     
 }
+
+#if DEBUG
+#if targetEnvironment(simulator)
+import SwiftUI
+
+@available(iOS 13.0, *)
+struct PrivacyTitleCell_Previews: PreviewProvider {
+    
+    static var devices = AppConstants.previewDevices
+    
+    static var platform: PreviewPlatform? {
+        return SwiftUI.PreviewPlatform.iOS
+    }
+    
+    static var previews: some SwiftUI.View {
+        ForEach(devices, id: \.self) { deviceName in
+            
+            VStack(alignment: .center, spacing: 10) {
+                
+                UIViewPreview {
+                    
+                    let view = PrivacyTitleCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: PrivacyTitleCell.reuseIdentifier)
+                    view.update("Title", true)
+                    return view
+                }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 150, alignment: .center)
+                
+                Spacer()
+                
+            }.previewDevice(PreviewDevice(rawValue: deviceName))
+            .previewDisplayName(deviceName)
+        }
+        
+    }
+    
+}
+#endif
+#endif

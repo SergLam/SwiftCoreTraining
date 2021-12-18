@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>rewind-seconds-count</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@count@</string>
+		<key>count</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>ld</string>
+			<key>zero</key>
+			<string>Rewind for %ld seconds</string>
+			<key>one</key>
+			<string>Rewind for %ld second</string>
+			<key>two</key>
+			<string>Rewind for %ld seconds</string>
+			<key>few</key>
+			<string>Rewind for %ld seconds</string>
+			<key>many</key>
+			<string>Rewind for %ld seconds</string>
+			<key>other</key>
+			<string>Rewind for %ld seconds</string>
+		</dict>
+	</dict>
+	<key>fast-forward-seconds-count</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@count@</string>
+		<key>count</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>ld</string>
+			<key>zero</key>
+			<string>Fast forward for %ld seconds</string>
+			<key>one</key>
+			<string>Fast forward for %ld second</string>
+			<key>two</key>
+			<string>Fast forward for %ld seconds</string>
+			<key>few</key>
+			<string>Fast forward for %ld seconds</string>
+			<key>many</key>
+			<string>Fast forward for %ld seconds</string>
+			<key>other</key>
+			<string>Fast forward for %ld seconds</string>
+		</dict>
+	</dict>
+	<key>rewind-minutes-count</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@count@</string>
+		<key>count</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>ld</string>
+			<key>zero</key>
+			<string>Rewind for %ld minutes</string>
+			<key>one</key>
+			<string>Rewind for %ld minute</string>
+			<key>two</key>
+			<string>Rewind for %ld minutes</string>
+			<key>few</key>
+			<string>Rewind for %ld minutes</string>
+			<key>many</key>
+			<string>Rewind for %ld minutes</string>
+			<key>other</key>
+			<string>Rewind for %ld minutes</string>
+		</dict>
+	</dict>
+	<key>fast-forward-minutes-count</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@count@</string>
+		<key>count</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>ld</string>
+			<key>zero</key>
+			<string>Fast forward for %ld minutes</string>
+			<key>one</key>
+			<string>Fast forward for %ld minute</string>
+			<key>two</key>
+			<string>Fast forward for %ld minutes</string>
+			<key>few</key>
+			<string>Fast forward for %ld minutes</string>
+			<key>many</key>
+			<string>Fast forward for %ld minutes</string>
+			<key>other</key>
+			<string>Fast forward for %ld minutes</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
