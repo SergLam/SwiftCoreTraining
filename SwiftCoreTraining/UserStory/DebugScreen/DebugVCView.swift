@@ -41,3 +41,36 @@ final class DebugVCView: UIView {
         
     }
 }
+
+#if DEBUG
+#if targetEnvironment(simulator)
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
+
+@available(iOS 13.0, *)
+struct DebugVCView_Previews: PreviewProvider {
+    
+    static var devices = AppConstants.previewDevices
+    
+    static var platform: PreviewPlatform? {
+        return SwiftUI.PreviewPlatform.iOS
+    }
+    
+    static var previews: some SwiftUI.View {
+        ForEach(devices, id: \.self) { deviceName in
+            Group {
+                UIViewPreview {
+                    
+                    let view = DebugVCView()
+                    return view
+                }
+            }.previewDevice(PreviewDevice(rawValue: deviceName))
+            .previewDisplayName(deviceName)
+        }
+        
+    }
+    
+}
+#endif
+#endif

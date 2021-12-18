@@ -41,3 +41,36 @@ final class TransitionPushView: UIView {
         bigImageView.image = UIImage(named: "avatarPlaceholder")
     }
 }
+
+#if DEBUG
+#if targetEnvironment(simulator)
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
+
+@available(iOS 13.0, *)
+struct TransitionPushView_Previews: PreviewProvider {
+    
+    static var devices = AppConstants.previewDevices
+    
+    static var platform: PreviewPlatform? {
+        return SwiftUI.PreviewPlatform.iOS
+    }
+    
+    static var previews: some SwiftUI.View {
+        ForEach(devices, id: \.self) { deviceName in
+            Group {
+                UIViewPreview {
+                    
+                    let view = TransitionPushView()
+                    return view
+                }
+            }.previewDevice(PreviewDevice(rawValue: deviceName))
+            .previewDisplayName(deviceName)
+        }
+        
+    }
+    
+}
+#endif
+#endif

@@ -23,4 +23,4 @@ typealias TypeResultClosure<T> = (Swift.Result<T, Error>) -> Void
 typealias GeocoderCompletion = ((Swift.Result<[CLPlacemark], Error>) -> Void)
 typealias PlaceSearchCompletion = ((Swift.Result<[MKMapItem], Error>) -> Void)
 
-typealias DataUpdateInfo = [String: [String: Any]]
+public typealias DataUpdateInfo = [String: [String: Any]]

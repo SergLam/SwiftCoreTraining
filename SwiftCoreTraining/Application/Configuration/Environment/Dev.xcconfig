@@ -1,0 +1,36 @@
+//
+//  Dev.xcconfig
+//  SwiftCoreTraining
+//
+//  Created by Serhii Liamtsev on 12/18/21.
+//  Copyright © 2021 Serg Liamtsev. All rights reserved.
+//
+
+REST_BASE_URL = https:/$()/www.google.com/
+REST_DOMAIN_NAME = google.com
+REST_IP_ADDRESS = 192.168.0.1
+
+STORAGE_BASE_URL = https:/$()/www.google.com/storage/
+
+NOMINATIM_BASE_URL = https:/$()/nominatim.openstreetmap.org
+
+BUGFENDER_API_KEY = XXX_XXX_XXX_XXX_XXX_XXX
+INSTABUG_API_KEY = 29873489723894789237489723
+
+GOOGLE_CLIENT_ID = 1111111111111111-5fl2m0j07hvpfr9db5ifmh1b1tsdp235.apps.googleusercontent.com
+GOOGLE_API_KEY = ABCDEFGHIJK-noWGVom_i2uABCDEFGHIJK
+
+GOOGLE_ANALYTICS_TRACK_ID = UA-123456789-1
+
+ADJUST_SDK_API_KEY = XXX_XXX_XXX_XXX
+SEGMENT_IO_API_KEY = XXX_XXX_XXX_XXX_XXX_XXX_XXX_XXX
+
+STRIPE_API_KEY_PROD = pk_live_XXX_XXX_XXX_XXX
+STRIPE_API_KEY_TEST = pk_test_XXX_XXX_XXX_XXX
+
+MANAGE_SUBSCRIPTIONS_URL = https:/$()/buy.itunes.apple.com/WebObjects/my_fancy_app_id/locale/manageSubscriptions
+
+TERMS_URL = https:/$()/www.google.com/terms_of_use/
+PRIVACY_URL = https:/$()/www.google.com/privacy_policy/
+
+ITUNES_APP_URL = itms-apps:/$()/itunes.apple.com/app/123456789
