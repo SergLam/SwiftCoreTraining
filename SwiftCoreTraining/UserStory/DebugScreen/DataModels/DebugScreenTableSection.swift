@@ -25,6 +25,7 @@ enum DebugScreenTableSection: Int, CaseIterable {
     case objcFeatures
     case algorithms
     case xmlParsing
+    case protocolExtension
     
     var title: String {
         switch self {
@@ -56,6 +57,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
             return "Algorithms"
         case .xmlParsing:
             return "XML Parsing"
+        case .protocolExtension:
+            return "Protocol Extension"
         }
     }
     
@@ -94,6 +97,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
                     "RecursiveAlgorithms VC"]
         case .xmlParsing:
             return ["XMLParser VC"]
+        case .protocolExtension:
+            return ["Protocol Extension VC"]
         }
     }
     
@@ -134,6 +139,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
                     RecursiveAlgorithmsVC()]
         case .xmlParsing:
             return [XMLParserVC()]
+        case .protocolExtension:
+            return [ProtocolExtensionVC()]
         }
     }
     

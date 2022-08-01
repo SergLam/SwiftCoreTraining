@@ -10,6 +10,8 @@
 		0401607326316B9F00D8DE43 /* DebugScreenTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401607226316B9F00D8DE43 /* DebugScreenTableSection.swift */; };
 		040B00702625F5030001A5C3 /* UIView+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B006F2625F5030001A5C3 /* UIView+AddAction.swift */; };
 		040B008A2625F6AC0001A5C3 /* SharedTypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B00892625F6AC0001A5C3 /* SharedTypeAliases.swift */; };
+		04130A6428982E77000149DD /* ProtocolExtensionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04130A6328982E77000149DD /* ProtocolExtensionVC.swift */; };
+		04130A6628982E8B000149DD /* ProtocolExtensionVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04130A6528982E8B000149DD /* ProtocolExtensionVCViewModel.swift */; };
 		046A5078276DD70700432BC6 /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A5076276DD70700432BC6 /* UIViewPreview.swift */; };
 		046A5079276DD70700432BC6 /* UIViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A5077276DD70700432BC6 /* UIViewControllerPreview.swift */; };
 		046A507C276DD7A700432BC6 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A507B276DD7A700432BC6 /* AppConstants.swift */; };
@@ -202,6 +204,8 @@
 		0401607226316B9F00D8DE43 /* DebugScreenTableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugScreenTableSection.swift; sourceTree = "<group>"; };
 		040B006F2625F5030001A5C3 /* UIView+AddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddAction.swift"; sourceTree = "<group>"; };
 		040B00892625F6AC0001A5C3 /* SharedTypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTypeAliases.swift; sourceTree = "<group>"; };
+		04130A6328982E77000149DD /* ProtocolExtensionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolExtensionVC.swift; sourceTree = "<group>"; };
+		04130A6528982E8B000149DD /* ProtocolExtensionVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolExtensionVCViewModel.swift; sourceTree = "<group>"; };
 		046A5076276DD70700432BC6 /* UIViewPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
 		046A5077276DD70700432BC6 /* UIViewControllerPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerPreview.swift; sourceTree = "<group>"; };
 		046A507B276DD7A700432BC6 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -503,6 +507,15 @@
 				040B00892625F6AC0001A5C3 /* SharedTypeAliases.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		04130A6228982E5A000149DD /* ProtocolExtension */ = {
+			isa = PBXGroup;
+			children = (
+				04130A6328982E77000149DD /* ProtocolExtensionVC.swift */,
+				04130A6528982E8B000149DD /* ProtocolExtensionVCViewModel.swift */,
+			);
+			path = ProtocolExtension;
 			sourceTree = "<group>";
 		};
 		046A5075276DD70700432BC6 /* SwiftUIPreview */ = {
@@ -1177,6 +1190,7 @@
 		7CFDC33622B6CFE900FF351E /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
+				04130A6228982E5A000149DD /* ProtocolExtension */,
 				04FA6DC726FA6DA000C52E86 /* Combine */,
 				04C14956269D7B9F006FC1D8 /* Inheritance */,
 				7C17966C2630AD1000EAC908 /* DebugScreen */,
@@ -1768,6 +1782,7 @@
 				7CC57CC125CFDC1E00C58D27 /* TestMemoryClass.swift in Sources */,
 				7CFDC3AF22B6CFE900FF351E /* PersonsResponse.swift in Sources */,
 				7C1796DE2630B2F200EAC908 /* DebugScreenTableCellsFactory.swift in Sources */,
+				04130A6628982E8B000149DD /* ProtocolExtensionVCViewModel.swift in Sources */,
 				046A5099276DDCF800432BC6 /* UserJSON.swift in Sources */,
 				7C90633F240ED6DE0055BCD8 /* Router.swift in Sources */,
 				7CFDC3A722B6CFE900FF351E /* ViperRouter.swift in Sources */,
@@ -1858,6 +1873,7 @@
 				7C1796902630AE2B00EAC908 /* CollectionCellModels.swift in Sources */,
 				04FA6DCB26FA6DCB00C52E86 /* CombineVCViewModel.swift in Sources */,
 				040B008A2625F6AC0001A5C3 /* SharedTypeAliases.swift in Sources */,
+				04130A6428982E77000149DD /* ProtocolExtensionVC.swift in Sources */,
 				7C3B5C5124BA3D840058B9A8 /* Book.m in Sources */,
 				7CFDC3CD22B6CFE900FF351E /* PrivacyPolicyView.swift in Sources */,
 				7C64B84D2246290300480D88 /* AlertPresenter.swift in Sources */,
