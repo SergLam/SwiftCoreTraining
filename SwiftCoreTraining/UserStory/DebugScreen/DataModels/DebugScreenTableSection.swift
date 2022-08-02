@@ -21,7 +21,7 @@ enum DebugScreenTableSection: Int, CaseIterable {
     case gcd
     case ui
     case swiftBasics
-    case dataStructuresAndAlgorightms
+    case dataStructures
     case objcFeatures
     case algorithms
     case xmlParsing
@@ -49,8 +49,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
             return "UI"
         case .swiftBasics:
             return "Swift Basics"
-        case .dataStructuresAndAlgorightms:
-            return "Data structures and algorightms"
+        case .dataStructures:
+            return "Data structures"
         case .objcFeatures:
             return "Objc features!"
         case .algorithms:
@@ -87,8 +87,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
                     "SystemTransitions"]
         case .swiftBasics:
             return ["SubclassingVC"]
-        case .dataStructuresAndAlgorightms:
-            return ["Array-Set convertions"]
+        case .dataStructures:
+            return ["Array-Set convertions", "Array-Copy-On-Write"]
         case .objcFeatures:
             return ["ObjC example view controller",
                     "Objc_associatedKeyValues"]
@@ -128,8 +128,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
                     SystemTransitionRootVC()]
         case .swiftBasics:
             return [SubclassingVC()]
-        case .dataStructuresAndAlgorightms:
-            return [ArraySetVC()]
+        case .dataStructures:
+            return [ArraySetVC(), SwiftArrayVC()]
         case .objcFeatures:
             
             return [ExampleVC(),
