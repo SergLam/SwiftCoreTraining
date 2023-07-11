@@ -18,6 +18,9 @@
 		042446A02A5D90690032F454 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0424469E2A5D90690032F454 /* Images.xcassets */; };
 		042446A22A5DA43D0032F454 /* DebugScreenTableControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042446A12A5DA43D0032F454 /* DebugScreenTableControllerState.swift */; };
 		042446A42A5DA7150032F454 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042446A32A5DA7150032F454 /* String+Ext.swift */; };
+		042446A72A5DB24D0032F454 /* SwiftUIConcurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042446A62A5DB24D0032F454 /* SwiftUIConcurrencyView.swift */; };
+		042446AB2A5DB2F70032F454 /* SwiftUIConcurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042446AA2A5DB2F70032F454 /* SwiftUIConcurrencyViewModel.swift */; };
+		042446AD2A5DB5960032F454 /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042446AC2A5DB5960032F454 /* Data+Ext.swift */; };
 		046A5078276DD70700432BC6 /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A5076276DD70700432BC6 /* UIViewPreview.swift */; };
 		046A5079276DD70700432BC6 /* UIViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A5077276DD70700432BC6 /* UIViewControllerPreview.swift */; };
 		046A507C276DD7A700432BC6 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A507B276DD7A700432BC6 /* AppConstants.swift */; };
@@ -215,6 +218,9 @@
 		0424469E2A5D90690032F454 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		042446A12A5DA43D0032F454 /* DebugScreenTableControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugScreenTableControllerState.swift; sourceTree = "<group>"; };
 		042446A32A5DA7150032F454 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		042446A62A5DB24D0032F454 /* SwiftUIConcurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIConcurrencyView.swift; sourceTree = "<group>"; };
+		042446AA2A5DB2F70032F454 /* SwiftUIConcurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIConcurrencyViewModel.swift; sourceTree = "<group>"; };
+		042446AC2A5DB5960032F454 /* Data+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ext.swift"; sourceTree = "<group>"; };
 		046A5076276DD70700432BC6 /* UIViewPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
 		046A5077276DD70700432BC6 /* UIViewControllerPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerPreview.swift; sourceTree = "<group>"; };
 		046A507B276DD7A700432BC6 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -537,6 +543,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		042446A52A5DB2350032F454 /* ConcurrencySwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				042446A62A5DB24D0032F454 /* SwiftUIConcurrencyView.swift */,
+				042446AA2A5DB2F70032F454 /* SwiftUIConcurrencyViewModel.swift */,
+			);
+			path = ConcurrencySwiftUI;
+			sourceTree = "<group>";
+		};
 		046A5075276DD70700432BC6 /* SwiftUIPreview */ = {
 			isa = PBXGroup;
 			children = (
@@ -670,6 +685,7 @@
 				046A507D276DD7FE00432BC6 /* DateFormatter+Ext.swift */,
 				046A50A1276DDF4500432BC6 /* TimeInterval+Ext.swift */,
 				042446A32A5DA7150032F454 /* String+Ext.swift */,
+				042446AC2A5DB5960032F454 /* Data+Ext.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1201,6 +1217,7 @@
 		7CFDC33622B6CFE900FF351E /* UserStory */ = {
 			isa = PBXGroup;
 			children = (
+				042446A52A5DB2350032F454 /* ConcurrencySwiftUI */,
 				7C17966C2630AD1000EAC908 /* DebugScreen */,
 				04130A672899430A000149DD /* SwiftArray */,
 				04130A6228982E5A000149DD /* ProtocolExtension */,
@@ -1787,6 +1804,7 @@
 				7C2F034C21FCC5D000A50936 /* AppDelegate.swift in Sources */,
 				7C906338240ED6DE0055BCD8 /* View.swift in Sources */,
 				04D523102632B24200084891 /* UINavigationController+NavBar.swift in Sources */,
+				042446AD2A5DB5960032F454 /* Data+Ext.swift in Sources */,
 				7CFDC3D022B6CFE900FF351E /* DebugVC.swift in Sources */,
 				1316DB8D241029B60070CE2C /* ViperDataSource.swift in Sources */,
 				7CFDC3C222B6CFE900FF351E /* CoreDataOpetations.swift in Sources */,
@@ -1879,7 +1897,9 @@
 				7C17967C2630AD3A00EAC908 /* DiffableTableController.swift in Sources */,
 				7C90633C240ED6DE0055BCD8 /* Presenter.swift in Sources */,
 				32CD914B6A8C031C5994D63A /* SwipeBackSwipeBackNavigationController.swift in Sources */,
+				042446AB2A5DB2F70032F454 /* SwiftUIConcurrencyViewModel.swift in Sources */,
 				DD05ADBDD103B53F085CBB46 /* SwipeBackPanDirectionGestureRecognizer.swift in Sources */,
+				042446A72A5DB24D0032F454 /* SwiftUIConcurrencyView.swift in Sources */,
 				046A5079276DD70700432BC6 /* UIViewControllerPreview.swift in Sources */,
 				EBF4EABEB82CCACB43C9C783 /* SwipeBackPopNavigationGestureAnimator.swift in Sources */,
 				7C1796802630AD3A00EAC908 /* CollectionViewSectionViewModel.swift in Sources */,

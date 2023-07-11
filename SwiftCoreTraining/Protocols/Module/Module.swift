@@ -9,5 +9,5 @@
 import UIKit
 
 protocol Module: AnyObject {
-    func viewToPresent() -> View
+    func viewToPresent() -> ViperView
 }

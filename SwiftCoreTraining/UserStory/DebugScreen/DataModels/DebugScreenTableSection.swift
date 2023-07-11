@@ -6,12 +6,14 @@
 //  Copyright © 2021 Serg Liamtsev. All rights reserved.
 //
 
+import SwiftUI
 import UIKit
 
 /// Debug screen sections titles
 enum DebugScreenTableSection: Int, CaseIterable {
     
-    case combine = 0
+    case swiftUI = 0
+    case combine
     case viper
     case inheritance
     case closures
@@ -29,6 +31,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
     
     var title: String {
         switch self {
+        case .swiftUI:
+            return "SwiftUI + Concurrency"
         case .combine:
             return "Combine Framework"
         case .viper:
@@ -64,6 +68,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
     
     var sectionRowsTitles: [String] {
         switch self {
+        case .swiftUI:
+            return ["SwiftUI VC"]
         case .combine:
             return ["Combine VC"]
         case .viper:
@@ -104,6 +110,8 @@ enum DebugScreenTableSection: Int, CaseIterable {
     
     var viewControllers: [UIViewController] {
         switch self {
+        case .swiftUI:
+            return [UIHostingController(rootView: SwiftUIConcurrencyView())]
         case .combine:
             return [CombineVC()]
         case .viper:

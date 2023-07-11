@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol View: AnyObject {
+protocol VIPERView: AnyObject {
     
 }
