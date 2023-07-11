@@ -77,4 +77,3 @@ struct ProtocolExtensionVC_Previews: PreviewProvider {
 }
 #endif
 #endif
-

@@ -8,7 +8,6 @@
 
 import Foundation
 
-protocol UniqueIdentifiable {
+protocol UniqueIdentifiable: Identifiable {
     
-    var identifier: UUID { get set }
 }

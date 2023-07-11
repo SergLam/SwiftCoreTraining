@@ -20,6 +20,8 @@ final class CustomAnimator: NSObject {
     
 }
 
+// MARK: - UIViewControllerAnimatedTransitioning
+
 extension CustomAnimator: UIViewControllerAnimatedTransitioning {
    
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
@@ -32,12 +34,16 @@ extension CustomAnimator: UIViewControllerAnimatedTransitioning {
         guard let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from) else { return }
         guard let toView = transitionContext.view(forKey: UITransitionContextViewKey.to) else { return }
         
-        self.isPresenting ? container.addSubview(toView) : container.insertSubview(toView, belowSubview: fromView)
+        if self.isPresenting {
+            container.addSubview(toView)
+        } else {
+            container.insertSubview(toView, belowSubview: fromView)
+        }
         
         let detailView = isPresenting ? toView : fromView
         
         let animations = { [unowned self] in
-            toView.frame = self.isPresenting ?  CGRect(x: fromView.frame.width, y: 0, width: toView.frame.width, height: toView.frame.height) : toView.frame
+            toView.frame = self.isPresenting ? CGRect(x: fromView.frame.width, y: 0, width: toView.frame.width, height: toView.frame.height) : toView.frame
             toView.alpha = self.isPresenting ? 0 : 1
             toView.layoutIfNeeded()
             

@@ -25,8 +25,13 @@ struct Container<ObjectType: Codable>: Codable {
     let object: ObjectType
 }
 
+/// Extension that allow to save / read Codable models to UserDefaults
 extension UserDefaults {
     
+    /// Save a given codable model to user defaults
+    /// - Parameters:
+    ///   - object: codable model to be saved
+    ///   - defaultName: key name for model
     func set<ObjectType: Codable>( object: ObjectType?, forKey defaultName: String) {
         
         guard let object = object else {
@@ -44,6 +49,11 @@ extension UserDefaults {
         }
     }
     
+    /// Read a model or a given type by provided key value.
+    /// - Parameters:
+    ///   - defaultName: key name to read the model value.
+    ///   - type: model type
+    /// - Returns: model instance, if it's present in defaults
     func get<ObjectType: Codable>(forKey defaultName: String, type: ObjectType.Type) -> ObjectType? {
         guard let data = self.data(forKey: defaultName) else {
             return nil

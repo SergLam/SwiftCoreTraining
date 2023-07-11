@@ -14,7 +14,9 @@ extension UIView {
                                      _ frame: CGRect) -> CALayer {
         let newLayer = CAGradientLayer()
         newLayer.frame = frame
-        newLayer.colors = colors.map{ $0.cgColor }
+        newLayer.colors = colors.map{
+            $0.cgColor
+        }
         newLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
         newLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
         return newLayer

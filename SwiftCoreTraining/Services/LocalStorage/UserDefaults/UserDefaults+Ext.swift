@@ -10,6 +10,7 @@ import Foundation
 
 extension UserDefaults {
     
+    /// Use `suiteName` initializer for data sharing between different apps and widgets
     static let shared = UserDefaults(suiteName: Environment.bundleId) ?? UserDefaults.standard
     
     static func removeAllData() {

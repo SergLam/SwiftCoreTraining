@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// Mock data container.
+/// Use for initial UI testing - while the backend is not implemented yet.
 struct MockDataConstants {
     
     static let dummyText: String = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus faucibus leo in placerat. Nunc in neque at sem dictum iaculis vel ut nunc. Duis id tincidunt quam. Suspendisse sed lacus vel neque volutpat congue. In hac habitasse platea dictumst. Cras posuere bibendum tortor sed luctus. Sed sed velit finibus, tincidunt nisi et, ultrices orci."

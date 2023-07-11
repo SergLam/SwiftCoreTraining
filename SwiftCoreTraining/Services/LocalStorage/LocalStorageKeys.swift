@@ -8,6 +8,9 @@
 
 import Foundation
 
+/// Data entities storage keys.
+/// Should be used for UserDefaults, KeyChain or FileManager
+/// - depending on storage implementation details.
 enum LocalStorageKeys: String, CaseIterable {
     
     // MARK: - Authorization parameters keys

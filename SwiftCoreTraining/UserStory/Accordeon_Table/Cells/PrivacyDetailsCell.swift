@@ -10,7 +10,7 @@ import UIKit
 
 final class PrivacyDetailsCell: UITableViewCell {
     
-    static let identifier = String(describing: self)
+    static let identifier = String(describing: PrivacyDetailsCell.self)
     
     private let separatorView = UIView()
     

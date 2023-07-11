@@ -1,6 +1,6 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '13.0'
-deployment_target = '13.0'
+platform :ios, '16.0'
+deployment_target = '16.0'
 
 install! 'cocoapods', :disable_input_output_paths => true, :warn_for_unused_master_specs_repo => false
 
@@ -16,7 +16,7 @@ def development_pods
   use_frameworks!
   inhibit_all_warnings!
   
-  pod 'SwiftLint', '~> 0.45.1'
+  pod 'SwiftLint', '~> 0.52.4'
   
 end
 

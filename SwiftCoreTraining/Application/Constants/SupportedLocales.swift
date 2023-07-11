@@ -8,10 +8,12 @@
 
 import UIKit
 
+/// Runtime locale change helper struct (without chaning a device locale)
 enum SupportedLocales: Int, CaseIterable {
     
     case english = 0
     case russian = 1
+    case ukrainian = 2
     
     var identifier: String {
         switch self {
@@ -19,6 +21,8 @@ enum SupportedLocales: Int, CaseIterable {
             return "en-US"
         case .russian:
             return "ru-RU"
+        case .ukrainian:
+            return "uk"
         }
     }
     
@@ -36,6 +40,8 @@ enum SupportedLocales: Int, CaseIterable {
             return "US"
         case .russian:
             return "RU"
+        case .ukrainian:
+            return "UA"
         }
     }
     
@@ -52,12 +58,14 @@ enum SupportedLocales: Int, CaseIterable {
             return "en"
         case .russian:
             return "ru"
+        case .ukrainian:
+            return "uk"
         }
     }
     
     static func getDefaultLocale() -> SupportedLocales {
         
-        let defaultCode: String = Locale.current.languageCode?.lowercased() ?? SupportedLocales.russian.localeCode
+        let defaultCode: String = Locale.current.language.languageCode?.identifier.lowercased() ?? SupportedLocales.ukrainian.localeCode
         
         for locale in SupportedLocales.allCases {
             
@@ -66,12 +74,12 @@ enum SupportedLocales: Int, CaseIterable {
                 return locale
             }
         }
-        return SupportedLocales.russian
+        return SupportedLocales.ukrainian
     }
     
     static func getDefaultLocaleCode() -> String {
         
-        let defaultCode: String = Locale.current.languageCode?.lowercased() ?? SupportedLocales.russian.localeCode
+        let defaultCode: String = Locale.current.language.languageCode?.identifier.lowercased() ?? SupportedLocales.ukrainian.localeCode
         
         for locale in SupportedLocales.allCases {
             

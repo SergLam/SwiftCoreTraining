@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// User-defined keys for .xcconfig files value reading.
 private enum UserDefinedKeys: String, CaseIterable {
     
     // MARK: - Base URL keys
@@ -26,13 +27,13 @@ private enum UserDefinedKeys: String, CaseIterable {
     // MARK: - Error & bugs reporting SDK Key
     case BUGFENDER_API_KEY = "BUGFENDER_API_KEY"
     case INSTABUG_API_KEY = "INSTABUG_API_KEY"
-
+    
     // MARK: - Google API Keys
     case GOOGLE_CLIENT_ID = "GOOGLE_CLIENT_ID"
     case GOOGLE_API_KEY = "GOOGLE_API_KEY"
     
     case GOOGLE_ANALYTICS_TRACK_ID = "GOOGLE_ANALYTICS_TRACK_ID"
-
+    
     // MARK: - Analytics SDK
     case ADJUST_SDK_API_KEY = "ADJUST_SDK_API_KEY"
     case SEGMENT_IO_API_KEY = "SEGMENT_IO_API_KEY"
@@ -43,7 +44,9 @@ private enum UserDefinedKeys: String, CaseIterable {
     
 }
 
- enum Environment {
+/// This enum provides convenient access to user-defined values at .xcconfig files.
+/// Should be used for global configuration values reading (e.g. server URL, API keys, etc.)
+enum Environment {
     
     private static let dictionary: [String: Any] = {
         guard let dict = Bundle.main.infoDictionary else {

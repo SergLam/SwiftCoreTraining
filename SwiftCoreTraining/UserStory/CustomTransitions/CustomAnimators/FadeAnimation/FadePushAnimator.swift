@@ -31,7 +31,9 @@ extension FadePushAnimator: UIViewControllerAnimatedTransitioning {
         // Hide view controller before presenting it
         containerView.addSubview(toView)
         toView.alpha = 0
-        viewsToHide.forEach{ $0.alpha = 0 }
+        viewsToHide.forEach{
+            $0.alpha = 0
+        }
         
         UIView.animate(withDuration: duration, animations: {
             // Show view controller, with fade in animation

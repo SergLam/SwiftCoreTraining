@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// Pre-allocated DataFormatter for convenient date parsing.
+/// `static let` closures are invoked and allocated after a first call.
 extension DateFormatter {
         
     static let miliSecondsUTCPlus3: DateFormatter = {

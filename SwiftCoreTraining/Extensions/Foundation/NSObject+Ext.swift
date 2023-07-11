@@ -1,5 +1,5 @@
 //
-//   NSObject+Ext.swift
+//  NSObject+Ext.swift
 //  SwiftCoreTraining
 //
 //  Created by Serhii Liamtsev on 4/21/21.

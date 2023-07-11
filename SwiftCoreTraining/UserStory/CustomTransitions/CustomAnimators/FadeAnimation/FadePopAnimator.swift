@@ -38,8 +38,12 @@ extension FadePopAnimator: UIViewControllerAnimatedTransitioning {
         UIView.animate(withDuration: duration, animations: { [unowned self] in
             // Show view controller, with fade in animation
             toView.alpha = 1
-            self.viewsToHide.forEach{ $0.alpha = 0 }
-            self.viewsToShow.forEach{ $0.alpha = 1 }
+            self.viewsToHide.forEach{
+                $0.alpha = 0
+            }
+            self.viewsToShow.forEach{
+                $0.alpha = 1
+            }
             
         }) { _ in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)

@@ -12,7 +12,7 @@ import UIKit
 
 class BaseViewController: UIViewController, ProgressShowable, ExternalURLOpenable, StatusBarResizable, UniqueIdentifiable {
     
-    var identifier: UUID = UUID()
+    var id: UUID = UUID()
     
     var hud: SpinnerVC = SpinnerVC()
     
