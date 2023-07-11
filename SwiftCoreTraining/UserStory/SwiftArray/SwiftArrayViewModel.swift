@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Array-related interview questions.
 final class SwiftArrayViewModel {
     
     // What are addresses for 'array1' and 'array2'?

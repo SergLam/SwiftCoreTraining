@@ -49,7 +49,7 @@ final class CoreDataManager: NSObject {
             fatalError("Error migrating store: \(error)")
         }
         
-        container = NSPersistentContainer(name: "SwiftCoreTraining")
+        container = NSPersistentContainer(name: modelFileName)
         container.loadPersistentStores { description, error in
             if let error = error {
                 fatalError("Failed to load Core Data stack: \(description) \(error)")

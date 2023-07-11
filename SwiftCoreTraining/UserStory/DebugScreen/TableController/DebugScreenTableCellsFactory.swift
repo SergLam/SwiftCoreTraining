@@ -12,6 +12,7 @@ protocol DebugScreenTableCellsFactoryDelegate: AnyObject {
     
 }
 
+/// Debug screen `UITableView` cells factory.
 final class DebugScreenTableCellsFactory: TableCellsFactory {
     
     weak var delegate: DebugScreenTableCellsFactoryDelegate?

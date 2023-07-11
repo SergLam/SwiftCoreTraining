@@ -6,9 +6,9 @@
 //  Copyright © 2021 Serg Liamtsev. All rights reserved.
 //
 
-// import SwiftCoreTraining_ObjC
 import UIKit
 
+/// Debug screen sections titles
 enum DebugScreenTableSection: Int, CaseIterable {
     
     case combine = 0

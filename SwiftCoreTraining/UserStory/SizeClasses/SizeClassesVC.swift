@@ -26,14 +26,11 @@ final class SizeClassesVC: BaseViewController {
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         if traitCollection.horizontalSizeClass == .regular {
             if UIDevice.current.orientation == .landscapeLeft {
-                // TODO: set layout for landscape left
                 isNavBarHidden(true)
             } else if UIDevice.current.orientation == .landscapeRight {
-                // TODO: set layout for landscape rigt
                 isNavBarHidden(true)
             }
         } else {
-            // TODO: set layout for portrait
             isNavBarHidden(false)
         }
         super.traitCollectionDidChange(previousTraitCollection)

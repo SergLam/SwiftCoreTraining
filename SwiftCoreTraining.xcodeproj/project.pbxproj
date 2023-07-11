@@ -16,6 +16,8 @@
 		04130A6B28994325000149DD /* SwiftArrayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04130A6A28994325000149DD /* SwiftArrayViewModel.swift */; };
 		0424469F2A5D90690032F454 /* AppIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0424469D2A5D90680032F454 /* AppIcons.xcassets */; };
 		042446A02A5D90690032F454 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0424469E2A5D90690032F454 /* Images.xcassets */; };
+		042446A22A5DA43D0032F454 /* DebugScreenTableControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042446A12A5DA43D0032F454 /* DebugScreenTableControllerState.swift */; };
+		042446A42A5DA7150032F454 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042446A32A5DA7150032F454 /* String+Ext.swift */; };
 		046A5078276DD70700432BC6 /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A5076276DD70700432BC6 /* UIViewPreview.swift */; };
 		046A5079276DD70700432BC6 /* UIViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A5077276DD70700432BC6 /* UIViewControllerPreview.swift */; };
 		046A507C276DD7A700432BC6 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A507B276DD7A700432BC6 /* AppConstants.swift */; };
@@ -211,6 +213,8 @@
 		042446982A5D8EB20032F454 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0424469D2A5D90680032F454 /* AppIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcons.xcassets; sourceTree = "<group>"; };
 		0424469E2A5D90690032F454 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		042446A12A5DA43D0032F454 /* DebugScreenTableControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugScreenTableControllerState.swift; sourceTree = "<group>"; };
+		042446A32A5DA7150032F454 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		046A5076276DD70700432BC6 /* UIViewPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
 		046A5077276DD70700432BC6 /* UIViewControllerPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerPreview.swift; sourceTree = "<group>"; };
 		046A507B276DD7A700432BC6 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -665,6 +669,7 @@
 				047B259526307EFE00E21DA6 /* NSObject+Ext.swift */,
 				046A507D276DD7FE00432BC6 /* DateFormatter+Ext.swift */,
 				046A50A1276DDF4500432BC6 /* TimeInterval+Ext.swift */,
+				042446A32A5DA7150032F454 /* String+Ext.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -950,6 +955,7 @@
 			children = (
 				7C1796DB2630B2F200EAC908 /* DebugScreenTableController.swift */,
 				7C1796DC2630B2F200EAC908 /* DebugScreenTableCellsFactory.swift */,
+				042446A12A5DA43D0032F454 /* DebugScreenTableControllerState.swift */,
 			);
 			path = TableController;
 			sourceTree = "<group>";
@@ -1792,6 +1798,7 @@
 				7CFDC3B322B6CFE900FF351E /* KVOVC.swift in Sources */,
 				7C4FA41524B3996400ECE2E5 /* House.m in Sources */,
 				04B8575127665CFA00C0265B /* OSLog+Ext.swift in Sources */,
+				042446A22A5DA43D0032F454 /* DebugScreenTableControllerState.swift in Sources */,
 				7C1796B92630B05700EAC908 /* DebugScreenTableViewCell.swift in Sources */,
 				04D5233E2632E94D00084891 /* Company.swift in Sources */,
 				046A50C2276DE89200432BC6 /* UniqueIdentifiable.swift in Sources */,
@@ -1858,6 +1865,7 @@
 				7C1796912630AE2B00EAC908 /* CollectionHeaderFooterModels.swift in Sources */,
 				7CFDC3B422B6CFE900FF351E /* KVCVC.swift in Sources */,
 				04D523022632AEFC00084891 /* DebugVCView.swift in Sources */,
+				042446A42A5DA7150032F454 /* String+Ext.swift in Sources */,
 				04D523392632E93D00084891 /* Department.swift in Sources */,
 				7C1796902630AE2B00EAC908 /* CollectionCellModels.swift in Sources */,
 				04FA6DCB26FA6DCB00C52E86 /* CombineVCViewModel.swift in Sources */,

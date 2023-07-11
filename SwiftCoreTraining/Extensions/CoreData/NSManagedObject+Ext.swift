@@ -23,7 +23,7 @@ extension NSManagedObject {
     */
     public static var entityName: String {
         let className = NSStringFromClass(self)
-        let entityName = className.components(separatedBy: ".").last!
+        let entityName = className.components(separatedBy: ".").last ?? ""
         return entityName
     }
     
@@ -36,7 +36,7 @@ extension NSManagedObject {
     }
     
     /**
-     Fuck Apple default initializer - use this one
+     Alternative Apple default initializer - use this one
      */
     convenience init(context: NSManagedObjectContext, _ belongsToModule: Bool = false) {
         

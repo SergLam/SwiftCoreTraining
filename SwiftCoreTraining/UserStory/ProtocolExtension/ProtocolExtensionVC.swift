@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Protocol extensions + default methods implementations demo
 final class ProtocolExtensionVC: BaseViewController {
     
     private let viewModelClass: ProtocolExtensionVCViewModel = ProtocolExtensionVCViewModel()

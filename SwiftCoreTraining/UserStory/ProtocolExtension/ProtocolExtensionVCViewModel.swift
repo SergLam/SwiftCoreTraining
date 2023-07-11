@@ -21,6 +21,7 @@ extension SampleProtocol {
   }
 }
 
+/// Protocol extensions + default methods implementations demo
 final class ProtocolExtensionVCViewModel: SampleProtocol {
     
     func foo() {

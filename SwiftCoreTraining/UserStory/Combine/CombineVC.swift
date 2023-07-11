@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Combine framework demo screen.
 final class CombineVC: BaseViewController {
     
     private let viewModel = CombineVCViewModel()
